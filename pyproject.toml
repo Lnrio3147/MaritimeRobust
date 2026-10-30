@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maritime-robust"
+version = "0.1.0"
+description = "Auditable fine-grained maritime corruption benchmark"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.5", "torchvision>=0.20", "numpy", "Pillow", "scipy", "scikit-learn", "matplotlib", "requests", "psutil"]
+
+[project.optional-dependencies]
+data = ["gdown", "py7zr", "beautifulsoup4"]
+dev = ["pytest"]
+depth = ["transformers", "socksio"]
+
+[project.scripts]
+maritime = "maritime_robust.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
