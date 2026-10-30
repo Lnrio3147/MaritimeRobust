@@ -13,6 +13,9 @@ echo "=== s6b train $(date +%H:%M:%S)"
 for f in 0 1 2; do
   for s in 17 29; do
     echo "--- s6b fold$f s$s $(date +%H:%M:%S)"
+    if [ -f "runs/fgsc23_civ8_fold$f/convnext_tiny_none_s6b_e40_s$s/complete.json" ]; then
+      echo "    (already trained, skipping)"; continue
+    fi
     $PY scripts/train_coverage.py --fold "$f" --seed "$s" --k 12 --singles --mix-base \
         --epochs 40 || { echo "TRAIN FAIL s6b $f $s"; exit 1; }
   done
@@ -20,6 +23,7 @@ done
 echo "=== s6b eval $(date +%H:%M:%S)"
 for f in 0 1 2; do
   for s in 17 29; do
+    [ -f "reports/lattice_s6b/fold${f}_s${s}.json" ] && { echo "    (already evaluated)"; continue; }
     $PY scripts/lattice_eval.py --fold "$f" --seed "$s" \
         --run-dir "runs/fgsc23_civ8_fold${f}/convnext_tiny_none_s6b_e40_s${s}" \
         --out-dir "reports/lattice_s6b" >> "reports/lattice_s6b_f${f}_s${s}.log" 2>&1 \

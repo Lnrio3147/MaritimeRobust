@@ -28,7 +28,8 @@ MEAN, STD = (0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616)
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--run-dir", required=True, help="reports/cifar_grid/<run> with correct.npz")
-    ap.add_argument("--archive", default="/home/uestc/mount_2T/uestc/lnrio/cifar_c/CIFAR-10-C")
+    ap.add_argument("--archive",
+                    default="/home/uestc/mount_2T/uestc/lnrio/cifar_c/extract/CIFAR-10-C")
     ap.add_argument("--tolerance", type=float, default=1.0, help="pp")
     ap.add_argument("--out", default="reports/CIFAR_VALIDATION.md")
     args = ap.parse_args()
@@ -44,8 +45,10 @@ def main():
     archive = Path(args.archive)
     labels = np.load(archive / "labels.npy")
     test = torchvision.datasets.CIFAR10(str(PROJECT / "data/cifar"), train=False, download=True)
-    assert np.array_equal(labels, np.asarray(test.targets)), "labels.npy does not match CIFAR-10 test order"
-    n = len(labels)
+    n = len(test.targets)
+    assert len(labels) == 5 * n, f"labels.npy has {len(labels)} entries, expected {5 * n}"
+    assert all(np.array_equal(labels[k * n:(k + 1) * n], np.asarray(test.targets))
+               for k in range(5)), "labels.npy does not match CIFAR-10 test order"
 
     rows, worst = [], 0.0
     for path in sorted(archive.glob("*.npy")):

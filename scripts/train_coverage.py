@@ -37,7 +37,8 @@ sys.path.insert(0, str(PROJECT / "scripts"))
 from maritime_robust.common import (ROOT, Budget, digest, environment, read_jsonl,
                                     seed_all, stable_seed, write_json)  # noqa: E402
 from maritime_robust.engine import ShipDataset, loader, predict  # noqa: E402
-from maritime_robust.lattice import HELD_OUT, apply_family, apply_pair, pool  # noqa: E402
+from maritime_robust.lattice import (HELD_OUT, apply_family, apply_pair, pool,  # noqa: E402
+                                    set_levels)
 from maritime_robust.methods import build as build_method  # noqa: E402
 
 
@@ -109,8 +110,8 @@ class LatticeDataset(ShipDataset):
 
 
 def _level(family):
-    from maritime_robust.lattice import MATCHED_LEVEL
-    return MATCHED_LEVEL[family]
+    from maritime_robust.lattice import LEVELS
+    return LEVELS[family]
 
 
 def main():
@@ -125,6 +126,8 @@ def main():
                     help="half the draws use the project combined recipe, half the lattice")
     ap.add_argument("--epochs", type=int, default=40)
     ap.add_argument("--suffix", default=None)
+    ap.add_argument("--levels", default=None,
+                    help="JSON from lattice_calibrate.py; overrides the matched-20pp ladder")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--phase", default="augmentation")
     ap.add_argument("--skip-budget", action="store_true")
@@ -135,6 +138,11 @@ def main():
     pairs = pool(12 if args.singles else args.k)
     if len(pairs) != (12 if args.singles else args.k):
         raise SystemExit(f"pool has {len(pairs)} pairs, requested {args.k}")
+
+    levels = None
+    if args.levels:
+        levels = json.loads((PROJECT / args.levels).read_text())["levels"]
+        set_levels(levels)
 
     manifest = PROJECT / f"data/manifests/folds/fgsc23_civ8_fold{args.fold}.jsonl"
     config = json.loads((ROOT / "configs/protocol.json").read_text())
@@ -168,6 +176,7 @@ def main():
         "coverage_singles": bool(args.singles),
         "coverage_pool": ["+".join(p) for p in pairs],
         "coverage_excluded": ["+".join(p) for p in HELD_OUT],
+        "coverage_levels": levels or "matched-20pp",
         "seed": args.seed, "epochs": args.epochs, "batch_size": batch_size,
         "workers": workers, "classes": labels, "num_classes": n,
         "augmented": True, "augmentation": "lattice",

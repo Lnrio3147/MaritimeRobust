@@ -53,13 +53,27 @@ def balanced_order(pairs):
     return order
 
 
-def apply_family(image, family, seed):
-    return apply(image, family, MATCHED_LEVEL[family], seed)
+# Live copy of the ladder. The coverage arms all run at the matched-20pp levels;
+# the double-damage control arm overrides it through ``set_levels`` so that an
+# unpaired augmentation carries the same damage per image as a pair does.
+LEVELS = dict(MATCHED_LEVEL)
 
 
-def apply_pair(image, pair, seed):
+def set_levels(mapping):
+    unknown = set(mapping) - set(FAMILIES)
+    if unknown:
+        raise KeyError(f"unknown families: {sorted(unknown)}")
+    LEVELS.update({k: float(v) for k, v in mapping.items()})
+
+
+def apply_family(image, family, seed, levels=None):
+    return apply(image, family, (levels or LEVELS)[family], seed)
+
+
+def apply_pair(image, pair, seed, levels=None):
     """Apply both families; the second seed is derived so the two draws are independent."""
-    return apply_family(apply_family(image, pair[0], seed), pair[1], seed ^ 0x5BD1E995)
+    return apply_family(apply_family(image, pair[0], seed, levels),
+                        pair[1], seed ^ 0x5BD1E995, levels)
 
 
 def pool(k):
