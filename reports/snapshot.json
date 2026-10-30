@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T12:00:32+00:00",
+ "generated_at": "2026-10-30T12:45:59+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "70127a3118ebffaa59643bcd6cfb330cb025f41c",
+  "commit": "71d6b696034156e86350cfcb8dd0a37e6dff2e02",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 693
+  "tracked_files": 710
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -30,16 +30,16 @@
    "bytes": 9793
   },
   "src/maritime_robust/engine.py": {
-   "sha256": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
-   "bytes": 20010
+   "sha256": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+   "bytes": 20332
   },
   "src/maritime_robust/methods/__init__.py": {
-   "sha256": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
-   "bytes": 8539
+   "sha256": "02a60e445a80678303a636a548e466fb0b5066c83ed7f55bb353b7715c3ac900",
+   "bytes": 8554
   },
   "src/maritime_robust/methods/augment.py": {
-   "sha256": "971f18ee7b9ec54161edcfe3eca37d5549c4f2b66edf9668fb56c83d62118650",
-   "bytes": 5265
+   "sha256": "5c1bb4208249728f855404a28113288aab93a381ea44e0767da1f22929ce77af",
+   "bytes": 7134
   },
   "src/maritime_robust/prepare.py": {
    "sha256": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
@@ -162,8 +162,8 @@
    "bytes": 3973
   },
   "scripts/explore_train.py": {
-   "sha256": "ce36636ba5c428c7ba49b28ce5bbbdd2479198a3b2a4b3b90539c8a6638be4f1",
-   "bytes": 12985
+   "sha256": "53bba40c1b149b7af129f98a009122683882aa764dde4c0f9d03421cc4c9ef2b",
+   "bytes": 16501
   },
   "scripts/failure_analysis.py": {
    "sha256": "d6ade32ef164c89374a58985b9986bf8562bfd3147e6f4eb45f32129eee8bd57",
@@ -172,6 +172,10 @@
   "scripts/failure_contact_sheet.py": {
    "sha256": "cee2b7171bc4bed4b03162fbbec955ed1f95c9f404cfa1477efd5cb814dbca88",
    "bytes": 4211
+  },
+  "scripts/feature_drift_probe.py": {
+   "sha256": "06522ab8eeba5e7bf788882dddf5208ab89d28a784d6bbad6f9a9be1b0293e65",
+   "bytes": 7902
   },
   "scripts/frozen_probe.py": {
    "sha256": "58c83d1f8f4b6eca837b17eb6888fe0ab462e609a07abd36eddd9bad5ace0e8e",
@@ -205,6 +209,14 @@
    "sha256": "541f9b358af86e6266f7b807568cc6d670cc720d44134e03cd3862113e2ffce1",
    "bytes": 7207
   },
+  "scripts/m2_eval.py": {
+   "sha256": "0d1538757726521418884ca5afe541862105a9e98a02d219fdc316ee70f3b177",
+   "bytes": 8764
+  },
+  "scripts/m2_gate.py": {
+   "sha256": "6b15ee2222d60535b389899660f17764f0e32828ede96aaae67a4751ada25b62",
+   "bytes": 2467
+  },
   "scripts/make_figures.py": {
    "sha256": "95fe9b1c77888c2e9804d694c566eb4f84523f716302bf6617c9da75a1d84bf8",
    "bytes": 5097
@@ -232,6 +244,10 @@
   "scripts/probe_common.py": {
    "sha256": "50683cee64632d6a4b728e479c9704ac0b17d4be785b073b800e219ca773b3a3",
    "bytes": 3454
+  },
+  "scripts/readout_probe.py": {
+   "sha256": "2818dd783b3e32379dfe7147ec96f963cee5015de06ca87b5a41cc4b3a7d1cc5",
+   "bytes": 5040
   },
   "scripts/real_degradation_eval.py": {
    "sha256": "6cad1dc3353204b588fe2b523d849081fcb8336acebf3d112988a33ea64579c3",
@@ -320,6 +336,10 @@
   "configs/protocol.json": {
    "sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
    "bytes": 1097
+  },
+  "configs/specialist_s5.json": {
+   "sha256": "c5e37e9c8febb78576416cea2d2e7576acc133def393c1b6fb6ba423eea53d0f",
+   "bytes": 556
   },
   "pyproject.toml": {
    "sha256": "35a3b824b2f4314ca51ab77396781a00d8a108f33f182b3d6d4246140c1878b0",
@@ -417,9 +437,13 @@
    "sha256": "e84d14bb6da3a76f691bf8cdafa2005935c4aac1b77df8688fe5db08645b7767",
    "bytes": 9021
   },
+  "reports/FEATURE_DRIFT_PROBE.md": {
+   "sha256": "cd3f2546494c320f7ead5f073bcf22a800585a6b4ffc74e634e1c588a61c62b0",
+   "bytes": 3487
+  },
   "reports/FINAL_CONCLUSIONS.md": {
-   "sha256": "42911930e40f95b26b9ac137bc49dc84ea33fe09a17cbf9c8cf840315bf41872",
-   "bytes": 5384
+   "sha256": "cc66669594cc12bdd9d915611e651b832eba1cc547988a54f227e0d5825a3fd3",
+   "bytes": 6174
   },
   "reports/FROZEN_PROBE.md": {
    "sha256": "70674437f978cb7416cfc72af65e0dd5415a59a90ba7d2d3c224fb1232c219c5",
@@ -441,6 +465,10 @@
    "sha256": "ce57398e1bb9adc06d1211f3633179c72d778de51c52b9498cb0ea2a23e3d493",
    "bytes": 3883
   },
+  "reports/M2_DRIFT_WEIGHTING.md": {
+   "sha256": "fe7b497ab71845e2e0c34332e348b1fc8eb7620e90604cdcbf1e45cfb61a9e28",
+   "bytes": 5087
+  },
   "reports/NEXT_PHASE_PLAN.md": {
    "sha256": "b76543932d3fdf5b4ba172e46c81e8cfdd21417df4a2cbd9713fad40414e17f8",
    "bytes": 8334
@@ -457,9 +485,25 @@
    "sha256": "65288d41abd09b1706c35eb30289b643618a4fd199c1ee38c0675187e0efc47a",
    "bytes": 7580
   },
+  "reports/PREREG_DRIFT_WEIGHTING.md": {
+   "sha256": "72591b181a451d89ec5b0d204ee19e69497407a001b47e7b193ddc053a9cb68e",
+   "bytes": 5460
+  },
+  "reports/PREREG_FEATURE_DRIFT.md": {
+   "sha256": "41ba5b34bb23c1e4488ee89b34296a9361dfda9d0831dab8051f8e8679924dad",
+   "bytes": 3156
+  },
+  "reports/PREREG_READOUT_PROBE.md": {
+   "sha256": "5d998938cc689ca9fcbd126e3ba6a343617c98ed25e82d1b2954a6f66237739f",
+   "bytes": 2545
+  },
   "reports/PREREG_SEVERITY_2_4.md": {
    "sha256": "d268022ae044ef17924a90fe7595d68c0a2a169358edc79761a114df400f0839",
    "bytes": 3558
+  },
+  "reports/PREREG_SPECIALIST_PROBE.md": {
+   "sha256": "8e84428a278fccb3ed00b46f0bf9f81a88dc4dfe2839ea50bbbb842c5439e41a",
+   "bytes": 2870
   },
   "reports/PROBE_PREREGISTRATION.md": {
    "sha256": "7bcbec6fd5a7ddb551a81719b735fb1fd7b66f6641a2f49fc9edc61e26cc3868",
@@ -472,6 +516,10 @@
   "reports/PUBLICATION_REVIEW.md": {
    "sha256": "10b150ec547ce6c726b48476c31a30e795f5a4f6704e16a37b760d421f4972f3",
    "bytes": 5691
+  },
+  "reports/READOUT_PROBE.md": {
+   "sha256": "7a81d24dc77e6218c3fa6f1a8860346febfba14bd85160fb134917e29da86a05",
+   "bytes": 2834
   },
   "reports/REAL_DEGRADATION_STRATIFIED.md": {
    "sha256": "fe4b80495a29237ef52fd0d6c44658860419974cee1681d1c99ca4be1f552302",
@@ -520,6 +568,10 @@
   "reports/SOTA_MODEL_SURVEY.md": {
    "sha256": "967558591f9c002ff823082de87b83cef140b9bbcf9dd398b74bc268938196e0",
    "bytes": 6554
+  },
+  "reports/SPECIALIST_PROBE.md": {
+   "sha256": "669e305ec57c08cf93ab53f549b512c2bafc64f353057534887b639c3aa885ac",
+   "bytes": 2918
   },
   "reports/STATUS.md": {
    "sha256": "ce609a4beea197d546c61a192cf30907c869e30876cda106464955cff5ddffd8",
@@ -613,6 +665,14 @@
    "sha256": "c0cc1c5f428a7b582dd88930c537f4f795b51c559f1546772dab2bc4fd81efba",
    "bytes": 11852
   },
+  "reports/feature_drift_s17.json": {
+   "sha256": "ff6d34ed857d1d2b0dc4fee2f8161d74eb9b6664235f9f52cf3a03dd281526f2",
+   "bytes": 11827
+  },
+  "reports/feature_drift_s29.json": {
+   "sha256": "624a1576e6e19014e965f63187164d8dcf9e73c16e3f4252dbce9ad7aaad4469",
+   "bytes": 11861
+  },
   "reports/fgsc23_audit.json": {
    "sha256": "575004d6bbcb75922e563fca8adb1a3490d35bcd057ad0e192f54f0e4adf1b6f",
    "bytes": 12614
@@ -705,6 +765,14 @@
    "sha256": "647c08c30b2a2afd33221f896f60daf4bef65865e1258bfd3587b6ad1114fc94",
    "bytes": 124
   },
+  "reports/readout_probe_s17.json": {
+   "sha256": "b8388e2e17784419b41f360726efe9c109f235c32933c955bc0d4d41ac347701",
+   "bytes": 4943
+  },
+  "reports/readout_probe_s29.json": {
+   "sha256": "1b4675cf5aedf90ee44c5e442b88d9320caf7936b8bd02420677e1a6168dea71",
+   "bytes": 4956
+  },
   "reports/real_degradation_predictions_fgsc23_val.meta.json": {
    "sha256": "36c67fc158ca3692ce9edf7328e665d082799314667bcb10c42ba0cacae8f591",
    "bytes": 825
@@ -762,8 +830,8 @@
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "83f5fe98e540f0f5075fd673800777fa7c6a28d311e06bddee3a0d1e13f0319e",
-   "bytes": 342633
+   "sha256": "7c06831fc1fd2ea63bd07ddd4a1515885e8d547c277063c4e8c847e79668ca8a",
+   "bytes": 348558
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",
@@ -1173,7 +1241,7 @@
   }
  },
  "weights_verified": false,
- "run_count": 140,
+ "run_count": 146,
  "runs": [
   {
    "run": "runs/fgsc23_civ8_fold0/convnext_tiny_combo_s17",
@@ -1321,6 +1389,214 @@
     },
     "best.pt": {
      "bytes": 111375360,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_d1_e40_s17",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 17,
+   "model": "convnext_tiny",
+   "declared_method": "d1",
+   "seed": 17,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8575992274239439,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "02a60e445a80678303a636a548e466fb0b5066c83ed7f55bb353b7715c3ac900",
+    "src/maritime_robust/methods/augment.py": "5c1bb4208249728f855404a28113288aab93a381ea44e0767da1f22929ce77af",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 68.702203839086,
+   "peak_cuda_allocated_bytes": 2739814400,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "16a0967818e11795e3da25528bc1b50a11b0506ae338a5e83b6392e78262e289",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3482
+    },
+    "config.json": {
+     "bytes": 3198
+    },
+    "history.json": {
+     "bytes": 11676
+    },
+    "best.pt": {
+     "bytes": 111375680,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_d1_e40_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": "convnext_tiny",
+   "declared_method": "d1",
+   "seed": 29,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8439211551302566,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "02a60e445a80678303a636a548e466fb0b5066c83ed7f55bb353b7715c3ac900",
+    "src/maritime_robust/methods/augment.py": "5c1bb4208249728f855404a28113288aab93a381ea44e0767da1f22929ce77af",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 74.74377265595831,
+   "peak_cuda_allocated_bytes": 2740011008,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "9a71b0831fbf8f4ecb4f28b6ae9a40f76ccb1a57638ec43fd22564ca7729cf66",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3484
+    },
+    "config.json": {
+     "bytes": 3198
+    },
+    "history.json": {
+     "bytes": 11675
+    },
+    "best.pt": {
+     "bytes": 111375680,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_d1inv_e40_s17",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 17,
+   "model": "convnext_tiny",
+   "declared_method": "d1inv",
+   "seed": 17,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8718098171025,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "02a60e445a80678303a636a548e466fb0b5066c83ed7f55bb353b7715c3ac900",
+    "src/maritime_robust/methods/augment.py": "5c1bb4208249728f855404a28113288aab93a381ea44e0767da1f22929ce77af",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 70.71836226689629,
+   "peak_cuda_allocated_bytes": 2739814400,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "788eaadd1331bdbc37b8589213584b43193bd55ade3ce5b3315b3fdca65b9c69",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3485
+    },
+    "config.json": {
+     "bytes": 3202
+    },
+    "history.json": {
+     "bytes": 11679
+    },
+    "best.pt": {
+     "bytes": 111375680,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_d1inv_e40_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": "convnext_tiny",
+   "declared_method": "d1inv",
+   "seed": 29,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8631492269395495,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "02a60e445a80678303a636a548e466fb0b5066c83ed7f55bb353b7715c3ac900",
+    "src/maritime_robust/methods/augment.py": "5c1bb4208249728f855404a28113288aab93a381ea44e0767da1f22929ce77af",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 73.31534635392018,
+   "peak_cuda_allocated_bytes": 2739814400,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "f03d5f175491022dd0f742dbf7134a4fd5246b0ca2feb382db019c163cb27a1a",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3488
+    },
+    "config.json": {
+     "bytes": 3202
+    },
+    "history.json": {
+     "bytes": 11682
+    },
+    "best.pt": {
+     "bytes": 111375680,
      "exists": true
     }
    }
@@ -1888,6 +2164,110 @@
     },
     "best.pt": {
      "bytes": 111375360,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s5spec_s17",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 17,
+   "model": "convnext_tiny",
+   "declared_method": "none",
+   "seed": 17,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8711924488833425,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c5e37e9c8febb78576416cea2d2e7576acc133def393c1b6fb6ba423eea53d0f",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
+    "src/maritime_robust/methods/augment.py": "2e5f2abd43ed6a483a33326e611fc4a502d2944f3d4eee86ab682a922d779a6f",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 58.84637483116239,
+   "peak_cuda_allocated_bytes": 2420803072,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "06b12df5129cf67905a7248dcfe1f3676a402ab6aa5d982ced490e81bde9be2c",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3330
+    },
+    "config.json": {
+     "bytes": 3044
+    },
+    "history.json": {
+     "bytes": 10114
+    },
+    "best.pt": {
+     "bytes": 111375488,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s5spec_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": "convnext_tiny",
+   "declared_method": "none",
+   "seed": 29,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8537625135683198,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c5e37e9c8febb78576416cea2d2e7576acc133def393c1b6fb6ba423eea53d0f",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "e5666fdc4764f93dc8fd0bfc3928a9d094ddfde8d079685bc7f7e898230c9008",
+    "src/maritime_robust/methods/__init__.py": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
+    "src/maritime_robust/methods/augment.py": "2e5f2abd43ed6a483a33326e611fc4a502d2944f3d4eee86ab682a922d779a6f",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27826280,
+   "training_wall_seconds": 63.26132094603963,
+   "peak_cuda_allocated_bytes": 2420803072,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "0e53b76e39800b33557117ab54c01eadac826cfe66359b6571f31e543b0bd1ad",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3330
+    },
+    "config.json": {
+     "bytes": 3044
+    },
+    "history.json": {
+     "bytes": 10109
+    },
+    "best.pt": {
+     "bytes": 111375488,
      "exists": true
     }
    }

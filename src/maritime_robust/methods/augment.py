@@ -117,3 +117,36 @@ class AugDataset(Dataset):
         if self.with_mask:
             tensor = torch.cat([tensor, clip_mask(raw)], 0)
         return tensor, row["label"], KIND_INDEX[condition["kind"]]
+
+
+class DriftDataset(AugDataset):
+    """``AugDataset`` plus the uncorrupted view of the *same* geometry.
+
+    Both views share the geometry draw, so the second one is the reference for a
+    per-image drift signal ``d = 1 − cos(f(clean), f(aug))`` measured with a
+    frozen teacher. Draw-for-draw identical to ``AugDataset`` otherwise, so an
+    α = 0 run through this class must reproduce the S1 baseline.
+    """
+
+    def __getitem__(self, index):
+        row = self.rows[index]
+        with Image.open(ROOT / row["path"]) as handle:
+            image = handle.convert("RGB")
+        image = ImageOps.contain(image, (224, 224), Image.Resampling.BICUBIC)
+        rng = np.random.default_rng(stable_seed(self.seed, self.epoch, row["sample_id"], "geometry"))
+        if rng.random() < .5:
+            image = ImageOps.mirror(image)
+        if rng.random() < .5:
+            image = ImageOps.flip(image)
+        image = image.rotate(90 * int(rng.integers(4)), expand=True)
+        clean = TF.normalize(TF.to_tensor(
+            ImageOps.pad(image, (224, 224), Image.Resampling.BICUBIC, color=FILL)), MEAN, STD)
+        rng = np.random.default_rng(stable_seed(self.seed, self.epoch, row["sample_id"], "augmentation"))
+        condition = self.draw(rng)
+        seed = corruption_seed(row["sample_id"], f"train_epoch_{self.epoch}", condition["kind"],
+                               condition["severity"], "matched", self.seed)
+        image, _ = corrupt(image, seed=seed, kind=condition["kind"],
+                           severity=condition["severity"], domain="matched", placement="random")
+        image = ImageOps.pad(image, (224, 224), method=Image.Resampling.BICUBIC, color=FILL)
+        tensor = TF.normalize(TF.to_tensor(image), MEAN, STD)
+        return tensor, clean, row["label"], KIND_INDEX[condition["kind"]]

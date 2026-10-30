@@ -1,0 +1,77 @@
+{
+  "prereg": "reports/PREREG_DRIFT_WEIGHTING.md",
+  "arms": {
+    "d1": {
+      "G1_magnitude": {
+        "threshold_pp": 1.5,
+        "value_pp": -0.5663430420711972,
+        "pass": false
+      },
+      "G2_consistency": {
+        "per_seed_pp": {
+          "17": -1.2944983818770222,
+          "29": 0.16181229773462777
+        },
+        "pass": false
+      },
+      "G3_significance": {
+        "ci95_pp": {
+          "17": [
+            -4.567307692307691,
+            1.9571175056719858
+          ],
+          "29": [
+            -1.8429487179487152,
+            2.153368835112255
+          ]
+        },
+        "pass": false
+      },
+      "G4_clean": {
+        "per_seed_pp": {
+          "17": -1.4563106796116498,
+          "29": -0.4854368932038833
+        },
+        "threshold_pp": -1.0,
+        "pass": false
+      },
+      "admitted": false
+    },
+    "d1inv": {
+      "G1_magnitude": {
+        "threshold_pp": 1.5,
+        "value_pp": 1.8203883495145623,
+        "pass": true
+      },
+      "G2_consistency": {
+        "per_seed_pp": {
+          "17": 0.6472491909385111,
+          "29": 2.9935275080906134
+        },
+        "pass": true
+      },
+      "G3_significance": {
+        "ci95_pp": {
+          "17": [
+            -0.9708737864077666,
+            2.323998590982281
+          ],
+          "29": [
+            0.5608974358974393,
+            5.6082533811120125
+          ]
+        },
+        "pass": false
+      },
+      "G4_clean": {
+        "per_seed_pp": {
+          "17": -0.4854368932038833,
+          "29": 1.9417475728155331
+        },
+        "threshold_pp": -1.0,
+        "pass": true
+      },
+      "admitted": false
+    }
+  }
+}

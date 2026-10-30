@@ -39,7 +39,8 @@ from maritime_robust.degradations import corrupt, corruption_seed  # noqa: E402
 from maritime_robust.engine import (ShipDataset, combined_recipe, loader,  # noqa: E402
                                     predict)
 from maritime_robust.methods import build as build_method, load_imagenet22k  # noqa: E402
-from maritime_robust.methods.augment import KINDS, AugDataset, MaskedClean  # noqa: E402
+from maritime_robust.methods.augment import (KINDS, AugDataset, DriftDataset,  # noqa: E402
+                                             MaskedClean)
 
 MEAN, STD, FILL = [.485, .456, .406], [.229, .224, .225], (124, 116, 104)
 PAIRS = [("haze", "glare"), ("haze", "cloud")]
@@ -95,7 +96,14 @@ def main():
     ap.add_argument("--fold", type=int, required=True)
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--method", default="none",
-                    choices=("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1"))
+                    choices=("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1",
+                             "d1", "d1inv"))
+    ap.add_argument("--alpha", type=float, default=1.0,
+                    help="d1/d1inv: exponent on the within-batch drift rank; "
+                         "d1 uses +1, d1inv uses -1, 0 must reproduce the baseline")
+    ap.add_argument("--teacher", default=None,
+                    help="d1/d1inv: run directory of the frozen drift teacher, e.g. "
+                         "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s17")
     ap.add_argument("--model", default="convnext_tiny")
     ap.add_argument("--epochs", type=int, default=24)
     ap.add_argument("--lambda-consistency", type=float, default=0.5)
@@ -152,6 +160,7 @@ def main():
         "combined_recipe_sha256": digest(Path(recipe) if recipe else
                                          ROOT / "configs/combined_augmentation.json"),
         "lambda_consistency": args.lambda_consistency if args.method == "t1" else None,
+        "alpha": args.alpha if args.method in ("d1", "d1inv") else None,
         "environment": environment(), "smoke_only": bool(args.limit),
     }
     settings["source_sha256"] = {str(p.relative_to(ROOT)): digest(p)
@@ -168,6 +177,19 @@ def main():
             settings["init_transfer"] = load_imagenet22k(model)
             write_json(out / "config.json", settings)
         model = model.cuda()
+        teacher = None
+        if args.method in ("d1", "d1inv"):
+            if not args.teacher:
+                raise SystemExit("--teacher is required for d1/d1inv")
+            checkpoint_path = ROOT / args.teacher / "best.pt"
+            teacher = build_method(args.model, n, "none")
+            teacher.load_state_dict(torch.load(checkpoint_path, map_location="cpu",
+                                               weights_only=False)["model"])
+            teacher = teacher.cuda().eval()
+            for parameter in teacher.parameters():
+                parameter.requires_grad_(False)
+            settings.update(teacher_run=args.teacher, teacher_sha256=digest(checkpoint_path))
+            write_json(out / "config.json", settings)
         opt_config = config["optimizer"][args.model]
         kwargs = {k: v for k, v in opt_config.items() if k != "name"}
         optimizer = (torch.optim.SGD if opt_config["name"] == "sgd" else torch.optim.AdamW)(
@@ -180,6 +202,8 @@ def main():
             ds = AugDataset(train_rows, seed=args.seed, curriculum=args.method == "t3",
                             total_epochs=args.epochs, with_mask=args.method == "m1",
                             recipe_path=recipe)
+        elif args.method in ("d1", "d1inv"):
+            ds = DriftDataset(train_rows, seed=args.seed, recipe_path=recipe)
         else:
             ds = ShipDataset(train_rows, train=True, augmentation="combined", seed=args.seed,
                              recipe_path=recipe)
@@ -193,6 +217,7 @@ def main():
             ds.epoch = epoch
             model.train()
             loss_sum = correct = 0
+            drift_sum = 0.0
             for batch in loader(ds, batch_size, workers, shuffle=True, seed=args.seed + epoch):
                 kind = None
                 if args.method == "t1":
@@ -200,6 +225,10 @@ def main():
                     single = single.cuda(non_blocking=True)
                 elif args.method in ("t2", "t3", "m1"):
                     x, y, kind = batch
+                    kind = kind.cuda(non_blocking=True)
+                elif args.method in ("d1", "d1inv"):
+                    x, clean, y, kind = batch
+                    clean = clean.cuda(non_blocking=True)
                     kind = kind.cuda(non_blocking=True)
                 else:
                     x, y = batch[0], batch[1]
@@ -218,6 +247,24 @@ def main():
                                                      / max(scale, 1e-3))
                             q /= q.sum()
                         loss = (per_sample * q[kind]).mean()
+                    elif args.method in ("d1", "d1inv"):
+                        # Per-image drift from the frozen teacher: how far the
+                        # augmented view moved from the clean view of the same
+                        # geometry. Weight by within-batch rank, never by the
+                        # absolute value, so the weight depends only on the
+                        # ordering of the batch and not on its severity mix.
+                        with torch.no_grad():
+                            f_clean = teacher.features_of(clean).float()
+                            f_aug = teacher.features_of(x).float()
+                        drift = 1.0 - F.cosine_similarity(f_clean, f_aug, dim=1)
+                        if len(drift) > 1:
+                            rank = torch.argsort(torch.argsort(drift)).float() / (len(drift) - 1)
+                        else:
+                            rank = torch.full_like(drift, 0.5)
+                        weight = torch.exp(args.alpha * (rank - 0.5))
+                        per_sample = F.cross_entropy(logits.float(), y, reduction="none")
+                        loss = (per_sample * weight).sum() / weight.sum()
+                        drift_sum += drift.mean().item() * len(y)
                     else:
                         loss = F.cross_entropy(logits, y)
                     if args.method == "t1":
@@ -241,6 +288,8 @@ def main():
                       "train_accuracy": correct / len(ds), "val_macro_f1": result["macro_f1"],
                       "val_accuracy": result["accuracy"], "lr": optimizer.param_groups[0]["lr"],
                       "seconds": time.perf_counter() - started}
+            if args.method in ("d1", "d1inv"):
+                record["mean_drift"] = drift_sum / len(ds)
             history.append(record)
             write_json(out / "history.json", history)
             if result["macro_f1"] > best:
