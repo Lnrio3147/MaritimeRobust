@@ -1,27 +1,70 @@
 {
-  "version": "1.0",
-  "image_size": 224,
-  "models": ["resnet50", "convnext_tiny", "swin_t"],
-  "scopes": ["civilian", "all"],
-  "seeds": [17, 29, 43],
-  "epochs": 40,
-  "batch_size": 32,
-  "workers": 4,
-  "validation_fraction": 0.2,
-  "split_seed": 20261027,
-  "near_duplicate_hamming_threshold": 4,
-  "augmentation_clean_probability": 0.5,
-  "training_corruptions": ["haze", "cloud", "glare"],
-  "optimizer": {
-    "resnet50": {"name": "sgd", "lr": 0.01, "momentum": 0.9, "weight_decay": 0.0001},
-    "convnext_tiny": {"name": "adamw", "lr": 0.0001, "weight_decay": 0.05},
-    "swin_t": {"name": "adamw", "lr": 0.0001, "weight_decay": 0.05}
+ "version": "1.0",
+ "image_size": 224,
+ "models": [
+  "resnet50",
+  "convnext_tiny",
+  "swin_t"
+ ],
+ "scopes": [
+  "civilian",
+  "all"
+ ],
+ "seeds": [
+  17,
+  29,
+  43
+ ],
+ "epochs": 40,
+ "batch_size": 32,
+ "workers": 4,
+ "validation_fraction": 0.2,
+ "split_seed": 20261027,
+ "near_duplicate_hamming_threshold": 4,
+ "augmentation_clean_probability": 0.5,
+ "training_corruptions": [
+  "haze",
+  "cloud",
+  "glare"
+ ],
+ "optimizer": {
+  "resnet50": {
+   "name": "sgd",
+   "lr": 0.01,
+   "momentum": 0.9,
+   "weight_decay": 0.0001
   },
-  "selection": "mean(clean validation macro-F1, matched single-corruption validation macro-F1)",
-  "checkpoint_selection": "best clean validation macro-F1; earliest epoch wins ties",
-  "unknown_source_groups": "exact/pixel/near-duplicate components only; never claim vessel/port independence",
-  "real_crop_context": 0.1,
-  "precision": "float16 AMP training and inference; probabilities float32",
-  "gpu_hours": 72,
-  "disk_bytes": 50000000000
+  "convnext_tiny": {
+   "name": "adamw",
+   "lr": 0.0001,
+   "weight_decay": 0.05
+  },
+  "swin_t": {
+   "name": "adamw",
+   "lr": 0.0001,
+   "weight_decay": 0.05
+  },
+  "convnext_small": {
+   "name": "adamw",
+   "lr": 0.0001,
+   "weight_decay": 0.05
+  },
+  "convnext_base": {
+   "name": "adamw",
+   "lr": 0.0001,
+   "weight_decay": 0.05
+  },
+  "convnext_large": {
+   "name": "adamw",
+   "lr": 0.0001,
+   "weight_decay": 0.05
+  }
+ },
+ "selection": "mean(clean validation macro-F1, matched single-corruption validation macro-F1)",
+ "checkpoint_selection": "best clean validation macro-F1; earliest epoch wins ties",
+ "unknown_source_groups": "exact/pixel/near-duplicate components only; never claim vessel/port independence",
+ "real_crop_context": 0.1,
+ "precision": "float16 AMP training and inference; probabilities float32",
+ "gpu_hours": 72,
+ "disk_bytes": 50000000000
 }

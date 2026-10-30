@@ -43,10 +43,13 @@ def main():
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--model", default="convnext_tiny")
     ap.add_argument("--out-dir", default="reports/overlap")
+    ap.add_argument("--run-dir", default=None,
+                    help="explicit run directory; overrides the model/method/seed template")
     args = ap.parse_args()
 
-    run = PROJECT / (f"runs/fgsc23_civ8_fold{args.fold}/"
-                     f"{args.model}_none_e40_s{args.seed}")
+    run = (PROJECT / args.run_dir if args.run_dir else
+           PROJECT / (f"runs/fgsc23_civ8_fold{args.fold}/"
+                      f"{args.model}_none_e40_s{args.seed}"))
     model, settings = ee.load_any(run)
     rows = [r for r in read_jsonl(Path(settings["manifest"])) if r["split"] == "val"]
     labels = np.array([r["label"] for r in rows])

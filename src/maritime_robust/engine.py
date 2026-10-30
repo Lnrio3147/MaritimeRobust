@@ -21,6 +21,11 @@ MODEL_WEIGHTS = {
     "resnet50": models.ResNet50_Weights.IMAGENET1K_V2,
     "convnext_tiny": models.ConvNeXt_Tiny_Weights.IMAGENET1K_V1,
     "swin_t": models.Swin_T_Weights.IMAGENET1K_V1,
+    # Capacity axis for the scale study. Added, never substituted: every
+    # entry above keeps its own weights, so no existing run changes meaning.
+    "convnext_small": models.ConvNeXt_Small_Weights.IMAGENET1K_V1,
+    "convnext_base": models.ConvNeXt_Base_Weights.IMAGENET1K_V1,
+    "convnext_large": models.ConvNeXt_Large_Weights.IMAGENET1K_V1,
 }
 
 COMBINED_RECIPE_PATH = ROOT/"configs/combined_augmentation.json"
@@ -65,7 +70,7 @@ def build_model(name, num_classes, pretrained=True):
     model = getattr(models, name)(weights=MODEL_WEIGHTS[name] if pretrained else None)
     if name == "resnet50":
         model.fc = torch.nn.Linear(model.fc.in_features, num_classes)
-    elif name == "convnext_tiny":
+    elif name.startswith("convnext_"):
         model.classifier[2] = torch.nn.Linear(model.classifier[2].in_features, num_classes)
     else:
         model.head = torch.nn.Linear(model.head.in_features, num_classes)

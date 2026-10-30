@@ -30,3 +30,5 @@ __pycache__/
 /runs_external/
 reports/composition/*/
 reports/composition_r50/*/
+# per-cell eval logs; the JSON next to them is the artifact
+reports/*_f[0-9]_s*.log

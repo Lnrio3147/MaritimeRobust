@@ -15,7 +15,8 @@ import torch.nn.functional as F
 
 from maritime_robust.engine import build_model
 
-DIMS = {"convnext_tiny": 768, "swin_t": 768, "resnet50": 2048}
+DIMS = {"convnext_tiny": 768, "swin_t": 768, "resnet50": 2048,
+        "convnext_small": 768, "convnext_base": 1024, "convnext_large": 1536}
 METHODS = ("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1", "d1", "d1inv")
 CLIP = 0.99
 CG_MEAN = torch.tensor([.485, .456, .406]).view(1, 3, 1, 1)
