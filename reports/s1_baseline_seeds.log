@@ -1,0 +1,660 @@
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 1, "train_loss": 1.8219142318929282, "train_accuracy": 0.3422330097087379, "val_macro_f1": 0.209005726184279, "val_accuracy": 0.38349514563106796, "lr": 0.0001, "seconds": 1.669252322986722}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 2, "train_loss": 1.284038655966231, "train_accuracy": 0.5558252427184466, "val_macro_f1": 0.5175908871575181, "val_accuracy": 0.5097087378640777, "lr": 9.957224306869053e-05, "seconds": 1.2332676760852337}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 3, "train_loss": 0.912304775807464, "train_accuracy": 0.7281553398058253, "val_macro_f1": 0.7118778407204567, "val_accuracy": 0.6601941747572816, "lr": 9.829629131445342e-05, "seconds": 1.1867177179083228}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 4, "train_loss": 0.6186028261786526, "train_accuracy": 0.8131067961165048, "val_macro_f1": 0.7472094838360137, "val_accuracy": 0.6941747572815534, "lr": 9.619397662556433e-05, "seconds": 1.2958489209413528}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 5, "train_loss": 0.4771377965084557, "train_accuracy": 0.8640776699029126, "val_macro_f1": 0.8267236744373405, "val_accuracy": 0.7766990291262136, "lr": 9.330127018922194e-05, "seconds": 1.2937389300204813}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 6, "train_loss": 0.4432804885419827, "train_accuracy": 0.8640776699029126, "val_macro_f1": 0.765614434179469, "val_accuracy": 0.7281553398058253, "lr": 8.966766701456176e-05, "seconds": 1.2621668711071834}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 7, "train_loss": 0.34612812174176705, "train_accuracy": 0.8932038834951457, "val_macro_f1": 0.8154612540754703, "val_accuracy": 0.7718446601941747, "lr": 8.535533905932738e-05, "seconds": 2.2861949810758233}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 8, "train_loss": 0.34307117803582865, "train_accuracy": 0.8883495145631068, "val_macro_f1": 0.807675389912232, "val_accuracy": 0.7669902912621359, "lr": 8.043807145043604e-05, "seconds": 1.336466895067133}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 9, "train_loss": 0.258021512367193, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.8413277671596175, "val_accuracy": 0.8106796116504854, "lr": 7.500000000000001e-05, "seconds": 1.3902436980279163}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 10, "train_loss": 0.214535175885969, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8456790829837362, "val_accuracy": 0.8106796116504854, "lr": 6.91341716182545e-05, "seconds": 1.3536958229960874}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 11, "train_loss": 0.2027559613139884, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8124938797020811, "val_accuracy": 0.7815533980582524, "lr": 6.294095225512605e-05, "seconds": 1.3629548740573227}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 12, "train_loss": 0.201565635580461, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8335701900303933, "val_accuracy": 0.8009708737864077, "lr": 5.65263096110026e-05, "seconds": 1.221627649036236}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 13, "train_loss": 0.1851767520736722, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8152644907269576, "val_accuracy": 0.7815533980582524, "lr": 5.000000000000001e-05, "seconds": 1.4313161459285766}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 14, "train_loss": 0.14376952318311895, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8223522946684565, "val_accuracy": 0.7815533980582524, "lr": 4.347369038899743e-05, "seconds": 1.308001262950711}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 15, "train_loss": 0.1317295772068709, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.822165514432408, "val_accuracy": 0.7864077669902912, "lr": 3.705904774487398e-05, "seconds": 1.3788715179543942}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 16, "train_loss": 0.10625561927128764, "train_accuracy": 0.9878640776699029, "val_macro_f1": 0.8164510724564609, "val_accuracy": 0.7766990291262136, "lr": 3.0865828381745534e-05, "seconds": 2.445391505025327}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 17, "train_loss": 0.09361611755148878, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.815040742200489, "val_accuracy": 0.7766990291262136, "lr": 2.5000000000000018e-05, "seconds": 1.284610243048519}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 18, "train_loss": 0.10421694829625991, "train_accuracy": 0.9805825242718447, "val_macro_f1": 0.8270917712174766, "val_accuracy": 0.7912621359223301, "lr": 1.956192854956397e-05, "seconds": 1.4055021569365636}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 19, "train_loss": 0.07115972830543241, "train_accuracy": 0.9854368932038835, "val_macro_f1": 0.817457118963143, "val_accuracy": 0.7815533980582524, "lr": 1.464466094067263e-05, "seconds": 1.3819651240482926}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 20, "train_loss": 0.1058877742695577, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8274380625799346, "val_accuracy": 0.7912621359223301, "lr": 1.033233298543825e-05, "seconds": 1.3215799200115725}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 21, "train_loss": 0.08414791623871883, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.8339221461839842, "val_accuracy": 0.8009708737864077, "lr": 6.698729810778065e-06, "seconds": 1.2218128190143034}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 22, "train_loss": 0.08966153353742025, "train_accuracy": 0.9733009708737864, "val_macro_f1": 0.8343807472483944, "val_accuracy": 0.8058252427184466, "lr": 3.8060233744356633e-06, "seconds": 1.2532115230569616}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 23, "train_loss": 0.09114889395468444, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8387180502890026, "val_accuracy": 0.8106796116504854, "lr": 1.70370868554659e-06, "seconds": 1.1809729529777542}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s29", "epoch": 24, "train_loss": 0.09196075985153902, "train_accuracy": 0.9805825242718447, "val_macro_f1": 0.8387180502890026, "val_accuracy": 0.8106796116504854, "lr": 4.277569313094809e-07, "seconds": 1.3006368819624186}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold0.jsonl",
+  "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 29,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:47:00Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.8456790829837362,
+  "training_wall_seconds": 42.28850127500482,
+  "peak_cuda_allocated_bytes": 2420474880,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "df973db07369beed0bba2d3c2e538a71d1b14026ea0eb5311a645be3614578e9",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 1, "train_loss": 1.8789382478565846, "train_accuracy": 0.2815533980582524, "val_macro_f1": 0.2410047796778002, "val_accuracy": 0.470873786407767, "lr": 0.0001, "seconds": 1.6672425429569557}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 2, "train_loss": 1.3306001806722103, "train_accuracy": 0.5315533980582524, "val_macro_f1": 0.6367338022165387, "val_accuracy": 0.6650485436893204, "lr": 9.957224306869053e-05, "seconds": 1.1993473409675062}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 3, "train_loss": 0.9185031033256679, "train_accuracy": 0.7135922330097088, "val_macro_f1": 0.7917805952758044, "val_accuracy": 0.7718446601941747, "lr": 9.829629131445342e-05, "seconds": 1.355650137993507}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 4, "train_loss": 0.6950049903786298, "train_accuracy": 0.7864077669902912, "val_macro_f1": 0.851596581565728, "val_accuracy": 0.8349514563106796, "lr": 9.619397662556433e-05, "seconds": 1.2988141770474613}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 5, "train_loss": 0.5051980267450648, "train_accuracy": 0.8519417475728155, "val_macro_f1": 0.8530361499926085, "val_accuracy": 0.8349514563106796, "lr": 9.330127018922194e-05, "seconds": 1.2371898849960417}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 6, "train_loss": 0.4426179157877431, "train_accuracy": 0.8616504854368932, "val_macro_f1": 0.8450246761738698, "val_accuracy": 0.8252427184466019, "lr": 8.966766701456176e-05, "seconds": 1.306729424977675}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 7, "train_loss": 0.33571085883575735, "train_accuracy": 0.8956310679611651, "val_macro_f1": 0.853092500251541, "val_accuracy": 0.8349514563106796, "lr": 8.535533905932738e-05, "seconds": 2.2633555710781366}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 8, "train_loss": 0.3364051603576512, "train_accuracy": 0.8956310679611651, "val_macro_f1": 0.8260789004597053, "val_accuracy": 0.8058252427184466, "lr": 8.043807145043604e-05, "seconds": 1.389403936918825}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 9, "train_loss": 0.2708483294954578, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8708755099077632, "val_accuracy": 0.8543689320388349, "lr": 7.500000000000001e-05, "seconds": 1.2805562199791893}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 10, "train_loss": 0.2549624318636737, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8837340945843357, "val_accuracy": 0.8689320388349514, "lr": 6.91341716182545e-05, "seconds": 1.3017957539996132}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 11, "train_loss": 0.22173191954209967, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.8728377600257918, "val_accuracy": 0.8592233009708737, "lr": 6.294095225512605e-05, "seconds": 1.3957633859245107}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 12, "train_loss": 0.21742148943317746, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8644981977892695, "val_accuracy": 0.8446601941747572, "lr": 5.65263096110026e-05, "seconds": 1.3516280309995636}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 13, "train_loss": 0.16734854717856473, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8642199856114563, "val_accuracy": 0.8495145631067961, "lr": 5.000000000000001e-05, "seconds": 1.3621597959427163}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 14, "train_loss": 0.16930812033056056, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8782384671756479, "val_accuracy": 0.8592233009708737, "lr": 4.347369038899743e-05, "seconds": 1.3259564369218424}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 15, "train_loss": 0.14536792763228557, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8637050569455578, "val_accuracy": 0.8495145631067961, "lr": 3.705904774487398e-05, "seconds": 2.4710286740446463}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 16, "train_loss": 0.14775292177512808, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8752027894632143, "val_accuracy": 0.8543689320388349, "lr": 3.0865828381745534e-05, "seconds": 1.327722126035951}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 17, "train_loss": 0.09823888250925009, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.875809199224806, "val_accuracy": 0.8592233009708737, "lr": 2.5000000000000018e-05, "seconds": 1.3504884589929134}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 18, "train_loss": 0.13689058281264257, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8828443669700037, "val_accuracy": 0.8689320388349514, "lr": 1.956192854956397e-05, "seconds": 1.3244513620156795}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 19, "train_loss": 0.09751683082974073, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.8759997790610812, "val_accuracy": 0.8592233009708737, "lr": 1.464466094067263e-05, "seconds": 1.242189644020982}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 20, "train_loss": 0.1337153768365823, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8809309793467017, "val_accuracy": 0.8640776699029126, "lr": 1.033233298543825e-05, "seconds": 1.3311845989665017}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 21, "train_loss": 0.11832989528051858, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.8791410695280493, "val_accuracy": 0.8640776699029126, "lr": 6.698729810778065e-06, "seconds": 1.3205996250035241}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 22, "train_loss": 0.09307751833524519, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8841779018561701, "val_accuracy": 0.8689320388349514, "lr": 3.8060233744356633e-06, "seconds": 1.2209734009811655}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 23, "train_loss": 0.10679276255004615, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8841779018561701, "val_accuracy": 0.8689320388349514, "lr": 1.70370868554659e-06, "seconds": 1.3336244490928948}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s29", "epoch": 24, "train_loss": 0.09584055804801218, "train_accuracy": 0.9805825242718447, "val_macro_f1": 0.8841779018561701, "val_accuracy": 0.8689320388349514, "lr": 4.277569313094809e-07, "seconds": 1.3187190300086513}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold1.jsonl",
+  "manifest_sha256": "7abfe3e2da66a6c41284baf70702a9c2c3dec48294feb234eb018de893e2179e",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 29,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:47:46Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.8841779018561701,
+  "training_wall_seconds": 44.528165338910185,
+  "peak_cuda_allocated_bytes": 2420802560,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "7b5fec888c474f262e2e85da9613756043586fe35af787bc28cfb37a563a15b4",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 1, "train_loss": 1.8776837714667458, "train_accuracy": 0.28398058252427183, "val_macro_f1": 0.15609822647693022, "val_accuracy": 0.4223300970873786, "lr": 0.0001, "seconds": 1.5827187669929117}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 2, "train_loss": 1.3317231113470873, "train_accuracy": 0.529126213592233, "val_macro_f1": 0.6963257710031903, "val_accuracy": 0.6844660194174758, "lr": 9.957224306869053e-05, "seconds": 1.4119663340970874}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 3, "train_loss": 0.9221948431533518, "train_accuracy": 0.6966019417475728, "val_macro_f1": 0.77608024989564, "val_accuracy": 0.7766990291262136, "lr": 9.829629131445342e-05, "seconds": 1.2916346589336172}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 4, "train_loss": 0.7216994664044056, "train_accuracy": 0.7572815533980582, "val_macro_f1": 0.7781723677613177, "val_accuracy": 0.7669902912621359, "lr": 9.619397662556433e-05, "seconds": 1.3616296700201929}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 5, "train_loss": 0.5503550400433032, "train_accuracy": 0.8203883495145631, "val_macro_f1": 0.7982965467884796, "val_accuracy": 0.7961165048543689, "lr": 9.330127018922194e-05, "seconds": 1.3558536539785564}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 6, "train_loss": 0.45805112540143206, "train_accuracy": 0.8495145631067961, "val_macro_f1": 0.8312924663988495, "val_accuracy": 0.8106796116504854, "lr": 8.966766701456176e-05, "seconds": 2.285290694097057}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 7, "train_loss": 0.3859120335393739, "train_accuracy": 0.8762135922330098, "val_macro_f1": 0.8265503214771832, "val_accuracy": 0.8300970873786407, "lr": 8.535533905932738e-05, "seconds": 1.24594044405967}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 8, "train_loss": 0.36166542942084157, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.8391020051373386, "val_accuracy": 0.8446601941747572, "lr": 8.043807145043604e-05, "seconds": 1.2604854579549283}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 9, "train_loss": 0.267929568308071, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8400080124218055, "val_accuracy": 0.8446601941747572, "lr": 7.500000000000001e-05, "seconds": 1.2759141570422798}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 10, "train_loss": 0.24973688281855536, "train_accuracy": 0.9271844660194175, "val_macro_f1": 0.8406707092184462, "val_accuracy": 0.8446601941747572, "lr": 6.91341716182545e-05, "seconds": 1.3818763670278713}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 11, "train_loss": 0.2169121584845978, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8294616983840382, "val_accuracy": 0.8300970873786407, "lr": 6.294095225512605e-05, "seconds": 1.2646590520162135}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 12, "train_loss": 0.18329307415242335, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8089217210090045, "val_accuracy": 0.8203883495145631, "lr": 5.65263096110026e-05, "seconds": 1.2094472829485312}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 13, "train_loss": 0.22149513285715602, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8298123786623204, "val_accuracy": 0.8300970873786407, "lr": 5.000000000000001e-05, "seconds": 1.417553515988402}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 14, "train_loss": 0.14443824577678754, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8408032896182919, "val_accuracy": 0.8446601941747572, "lr": 4.347369038899743e-05, "seconds": 2.26077174290549}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 15, "train_loss": 0.13539117979771884, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8533845896153105, "val_accuracy": 0.8640776699029126, "lr": 3.705904774487398e-05, "seconds": 1.3220834630774334}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 16, "train_loss": 0.13910357480488936, "train_accuracy": 0.9635922330097088, "val_macro_f1": 0.8609321606928857, "val_accuracy": 0.8689320388349514, "lr": 3.0865828381745534e-05, "seconds": 1.1728758140234277}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 17, "train_loss": 0.14194340360106775, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8519649212234783, "val_accuracy": 0.8592233009708737, "lr": 2.5000000000000018e-05, "seconds": 1.2589947000378743}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 18, "train_loss": 0.10894511871546217, "train_accuracy": 0.9635922330097088, "val_macro_f1": 0.8558810884254074, "val_accuracy": 0.8640776699029126, "lr": 1.956192854956397e-05, "seconds": 1.2217151679797098}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 19, "train_loss": 0.1208322442417006, "train_accuracy": 0.9635922330097088, "val_macro_f1": 0.8475845128781926, "val_accuracy": 0.8592233009708737, "lr": 1.464466094067263e-05, "seconds": 1.2703798440052196}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 20, "train_loss": 0.10792087126993438, "train_accuracy": 0.9733009708737864, "val_macro_f1": 0.8350351994870913, "val_accuracy": 0.8495145631067961, "lr": 1.033233298543825e-05, "seconds": 1.2368372200289741}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 21, "train_loss": 0.11087404162559694, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.845518096871397, "val_accuracy": 0.8592233009708737, "lr": 6.698729810778065e-06, "seconds": 1.32138890796341}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 22, "train_loss": 0.07795976890811643, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.8393694152449364, "val_accuracy": 0.8543689320388349, "lr": 3.8060233744356633e-06, "seconds": 2.3245388619834557}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 23, "train_loss": 0.13127719516893036, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8393694152449364, "val_accuracy": 0.8543689320388349, "lr": 1.70370868554659e-06, "seconds": 1.2884873980656266}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s29", "epoch": 24, "train_loss": 0.11009775098521733, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8393694152449364, "val_accuracy": 0.8543689320388349, "lr": 4.277569313094809e-07, "seconds": 1.3961619690526277}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold2.jsonl",
+  "manifest_sha256": "dea93a9189ae004e78ef9020ca608bce224dd0ffcaafc56e5d765a47ba5c41e2",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 29,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:48:35Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.8609321606928857,
+  "training_wall_seconds": 49.76779833401088,
+  "peak_cuda_allocated_bytes": 2420802560,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "9e867e3f4936b8c5d2f2aaeadcba83c9e76004b1c3ad71a862756c91e7111ce9",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 1, "train_loss": 1.7867093907976614, "train_accuracy": 0.3300970873786408, "val_macro_f1": 0.26799271898524846, "val_accuracy": 0.3932038834951456, "lr": 0.0001, "seconds": 1.5951452790759504}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 2, "train_loss": 1.2234477817433551, "train_accuracy": 0.5922330097087378, "val_macro_f1": 0.6330108524516419, "val_accuracy": 0.5825242718446602, "lr": 9.957224306869053e-05, "seconds": 1.4389294718857855}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 3, "train_loss": 0.8397156816084408, "train_accuracy": 0.7669902912621359, "val_macro_f1": 0.7927092546044159, "val_accuracy": 0.7427184466019418, "lr": 9.829629131445342e-05, "seconds": 1.3658129060640931}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 4, "train_loss": 0.5813780114488695, "train_accuracy": 0.8325242718446602, "val_macro_f1": 0.8055856773138652, "val_accuracy": 0.7524271844660194, "lr": 9.619397662556433e-05, "seconds": 1.1788021450629458}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 5, "train_loss": 0.44653351879814296, "train_accuracy": 0.8592233009708737, "val_macro_f1": 0.8358152993873159, "val_accuracy": 0.7961165048543689, "lr": 9.330127018922194e-05, "seconds": 1.24162875500042}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 6, "train_loss": 0.3709080433382571, "train_accuracy": 0.8859223300970874, "val_macro_f1": 0.8568116566178582, "val_accuracy": 0.8203883495145631, "lr": 8.966766701456176e-05, "seconds": 1.2425782119389623}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 7, "train_loss": 0.3091834549186299, "train_accuracy": 0.8956310679611651, "val_macro_f1": 0.8342844342232066, "val_accuracy": 0.7961165048543689, "lr": 8.535533905932738e-05, "seconds": 2.2699870909564197}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 8, "train_loss": 0.23700076659906258, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8377367410179493, "val_accuracy": 0.8009708737864077, "lr": 8.043807145043604e-05, "seconds": 1.4241989519214258}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 9, "train_loss": 0.2239959585724525, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.8331867987326803, "val_accuracy": 0.8009708737864077, "lr": 7.500000000000001e-05, "seconds": 1.2565137529745698}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 10, "train_loss": 0.14591385279465646, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8374562434223194, "val_accuracy": 0.8058252427184466, "lr": 6.91341716182545e-05, "seconds": 1.2845964800799266}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 11, "train_loss": 0.19918991032155972, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8491402041705194, "val_accuracy": 0.8155339805825242, "lr": 6.294095225512605e-05, "seconds": 1.3962052200222388}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 12, "train_loss": 0.12118467319648242, "train_accuracy": 0.970873786407767, "val_macro_f1": 0.8380786474255366, "val_accuracy": 0.8058252427184466, "lr": 5.65263096110026e-05, "seconds": 1.3651093509979546}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 13, "train_loss": 0.10642248724849479, "train_accuracy": 0.9733009708737864, "val_macro_f1": 0.8357906628300252, "val_accuracy": 0.7961165048543689, "lr": 5.000000000000001e-05, "seconds": 1.2766366909490898}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 14, "train_loss": 0.14297395069332955, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8516238668168141, "val_accuracy": 0.8203883495145631, "lr": 4.347369038899743e-05, "seconds": 1.3082298480439931}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 15, "train_loss": 0.1232959517069812, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8622354515615369, "val_accuracy": 0.8349514563106796, "lr": 3.705904774487398e-05, "seconds": 1.2455089399591088}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 16, "train_loss": 0.1033992163330606, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8363612076335457, "val_accuracy": 0.8009708737864077, "lr": 3.0865828381745534e-05, "seconds": 1.1941386429825798}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 17, "train_loss": 0.14030455515801327, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8319292466659383, "val_accuracy": 0.7961165048543689, "lr": 2.5000000000000018e-05, "seconds": 2.287752478965558}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 18, "train_loss": 0.12540955913877025, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8512149075525275, "val_accuracy": 0.8155339805825242, "lr": 1.956192854956397e-05, "seconds": 1.201426262035966}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 19, "train_loss": 0.11324751217967098, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.844243710744357, "val_accuracy": 0.8058252427184466, "lr": 1.464466094067263e-05, "seconds": 1.262731360970065}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 20, "train_loss": 0.09300821383022567, "train_accuracy": 0.970873786407767, "val_macro_f1": 0.8499898073449064, "val_accuracy": 0.8106796116504854, "lr": 1.033233298543825e-05, "seconds": 1.357064979034476}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 21, "train_loss": 0.09335320668964131, "train_accuracy": 0.970873786407767, "val_macro_f1": 0.8489004598809435, "val_accuracy": 0.8106796116504854, "lr": 6.698729810778065e-06, "seconds": 1.3776830200804397}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 22, "train_loss": 0.08005877953131223, "train_accuracy": 0.9733009708737864, "val_macro_f1": 0.8583806724041043, "val_accuracy": 0.8203883495145631, "lr": 3.8060233744356633e-06, "seconds": 1.2172991830157116}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 23, "train_loss": 0.13211385211319598, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8552684040869177, "val_accuracy": 0.8155339805825242, "lr": 1.70370868554659e-06, "seconds": 1.3159535240847617}
+{"run": "fgsc23_civ8_fold0/convnext_tiny_combo_s43", "epoch": 24, "train_loss": 0.09115860994579722, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8552684040869177, "val_accuracy": 0.8155339805825242, "lr": 4.277569313094809e-07, "seconds": 1.2412867699749768}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold0.jsonl",
+  "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 43,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:49:29Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.8622354515615369,
+  "training_wall_seconds": 42.08248084702063,
+  "peak_cuda_allocated_bytes": 2420802560,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "26fe8eee1f317468a45c8456d73367c603679c3b0b027261a06947a93bdcde15",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 1, "train_loss": 1.8287738700514857, "train_accuracy": 0.3058252427184466, "val_macro_f1": 0.38393188706342474, "val_accuracy": 0.558252427184466, "lr": 0.0001, "seconds": 1.7415136080235243}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 2, "train_loss": 1.257032374155174, "train_accuracy": 0.587378640776699, "val_macro_f1": 0.7426867319508448, "val_accuracy": 0.7330097087378641, "lr": 9.957224306869053e-05, "seconds": 1.2972949659451842}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 3, "train_loss": 0.919386260139132, "train_accuracy": 0.7160194174757282, "val_macro_f1": 0.8054985481550947, "val_accuracy": 0.7718446601941747, "lr": 9.829629131445342e-05, "seconds": 1.3024117429740727}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 4, "train_loss": 0.6378261603198006, "train_accuracy": 0.8179611650485437, "val_macro_f1": 0.8787987357188073, "val_accuracy": 0.8592233009708737, "lr": 9.619397662556433e-05, "seconds": 1.2650287459837273}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 5, "train_loss": 0.526479869791605, "train_accuracy": 0.8300970873786407, "val_macro_f1": 0.8353976953223404, "val_accuracy": 0.8203883495145631, "lr": 9.330127018922194e-05, "seconds": 1.1479242539498955}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 6, "train_loss": 0.40302779547219136, "train_accuracy": 0.8786407766990292, "val_macro_f1": 0.8516510182400177, "val_accuracy": 0.8300970873786407, "lr": 8.966766701456176e-05, "seconds": 1.2279511810047552}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 7, "train_loss": 0.3423788943915691, "train_accuracy": 0.9053398058252428, "val_macro_f1": 0.8570328115161918, "val_accuracy": 0.8300970873786407, "lr": 8.535533905932738e-05, "seconds": 2.295139607973397}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 8, "train_loss": 0.27563572769026157, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8793835793582965, "val_accuracy": 0.8543689320388349, "lr": 8.043807145043604e-05, "seconds": 1.3538713479647413}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 9, "train_loss": 0.21577510064088026, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8782345184561505, "val_accuracy": 0.8543689320388349, "lr": 7.500000000000001e-05, "seconds": 1.238524373038672}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 10, "train_loss": 0.21834705451738487, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8817044754019544, "val_accuracy": 0.8592233009708737, "lr": 6.91341716182545e-05, "seconds": 1.28636790800374}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 11, "train_loss": 0.20276611059614755, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8778069953573049, "val_accuracy": 0.8495145631067961, "lr": 6.294095225512605e-05, "seconds": 1.3053908930160105}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 12, "train_loss": 0.15284452551198238, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8717232862509567, "val_accuracy": 0.8446601941747572, "lr": 5.65263096110026e-05, "seconds": 1.2844764899928123}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 13, "train_loss": 0.11502659205094125, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8755634983657652, "val_accuracy": 0.8495145631067961, "lr": 5.000000000000001e-05, "seconds": 1.2276020859135315}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 14, "train_loss": 0.12350346422889857, "train_accuracy": 0.970873786407767, "val_macro_f1": 0.857884942525899, "val_accuracy": 0.8252427184466019, "lr": 4.347369038899743e-05, "seconds": 1.2296164750587195}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 15, "train_loss": 0.14234895591886298, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.8647066962007539, "val_accuracy": 0.8349514563106796, "lr": 3.705904774487398e-05, "seconds": 1.1900360130239278}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 16, "train_loss": 0.15297882074435937, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8753559257317218, "val_accuracy": 0.8543689320388349, "lr": 3.0865828381745534e-05, "seconds": 1.26940263598226}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 17, "train_loss": 0.15305763569850367, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8725573758722631, "val_accuracy": 0.8446601941747572, "lr": 2.5000000000000018e-05, "seconds": 2.201305104070343}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 18, "train_loss": 0.12994512666052985, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8821716932129646, "val_accuracy": 0.8592233009708737, "lr": 1.956192854956397e-05, "seconds": 1.1772223609732464}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 19, "train_loss": 0.13671875549751578, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8911364168950874, "val_accuracy": 0.8689320388349514, "lr": 1.464466094067263e-05, "seconds": 1.2952220810111612}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 20, "train_loss": 0.10518211072075714, "train_accuracy": 0.9781553398058253, "val_macro_f1": 0.8931217401612138, "val_accuracy": 0.8737864077669902, "lr": 1.033233298543825e-05, "seconds": 1.2411983540514484}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 21, "train_loss": 0.08730123524816291, "train_accuracy": 0.9733009708737864, "val_macro_f1": 0.8899770635763845, "val_accuracy": 0.8689320388349514, "lr": 6.698729810778065e-06, "seconds": 1.275902413064614}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 22, "train_loss": 0.09383891978599493, "train_accuracy": 0.9757281553398058, "val_macro_f1": 0.8841319732856772, "val_accuracy": 0.8640776699029126, "lr": 3.8060233744356633e-06, "seconds": 1.2493370160227641}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 23, "train_loss": 0.10718884865201793, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.8841319732856772, "val_accuracy": 0.8640776699029126, "lr": 1.70370868554659e-06, "seconds": 1.2127975700423121}
+{"run": "fgsc23_civ8_fold1/convnext_tiny_combo_s43", "epoch": 24, "train_loss": 0.11042124806966597, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8841319732856772, "val_accuracy": 0.8640776699029126, "lr": 4.277569313094809e-07, "seconds": 1.4126432460034266}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold1.jsonl",
+  "manifest_sha256": "7abfe3e2da66a6c41284baf70702a9c2c3dec48294feb234eb018de893e2179e",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 43,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:50:15Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.8931217401612138,
+  "training_wall_seconds": 44.636551668983884,
+  "peak_cuda_allocated_bytes": 2420802560,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "d7247f03ba5e7aa382a2125c1878b48ad05fd553a74341f0dbba5c13cc06b886",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 1, "train_loss": 1.800778883174785, "train_accuracy": 0.3276699029126214, "val_macro_f1": 0.22228268890200711, "val_accuracy": 0.4320388349514563, "lr": 0.0001, "seconds": 1.554803935927339}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 2, "train_loss": 1.2320524049036712, "train_accuracy": 0.5776699029126213, "val_macro_f1": 0.6756576658305371, "val_accuracy": 0.6699029126213593, "lr": 9.957224306869053e-05, "seconds": 1.3235629410482943}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 3, "train_loss": 0.9020253165254315, "train_accuracy": 0.7111650485436893, "val_macro_f1": 0.7510152139967369, "val_accuracy": 0.7378640776699029, "lr": 9.829629131445342e-05, "seconds": 1.2248231779085472}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 4, "train_loss": 0.6645918181798991, "train_accuracy": 0.7718446601941747, "val_macro_f1": 0.766076481058525, "val_accuracy": 0.7621359223300971, "lr": 9.619397662556433e-05, "seconds": 1.2401364900870249}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 5, "train_loss": 0.515800921083654, "train_accuracy": 0.8470873786407767, "val_macro_f1": 0.794692099061847, "val_accuracy": 0.7912621359223301, "lr": 9.330127018922194e-05, "seconds": 1.4123253070283681}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 6, "train_loss": 0.41006449414688406, "train_accuracy": 0.8640776699029126, "val_macro_f1": 0.786146393596084, "val_accuracy": 0.7864077669902912, "lr": 8.966766701456176e-05, "seconds": 2.318030424998142}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 7, "train_loss": 0.37083315675698436, "train_accuracy": 0.8883495145631068, "val_macro_f1": 0.8054721744619193, "val_accuracy": 0.7912621359223301, "lr": 8.535533905932738e-05, "seconds": 1.2506823589792475}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 8, "train_loss": 0.2784559049652618, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.7776355195083924, "val_accuracy": 0.7718446601941747, "lr": 8.043807145043604e-05, "seconds": 1.1885300150606781}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 9, "train_loss": 0.25226349000213216, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.812766311950332, "val_accuracy": 0.8058252427184466, "lr": 7.500000000000001e-05, "seconds": 1.1417253889376298}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 10, "train_loss": 0.23547208699786548, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.7986106611106611, "val_accuracy": 0.8009708737864077, "lr": 6.91341716182545e-05, "seconds": 1.2778229450341314}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 11, "train_loss": 0.2441055751541286, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.8349911780838383, "val_accuracy": 0.8155339805825242, "lr": 6.294095225512605e-05, "seconds": 1.2173984099645168}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 12, "train_loss": 0.17240777076448052, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8177373085623609, "val_accuracy": 0.8155339805825242, "lr": 5.65263096110026e-05, "seconds": 1.2591307460097596}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 13, "train_loss": 0.1593308474832368, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8168328108855163, "val_accuracy": 0.8155339805825242, "lr": 5.000000000000001e-05, "seconds": 1.2322391549823806}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 14, "train_loss": 0.16039912446031293, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8269189334257827, "val_accuracy": 0.8300970873786407, "lr": 4.347369038899743e-05, "seconds": 1.3069499640259892}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 15, "train_loss": 0.14361279175698177, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8427100260836042, "val_accuracy": 0.8349514563106796, "lr": 3.705904774487398e-05, "seconds": 2.172741455025971}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 16, "train_loss": 0.15613053594399423, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8310149456551092, "val_accuracy": 0.8349514563106796, "lr": 3.0865828381745534e-05, "seconds": 1.2240636959904805}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 17, "train_loss": 0.1219571590134241, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.852291829756495, "val_accuracy": 0.8495145631067961, "lr": 2.5000000000000018e-05, "seconds": 1.194521269062534}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 18, "train_loss": 0.13959581983610264, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8450741966366966, "val_accuracy": 0.8398058252427184, "lr": 1.956192854956397e-05, "seconds": 1.3333988920785487}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 19, "train_loss": 0.1471795506269029, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8462924553283595, "val_accuracy": 0.8398058252427184, "lr": 1.464466094067263e-05, "seconds": 1.2494832270313054}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 20, "train_loss": 0.12042068165627498, "train_accuracy": 0.9684466019417476, "val_macro_f1": 0.8370103556709908, "val_accuracy": 0.8300970873786407, "lr": 1.033233298543825e-05, "seconds": 1.2378792989766225}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 21, "train_loss": 0.12403562534781336, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8263248688513822, "val_accuracy": 0.8155339805825242, "lr": 6.698729810778065e-06, "seconds": 1.2499342929804698}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 22, "train_loss": 0.10693485094505606, "train_accuracy": 0.970873786407767, "val_macro_f1": 0.8327139331775941, "val_accuracy": 0.8252427184466019, "lr": 3.8060233744356633e-06, "seconds": 1.2472965230699629}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 23, "train_loss": 0.13171110454114895, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8327139331775941, "val_accuracy": 0.8252427184466019, "lr": 1.70370868554659e-06, "seconds": 1.1852181520080194}
+{"run": "fgsc23_civ8_fold2/convnext_tiny_combo_s43", "epoch": 24, "train_loss": 0.13130124094127452, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8300945959202921, "val_accuracy": 0.8203883495145631, "lr": 4.277569313094809e-07, "seconds": 2.3136196490377188}
+{
+  "manifest": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/data/manifests/folds/fgsc23_civ8_fold2.jsonl",
+  "manifest_sha256": "dea93a9189ae004e78ef9020ca608bce224dd0ffcaafc56e5d765a47ba5c41e2",
+  "model": "convnext_tiny",
+  "augmented": true,
+  "augmentation": "combined",
+  "seed": 43,
+  "epochs": 24,
+  "batch_size": 32,
+  "workers": 4,
+  "classes": {
+    "0": "container ship",
+    "1": "car carrier",
+    "2": "bulk carrier",
+    "3": "oil tanker",
+    "4": "fishing boat",
+    "5": "passenger ship",
+    "6": "liquefied gas ship",
+    "7": "barge"
+  },
+  "num_classes": 8,
+  "train_n": 412,
+  "val_n": 206,
+  "scope": "civilian",
+  "protocol": "research",
+  "pretrained_url": "https://download.pytorch.org/models/convnext_tiny-983f1562.pth",
+  "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-30T02:51:04Z"
+  },
+  "smoke_only": false,
+  "combined_recipe": {
+    "version": "1.0",
+    "clean_probability": 0.5,
+    "degraded_mixture": {
+      "single": 0.5,
+      "combined": 0.5
+    },
+    "single_kinds": [
+      "haze",
+      "cloud",
+      "glare"
+    ],
+    "single_severities": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "combined_kinds": [
+      "haze+glare",
+      "haze+cloud"
+    ],
+    "combined_severities": [
+      3,
+      5
+    ],
+    "domain": "matched",
+    "placement": "random",
+    "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+  },
+  "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+  "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+  },
+  "best_val_macro_f1": 0.852291829756495,
+  "training_wall_seconds": 47.25671119696926,
+  "peak_cuda_allocated_bytes": 2420802560,
+  "parameter_count": 27826280,
+  "checkpoint_sha256": "c3171917e47e1215e9c4a30ecc971910edf7ceda2808e4239fb257d5fff6407c",
+  "pretrained_sha256": "983f1562536e84ff750a1576fb08e54de751dbf2e17c0d8a4a13704341fdcd3d"
+}

@@ -1,0 +1,27 @@
+{
+  "dataset": "fgsc23_val",
+  "records": 1099,
+  "classifiers": [
+    "convnext_tiny_s17",
+    "convnext_tiny_s29",
+    "convnext_tiny_s43",
+    "resnet50_s17",
+    "swin_t_s17",
+    "swin_t_s29",
+    "swin_t_s43"
+  ],
+  "samples": 157,
+  "manifest": "data/manifests/fgsc23_research_civilian.jsonl",
+  "manifest_sha256": "e4178b700d9e16932cf4b01a31afac792b43df4285c487a9034c34cb6f119a61",
+  "output": "reports/real_degradation_predictions_fgsc23_val.jsonl",
+  "output_sha256": "9237a65928a7d87b5be123ed1834c2743cbd561e0a2f9966085dd434bef144ad",
+  "label_source": "restorer_eval_val.records.jsonl: clean/identity",
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-29T07:03:15Z"
+  }
+}

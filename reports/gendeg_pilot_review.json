@@ -1,0 +1,113 @@
+{
+  "review_sheet": "reports/gendeg_pilot_sheet.png",
+  "review_method": "single visual inspection; not a domain-expert annotation study; not a quantitative image-quality metric",
+  "status_legend": {
+    "valid": "vessel class cues visibly retained",
+    "flagged": "partially degraded; use only with human review",
+    "invalid": "vessel structure erased or label cues not recoverable"
+  },
+  "samples": {
+    "fgsc23_0c3233ec27fb21f2_865564445_mu0.1_sigma0.05": {
+      "class": "container ship",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "containers and hull clearly visible; mild haze"
+    },
+    "fgsc23_0c3233ec27fb21f2_865564445_mu0.25_sigma0.1": {
+      "class": "container ship",
+      "mu": 0.25,
+      "status": "valid",
+      "note": "containers and hull visible; slight color cast"
+    },
+    "fgsc23_725e6dd7ce300d44_3390322961_mu0.1_sigma0.05": {
+      "class": "car carrier",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "deck structure and hull visible"
+    },
+    "fgsc23_725e6dd7ce300d44_3390322961_mu0.25_sigma0.1": {
+      "class": "car carrier",
+      "mu": 0.25,
+      "status": "valid",
+      "note": "deck structure retained"
+    },
+    "fgsc23_0231dca0683c4320_2708070406_mu0.1_sigma0.05": {
+      "class": "bulk carrier",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "hull and superstructure visible"
+    },
+    "fgsc23_0231dca0683c4320_2708070406_mu0.25_sigma0.1": {
+      "class": "bulk carrier",
+      "mu": 0.25,
+      "status": "valid",
+      "note": "darker and lower contrast but class cues visible"
+    },
+    "fgsc23_8ca8946c2ac6c620_976417905_mu0.1_sigma0.05": {
+      "class": "oil tanker",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "hull and deck piping visible"
+    },
+    "fgsc23_8ca8946c2ac6c620_976417905_mu0.25_sigma0.1": {
+      "class": "oil tanker",
+      "mu": 0.25,
+      "status": "valid",
+      "note": "hull and deck structures retained"
+    },
+    "fgsc23_33ab8a287affea03_1358934579_mu0.1_sigma0.05": {
+      "class": "fishing boat",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "small vessel and superstructure visible"
+    },
+    "fgsc23_33ab8a287affea03_1358934579_mu0.25_sigma0.1": {
+      "class": "fishing boat",
+      "mu": 0.25,
+      "status": "invalid",
+      "note": "near-blank white; vessel structure erased"
+    },
+    "fgsc23_b8fb92a73bdf571c_996375205_mu0.1_sigma0.05": {
+      "class": "passenger ship",
+      "mu": 0.1,
+      "status": "flagged",
+      "note": "heavily overexposed; hull outline retained but most deck detail lost"
+    },
+    "fgsc23_b8fb92a73bdf571c_996375205_mu0.25_sigma0.1": {
+      "class": "passenger ship",
+      "mu": 0.25,
+      "status": "invalid",
+      "note": "severe overexposure; label cues not recoverable"
+    },
+    "fgsc23_0467508256d597db_640172017_mu0.1_sigma0.05": {
+      "class": "liquefied gas ship",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "four domes and hull visible"
+    },
+    "fgsc23_0467508256d597db_640172017_mu0.25_sigma0.1": {
+      "class": "liquefied gas ship",
+      "mu": 0.25,
+      "status": "valid",
+      "note": "domes and hull visible; grayscale shift"
+    },
+    "fgsc23_7593089fc13ec5ea_2197034699_mu0.1_sigma0.05": {
+      "class": "barge",
+      "mu": 0.1,
+      "status": "valid",
+      "note": "flat hull outline visible"
+    },
+    "fgsc23_7593089fc13ec5ea_2197034699_mu0.25_sigma0.1": {
+      "class": "barge",
+      "mu": 0.25,
+      "status": "invalid",
+      "note": "faint silhouette; most structure lost"
+    }
+  },
+  "counts": {
+    "valid": 12,
+    "flagged": 1,
+    "invalid": 3
+  },
+  "training_admission": "none; all generated images are excluded from classifier training and from validation/test"
+}

@@ -1,0 +1,88 @@
+{
+  "run": "runs_external/fgsc23_research_all/cdlnet_clean_s17",
+  "model": "cdlnet_repro",
+  "reproduction": "repaired official architecture, single-stage CE training",
+  "scope": "all",
+  "protocol": "research",
+  "seed": 17,
+  "input_size": 256,
+  "num_classes": 23,
+  "best_val_macro_f1": 0.8889722850381735,
+  "official_sanity": {
+    "clean_accuracy": 0.8616504854368932,
+    "clean_macro_f1": 0.8578546366802567,
+    "clean_balanced_accuracy": 0.8506435910211382,
+    "best_epoch": 40,
+    "epochs": 40,
+    "best_val_macro_f1": 0.8694466916136179,
+    "leakage": {
+      "train/val": 0,
+      "train/test": 18,
+      "val/test": 2
+    },
+    "train_n": 2602,
+    "val_n": 654
+  },
+  "civilian": {
+    "rows": {
+      "clean": 0.8429065197813754,
+      "clean_accuracy": 0.847457627118644,
+      "matched single": 0.6881950028012319,
+      "shifted single": 0.7007097421388359,
+      "matched combination": 0.33559247360029537,
+      "shifted combination": 0.3785662415977381,
+      "worst condition": 0.11333000944384053
+    },
+    "worst_condition": "matched_haze+glare_5",
+    "best_val_macro_f1": 0.8562019966514591,
+    "best_epoch": 17,
+    "epochs": 40,
+    "train_n": 618,
+    "val_n": 157,
+    "training_wall_seconds": 154.90485990606248
+  },
+  "protocol_check": {
+    "accuracy": 0.8616504854368932,
+    "macro_f1": 0.8697903303266372,
+    "balanced_accuracy": 0.8651931228757164,
+    "train_n": 3256,
+    "resize": "stretch",
+    "scheduler": "StepLR(step_size=10, gamma=0.1)",
+    "batch_size": 12,
+    "epochs": 40,
+    "training_wall_seconds": 521.3542179309297
+  },
+  "clean_macro_f1": 0.8681808195194047,
+  "clean_accuracy": 0.8702201622247973,
+  "summary": {
+    "clean": 0.8681808195194047,
+    "matched single": 0.7325166032779207,
+    "shifted single": 0.7276833468720572,
+    "matched combination": 0.40483593421178443,
+    "shifted combination": 0.39229882925924225,
+    "worst condition": 0.12827794905987075
+  },
+  "worst_conditions": {
+    "shifted_haze+cloud_5": 0.12827794905987075,
+    "matched_haze+glare_5": 0.18744162434055295,
+    "matched_haze+cloud_5": 0.2067660847488373,
+    "shifted_haze+glare_5": 0.21039697812540067,
+    "shifted_cloud_5": 0.404864747747094,
+    "shifted_haze_5": 0.4086248686717198,
+    "matched_haze_5": 0.4613050569852694,
+    "matched_cloud_5": 0.49952231735766495
+  },
+  "epochs_run": 40,
+  "best_epoch": 30,
+  "training_wall_seconds": 390.99130609002896,
+  "peak_cuda_allocated_bytes": 2362610176,
+  "parameter_count": 40869466,
+  "source_sha256": {
+    "external/cdlnet_repro/cdlnet_model.py": "75c35dcff7ff745c7923891f9621bf8ce5bb9d8c047de4dcc67d1cb536ecbcde",
+    "external/cdlnet_repro/cdlnet_data.py": "796c7537f769337ef4ffbfcbae73860018d34c9e10f3af6273be9350c18d3453",
+    "external/cdlnet_repro/run.py": "50424072adaea5bdeb5db130fc03928b91cecdb10357c5b2915f404350916fc4"
+  },
+  "checkpoint_sha256": "54749da357e915a15167950059d7d46111018e478afac2934ba1baaeb416af56",
+  "manifest_sha256": "31fab7cb9dcaf9e98d8ad63ca2639a62f42d40ff96128b76b8d88bc2271bb196",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718"
+}

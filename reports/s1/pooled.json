@@ -1,0 +1,42 @@
+{
+ "dir": "reports/s1",
+ "suffix": "",
+ "methods": {
+  "convnext_tiny_combo": {
+   "delta_pp": 0.39768062397372744,
+   "ci": [
+    -0.7030608579638752,
+    1.5419745484400658
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_i1": {
+   "delta_pp": 0.9390394088669951,
+   "ci": [
+    -0.09493021346469623,
+    1.9756388546798032
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_r3": {
+   "delta_pp": -0.6850369458128079,
+   "ci": [
+    -1.7626872947454844,
+    0.34643113711001666
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_t1": {
+   "delta_pp": 1.6574302134646963,
+   "ci": [
+    0.6336591748768473,
+    2.6760057471264367
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  }
+ }
+}

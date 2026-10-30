@@ -1,0 +1,1157 @@
+[
+  {
+    "a": "fgsc23_3df9b94e35423e67_2561817044",
+    "b": "fgsc23_45041fd14fe32d45_1262683085",
+    "hamming": 4,
+    "thumbnail_mae": 0.0448606014251709,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_e8a2f345aed8f1ca_3917628866",
+    "b": "fgsc23_c58507b4a359270d_2786734401",
+    "hamming": 2,
+    "thumbnail_mae": 0.005812142509967089,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ddeb8d8b5b7f89ff_2743336254",
+    "b": "fgsc23_18bc0c87929baa51_3456328640",
+    "hamming": 2,
+    "thumbnail_mae": 0.008489073254168034,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f8470d4452ab6ad4_3062567805",
+    "b": "fgsc23_5e78229e0c2bc661_334803503",
+    "hamming": 2,
+    "thumbnail_mae": 0.015662020072340965,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_4b756f23744552de_2837165927",
+    "b": "fgsc23_f68834b69dc347dd_278126145",
+    "hamming": 2,
+    "thumbnail_mae": 0.008948631584644318,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ef917eb4de9fe9dc_2781387821",
+    "b": "fgsc23_4654f0bdced1324f_950394626",
+    "hamming": 2,
+    "thumbnail_mae": 0.008942249231040478,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ef917eb4de9fe9dc_2781387821",
+    "b": "fgsc23_00226aa6c51fb68d_571209023",
+    "hamming": 2,
+    "thumbnail_mae": 0.0386144295334816,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_ef917eb4de9fe9dc_2781387821",
+    "b": "fgsc23_5581298f36742519_2847905950",
+    "hamming": 2,
+    "thumbnail_mae": 0.018707873299717903,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_b3ceba956de3ca76_1104750031",
+    "b": "fgsc23_9e82e077ced6bc81_2885536953",
+    "hamming": 4,
+    "thumbnail_mae": 0.0640663281083107,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_b3ceba956de3ca76_1104750031",
+    "b": "fgsc23_ac771608aecee1f8_423723827",
+    "hamming": 2,
+    "thumbnail_mae": 0.0126953125,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_b3ceba956de3ca76_1104750031",
+    "b": "fgsc23_b5b05cfd94bae5d0_783706895",
+    "hamming": 4,
+    "thumbnail_mae": 0.02913220040500164,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_de44d7fcda9eab0f_147017225",
+    "b": "fgsc23_0b93cf6eb18617ca_3370176945",
+    "hamming": 4,
+    "thumbnail_mae": 0.040900737047195435,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_89a78d7700e03f91_3240498113",
+    "b": "fgsc23_6a7d6ea8d8ad756b_1667015502",
+    "hamming": 2,
+    "thumbnail_mae": 0.053917739540338516,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_89a78d7700e03f91_3240498113",
+    "b": "fgsc23_cfab5024591c7fc3_1284582352",
+    "hamming": 4,
+    "thumbnail_mae": 0.033869486302137375,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_89a78d7700e03f91_3240498113",
+    "b": "fgsc23_f24d9d643c7163ec_2168236047",
+    "hamming": 4,
+    "thumbnail_mae": 0.08081341534852982,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_89a78d7700e03f91_3240498113",
+    "b": "fgsc23_c2d352d074232400_2791230869",
+    "hamming": 0,
+    "thumbnail_mae": 0.10663297027349472,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_89a78d7700e03f91_3240498113",
+    "b": "fgsc23_c3b50e04d9fd4fde_1734445146",
+    "hamming": 2,
+    "thumbnail_mae": 0.03317631408572197,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0095b73bd7a5fed6_3550438139",
+    "b": "fgsc23_5f7b6022c97df90c_697337975",
+    "hamming": 4,
+    "thumbnail_mae": 0.008800551295280457,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0095b73bd7a5fed6_3550438139",
+    "b": "fgsc23_cfab5024591c7fc3_1284582352",
+    "hamming": 2,
+    "thumbnail_mae": 0.00927925854921341,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0095b73bd7a5fed6_3550438139",
+    "b": "fgsc23_95a8974a95daa5b3_11757315",
+    "hamming": 0,
+    "thumbnail_mae": 0.027558213099837303,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0095b73bd7a5fed6_3550438139",
+    "b": "fgsc23_06d77c263cfb2e95_625224810",
+    "hamming": 2,
+    "thumbnail_mae": 0.04763327166438103,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_a4c36eb5817ce152_1982386201",
+    "b": "fgsc23_b9fff9d4de7c6d19_259337816",
+    "hamming": 2,
+    "thumbnail_mae": 0.008344822563230991,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_a4c36eb5817ce152_1982386201",
+    "b": "fgsc23_1da018dcb07e194c_2779136431",
+    "hamming": 4,
+    "thumbnail_mae": 0.035535383969545364,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_e3f2e6b17a6df2e1_3983785272",
+    "b": "fgsc23_7515c6f80f7626dc_705872954",
+    "hamming": 2,
+    "thumbnail_mae": 0.04969745874404907,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_5fe87f7d67c1e2c8_3978574894",
+    "hamming": 4,
+    "thumbnail_mae": 0.05937117338180542,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_3ad0ef5b298755ec_3257602137",
+    "hamming": 4,
+    "thumbnail_mae": 0.051612287759780884,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_63d45bf9b38fbca9_602543527",
+    "hamming": 2,
+    "thumbnail_mae": 0.04255132004618645,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_36f05130a74071d7_2321710017",
+    "hamming": 4,
+    "thumbnail_mae": 0.036960016936063766,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_d621742dc3a63182_3296415328",
+    "hamming": 2,
+    "thumbnail_mae": 0.045749083161354065,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_4ff96325015d10ab_2278671964",
+    "hamming": 2,
+    "thumbnail_mae": 0.043665748089551926,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_65a645b41f3c1a80_3621115544",
+    "b": "fgsc23_c0d3f16ed74a3cff_3434992222",
+    "hamming": 2,
+    "thumbnail_mae": 0.04055223986506462,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_40294f71c60feccc_1962016252",
+    "b": "fgsc23_702eaf229d9ec019_1315405081",
+    "hamming": 0,
+    "thumbnail_mae": 0.022223500534892082,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_40294f71c60feccc_1962016252",
+    "b": "fgsc23_01d83d315525e737_4004729756",
+    "hamming": 4,
+    "thumbnail_mae": 0.03385033831000328,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_40294f71c60feccc_1962016252",
+    "b": "fgsc23_f2c258918eb441c3_2115382401",
+    "hamming": 0,
+    "thumbnail_mae": 0.02266007848083973,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_40294f71c60feccc_1962016252",
+    "b": "fgsc23_95cec32f75abcd28_730774157",
+    "hamming": 0,
+    "thumbnail_mae": 0.017685355618596077,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_2c88a241f41550f8_49467405",
+    "b": "fgsc23_e85b23a2812acb1c_3238844089",
+    "hamming": 2,
+    "thumbnail_mae": 0.02623315155506134,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_2c88a241f41550f8_49467405",
+    "b": "fgsc23_be6e7125ca0d6b40_4291441822",
+    "hamming": 2,
+    "thumbnail_mae": 0.020844822749495506,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_2c88a241f41550f8_49467405",
+    "b": "fgsc23_5312611b7277703a_3123646582",
+    "hamming": 2,
+    "thumbnail_mae": 0.01907169073820114,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_2c88a241f41550f8_49467405",
+    "b": "fgsc23_a106d736fb96d569_533657477",
+    "hamming": 2,
+    "thumbnail_mae": 0.026845894753932953,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f78d8158e1d71462_3656476824",
+    "b": "fgsc23_22d4bd7c70ce816d_3638048581",
+    "hamming": 2,
+    "thumbnail_mae": 0.023226866498589516,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f78d8158e1d71462_3656476824",
+    "b": "fgsc23_4804d5edb52ed71e_3016395989",
+    "hamming": 2,
+    "thumbnail_mae": 0.029572611674666405,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_4654f0bdced1324f_950394626",
+    "b": "fgsc23_00226aa6c51fb68d_571209023",
+    "hamming": 2,
+    "thumbnail_mae": 0.034589461982250214,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_4654f0bdced1324f_950394626",
+    "b": "fgsc23_5581298f36742519_2847905950",
+    "hamming": 2,
+    "thumbnail_mae": 0.013687193393707275,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ae40104cdad15e76_1468776603",
+    "b": "fgsc23_f432bc9a41046e69_429652953",
+    "hamming": 0,
+    "thumbnail_mae": 0.011623007245361805,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ae40104cdad15e76_1468776603",
+    "b": "fgsc23_bde3f6355144052a_3280920858",
+    "hamming": 4,
+    "thumbnail_mae": 0.010248161852359772,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ae40104cdad15e76_1468776603",
+    "b": "fgsc23_3e408882bb204062_2449477913",
+    "hamming": 2,
+    "thumbnail_mae": 0.038656558841466904,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_d9386b958220f08b_1156640771",
+    "b": "fgsc23_8fbba2b3ccd2b6fc_3997930360",
+    "hamming": 2,
+    "thumbnail_mae": 0.031092984601855278,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_d9386b958220f08b_1156640771",
+    "b": "fgsc23_448e1d32ea8a22e6_1843813269",
+    "hamming": 0,
+    "thumbnail_mae": 0.009727328084409237,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_d9386b958220f08b_1156640771",
+    "b": "fgsc23_60df6a1d724e8903_713925796",
+    "hamming": 0,
+    "thumbnail_mae": 0.014269299805164337,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0ab8226b7bdce0d1_3132199424",
+    "b": "fgsc23_87c341b3749e4f49_2335375305",
+    "hamming": 4,
+    "thumbnail_mae": 0.083252914249897,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_206b32bf5c2bd638_2257752134",
+    "b": "fgsc23_f433b3fb273ed494_1915177357",
+    "hamming": 4,
+    "thumbnail_mae": 0.013403798453509808,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_206b32bf5c2bd638_2257752134",
+    "b": "fgsc23_c66629afe250b82e_1735305294",
+    "hamming": 4,
+    "thumbnail_mae": 0.04014246165752411,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_206b32bf5c2bd638_2257752134",
+    "b": "fgsc23_c2144d3876abd61d_3744108956",
+    "hamming": 2,
+    "thumbnail_mae": 0.006755514536052942,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8b1f586dcad99c97_1301890075",
+    "b": "fgsc23_776539fe6c345e0a_1685752958",
+    "hamming": 4,
+    "thumbnail_mae": 0.025693168863654137,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8b1f586dcad99c97_1301890075",
+    "b": "fgsc23_b4e37f27cb1a2c35_2397014953",
+    "hamming": 4,
+    "thumbnail_mae": 0.02994026057422161,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8b1f586dcad99c97_1301890075",
+    "b": "fgsc23_c8ca4717c3fad278_2432905889",
+    "hamming": 2,
+    "thumbnail_mae": 0.023969821631908417,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_776539fe6c345e0a_1685752958",
+    "b": "fgsc23_b4e37f27cb1a2c35_2397014953",
+    "hamming": 0,
+    "thumbnail_mae": 0.01848575472831726,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_776539fe6c345e0a_1685752958",
+    "b": "fgsc23_c8ca4717c3fad278_2432905889",
+    "hamming": 4,
+    "thumbnail_mae": 0.035263482481241226,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_2d1ec8d4d6b37c29_3644456132",
+    "b": "fgsc23_27f9b3d782cec59e_3811976704",
+    "hamming": 4,
+    "thumbnail_mae": 0.04478783532977104,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_5b46c1d185d1fe91_4087501244",
+    "b": "fgsc23_269eab70f3cc101b_2626977107",
+    "hamming": 4,
+    "thumbnail_mae": 0.02554253675043583,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5167216a54dc9e98_3554373463",
+    "b": "fgsc23_8d4495106d5ddcc2_2364722122",
+    "hamming": 2,
+    "thumbnail_mae": 0.01266467571258545,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ccf8ed6477779fc6_1742888854",
+    "b": "fgsc23_c1c65f33bb984965_2003195756",
+    "hamming": 0,
+    "thumbnail_mae": 0.010830269195139408,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_43328cbae38d8b95_4228197072",
+    "b": "fgsc23_b8fc11f89d8258a0_2439235662",
+    "hamming": 2,
+    "thumbnail_mae": 0.013597835786640644,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_926611df4bd69287_3750042668",
+    "b": "fgsc23_61008ce0d6504cdd_3713906024",
+    "hamming": 2,
+    "thumbnail_mae": 0.019633373245596886,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_a6a7024375aa97c8_477369493",
+    "b": "fgsc23_01490bc9d1bc9eef_438162777",
+    "hamming": 4,
+    "thumbnail_mae": 0.02126225270330906,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_02c4ef5308133366_2127528496",
+    "b": "fgsc23_3c12ae476eb569e3_1956653816",
+    "hamming": 2,
+    "thumbnail_mae": 0.0200431477278471,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8975f239db0136cf_3619611867",
+    "b": "fgsc23_4c79e522682b5ac5_286676719",
+    "hamming": 0,
+    "thumbnail_mae": 0.0059206499718129635,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_42df5a2ba15d4a15_386553788",
+    "b": "fgsc23_e96bf72c290325a7_2478716703",
+    "hamming": 4,
+    "thumbnail_mae": 0.03491625562310219,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_bdc16c9000d7dfea_3155005987",
+    "b": "fgsc23_1abf696e5dd944ca_3257912441",
+    "hamming": 2,
+    "thumbnail_mae": 0.022075416520237923,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_3957202e2097710a_3380637559",
+    "b": "fgsc23_54838f0b55dabe8a_120651086",
+    "hamming": 0,
+    "thumbnail_mae": 0.023243464529514313,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_16830b6e9747fdbd_3138447478",
+    "b": "fgsc23_275b2d930893d414_234863179",
+    "hamming": 4,
+    "thumbnail_mae": 0.03991906717419624,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_2ad948b9bf982e54_3569548584",
+    "b": "fgsc23_edbc2e6881a49c9d_3470024099",
+    "hamming": 0,
+    "thumbnail_mae": 0.000337009783834219,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ff380169b5b837f0_1766676010",
+    "b": "fgsc23_077a0960101daf1f_2013337886",
+    "hamming": 4,
+    "thumbnail_mae": 0.040236931294202805,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_d6fc160de739a731_3026956039",
+    "b": "fgsc23_ea1181f7d980f94b_320133484",
+    "hamming": 4,
+    "thumbnail_mae": 0.043278951197862625,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_4c4875241537c70c_3463682340",
+    "b": "fgsc23_56285e0ceaa75928_610884442",
+    "hamming": 4,
+    "thumbnail_mae": 0.07326260954141617,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_13aea87f067abd25_3571431216",
+    "b": "fgsc23_460b496d250bae7e_159214441",
+    "hamming": 4,
+    "thumbnail_mae": 0.09591630846261978,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_e55d6d736bfa382d_105091967",
+    "b": "fgsc23_83e62ad2e5453c61_126483012",
+    "hamming": 2,
+    "thumbnail_mae": 0.012496170587837696,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_beb3790bea76b267_1074528706",
+    "b": "fgsc23_e6780abb958d7629_1960373924",
+    "hamming": 2,
+    "thumbnail_mae": 0.01457056775689125,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_9c941bbdb81786cf_1905012155",
+    "b": "fgsc23_4db1f1b71eed429e_3110506847",
+    "hamming": 2,
+    "thumbnail_mae": 0.014053563587367535,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_0af4cbd4ccd96f2d_4078507964",
+    "b": "fgsc23_4decf09587b0a375_3549814183",
+    "hamming": 2,
+    "thumbnail_mae": 0.024722987785935402,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_a2485f84ff86184a_1154949011",
+    "b": "fgsc23_1b9ad29a0d60a59c_1871212857",
+    "hamming": 2,
+    "thumbnail_mae": 0.01731005124747753,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_a059fb717675f521_2831809061",
+    "b": "fgsc23_33d3e82a6070f2d2_2146087580",
+    "hamming": 0,
+    "thumbnail_mae": 0.006562754977494478,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_059ea1b51b24d39c_868544200",
+    "b": "fgsc23_5aa272afedebbdaf_2719249558",
+    "hamming": 4,
+    "thumbnail_mae": 0.06302977353334427,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_6a7d6ea8d8ad756b_1667015502",
+    "b": "fgsc23_b93e9ae91682e8cb_432646547",
+    "hamming": 4,
+    "thumbnail_mae": 0.020392922684550285,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_6a7d6ea8d8ad756b_1667015502",
+    "b": "fgsc23_c2d352d074232400_2791230869",
+    "hamming": 2,
+    "thumbnail_mae": 0.076903335750103,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_6a7d6ea8d8ad756b_1667015502",
+    "b": "fgsc23_c3b50e04d9fd4fde_1734445146",
+    "hamming": 4,
+    "thumbnail_mae": 0.021859681233763695,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5f7b6022c97df90c_697337975",
+    "b": "fgsc23_cfab5024591c7fc3_1284582352",
+    "hamming": 4,
+    "thumbnail_mae": 0.013499540276825428,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5f7b6022c97df90c_697337975",
+    "b": "fgsc23_95a8974a95daa5b3_11757315",
+    "hamming": 4,
+    "thumbnail_mae": 0.028170956298708916,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5f7b6022c97df90c_697337975",
+    "b": "fgsc23_f24d9d643c7163ec_2168236047",
+    "hamming": 4,
+    "thumbnail_mae": 0.07634421437978745,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_7a13403fa17c1c63_1244285656",
+    "b": "fgsc23_0db73bd618980b8c_1578073953",
+    "hamming": 4,
+    "thumbnail_mae": 0.014820772223174572,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_84d8f635215e13f3_3370734524",
+    "b": "fgsc23_af1d665f0ecab929_1638287347",
+    "hamming": 4,
+    "thumbnail_mae": 0.04046032205224037,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_84d8f635215e13f3_3370734524",
+    "b": "fgsc23_36f05130a74071d7_2321710017",
+    "hamming": 4,
+    "thumbnail_mae": 0.04143305867910385,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_00226aa6c51fb68d_571209023",
+    "b": "fgsc23_5581298f36742519_2847905950",
+    "hamming": 2,
+    "thumbnail_mae": 0.022503063082695007,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_9e82e077ced6bc81_2885536953",
+    "b": "fgsc23_ac771608aecee1f8_423723827",
+    "hamming": 2,
+    "thumbnail_mae": 0.05366881191730499,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_9e82e077ced6bc81_2885536953",
+    "b": "fgsc23_b5b05cfd94bae5d0_783706895",
+    "hamming": 2,
+    "thumbnail_mae": 0.03523284196853638,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_cfab5024591c7fc3_1284582352",
+    "b": "fgsc23_95a8974a95daa5b3_11757315",
+    "hamming": 2,
+    "thumbnail_mae": 0.019910385832190514,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_cfab5024591c7fc3_1284582352",
+    "b": "fgsc23_06d77c263cfb2e95_625224810",
+    "hamming": 2,
+    "thumbnail_mae": 0.05227098986506462,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_cfab5024591c7fc3_1284582352",
+    "b": "fgsc23_f24d9d643c7163ec_2168236047",
+    "hamming": 4,
+    "thumbnail_mae": 0.08288144320249557,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_cfab5024591c7fc3_1284582352",
+    "b": "fgsc23_c2d352d074232400_2791230869",
+    "hamming": 4,
+    "thumbnail_mae": 0.11990656703710556,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_95a8974a95daa5b3_11757315",
+    "b": "fgsc23_06d77c263cfb2e95_625224810",
+    "hamming": 2,
+    "thumbnail_mae": 0.06232383847236633,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_0b93cf6eb18617ca_3370176945",
+    "b": "fgsc23_f24d9d643c7163ec_2168236047",
+    "hamming": 4,
+    "thumbnail_mae": 0.06537224352359772,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_0b93cf6eb18617ca_3370176945",
+    "b": "fgsc23_c3b50e04d9fd4fde_1734445146",
+    "hamming": 4,
+    "thumbnail_mae": 0.045615047216415405,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f24d9d643c7163ec_2168236047",
+    "b": "fgsc23_c2d352d074232400_2791230869",
+    "hamming": 4,
+    "thumbnail_mae": 0.05752144753932953,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f24d9d643c7163ec_2168236047",
+    "b": "fgsc23_c3b50e04d9fd4fde_1734445146",
+    "hamming": 4,
+    "thumbnail_mae": 0.07629825919866562,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_c2d352d074232400_2791230869",
+    "b": "fgsc23_c3b50e04d9fd4fde_1734445146",
+    "hamming": 2,
+    "thumbnail_mae": 0.08476179838180542,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_35fd82475829db11_104358764",
+    "b": "fgsc23_488d8aa77d953913_2786491732",
+    "hamming": 4,
+    "thumbnail_mae": 0.020488662645220757,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_b9fff9d4de7c6d19_259337816",
+    "b": "fgsc23_1da018dcb07e194c_2779136431",
+    "hamming": 2,
+    "thumbnail_mae": 0.03008578158915043,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_488d8aa77d953913_2786491732",
+    "b": "fgsc23_7515c6f80f7626dc_705872954",
+    "hamming": 4,
+    "thumbnail_mae": 0.0395718477666378,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f149eb4eac7f1f29_1742431594",
+    "b": "fgsc23_8859fa917602f9b3_3828856674",
+    "hamming": 0,
+    "thumbnail_mae": 0.03570771962404251,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f149eb4eac7f1f29_1742431594",
+    "b": "fgsc23_45041fd14fe32d45_1262683085",
+    "hamming": 4,
+    "thumbnail_mae": 0.044707413762807846,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f149eb4eac7f1f29_1742431594",
+    "b": "fgsc23_f6162fa84c1d66ef_2978310533",
+    "hamming": 0,
+    "thumbnail_mae": 0.025700828060507774,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f149eb4eac7f1f29_1742431594",
+    "b": "fgsc23_76df524cdc2a342c_3612095168",
+    "hamming": 0,
+    "thumbnail_mae": 0.0234375,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8859fa917602f9b3_3828856674",
+    "b": "fgsc23_45041fd14fe32d45_1262683085",
+    "hamming": 4,
+    "thumbnail_mae": 0.055575981736183167,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_8859fa917602f9b3_3828856674",
+    "b": "fgsc23_f6162fa84c1d66ef_2978310533",
+    "hamming": 0,
+    "thumbnail_mae": 0.010680911131203175,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8859fa917602f9b3_3828856674",
+    "b": "fgsc23_76df524cdc2a342c_3612095168",
+    "hamming": 0,
+    "thumbnail_mae": 0.013319547288119793,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_45041fd14fe32d45_1262683085",
+    "b": "fgsc23_f6162fa84c1d66ef_2978310533",
+    "hamming": 4,
+    "thumbnail_mae": 0.05253906175494194,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_45041fd14fe32d45_1262683085",
+    "b": "fgsc23_76df524cdc2a342c_3612095168",
+    "hamming": 4,
+    "thumbnail_mae": 0.05094209685921669,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_f6162fa84c1d66ef_2978310533",
+    "b": "fgsc23_76df524cdc2a342c_3612095168",
+    "hamming": 0,
+    "thumbnail_mae": 0.0058708637952804565,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_e85b23a2812acb1c_3238844089",
+    "b": "fgsc23_be6e7125ca0d6b40_4291441822",
+    "hamming": 4,
+    "thumbnail_mae": 0.024659162387251854,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_e85b23a2812acb1c_3238844089",
+    "b": "fgsc23_5312611b7277703a_3123646582",
+    "hamming": 4,
+    "thumbnail_mae": 0.026493564248085022,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_e85b23a2812acb1c_3238844089",
+    "b": "fgsc23_a106d736fb96d569_533657477",
+    "hamming": 4,
+    "thumbnail_mae": 0.028469666838645935,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_702eaf229d9ec019_1315405081",
+    "b": "fgsc23_01d83d315525e737_4004729756",
+    "hamming": 4,
+    "thumbnail_mae": 0.04221813753247261,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_702eaf229d9ec019_1315405081",
+    "b": "fgsc23_f2c258918eb441c3_2115382401",
+    "hamming": 0,
+    "thumbnail_mae": 0.044508278369903564,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_702eaf229d9ec019_1315405081",
+    "b": "fgsc23_95cec32f75abcd28_730774157",
+    "hamming": 0,
+    "thumbnail_mae": 0.03964078053832054,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_be6e7125ca0d6b40_4291441822",
+    "b": "fgsc23_5312611b7277703a_3123646582",
+    "hamming": 2,
+    "thumbnail_mae": 0.007295496761798859,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_be6e7125ca0d6b40_4291441822",
+    "b": "fgsc23_a106d736fb96d569_533657477",
+    "hamming": 2,
+    "thumbnail_mae": 0.009340533055365086,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5312611b7277703a_3123646582",
+    "b": "fgsc23_a106d736fb96d569_533657477",
+    "hamming": 0,
+    "thumbnail_mae": 0.008279718458652496,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_01d83d315525e737_4004729756",
+    "b": "fgsc23_f2c258918eb441c3_2115382401",
+    "hamming": 4,
+    "thumbnail_mae": 0.025053614750504494,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_01d83d315525e737_4004729756",
+    "b": "fgsc23_95cec32f75abcd28_730774157",
+    "hamming": 4,
+    "thumbnail_mae": 0.023847272619605064,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f2c258918eb441c3_2115382401",
+    "b": "fgsc23_95cec32f75abcd28_730774157",
+    "hamming": 0,
+    "thumbnail_mae": 0.006115961819887161,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5fe87f7d67c1e2c8_3978574894",
+    "b": "fgsc23_3ad0ef5b298755ec_3257602137",
+    "hamming": 2,
+    "thumbnail_mae": 0.009773284196853638,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5fe87f7d67c1e2c8_3978574894",
+    "b": "fgsc23_af1d665f0ecab929_1638287347",
+    "hamming": 2,
+    "thumbnail_mae": 0.03447457030415535,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_5fe87f7d67c1e2c8_3978574894",
+    "b": "fgsc23_36f05130a74071d7_2321710017",
+    "hamming": 2,
+    "thumbnail_mae": 0.0633348599076271,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_3ad0ef5b298755ec_3257602137",
+    "b": "fgsc23_af1d665f0ecab929_1638287347",
+    "hamming": 4,
+    "thumbnail_mae": 0.026868870481848717,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_3ad0ef5b298755ec_3257602137",
+    "b": "fgsc23_36f05130a74071d7_2321710017",
+    "hamming": 4,
+    "thumbnail_mae": 0.05435815081000328,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_63d45bf9b38fbca9_602543527",
+    "b": "fgsc23_d621742dc3a63182_3296415328",
+    "hamming": 2,
+    "thumbnail_mae": 0.05779334902763367,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_63d45bf9b38fbca9_602543527",
+    "b": "fgsc23_4ff96325015d10ab_2278671964",
+    "hamming": 2,
+    "thumbnail_mae": 0.028657322749495506,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_63d45bf9b38fbca9_602543527",
+    "b": "fgsc23_c0d3f16ed74a3cff_3434992222",
+    "hamming": 2,
+    "thumbnail_mae": 0.02981770597398281,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_af1d665f0ecab929_1638287347",
+    "b": "fgsc23_36f05130a74071d7_2321710017",
+    "hamming": 2,
+    "thumbnail_mae": 0.030507048591971397,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_d621742dc3a63182_3296415328",
+    "b": "fgsc23_4ff96325015d10ab_2278671964",
+    "hamming": 0,
+    "thumbnail_mae": 0.029810048639774323,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_d621742dc3a63182_3296415328",
+    "b": "fgsc23_c0d3f16ed74a3cff_3434992222",
+    "hamming": 0,
+    "thumbnail_mae": 0.028182441368699074,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_4ff96325015d10ab_2278671964",
+    "b": "fgsc23_c0d3f16ed74a3cff_3434992222",
+    "hamming": 0,
+    "thumbnail_mae": 0.008490349166095257,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f432bc9a41046e69_429652953",
+    "b": "fgsc23_bde3f6355144052a_3280920858",
+    "hamming": 4,
+    "thumbnail_mae": 0.014816942624747753,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f432bc9a41046e69_429652953",
+    "b": "fgsc23_3e408882bb204062_2449477913",
+    "hamming": 2,
+    "thumbnail_mae": 0.03079426847398281,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_8774537f0772f364_1593164838",
+    "b": "fgsc23_4804d5edb52ed71e_3016395989",
+    "hamming": 4,
+    "thumbnail_mae": 0.02614506520330906,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_22d4bd7c70ce816d_3638048581",
+    "b": "fgsc23_4804d5edb52ed71e_3016395989",
+    "hamming": 2,
+    "thumbnail_mae": 0.008566942065954208,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_bde3f6355144052a_3280920858",
+    "b": "fgsc23_3e408882bb204062_2449477913",
+    "hamming": 4,
+    "thumbnail_mae": 0.032666970044374466,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ac771608aecee1f8_423723827",
+    "b": "fgsc23_b5b05cfd94bae5d0_783706895",
+    "hamming": 2,
+    "thumbnail_mae": 0.018765317276120186,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_c66629afe250b82e_1735305294",
+    "b": "fgsc23_c2144d3876abd61d_3744108956",
+    "hamming": 4,
+    "thumbnail_mae": 0.04258578643202782,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_8fbba2b3ccd2b6fc_3997930360",
+    "b": "fgsc23_448e1d32ea8a22e6_1843813269",
+    "hamming": 2,
+    "thumbnail_mae": 0.038714002817869186,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_8fbba2b3ccd2b6fc_3997930360",
+    "b": "fgsc23_60df6a1d724e8903_713925796",
+    "hamming": 2,
+    "thumbnail_mae": 0.03127680718898773,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_448e1d32ea8a22e6_1843813269",
+    "b": "fgsc23_60df6a1d724e8903_713925796",
+    "hamming": 0,
+    "thumbnail_mae": 0.012162989936769009,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_b4e37f27cb1a2c35_2397014953",
+    "b": "fgsc23_c8ca4717c3fad278_2432905889",
+    "hamming": 4,
+    "thumbnail_mae": 0.0302734375,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_f8dcdd15857a884a_4226499849",
+    "b": "fgsc23_3e07d6dc94045a9c_4010081210",
+    "hamming": 4,
+    "thumbnail_mae": 0.03111979179084301,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_90331acc21992f68_1224352415",
+    "b": "fgsc23_d0c1421218e710c7_1781282470",
+    "hamming": 4,
+    "thumbnail_mae": 0.024712776765227318,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_ece50748006e91c0_1009697069",
+    "b": "fgsc23_047124b85ed7c8b0_2876232949",
+    "hamming": 0,
+    "thumbnail_mae": 0.01501736044883728,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_1671b39c77df3a0e_1920003005",
+    "b": "fgsc23_f0802190867d4728_3699152012",
+    "hamming": 4,
+    "thumbnail_mae": 0.035012003034353256,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_fdfab620289fed9d_3505843569",
+    "b": "fgsc23_5414bbe977e5ee75_344976533",
+    "hamming": 4,
+    "thumbnail_mae": 0.03514348343014717,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_4d532ab14ba6f475_883277653",
+    "b": "fgsc23_8629e2a87e1ecfcd_2861970896",
+    "hamming": 2,
+    "thumbnail_mae": 0.022623060271143913,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_e1716c11715e9923_2280915309",
+    "b": "fgsc23_3a2658f62ea67583_1342857057",
+    "hamming": 4,
+    "thumbnail_mae": 0.07123544812202454,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_3c8bf97e65c567c9_154474377",
+    "b": "fgsc23_bd4139e0c6c3a23c_3612178143",
+    "hamming": 2,
+    "thumbnail_mae": 0.022149458527565002,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_051c1f62f7482dee_1289021976",
+    "b": "fgsc23_15003ecf98b49096_1636438217",
+    "hamming": 4,
+    "thumbnail_mae": 0.2721303105354309,
+    "grouped": false
+  },
+  {
+    "a": "fgsc23_a55fd6b7383e8c88_2224060100",
+    "b": "fgsc23_29f9fb968afd3a82_4264758265",
+    "hamming": 2,
+    "thumbnail_mae": 0.029424527660012245,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_dc179a0b78ac87c1_2502717782",
+    "b": "fgsc23_fc75c38d17f70cd5_1062179095",
+    "hamming": 4,
+    "thumbnail_mae": 0.012270219624042511,
+    "grouped": true
+  },
+  {
+    "a": "fgsc23_95e17c6bf88adc65_1969529259",
+    "b": "fgsc23_902382c79beeb375_2519114516",
+    "hamming": 2,
+    "thumbnail_mae": 0.017363663762807846,
+    "grouped": true
+  }
+]

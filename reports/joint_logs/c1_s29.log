@@ -1,0 +1,3 @@
+{"skip": "runs_joint/fgsc23_research_civilian/swin_t_joint_localized_s29"}
+{"run": "runs_joint/fgsc23_research_civilian/swin_t_joint_localized_s29", "condition": "matched_cloud_3_border", "macro_f1": 0.8712913912209768, "accuracy": 0.8771186440677966}
+{"run": "runs_joint/fgsc23_research_civilian/swin_t_joint_localized_s29", "condition": "matched_glare_3_border", "macro_f1": 0.8610520924787826, "accuracy": 0.8728813559322034}

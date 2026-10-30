@@ -1,0 +1,479 @@
+{
+  "dataset": "FGSC-23",
+  "actual_image_count": 4080,
+  "unique_pixels": 4074,
+  "exact_duplicate_extras": 6,
+  "near_candidate_pairs": 165,
+  "cross_official_split_components": 20,
+  "cross_official_examples": [
+    [
+      "fgsc23_ddeb8d8b5b7f89ff_2743336254",
+      "fgsc23_18bc0c87929baa51_3456328640"
+    ],
+    [
+      "fgsc23_f8470d4452ab6ad4_3062567805",
+      "fgsc23_5e78229e0c2bc661_334803503"
+    ],
+    [
+      "fgsc23_ef917eb4de9fe9dc_2781387821",
+      "fgsc23_4654f0bdced1324f_950394626",
+      "fgsc23_00226aa6c51fb68d_571209023",
+      "fgsc23_5581298f36742519_2847905950"
+    ],
+    [
+      "fgsc23_b3ceba956de3ca76_1104750031",
+      "fgsc23_ac771608aecee1f8_423723827",
+      "fgsc23_b5b05cfd94bae5d0_783706895"
+    ],
+    [
+      "fgsc23_89a78d7700e03f91_3240498113",
+      "fgsc23_0095b73bd7a5fed6_3550438139",
+      "fgsc23_6a7d6ea8d8ad756b_1667015502",
+      "fgsc23_5f7b6022c97df90c_697337975",
+      "fgsc23_b93e9ae91682e8cb_432646547",
+      "fgsc23_cfab5024591c7fc3_1284582352",
+      "fgsc23_95a8974a95daa5b3_11757315",
+      "fgsc23_c3b50e04d9fd4fde_1734445146"
+    ],
+    [
+      "fgsc23_a4c36eb5817ce152_1982386201",
+      "fgsc23_b9fff9d4de7c6d19_259337816",
+      "fgsc23_1da018dcb07e194c_2779136431"
+    ],
+    [
+      "fgsc23_40294f71c60feccc_1962016252",
+      "fgsc23_702eaf229d9ec019_1315405081",
+      "fgsc23_01d83d315525e737_4004729756",
+      "fgsc23_f2c258918eb441c3_2115382401",
+      "fgsc23_95cec32f75abcd28_730774157"
+    ],
+    [
+      "fgsc23_2c88a241f41550f8_49467405",
+      "fgsc23_e85b23a2812acb1c_3238844089",
+      "fgsc23_be6e7125ca0d6b40_4291441822",
+      "fgsc23_5312611b7277703a_3123646582",
+      "fgsc23_a106d736fb96d569_533657477"
+    ],
+    [
+      "fgsc23_f78d8158e1d71462_3656476824",
+      "fgsc23_8774537f0772f364_1593164838",
+      "fgsc23_22d4bd7c70ce816d_3638048581",
+      "fgsc23_4804d5edb52ed71e_3016395989"
+    ],
+    [
+      "fgsc23_ae40104cdad15e76_1468776603",
+      "fgsc23_f432bc9a41046e69_429652953",
+      "fgsc23_bde3f6355144052a_3280920858",
+      "fgsc23_3e408882bb204062_2449477913"
+    ],
+    [
+      "fgsc23_d9386b958220f08b_1156640771",
+      "fgsc23_8fbba2b3ccd2b6fc_3997930360",
+      "fgsc23_448e1d32ea8a22e6_1843813269",
+      "fgsc23_60df6a1d724e8903_713925796"
+    ],
+    [
+      "fgsc23_206b32bf5c2bd638_2257752134",
+      "fgsc23_f433b3fb273ed494_1915177357",
+      "fgsc23_c2144d3876abd61d_3744108956"
+    ],
+    [
+      "fgsc23_8b1f586dcad99c97_1301890075",
+      "fgsc23_776539fe6c345e0a_1685752958",
+      "fgsc23_b4e37f27cb1a2c35_2397014953",
+      "fgsc23_c8ca4717c3fad278_2432905889"
+    ],
+    [
+      "fgsc23_5b46c1d185d1fe91_4087501244",
+      "fgsc23_269eab70f3cc101b_2626977107"
+    ],
+    [
+      "fgsc23_5167216a54dc9e98_3554373463",
+      "fgsc23_8d4495106d5ddcc2_2364722122"
+    ],
+    [
+      "fgsc23_ccf8ed6477779fc6_1742888854",
+      "fgsc23_c1c65f33bb984965_2003195756"
+    ],
+    [
+      "fgsc23_43328cbae38d8b95_4228197072",
+      "fgsc23_b8fc11f89d8258a0_2439235662"
+    ],
+    [
+      "fgsc23_a6a7024375aa97c8_477369493",
+      "fgsc23_01490bc9d1bc9eef_438162777"
+    ],
+    [
+      "fgsc23_02c4ef5308133366_2127528496",
+      "fgsc23_3c12ae476eb569e3_1956653816"
+    ],
+    [
+      "fgsc23_8975f239db0136cf_3619611867",
+      "fgsc23_4c79e522682b5ac5_286676719"
+    ]
+  ],
+  "label_conflict_components": 2,
+  "manifests": {
+    "fgsc23_official_civilian": {
+      "sha256": "4bf99627e4473a8fd9508abd34765756ec41c0cf0ca4fc4163b46312bd8d4403",
+      "counts": {
+        "test": 204,
+        "val": 165,
+        "train": 649
+      },
+      "class_counts": {
+        "train": {
+          "container ship": 64,
+          "car carrier": 46,
+          "bulk carrier": 219,
+          "oil tanker": 106,
+          "fishing boat": 66,
+          "passenger ship": 56,
+          "liquefied gas ship": 59,
+          "barge": 33
+        },
+        "val": {
+          "container ship": 17,
+          "car carrier": 12,
+          "bulk carrier": 55,
+          "oil tanker": 26,
+          "fishing boat": 16,
+          "passenger ship": 14,
+          "liquefied gas ship": 15,
+          "barge": 10
+        },
+        "test": {
+          "container ship": 19,
+          "car carrier": 14,
+          "bulk carrier": 69,
+          "oil tanker": 33,
+          "fishing boat": 20,
+          "passenger ship": 18,
+          "liquefied gas ship": 20,
+          "barge": 11
+        }
+      },
+      "label_map": {
+        "14": 0,
+        "15": 1,
+        "17": 2,
+        "18": 3,
+        "19": 4,
+        "20": 5,
+        "21": 6,
+        "22": 7
+      },
+      "group_intersections": {
+        "train/val": 0,
+        "train/test": 9,
+        "val/test": 2
+      }
+    },
+    "fgsc23_official_all": {
+      "sha256": "6cbc9993648a91fd785ad7a760c853921085d19d0168519eacaa5b4edf79ed29",
+      "counts": {
+        "test": 824,
+        "train": 2602,
+        "val": 654
+      },
+      "class_counts": {
+        "train": {
+          "non-ship": 310,
+          "air carrier": 106,
+          "submarine": 152,
+          "medical ship": 14,
+          "combat boat": 91,
+          "auxiliary ship": 144,
+          "container ship": 64,
+          "car carrier": 46,
+          "hovercraft": 77,
+          "bulk carrier": 219,
+          "oil tanker": 106,
+          "fishing boat": 66,
+          "destroyer": 346,
+          "passenger ship": 56,
+          "liquefied gas ship": 59,
+          "barge": 33,
+          "landing craft": 69,
+          "frigate": 188,
+          "amphibious transport dock": 58,
+          "cruiser": 187,
+          "Tarawa-class amphibious assault ship": 56,
+          "amphibious assault ship": 98,
+          "command ship": 57
+        },
+        "val": {
+          "non-ship": 77,
+          "air carrier": 26,
+          "submarine": 38,
+          "medical ship": 3,
+          "combat boat": 23,
+          "auxiliary ship": 36,
+          "container ship": 17,
+          "car carrier": 12,
+          "hovercraft": 19,
+          "bulk carrier": 55,
+          "oil tanker": 26,
+          "fishing boat": 16,
+          "destroyer": 88,
+          "passenger ship": 14,
+          "liquefied gas ship": 15,
+          "barge": 10,
+          "landing craft": 17,
+          "frigate": 48,
+          "amphibious transport dock": 14,
+          "cruiser": 47,
+          "Tarawa-class amphibious assault ship": 14,
+          "amphibious assault ship": 25,
+          "command ship": 14
+        },
+        "test": {
+          "non-ship": 97,
+          "air carrier": 34,
+          "submarine": 48,
+          "medical ship": 10,
+          "combat boat": 29,
+          "auxiliary ship": 45,
+          "container ship": 19,
+          "car carrier": 14,
+          "hovercraft": 24,
+          "bulk carrier": 69,
+          "oil tanker": 33,
+          "fishing boat": 20,
+          "destroyer": 108,
+          "passenger ship": 18,
+          "liquefied gas ship": 20,
+          "barge": 11,
+          "landing craft": 22,
+          "frigate": 59,
+          "amphibious transport dock": 18,
+          "cruiser": 59,
+          "Tarawa-class amphibious assault ship": 18,
+          "amphibious assault ship": 31,
+          "command ship": 18
+        }
+      },
+      "label_map": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 20,
+        "21": 21,
+        "22": 22
+      },
+      "group_intersections": {
+        "train/val": 0,
+        "train/test": 18,
+        "val/test": 2
+      }
+    },
+    "fgsc23_research_civilian": {
+      "sha256": "e4178b700d9e16932cf4b01a31afac792b43df4285c487a9034c34cb6f119a61",
+      "counts": {
+        "test": 236,
+        "val": 157,
+        "train": 618
+      },
+      "class_counts": {
+        "train": {
+          "container ship": 62,
+          "car carrier": 46,
+          "bulk carrier": 218,
+          "oil tanker": 105,
+          "fishing boat": 66,
+          "passenger ship": 56,
+          "liquefied gas ship": 34,
+          "barge": 31
+        },
+        "val": {
+          "container ship": 16,
+          "car carrier": 12,
+          "bulk carrier": 54,
+          "oil tanker": 26,
+          "fishing boat": 16,
+          "passenger ship": 14,
+          "liquefied gas ship": 9,
+          "barge": 10
+        },
+        "test": {
+          "container ship": 18,
+          "car carrier": 14,
+          "bulk carrier": 69,
+          "oil tanker": 33,
+          "fishing boat": 20,
+          "passenger ship": 18,
+          "liquefied gas ship": 51,
+          "barge": 13
+        }
+      },
+      "label_map": {
+        "14": 0,
+        "15": 1,
+        "17": 2,
+        "18": 3,
+        "19": 4,
+        "20": 5,
+        "21": 6,
+        "22": 7
+      },
+      "group_intersections": {
+        "train/val": 0,
+        "train/test": 0,
+        "val/test": 0
+      }
+    },
+    "fgsc23_research_all": {
+      "sha256": "31fab7cb9dcaf9e98d8ad63ca2639a62f42d40ff96128b76b8d88bc2271bb196",
+      "counts": {
+        "test": 863,
+        "train": 2565,
+        "val": 643
+      },
+      "class_counts": {
+        "train": {
+          "non-ship": 310,
+          "air carrier": 106,
+          "submarine": 152,
+          "medical ship": 14,
+          "combat boat": 91,
+          "auxiliary ship": 144,
+          "container ship": 62,
+          "car carrier": 46,
+          "hovercraft": 77,
+          "bulk carrier": 218,
+          "oil tanker": 105,
+          "fishing boat": 66,
+          "destroyer": 344,
+          "passenger ship": 56,
+          "liquefied gas ship": 34,
+          "barge": 31,
+          "landing craft": 69,
+          "frigate": 187,
+          "amphibious transport dock": 57,
+          "cruiser": 186,
+          "Tarawa-class amphibious assault ship": 56,
+          "amphibious assault ship": 97,
+          "command ship": 57
+        },
+        "val": {
+          "non-ship": 77,
+          "air carrier": 26,
+          "submarine": 38,
+          "medical ship": 3,
+          "combat boat": 23,
+          "auxiliary ship": 36,
+          "container ship": 16,
+          "car carrier": 12,
+          "hovercraft": 19,
+          "bulk carrier": 54,
+          "oil tanker": 26,
+          "fishing boat": 16,
+          "destroyer": 87,
+          "passenger ship": 14,
+          "liquefied gas ship": 9,
+          "barge": 10,
+          "landing craft": 17,
+          "frigate": 47,
+          "amphibious transport dock": 14,
+          "cruiser": 46,
+          "Tarawa-class amphibious assault ship": 14,
+          "amphibious assault ship": 25,
+          "command ship": 14
+        },
+        "test": {
+          "non-ship": 97,
+          "air carrier": 34,
+          "submarine": 48,
+          "medical ship": 10,
+          "combat boat": 29,
+          "auxiliary ship": 45,
+          "container ship": 18,
+          "car carrier": 14,
+          "hovercraft": 24,
+          "bulk carrier": 69,
+          "oil tanker": 33,
+          "fishing boat": 20,
+          "destroyer": 110,
+          "passenger ship": 18,
+          "liquefied gas ship": 51,
+          "barge": 13,
+          "landing craft": 22,
+          "frigate": 61,
+          "amphibious transport dock": 19,
+          "cruiser": 60,
+          "Tarawa-class amphibious assault ship": 18,
+          "amphibious assault ship": 32,
+          "command ship": 18
+        }
+      },
+      "label_map": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7,
+        "8": 8,
+        "9": 9,
+        "10": 10,
+        "11": 11,
+        "12": 12,
+        "13": 13,
+        "14": 14,
+        "15": 15,
+        "16": 16,
+        "17": 17,
+        "18": 18,
+        "19": 19,
+        "20": 20,
+        "21": 21,
+        "22": 22
+      },
+      "group_intersections": {
+        "train/val": 0,
+        "train/test": 0,
+        "val/test": 0
+      }
+    }
+  },
+  "limitations": [
+    "Original scene/port/vessel identities absent; duplicate-free is not scene-independent.",
+    "Near-duplicate screening is conservative and cannot certify no augmented/rotated overlap.",
+    "No ground-truth ship mask, therefore no true ship-coverage measurements.",
+    "Official protocol includes train-derived validation; full-train published numbers are not identical training protocols."
+  ],
+  "civilian_ids": [
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22
+  ],
+  "ambiguous_excluded_ids": [
+    11,
+    13,
+    16
+  ]
+}

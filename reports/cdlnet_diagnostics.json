@@ -1,0 +1,4549 @@
+{
+  "civilian": {
+    "title": "民船主实验（8 类）",
+    "run": "runs_external/fgsc23_research_civilian/cdlnet_clean_s17",
+    "models": [
+      "cdlnet_repro",
+      "resnet50",
+      "convnext_tiny",
+      "swin_t"
+    ],
+    "labels": {
+      "0": "container ship",
+      "1": "car carrier",
+      "2": "bulk carrier",
+      "3": "oil tanker",
+      "4": "fishing boat",
+      "5": "passenger ship",
+      "6": "liquefied gas ship",
+      "7": "barge"
+    },
+    "num_classes": 8,
+    "high_confidence_threshold": 0.9,
+    "family_scores": {
+      "cdlnet_repro": {
+        "clean": {
+          "macro_f1": 0.8429065197813754,
+          "accuracy": 0.847457627118644,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.6881950028012319,
+          "accuracy": 0.726271186440678,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.8176666666666667,
+          "clean_correct_observations": 3000
+        },
+        "shifted single": {
+          "macro_f1": 0.7007097421388359,
+          "accuracy": 0.7242937853107345,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.815,
+          "clean_correct_observations": 3000
+        },
+        "matched combination": {
+          "macro_f1": 0.33559247360029537,
+          "accuracy": 0.4067796610169491,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.445,
+          "clean_correct_observations": 800
+        },
+        "shifted combination": {
+          "macro_f1": 0.3785662415977381,
+          "accuracy": 0.44491525423728817,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.47625,
+          "clean_correct_observations": 800
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "macro_f1": 0.7999652955991334,
+          "accuracy": 0.8135593220338984,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.7313674919105164,
+          "accuracy": 0.7548022598870057,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.8440972222222223,
+          "clean_correct_observations": 2880
+        },
+        "shifted single": {
+          "macro_f1": 0.7258620254525141,
+          "accuracy": 0.7519774011299435,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.8402777777777778,
+          "clean_correct_observations": 2880
+        },
+        "matched combination": {
+          "macro_f1": 0.42248614562680287,
+          "accuracy": 0.45868644067796605,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.48046875,
+          "clean_correct_observations": 768
+        },
+        "shifted combination": {
+          "macro_f1": 0.4543904621808421,
+          "accuracy": 0.48093220338983045,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.5052083333333334,
+          "clean_correct_observations": 768
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "macro_f1": 0.8433233041490702,
+          "accuracy": 0.8516949152542372,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.8022008388965303,
+          "accuracy": 0.8183615819209038,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.9313432835820895,
+          "clean_correct_observations": 3015
+        },
+        "shifted single": {
+          "macro_f1": 0.7922991381128043,
+          "accuracy": 0.809322033898305,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.9177446102819237,
+          "clean_correct_observations": 3015
+        },
+        "matched combination": {
+          "macro_f1": 0.6064475166328895,
+          "accuracy": 0.6408898305084746,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.7201492537313433,
+          "clean_correct_observations": 804
+        },
+        "shifted combination": {
+          "macro_f1": 0.5778756008404665,
+          "accuracy": 0.6154661016949152,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.6865671641791045,
+          "clean_correct_observations": 804
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "macro_f1": 0.8735535862262205,
+          "accuracy": 0.8898305084745762,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.7940296878582914,
+          "accuracy": 0.8206214689265537,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.9041269841269841,
+          "clean_correct_observations": 3150
+        },
+        "shifted single": {
+          "macro_f1": 0.8160738909817923,
+          "accuracy": 0.8403954802259886,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.9250793650793651,
+          "clean_correct_observations": 3150
+        },
+        "matched combination": {
+          "macro_f1": 0.5668630347014095,
+          "accuracy": 0.6228813559322034,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.6738095238095239,
+          "clean_correct_observations": 840
+        },
+        "shifted combination": {
+          "macro_f1": 0.6065742602550759,
+          "accuracy": 0.6610169491525424,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.7202380952380952,
+          "clean_correct_observations": 840
+        }
+      }
+    },
+    "severity_curves": {
+      "cdlnet_repro": {
+        "matched": {
+          "haze": [
+            0.7999705386352952,
+            0.7738786298218348,
+            0.7181544832127408,
+            0.587902712103822,
+            0.33603671684501135
+          ],
+          "cloud": [
+            0.8338688408015381,
+            0.7981501639988917,
+            0.7556887375002577,
+            0.6033281080216966,
+            0.4290079065911613
+          ],
+          "glare": [
+            0.8394684179978298,
+            0.8215201013426165,
+            0.7895886525852569,
+            0.6859816044047286,
+            0.5503794281557973
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8165816551845964,
+            0.7714674064066209,
+            0.69819081720077,
+            0.5976570401004146,
+            0.30562490043360263
+          ],
+          "cloud": [
+            0.847971578000127,
+            0.7699730745280271,
+            0.7284933204050852,
+            0.5218625461708162,
+            0.3730624637467045
+          ],
+          "glare": [
+            0.8434968888741268,
+            0.8215281629608004,
+            0.8435895640307405,
+            0.8225462962962964,
+            0.7486004177438088
+          ]
+        }
+      },
+      "resnet50": {
+        "matched": {
+          "haze": [
+            0.7817150677032463,
+            0.7726627356599449,
+            0.7598011278993009,
+            0.6864968933739684,
+            0.5775859436878361
+          ],
+          "cloud": [
+            0.7966333180446773,
+            0.8125691934050778,
+            0.7833805269322812,
+            0.7136052260544641,
+            0.5274161922607217
+          ],
+          "glare": [
+            0.811454302827731,
+            0.8334722350007482,
+            0.7979216146552518,
+            0.71344033053196,
+            0.6023576706205362
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.7827146717142006,
+            0.8090518183338263,
+            0.7696447312147445,
+            0.735181538187217,
+            0.5120112900106312
+          ],
+          "cloud": [
+            0.8320939047834243,
+            0.8120157361340874,
+            0.6511037833057653,
+            0.5217388918916666,
+            0.43499960567983686
+          ],
+          "glare": [
+            0.8103143501257921,
+            0.8093097658359416,
+            0.8267767600221052,
+            0.7985439702655186,
+            0.7824295642829545
+          ]
+        }
+      },
+      "convnext_tiny": {
+        "matched": {
+          "haze": [
+            0.8438861600844334,
+            0.8345194781491476,
+            0.812950660396609,
+            0.7669536567110333,
+            0.7228290739278642
+          ],
+          "cloud": [
+            0.8326617866684092,
+            0.8429816497531956,
+            0.8394351459229177,
+            0.8086956467855563,
+            0.728434770494762
+          ],
+          "glare": [
+            0.8393933684734425,
+            0.8484260252973601,
+            0.8094092231698637,
+            0.7908385356304475,
+            0.7115974019829123
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8280367664742665,
+            0.8096850505514528,
+            0.7849608683190772,
+            0.784502611855553,
+            0.745042885341906
+          ],
+          "cloud": [
+            0.8581295290513778,
+            0.8489415346558205,
+            0.8020431277368127,
+            0.7099189924282803,
+            0.5378462341762373
+          ],
+          "glare": [
+            0.8436325256993684,
+            0.856062521638318,
+            0.8291574748340116,
+            0.8274952421391701,
+            0.8190317067904104
+          ]
+        }
+      },
+      "swin_t": {
+        "matched": {
+          "haze": [
+            0.8506897345798314,
+            0.8465357612749917,
+            0.8122333942598587,
+            0.7863365332115332,
+            0.7614349927689692
+          ],
+          "cloud": [
+            0.8782423764648828,
+            0.8455877988260398,
+            0.8129171101515353,
+            0.7633422903278996,
+            0.6324677763049482
+          ],
+          "glare": [
+            0.8701553025602516,
+            0.83694089350511,
+            0.7849379475667279,
+            0.7683503513134414,
+            0.6602730547583489
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8404139294044651,
+            0.8431655620207921,
+            0.8116305502630867,
+            0.7966940336233814,
+            0.7123985351233496
+          ],
+          "cloud": [
+            0.8655294506502618,
+            0.8641705928771193,
+            0.8371974501006758,
+            0.7867295375885763,
+            0.6855815039553947
+          ],
+          "glare": [
+            0.8619570530572507,
+            0.8704379555025672,
+            0.8463712447412428,
+            0.8322332103625851,
+            0.7865977554561356
+          ]
+        }
+      }
+    },
+    "class_drops": {
+      "cdlnet_repro": [
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.9444444444444444,
+          "matched_single_recall": 0.662962962962963,
+          "matched_combination_recall": 0.25,
+          "drop_matched_single": 0.28148148148148144,
+          "drop_matched_combination": 0.6944444444444444
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.6974358974358975,
+          "matched_combination_recall": 0.15384615384615385,
+          "drop_matched_single": 0.22564102564102562,
+          "drop_matched_combination": 0.7692307692307693
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.7777777777777778,
+          "matched_single_recall": 0.6296296296296295,
+          "matched_combination_recall": 0.2777777777777778,
+          "drop_matched_single": 0.14814814814814825,
+          "drop_matched_combination": 0.5
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8840579710144928,
+          "matched_single_recall": 0.7507246376811593,
+          "matched_combination_recall": 0.5181159420289855,
+          "drop_matched_single": 0.13333333333333353,
+          "drop_matched_combination": 0.3659420289855073
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.5,
+          "matched_single_recall": 0.39,
+          "matched_combination_recall": 0.19999999999999998,
+          "drop_matched_single": 0.10999999999999999,
+          "drop_matched_combination": 0.30000000000000004
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9058823529411766,
+          "matched_combination_recall": 0.45098039215686275,
+          "drop_matched_single": 0.09411764705882342,
+          "drop_matched_combination": 0.5490196078431373
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.7575757575757576,
+          "matched_single_recall": 0.6828282828282827,
+          "matched_combination_recall": 0.44696969696969696,
+          "drop_matched_single": 0.0747474747474749,
+          "drop_matched_combination": 0.3106060606060606
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 0.7142857142857143,
+          "matched_single_recall": 0.7666666666666668,
+          "matched_combination_recall": 0.5,
+          "drop_matched_single": -0.05238095238095253,
+          "drop_matched_combination": 0.2142857142857143
+        }
+      ],
+      "resnet50": [
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.717948717948718,
+          "matched_combination_recall": 0.15384615384615385,
+          "drop_matched_single": 0.28205128205128205,
+          "drop_matched_combination": 0.8461538461538461
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8695652173913043,
+          "matched_single_recall": 0.6685990338164252,
+          "matched_combination_recall": 0.3115942028985507,
+          "drop_matched_single": 0.20096618357487916,
+          "drop_matched_combination": 0.5579710144927537
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.7777777777777778,
+          "matched_single_recall": 0.674074074074074,
+          "matched_combination_recall": 0.3055555555555556,
+          "drop_matched_single": 0.10370370370370374,
+          "drop_matched_combination": 0.4722222222222222
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9190476190476191,
+          "matched_combination_recall": 0.5535714285714286,
+          "drop_matched_single": 0.08095238095238089,
+          "drop_matched_combination": 0.4464285714285714
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.8484848484848485,
+          "matched_single_recall": 0.7919191919191918,
+          "matched_combination_recall": 0.6515151515151515,
+          "drop_matched_single": 0.05656565656565671,
+          "drop_matched_combination": 0.19696969696969702
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.7222222222222222,
+          "matched_single_recall": 0.7222222222222222,
+          "matched_combination_recall": 0.4166666666666667,
+          "drop_matched_single": 0.0,
+          "drop_matched_combination": 0.3055555555555555
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.5,
+          "matched_single_recall": 0.5033333333333332,
+          "matched_combination_recall": 0.525,
+          "drop_matched_single": -0.0033333333333331883,
+          "drop_matched_combination": -0.025000000000000022
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 0.7843137254901961,
+          "matched_single_recall": 0.950326797385621,
+          "matched_combination_recall": 0.6274509803921569,
+          "drop_matched_single": -0.1660130718954249,
+          "drop_matched_combination": 0.1568627450980392
+        }
+      ],
+      "convnext_tiny": [
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8840579710144928,
+          "matched_single_recall": 0.8135265700483091,
+          "matched_combination_recall": 0.6956521739130435,
+          "drop_matched_single": 0.07053140096618371,
+          "drop_matched_combination": 0.18840579710144933
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9380952380952382,
+          "matched_combination_recall": 0.7142857142857142,
+          "drop_matched_single": 0.061904761904761796,
+          "drop_matched_combination": 0.2857142857142858
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.8717948717948719,
+          "matched_combination_recall": 0.6346153846153846,
+          "drop_matched_single": 0.05128205128205121,
+          "drop_matched_combination": 0.28846153846153855
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.8181818181818182,
+          "matched_single_recall": 0.7919191919191919,
+          "matched_combination_recall": 0.5757575757575757,
+          "drop_matched_single": 0.02626262626262632,
+          "drop_matched_combination": 0.24242424242424254
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.8222222222222223,
+          "matched_combination_recall": 0.5833333333333333,
+          "drop_matched_single": 0.011111111111111072,
+          "drop_matched_combination": 0.2500000000000001
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9895424836601308,
+          "matched_combination_recall": 0.7745098039215685,
+          "drop_matched_single": 0.010457516339869244,
+          "drop_matched_combination": 0.22549019607843146
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.45,
+          "matched_single_recall": 0.44000000000000006,
+          "matched_combination_recall": 0.36249999999999993,
+          "drop_matched_single": 0.009999999999999953,
+          "drop_matched_combination": 0.08750000000000008
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.6666666666666666,
+          "matched_single_recall": 0.6851851851851851,
+          "matched_combination_recall": 0.4861111111111111,
+          "drop_matched_single": -0.01851851851851849,
+          "drop_matched_combination": 0.18055555555555552
+        }
+      ],
+      "swin_t": [
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.55,
+          "matched_single_recall": 0.38333333333333336,
+          "matched_combination_recall": 0.3125,
+          "drop_matched_single": 0.16666666666666669,
+          "drop_matched_combination": 0.23750000000000004
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8985507246376812,
+          "matched_single_recall": 0.7884057971014493,
+          "matched_combination_recall": 0.6014492753623188,
+          "drop_matched_single": 0.11014492753623184,
+          "drop_matched_combination": 0.2971014492753623
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.919047619047619,
+          "matched_combination_recall": 0.5178571428571429,
+          "drop_matched_single": 0.080952380952381,
+          "drop_matched_combination": 0.4821428571428571
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.9393939393939394,
+          "matched_single_recall": 0.8727272727272728,
+          "matched_combination_recall": 0.6742424242424242,
+          "drop_matched_single": 0.06666666666666665,
+          "drop_matched_combination": 0.26515151515151525
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.954248366013072,
+          "matched_combination_recall": 0.7990196078431373,
+          "drop_matched_single": 0.04575163398692805,
+          "drop_matched_combination": 0.2009803921568627
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.8111111111111112,
+          "matched_combination_recall": 0.5972222222222223,
+          "drop_matched_single": 0.022222222222222143,
+          "drop_matched_combination": 0.23611111111111105
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.9076923076923079,
+          "matched_combination_recall": 0.5576923076923077,
+          "drop_matched_single": 0.015384615384615219,
+          "drop_matched_combination": 0.3653846153846154
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.7777777777777778,
+          "matched_single_recall": 0.825925925925926,
+          "matched_combination_recall": 0.611111111111111,
+          "drop_matched_single": -0.04814814814814816,
+          "drop_matched_combination": 0.16666666666666674
+        }
+      ]
+    },
+    "confusions": {
+      "cdlnet_repro": {
+        "clean": [
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 9
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 8
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 4
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "car carrier",
+            "predicted": "bulk carrier",
+            "count": 2
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 2
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "container ship",
+            "count": 2
+          },
+          {
+            "true": "container ship",
+            "predicted": "oil tanker",
+            "count": 1
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "liquefied gas ship",
+            "predicted": "bulk carrier",
+            "count": 41
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 20
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 19
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "bulk carrier",
+            "count": 13
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 11
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 11
+          },
+          {
+            "true": "barge",
+            "predicted": "bulk carrier",
+            "count": 9
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "car carrier",
+            "count": 7
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 23
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "car carrier",
+            "count": 22
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "bulk carrier",
+            "count": 18
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 17
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 10
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "bulk carrier",
+            "count": 10
+          },
+          {
+            "true": "container ship",
+            "predicted": "car carrier",
+            "count": 7
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 7
+          }
+        ]
+      },
+      "resnet50": {
+        "clean": [
+          {
+            "true": "liquefied gas ship",
+            "predicted": "container ship",
+            "count": 11
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "passenger ship",
+            "count": 6
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 4
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 4
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 4
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "passenger ship",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 2
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 2
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 39
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "oil tanker",
+            "count": 36
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "oil tanker",
+            "count": 16
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 13
+          },
+          {
+            "true": "barge",
+            "predicted": "oil tanker",
+            "count": 12
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 10
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "oil tanker",
+            "count": 9
+          },
+          {
+            "true": "container ship",
+            "predicted": "oil tanker",
+            "count": 8
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "liquefied gas ship",
+            "predicted": "bulk carrier",
+            "count": 24
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 22
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "fishing boat",
+            "count": 11
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "fishing boat",
+            "count": 11
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 10
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 9
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 8
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 7
+          }
+        ]
+      },
+      "convnext_tiny": {
+        "clean": [
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 9
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 6
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 5
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 2
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "oil tanker",
+            "count": 2
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "fishing boat",
+            "count": 2
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 13
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 11
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "barge",
+            "count": 10
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 8
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 8
+          },
+          {
+            "true": "barge",
+            "predicted": "liquefied gas ship",
+            "count": 8
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 7
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "liquefied gas ship",
+            "count": 6
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "bulk carrier",
+            "predicted": "car carrier",
+            "count": 19
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "liquefied gas ship",
+            "count": 11
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 9
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 8
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 7
+          },
+          {
+            "true": "barge",
+            "predicted": "liquefied gas ship",
+            "count": 7
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "passenger ship",
+            "count": 5
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "fishing boat",
+            "count": 5
+          }
+        ]
+      },
+      "swin_t": {
+        "clean": [
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 5
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "passenger ship",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 2
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 2
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "car carrier",
+            "count": 2
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 2
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "bulk carrier",
+            "count": 2
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 14
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 13
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "liquefied gas ship",
+            "count": 11
+          },
+          {
+            "true": "barge",
+            "predicted": "liquefied gas ship",
+            "count": 11
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 8
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 8
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 7
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "fishing boat",
+            "count": 6
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 17
+          },
+          {
+            "true": "barge",
+            "predicted": "liquefied gas ship",
+            "count": 11
+          },
+          {
+            "true": "car carrier",
+            "predicted": "oil tanker",
+            "count": 10
+          },
+          {
+            "true": "passenger ship",
+            "predicted": "fishing boat",
+            "count": 9
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 8
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 7
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "liquefied gas ship",
+            "count": 6
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "fishing boat",
+            "count": 5
+          }
+        ]
+      }
+    },
+    "confidence": {
+      "cdlnet_repro": {
+        "clean": {
+          "n": 236,
+          "errors": 36,
+          "error_rate": 0.15254237288135594,
+          "high_confidence_errors": 10,
+          "high_confidence_share_of_errors": 0.2777777777777778,
+          "mean_confidence_correct": 0.9374766917526722,
+          "mean_confidence_wrong": 0.7681436820162667,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 236,
+          "errors": 128,
+          "error_rate": 0.5423728813559322,
+          "high_confidence_errors": 17,
+          "high_confidence_share_of_errors": 0.1328125,
+          "mean_confidence_correct": 0.6491689739955796,
+          "mean_confidence_wrong": 0.48280696116853505,
+          "clean_correct_to_wrong": 102
+        },
+        "matched_cloud_5": {
+          "n": 236,
+          "errors": 122,
+          "error_rate": 0.5169491525423728,
+          "high_confidence_errors": 11,
+          "high_confidence_share_of_errors": 0.09016393442622951,
+          "mean_confidence_correct": 0.7641493479410807,
+          "mean_confidence_wrong": 0.5418469841118718,
+          "clean_correct_to_wrong": 95
+        },
+        "matched_glare_5": {
+          "n": 236,
+          "errors": 93,
+          "error_rate": 0.3940677966101695,
+          "high_confidence_errors": 11,
+          "high_confidence_share_of_errors": 0.11827956989247312,
+          "mean_confidence_correct": 0.8393844195179172,
+          "mean_confidence_wrong": 0.5943613265470792,
+          "clean_correct_to_wrong": 64
+        },
+        "matched_haze+glare_5": {
+          "n": 236,
+          "errors": 179,
+          "error_rate": 0.7584745762711864,
+          "high_confidence_errors": 5,
+          "high_confidence_share_of_errors": 0.027932960893854747,
+          "mean_confidence_correct": 0.29750222072266697,
+          "mean_confidence_wrong": 0.3051892152711666,
+          "clean_correct_to_wrong": 148
+        },
+        "matched_haze+cloud_5": {
+          "n": 236,
+          "errors": 190,
+          "error_rate": 0.8050847457627118,
+          "high_confidence_errors": 8,
+          "high_confidence_share_of_errors": 0.042105263157894736,
+          "mean_confidence_correct": 0.3751340307619261,
+          "mean_confidence_wrong": 0.34479833911908303,
+          "clean_correct_to_wrong": 158
+        },
+        "shifted_haze+cloud_5": {
+          "n": 236,
+          "errors": 187,
+          "error_rate": 0.7923728813559322,
+          "high_confidence_errors": 4,
+          "high_confidence_share_of_errors": 0.0213903743315508,
+          "mean_confidence_correct": 0.3137446061080816,
+          "mean_confidence_wrong": 0.32106341078957135,
+          "clean_correct_to_wrong": 161
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "n": 236,
+          "errors": 44,
+          "error_rate": 0.1864406779661017,
+          "high_confidence_errors": 17,
+          "high_confidence_share_of_errors": 0.38636363636363635,
+          "mean_confidence_correct": 0.9569510139214495,
+          "mean_confidence_wrong": 0.827239906246012,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 236,
+          "errors": 88,
+          "error_rate": 0.3728813559322034,
+          "high_confidence_errors": 17,
+          "high_confidence_share_of_errors": 0.19318181818181818,
+          "mean_confidence_correct": 0.8422363152777826,
+          "mean_confidence_wrong": 0.6915408819913864,
+          "clean_correct_to_wrong": 64
+        },
+        "matched_cloud_5": {
+          "n": 236,
+          "errors": 99,
+          "error_rate": 0.4194915254237288,
+          "high_confidence_errors": 33,
+          "high_confidence_share_of_errors": 0.3333333333333333,
+          "mean_confidence_correct": 0.9053634772770596,
+          "mean_confidence_wrong": 0.7350057730771075,
+          "clean_correct_to_wrong": 73
+        },
+        "matched_glare_5": {
+          "n": 236,
+          "errors": 90,
+          "error_rate": 0.3813559322033898,
+          "high_confidence_errors": 22,
+          "high_confidence_share_of_errors": 0.24444444444444444,
+          "mean_confidence_correct": 0.8993864314605112,
+          "mean_confidence_wrong": 0.7274384611182743,
+          "clean_correct_to_wrong": 64
+        },
+        "matched_haze+glare_5": {
+          "n": 236,
+          "errors": 192,
+          "error_rate": 0.8135593220338984,
+          "high_confidence_errors": 8,
+          "high_confidence_share_of_errors": 0.041666666666666664,
+          "mean_confidence_correct": 0.5345025316558101,
+          "mean_confidence_wrong": 0.42666515172459185,
+          "clean_correct_to_wrong": 154
+        },
+        "matched_haze+cloud_5": {
+          "n": 236,
+          "errors": 165,
+          "error_rate": 0.6991525423728814,
+          "high_confidence_errors": 11,
+          "high_confidence_share_of_errors": 0.06666666666666667,
+          "mean_confidence_correct": 0.656666701108637,
+          "mean_confidence_wrong": 0.5699828575054805,
+          "clean_correct_to_wrong": 131
+        },
+        "shifted_haze+cloud_5": {
+          "n": 236,
+          "errors": 165,
+          "error_rate": 0.6991525423728814,
+          "high_confidence_errors": 20,
+          "high_confidence_share_of_errors": 0.12121212121212122,
+          "mean_confidence_correct": 0.6252875288187618,
+          "mean_confidence_wrong": 0.6191545393430825,
+          "clean_correct_to_wrong": 135
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "n": 236,
+          "errors": 35,
+          "error_rate": 0.1483050847457627,
+          "high_confidence_errors": 2,
+          "high_confidence_share_of_errors": 0.05714285714285714,
+          "mean_confidence_correct": 0.8716495094904259,
+          "mean_confidence_wrong": 0.6095835838999067,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 236,
+          "errors": 53,
+          "error_rate": 0.2245762711864407,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.7323655537405952,
+          "mean_confidence_wrong": 0.4578034023068986,
+          "clean_correct_to_wrong": 23
+        },
+        "matched_cloud_5": {
+          "n": 236,
+          "errors": 59,
+          "error_rate": 0.25,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.5653655383378099,
+          "mean_confidence_wrong": 0.4147543586411719,
+          "clean_correct_to_wrong": 38
+        },
+        "matched_glare_5": {
+          "n": 236,
+          "errors": 61,
+          "error_rate": 0.2584745762711864,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.65147468319961,
+          "mean_confidence_wrong": 0.3930670416257421,
+          "clean_correct_to_wrong": 32
+        },
+        "matched_haze+glare_5": {
+          "n": 236,
+          "errors": 131,
+          "error_rate": 0.5550847457627118,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.3561971116633642,
+          "mean_confidence_wrong": 0.23797931118320872,
+          "clean_correct_to_wrong": 100
+        },
+        "matched_haze+cloud_5": {
+          "n": 236,
+          "errors": 114,
+          "error_rate": 0.4830508474576271,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.4035061380413712,
+          "mean_confidence_wrong": 0.286751437736185,
+          "clean_correct_to_wrong": 86
+        },
+        "shifted_haze+cloud_5": {
+          "n": 236,
+          "errors": 129,
+          "error_rate": 0.5466101694915254,
+          "high_confidence_errors": 0,
+          "high_confidence_share_of_errors": 0.0,
+          "mean_confidence_correct": 0.37285804024366576,
+          "mean_confidence_wrong": 0.25612679389558096,
+          "clean_correct_to_wrong": 102
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "n": 236,
+          "errors": 26,
+          "error_rate": 0.11016949152542373,
+          "high_confidence_errors": 15,
+          "high_confidence_share_of_errors": 0.5769230769230769,
+          "mean_confidence_correct": 0.9824027765364874,
+          "mean_confidence_wrong": 0.8373766209070499,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 236,
+          "errors": 47,
+          "error_rate": 0.19915254237288135,
+          "high_confidence_errors": 29,
+          "high_confidence_share_of_errors": 0.6170212765957447,
+          "mean_confidence_correct": 0.9714798227189079,
+          "mean_confidence_wrong": 0.8594006173154141,
+          "clean_correct_to_wrong": 28
+        },
+        "matched_cloud_5": {
+          "n": 236,
+          "errors": 80,
+          "error_rate": 0.3389830508474576,
+          "high_confidence_errors": 24,
+          "high_confidence_share_of_errors": 0.3,
+          "mean_confidence_correct": 0.9136398856838545,
+          "mean_confidence_wrong": 0.7719798188656568,
+          "clean_correct_to_wrong": 57
+        },
+        "matched_glare_5": {
+          "n": 236,
+          "errors": 73,
+          "error_rate": 0.3093220338983051,
+          "high_confidence_errors": 28,
+          "high_confidence_share_of_errors": 0.3835616438356164,
+          "mean_confidence_correct": 0.9522414553019166,
+          "mean_confidence_wrong": 0.7868315279483795,
+          "clean_correct_to_wrong": 52
+        },
+        "matched_haze+glare_5": {
+          "n": 236,
+          "errors": 133,
+          "error_rate": 0.5635593220338984,
+          "high_confidence_errors": 23,
+          "high_confidence_share_of_errors": 0.17293233082706766,
+          "mean_confidence_correct": 0.8216973421643081,
+          "mean_confidence_wrong": 0.6781007858147299,
+          "clean_correct_to_wrong": 112
+        },
+        "matched_haze+cloud_5": {
+          "n": 236,
+          "errors": 108,
+          "error_rate": 0.4576271186440678,
+          "high_confidence_errors": 32,
+          "high_confidence_share_of_errors": 0.2962962962962963,
+          "mean_confidence_correct": 0.8320235474966466,
+          "mean_confidence_wrong": 0.7062440026137564,
+          "clean_correct_to_wrong": 89
+        },
+        "shifted_haze+cloud_5": {
+          "n": 236,
+          "errors": 105,
+          "error_rate": 0.4449152542372881,
+          "high_confidence_errors": 29,
+          "high_confidence_share_of_errors": 0.2761904761904762,
+          "mean_confidence_correct": 0.8618080188299864,
+          "mean_confidence_wrong": 0.7309899599779219,
+          "clean_correct_to_wrong": 87
+        }
+      }
+    },
+    "placement": {
+      "cdlnet_repro": {
+        "cloud_3": {
+          "center": 0.7324021506940789,
+          "border": 0.7857904155914386
+        },
+        "glare_3": {
+          "center": 0.6206685478955594,
+          "border": 0.8394289878113408
+        }
+      },
+      "resnet50": {
+        "cloud_3": {
+          "center": 0.7937708909962937,
+          "border": 0.7899982070986291
+        },
+        "glare_3": {
+          "center": 0.6397181297635475,
+          "border": 0.8039210751758386
+        }
+      },
+      "convnext_tiny": {
+        "cloud_3": {
+          "center": 0.8217199812594549,
+          "border": 0.8212631429383348
+        },
+        "glare_3": {
+          "center": 0.7856695110040576,
+          "border": 0.8312108670537935
+        }
+      },
+      "swin_t": {
+        "cloud_3": {
+          "center": 0.7875629072511857,
+          "border": 0.8395823477918472
+        },
+        "glare_3": {
+          "center": 0.748358956019779,
+          "border": 0.8693372733234186
+        }
+      }
+    },
+    "collapse": {
+      "cdlnet_repro": {
+        "clean": {
+          "label": "bulk carrier",
+          "count": 83,
+          "share": 0.3516949152542373
+        },
+        "matched_haze+glare_5": {
+          "label": "bulk carrier",
+          "count": 151,
+          "share": 0.6398305084745762
+        },
+        "shifted_haze+cloud_5": {
+          "label": "bulk carrier",
+          "count": 98,
+          "share": 0.4152542372881356
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "label": "bulk carrier",
+          "count": 70,
+          "share": 0.2966101694915254
+        },
+        "matched_haze+glare_5": {
+          "label": "oil tanker",
+          "count": 149,
+          "share": 0.6313559322033898
+        },
+        "shifted_haze+cloud_5": {
+          "label": "fishing boat",
+          "count": 79,
+          "share": 0.3347457627118644
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "label": "bulk carrier",
+          "count": 82,
+          "share": 0.3474576271186441
+        },
+        "matched_haze+glare_5": {
+          "label": "liquefied gas ship",
+          "count": 65,
+          "share": 0.2754237288135593
+        },
+        "shifted_haze+cloud_5": {
+          "label": "liquefied gas ship",
+          "count": 73,
+          "share": 0.3093220338983051
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "label": "bulk carrier",
+          "count": 74,
+          "share": 0.3135593220338983
+        },
+        "matched_haze+glare_5": {
+          "label": "liquefied gas ship",
+          "count": 95,
+          "share": 0.4025423728813559
+        },
+        "shifted_haze+cloud_5": {
+          "label": "liquefied gas ship",
+          "count": 82,
+          "share": 0.3474576271186441
+        }
+      }
+    },
+    "intervals": {
+      "clean": {
+        "low": 0.7889527699484075,
+        "high": 0.8873986588184405,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze_5": {
+        "low": 0.2621970772501226,
+        "high": 0.40114759916696724,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_cloud_5": {
+        "low": 0.35901520386611196,
+        "high": 0.4994277866456389,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_glare_5": {
+        "low": 0.48005501736641937,
+        "high": 0.6181770355276823,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze+glare_5": {
+        "low": 0.07500912953121576,
+        "high": 0.147754960527656,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze+cloud_5": {
+        "low": 0.09270929492104243,
+        "high": 0.16382736756624433,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "shifted_haze+cloud_5": {
+        "low": 0.0988203868265703,
+        "high": 0.18900811913022897,
+        "repeats": 300,
+        "group_count": 200,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      }
+    },
+    "condition_macro_f1": {
+      "cdlnet_repro": {
+        "clean": 0.8429065197813754,
+        "matched_haze_1": 0.7999705386352952,
+        "matched_haze_2": 0.7738786298218348,
+        "matched_haze_3": 0.7181544832127408,
+        "matched_haze_4": 0.587902712103822,
+        "matched_haze_5": 0.33603671684501135,
+        "matched_cloud_1": 0.8338688408015381,
+        "matched_cloud_2": 0.7981501639988917,
+        "matched_cloud_3": 0.7556887375002577,
+        "matched_cloud_4": 0.6033281080216966,
+        "matched_cloud_5": 0.4290079065911613,
+        "matched_glare_1": 0.8394684179978298,
+        "matched_glare_2": 0.8215201013426165,
+        "matched_glare_3": 0.7895886525852569,
+        "matched_glare_4": 0.6859816044047286,
+        "matched_glare_5": 0.5503794281557973,
+        "matched_haze+glare_3": 0.5567300554567108,
+        "matched_haze+glare_5": 0.11333000944384053,
+        "matched_haze+cloud_3": 0.5429291398874712,
+        "matched_haze+cloud_5": 0.12938068961315913,
+        "shifted_haze_1": 0.8165816551845964,
+        "shifted_haze_2": 0.7714674064066209,
+        "shifted_haze_3": 0.69819081720077,
+        "shifted_haze_4": 0.5976570401004146,
+        "shifted_haze_5": 0.30562490043360263,
+        "shifted_cloud_1": 0.847971578000127,
+        "shifted_cloud_2": 0.7699730745280271,
+        "shifted_cloud_3": 0.7284933204050852,
+        "shifted_cloud_4": 0.5218625461708162,
+        "shifted_cloud_5": 0.3730624637467045,
+        "shifted_glare_1": 0.8434968888741268,
+        "shifted_glare_2": 0.8215281629608004,
+        "shifted_glare_3": 0.8435895640307405,
+        "shifted_glare_4": 0.8225462962962964,
+        "shifted_glare_5": 0.7486004177438088,
+        "shifted_haze+glare_3": 0.6620839707426929,
+        "shifted_haze+glare_5": 0.20772134320930782,
+        "shifted_haze+cloud_3": 0.5032787419799354,
+        "shifted_haze+cloud_5": 0.14118091045901637,
+        "matched_cloud_3_center": 0.7324021506940789,
+        "matched_glare_3_center": 0.6206685478955594,
+        "matched_cloud_3_border": 0.7857904155914386,
+        "matched_glare_3_border": 0.8394289878113408
+      },
+      "resnet50": {
+        "clean": 0.7999652955991334,
+        "matched_haze_1": 0.7817150677032463,
+        "matched_haze_2": 0.7726627356599449,
+        "matched_haze_3": 0.7598011278993009,
+        "matched_haze_4": 0.6864968933739684,
+        "matched_haze_5": 0.5775859436878361,
+        "matched_cloud_1": 0.7966333180446773,
+        "matched_cloud_2": 0.8125691934050778,
+        "matched_cloud_3": 0.7833805269322812,
+        "matched_cloud_4": 0.7136052260544641,
+        "matched_cloud_5": 0.5274161922607217,
+        "matched_glare_1": 0.811454302827731,
+        "matched_glare_2": 0.8334722350007482,
+        "matched_glare_3": 0.7979216146552518,
+        "matched_glare_4": 0.71344033053196,
+        "matched_glare_5": 0.6023576706205362,
+        "matched_haze+glare_3": 0.6399883722892741,
+        "matched_haze+glare_5": 0.15202749529386556,
+        "matched_haze+cloud_3": 0.6356481663593732,
+        "matched_haze+cloud_5": 0.2622805485646985,
+        "shifted_haze_1": 0.7827146717142006,
+        "shifted_haze_2": 0.8090518183338263,
+        "shifted_haze_3": 0.7696447312147445,
+        "shifted_haze_4": 0.735181538187217,
+        "shifted_haze_5": 0.5120112900106312,
+        "shifted_cloud_1": 0.8320939047834243,
+        "shifted_cloud_2": 0.8120157361340874,
+        "shifted_cloud_3": 0.6511037833057653,
+        "shifted_cloud_4": 0.5217388918916666,
+        "shifted_cloud_5": 0.43499960567983686,
+        "shifted_glare_1": 0.8103143501257921,
+        "shifted_glare_2": 0.8093097658359416,
+        "shifted_glare_3": 0.8267767600221052,
+        "shifted_glare_4": 0.7985439702655186,
+        "shifted_glare_5": 0.7824295642829545,
+        "shifted_haze+glare_3": 0.7269845557122381,
+        "shifted_haze+glare_5": 0.2764439911517106,
+        "shifted_haze+cloud_3": 0.5588002668388847,
+        "shifted_haze+cloud_5": 0.255333035020535,
+        "matched_cloud_3_center": 0.7937708909962937,
+        "matched_glare_3_center": 0.6397181297635475,
+        "matched_cloud_3_border": 0.7899982070986291,
+        "matched_glare_3_border": 0.8039210751758386
+      },
+      "convnext_tiny": {
+        "clean": 0.8433233041490702,
+        "matched_haze_1": 0.8438861600844334,
+        "matched_haze_2": 0.8345194781491476,
+        "matched_haze_3": 0.812950660396609,
+        "matched_haze_4": 0.7669536567110333,
+        "matched_haze_5": 0.7228290739278642,
+        "matched_cloud_1": 0.8326617866684092,
+        "matched_cloud_2": 0.8429816497531956,
+        "matched_cloud_3": 0.8394351459229177,
+        "matched_cloud_4": 0.8086956467855563,
+        "matched_cloud_5": 0.728434770494762,
+        "matched_glare_1": 0.8393933684734425,
+        "matched_glare_2": 0.8484260252973601,
+        "matched_glare_3": 0.8094092231698637,
+        "matched_glare_4": 0.7908385356304475,
+        "matched_glare_5": 0.7115974019829123,
+        "matched_haze+glare_3": 0.7739600625256384,
+        "matched_haze+glare_5": 0.4025036079914376,
+        "matched_haze+cloud_3": 0.772130083314881,
+        "matched_haze+cloud_5": 0.477196312699601,
+        "shifted_haze_1": 0.8280367664742665,
+        "shifted_haze_2": 0.8096850505514528,
+        "shifted_haze_3": 0.7849608683190772,
+        "shifted_haze_4": 0.784502611855553,
+        "shifted_haze_5": 0.745042885341906,
+        "shifted_cloud_1": 0.8581295290513778,
+        "shifted_cloud_2": 0.8489415346558205,
+        "shifted_cloud_3": 0.8020431277368127,
+        "shifted_cloud_4": 0.7099189924282803,
+        "shifted_cloud_5": 0.5378462341762373,
+        "shifted_glare_1": 0.8436325256993684,
+        "shifted_glare_2": 0.856062521638318,
+        "shifted_glare_3": 0.8291574748340116,
+        "shifted_glare_4": 0.8274952421391701,
+        "shifted_glare_5": 0.8190317067904104,
+        "shifted_haze+glare_3": 0.7740147980521674,
+        "shifted_haze+glare_5": 0.41343751315734073,
+        "shifted_haze+cloud_3": 0.7347762891837331,
+        "shifted_haze+cloud_5": 0.38927380296862474,
+        "matched_cloud_3_center": 0.8217199812594549,
+        "matched_glare_3_center": 0.7856695110040576,
+        "matched_cloud_3_border": 0.8212631429383348,
+        "matched_glare_3_border": 0.8312108670537935
+      },
+      "swin_t": {
+        "clean": 0.8735535862262205,
+        "matched_haze_1": 0.8506897345798314,
+        "matched_haze_2": 0.8465357612749917,
+        "matched_haze_3": 0.8122333942598587,
+        "matched_haze_4": 0.7863365332115332,
+        "matched_haze_5": 0.7614349927689692,
+        "matched_cloud_1": 0.8782423764648828,
+        "matched_cloud_2": 0.8455877988260398,
+        "matched_cloud_3": 0.8129171101515353,
+        "matched_cloud_4": 0.7633422903278996,
+        "matched_cloud_5": 0.6324677763049482,
+        "matched_glare_1": 0.8701553025602516,
+        "matched_glare_2": 0.83694089350511,
+        "matched_glare_3": 0.7849379475667279,
+        "matched_glare_4": 0.7683503513134414,
+        "matched_glare_5": 0.6602730547583489,
+        "matched_haze+glare_3": 0.7284745371428707,
+        "matched_haze+glare_5": 0.34804329563498804,
+        "matched_haze+cloud_3": 0.70358922553195,
+        "matched_haze+cloud_5": 0.4873450804958296,
+        "shifted_haze_1": 0.8404139294044651,
+        "shifted_haze_2": 0.8431655620207921,
+        "shifted_haze_3": 0.8116305502630867,
+        "shifted_haze_4": 0.7966940336233814,
+        "shifted_haze_5": 0.7123985351233496,
+        "shifted_cloud_1": 0.8655294506502618,
+        "shifted_cloud_2": 0.8641705928771193,
+        "shifted_cloud_3": 0.8371974501006758,
+        "shifted_cloud_4": 0.7867295375885763,
+        "shifted_cloud_5": 0.6855815039553947,
+        "shifted_glare_1": 0.8619570530572507,
+        "shifted_glare_2": 0.8704379555025672,
+        "shifted_glare_3": 0.8463712447412428,
+        "shifted_glare_4": 0.8322332103625851,
+        "shifted_glare_5": 0.7865977554561356,
+        "shifted_haze+glare_3": 0.7784453455854807,
+        "shifted_haze+glare_5": 0.4642868686037567,
+        "shifted_haze+cloud_3": 0.7343077398643079,
+        "shifted_haze+cloud_5": 0.44925708696675837,
+        "matched_cloud_3_center": 0.7875629072511857,
+        "matched_glare_3_center": 0.748358956019779,
+        "matched_cloud_3_border": 0.8395823477918472,
+        "matched_glare_3_border": 0.8693372733234186
+      }
+    }
+  },
+  "all": {
+    "title": "全 23 类（research split，外部模型参照）",
+    "run": "runs_external/fgsc23_research_all/cdlnet_clean_s17",
+    "models": [
+      "cdlnet_repro",
+      "resnet50",
+      "convnext_tiny",
+      "swin_t"
+    ],
+    "labels": {
+      "0": "non-ship",
+      "1": "air carrier",
+      "10": "submarine",
+      "11": "medical ship",
+      "12": "combat boat",
+      "13": "auxiliary ship",
+      "14": "container ship",
+      "15": "car carrier",
+      "16": "hovercraft",
+      "17": "bulk carrier",
+      "18": "oil tanker",
+      "19": "fishing boat",
+      "2": "destroyer",
+      "20": "passenger ship",
+      "21": "liquefied gas ship",
+      "22": "barge",
+      "3": "landing craft",
+      "4": "frigate",
+      "5": "amphibious transport dock",
+      "6": "cruiser",
+      "7": "Tarawa-class amphibious assault ship",
+      "8": "amphibious assault ship",
+      "9": "command ship"
+    },
+    "num_classes": 23,
+    "high_confidence_threshold": 0.9,
+    "family_scores": {
+      "cdlnet_repro": {
+        "clean": {
+          "macro_f1": 0.8681808195194047,
+          "accuracy": 0.8702201622247973,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.7325166032779207,
+          "accuracy": 0.756431054461182,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.844207723035952,
+          "clean_correct_observations": 11265
+        },
+        "shifted single": {
+          "macro_f1": 0.7276833468720572,
+          "accuracy": 0.7465430668211663,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.8336440301819796,
+          "clean_correct_observations": 11265
+        },
+        "matched combination": {
+          "macro_f1": 0.40483593421178443,
+          "accuracy": 0.4556778679026651,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.5019973368841545,
+          "clean_correct_observations": 3004
+        },
+        "shifted combination": {
+          "macro_f1": 0.39229882925924225,
+          "accuracy": 0.4522016222479722,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.4980026631158455,
+          "clean_correct_observations": 3004
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "macro_f1": 0.8902783773920587,
+          "accuracy": 0.8933951332560834,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.7656637721290892,
+          "accuracy": 0.7758207802240249,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.8502377864245568,
+          "clean_correct_observations": 11565
+        },
+        "shifted single": {
+          "macro_f1": 0.7727188950188189,
+          "accuracy": 0.7732715334105832,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.8495460440985733,
+          "clean_correct_observations": 11565
+        },
+        "matched combination": {
+          "macro_f1": 0.42611886259505066,
+          "accuracy": 0.4359791425260719,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.4698443579766537,
+          "clean_correct_observations": 3084
+        },
+        "shifted combination": {
+          "macro_f1": 0.44897811298411555,
+          "accuracy": 0.447566628041715,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.4795719844357977,
+          "clean_correct_observations": 3084
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "macro_f1": 0.9065039725006092,
+          "accuracy": 0.9061413673232909,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.8285171276741525,
+          "accuracy": 0.8305909617612978,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.903921568627451,
+          "clean_correct_observations": 11730
+        },
+        "shifted single": {
+          "macro_f1": 0.8229986047625125,
+          "accuracy": 0.82240247199691,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.8956521739130435,
+          "clean_correct_observations": 11730
+        },
+        "matched combination": {
+          "macro_f1": 0.5469519570856934,
+          "accuracy": 0.5576477404403244,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.604539641943734,
+          "clean_correct_observations": 3128
+        },
+        "shifted combination": {
+          "macro_f1": 0.5736825361582869,
+          "accuracy": 0.5854577056778678,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.6336317135549873,
+          "clean_correct_observations": 3128
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "macro_f1": 0.8901995638588108,
+          "accuracy": 0.8876013904982619,
+          "conditions": [
+            "clean"
+          ],
+          "retention": null,
+          "clean_correct_observations": 0
+        },
+        "matched single": {
+          "macro_f1": 0.8006780277496109,
+          "accuracy": 0.8055619930475088,
+          "conditions": [
+            "matched_haze_1",
+            "matched_haze_2",
+            "matched_haze_3",
+            "matched_haze_4",
+            "matched_haze_5",
+            "matched_cloud_1",
+            "matched_cloud_2",
+            "matched_cloud_3",
+            "matched_cloud_4",
+            "matched_cloud_5",
+            "matched_glare_1",
+            "matched_glare_2",
+            "matched_glare_3",
+            "matched_glare_4",
+            "matched_glare_5"
+          ],
+          "retention": 0.8869451697127937,
+          "clean_correct_observations": 11490
+        },
+        "shifted single": {
+          "macro_f1": 0.8117454983354491,
+          "accuracy": 0.8099652375434532,
+          "conditions": [
+            "shifted_haze_1",
+            "shifted_haze_2",
+            "shifted_haze_3",
+            "shifted_haze_4",
+            "shifted_haze_5",
+            "shifted_cloud_1",
+            "shifted_cloud_2",
+            "shifted_cloud_3",
+            "shifted_cloud_4",
+            "shifted_cloud_5",
+            "shifted_glare_1",
+            "shifted_glare_2",
+            "shifted_glare_3",
+            "shifted_glare_4",
+            "shifted_glare_5"
+          ],
+          "retention": 0.8919930374238468,
+          "clean_correct_observations": 11490
+        },
+        "matched combination": {
+          "macro_f1": 0.5488925245814493,
+          "accuracy": 0.5564889918887601,
+          "conditions": [
+            "matched_haze+glare_3",
+            "matched_haze+glare_5",
+            "matched_haze+cloud_3",
+            "matched_haze+cloud_5"
+          ],
+          "retention": 0.610313315926893,
+          "clean_correct_observations": 3064
+        },
+        "shifted combination": {
+          "macro_f1": 0.5686330844484307,
+          "accuracy": 0.5677867902665121,
+          "conditions": [
+            "shifted_haze+glare_3",
+            "shifted_haze+glare_5",
+            "shifted_haze+cloud_3",
+            "shifted_haze+cloud_5"
+          ],
+          "retention": 0.6207571801566579,
+          "clean_correct_observations": 3064
+        }
+      }
+    },
+    "severity_curves": {
+      "cdlnet_repro": {
+        "matched": {
+          "haze": [
+            0.8454496936840259,
+            0.8197966365991074,
+            0.7267762911579478,
+            0.5982299780475814,
+            0.4613050569852694
+          ],
+          "cloud": [
+            0.8609224137403453,
+            0.8351647914801141,
+            0.7635905846130133,
+            0.6520003292090214,
+            0.49952231735766495
+          ],
+          "glare": [
+            0.8688587489455423,
+            0.8556870949281352,
+            0.8230918021498913,
+            0.7740251357721639,
+            0.6033281744989865
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8494007357986197,
+            0.8091305596565787,
+            0.7248793110142795,
+            0.571168731848077,
+            0.4086248686717198
+          ],
+          "cloud": [
+            0.87607832961047,
+            0.8245326011490026,
+            0.7420889581975443,
+            0.5655166005226677,
+            0.404864747747094
+          ],
+          "glare": [
+            0.8681034224775135,
+            0.8663839047531315,
+            0.8371790748718577,
+            0.824459807353656,
+            0.7428385494086432
+          ]
+        }
+      },
+      "resnet50": {
+        "matched": {
+          "haze": [
+            0.8728504511685841,
+            0.8489245129492831,
+            0.822939885885449,
+            0.7383343802001249,
+            0.5943216041453895
+          ],
+          "cloud": [
+            0.8879724189077792,
+            0.8599957313030239,
+            0.7994675381135643,
+            0.6545546525193956,
+            0.4716235205697141
+          ],
+          "glare": [
+            0.8859075571968124,
+            0.8726265882957619,
+            0.8301284781126718,
+            0.7379513901754524,
+            0.6073578723933316
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8789335039687052,
+            0.863892060316327,
+            0.8059141629745616,
+            0.7528811880360777,
+            0.5752909762754713
+          ],
+          "cloud": [
+            0.8779938114564685,
+            0.8483601558187187,
+            0.7650325038221861,
+            0.6098767831559193,
+            0.3789002025140445
+          ],
+          "glare": [
+            0.8894248282263792,
+            0.882504842400114,
+            0.8665789659494894,
+            0.8372177940484662,
+            0.7579816463193536
+          ]
+        }
+      },
+      "convnext_tiny": {
+        "matched": {
+          "haze": [
+            0.8869484738422158,
+            0.8790488376857735,
+            0.8513029388222365,
+            0.8222636295082125,
+            0.7665332878204691
+          ],
+          "cloud": [
+            0.8986305981409497,
+            0.8797826429758839,
+            0.8320422290427473,
+            0.7803055930214667,
+            0.6279050669301719
+          ],
+          "glare": [
+            0.8987402734079227,
+            0.8974630705088493,
+            0.8716952743267852,
+            0.8209035732892237,
+            0.7141914257893806
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8903156268201778,
+            0.8782515637200362,
+            0.8572174858747744,
+            0.8249383993368357,
+            0.7398038638824933
+          ],
+          "cloud": [
+            0.8991766486554075,
+            0.877121425644382,
+            0.7930264433210568,
+            0.6951157794243165,
+            0.5014704962211637
+          ],
+          "glare": [
+            0.9041069689663555,
+            0.8994724175094247,
+            0.8862805534091592,
+            0.8832536793126718,
+            0.8154277193394314
+          ]
+        }
+      },
+      "swin_t": {
+        "matched": {
+          "haze": [
+            0.8756329411402585,
+            0.86589757546872,
+            0.8334848458726704,
+            0.7968358483860287,
+            0.724211538796141
+          ],
+          "cloud": [
+            0.8884519338477561,
+            0.8497131573020055,
+            0.8175984015118479,
+            0.7339223641380619,
+            0.6302837468209536
+          ],
+          "glare": [
+            0.8863715630332765,
+            0.8710832729351033,
+            0.83344436128668,
+            0.7605852514232451,
+            0.6426536142814152
+          ]
+        },
+        "shifted": {
+          "haze": [
+            0.8805438387780202,
+            0.8603596942515879,
+            0.8264435298340359,
+            0.7922140220817838,
+            0.6794388928366274
+          ],
+          "cloud": [
+            0.9020631368113051,
+            0.8641269734820562,
+            0.8225258144323397,
+            0.7133419848166149,
+            0.5708010934064702
+          ],
+          "glare": [
+            0.889681906912737,
+            0.8843495963889489,
+            0.8698212629793539,
+            0.8430345970108671,
+            0.777436131008988
+          ]
+        }
+      }
+    },
+    "class_drops": {
+      "cdlnet_repro": [
+        {
+          "label": "combat boat",
+          "support": 29,
+          "clean_recall": 0.896551724137931,
+          "matched_single_recall": 0.6275862068965516,
+          "matched_combination_recall": 0.18103448275862072,
+          "drop_matched_single": 0.2689655172413794,
+          "drop_matched_combination": 0.7155172413793103
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.6717948717948719,
+          "matched_combination_recall": 0.17307692307692307,
+          "drop_matched_single": 0.2512820512820513,
+          "drop_matched_combination": 0.75
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.55,
+          "matched_single_recall": 0.33,
+          "matched_combination_recall": 0.05,
+          "drop_matched_single": 0.22000000000000003,
+          "drop_matched_combination": 0.5
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.7777777777777778,
+          "matched_single_recall": 0.5777777777777778,
+          "matched_combination_recall": 0.125,
+          "drop_matched_single": 0.19999999999999996,
+          "drop_matched_combination": 0.6527777777777778
+        },
+        {
+          "label": "landing craft",
+          "support": 22,
+          "clean_recall": 0.8181818181818182,
+          "matched_single_recall": 0.6242424242424243,
+          "matched_combination_recall": 0.29545454545454547,
+          "drop_matched_single": 0.19393939393939397,
+          "drop_matched_combination": 0.5227272727272727
+        },
+        {
+          "label": "submarine",
+          "support": 48,
+          "clean_recall": 0.9375,
+          "matched_single_recall": 0.7597222222222223,
+          "matched_combination_recall": 0.4791666666666667,
+          "drop_matched_single": 0.1777777777777777,
+          "drop_matched_combination": 0.4583333333333333
+        },
+        {
+          "label": "hovercraft",
+          "support": 24,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.8222222222222223,
+          "matched_combination_recall": 0.3645833333333333,
+          "drop_matched_single": 0.1777777777777777,
+          "drop_matched_combination": 0.6354166666666667
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.7536231884057971,
+          "matched_single_recall": 0.5768115942028985,
+          "matched_combination_recall": 0.22463768115942026,
+          "drop_matched_single": 0.1768115942028986,
+          "drop_matched_combination": 0.5289855072463768
+        },
+        {
+          "label": "command ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.6999999999999998,
+          "matched_combination_recall": 0.4444444444444444,
+          "drop_matched_single": 0.13333333333333353,
+          "drop_matched_combination": 0.38888888888888895
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.8787878787878788,
+          "matched_single_recall": 0.7474747474747473,
+          "matched_combination_recall": 0.4318181818181818,
+          "drop_matched_single": 0.1313131313131315,
+          "drop_matched_combination": 0.44696969696969696
+        },
+        {
+          "label": "auxiliary ship",
+          "support": 45,
+          "clean_recall": 0.7555555555555555,
+          "matched_single_recall": 0.6251851851851851,
+          "matched_combination_recall": 0.2722222222222222,
+          "drop_matched_single": 0.13037037037037047,
+          "drop_matched_combination": 0.48333333333333334
+        },
+        {
+          "label": "non-ship",
+          "support": 97,
+          "clean_recall": 0.8041237113402062,
+          "matched_single_recall": 0.6900343642611683,
+          "matched_combination_recall": 0.4097938144329897,
+          "drop_matched_single": 0.11408934707903795,
+          "drop_matched_combination": 0.39432989690721654
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.7296296296296296,
+          "matched_combination_recall": 0.3472222222222222,
+          "drop_matched_single": 0.10370370370370374,
+          "drop_matched_combination": 0.48611111111111116
+        },
+        {
+          "label": "medical ship",
+          "support": 10,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9,
+          "matched_combination_recall": 0.45,
+          "drop_matched_single": 0.09999999999999998,
+          "drop_matched_combination": 0.55
+        },
+        {
+          "label": "Tarawa-class amphibious assault ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.7444444444444447,
+          "matched_combination_recall": 0.5555555555555556,
+          "drop_matched_single": 0.08888888888888868,
+          "drop_matched_combination": 0.2777777777777778
+        },
+        {
+          "label": "frigate",
+          "support": 61,
+          "clean_recall": 0.9344262295081968,
+          "matched_single_recall": 0.8469945355191257,
+          "matched_combination_recall": 0.4877049180327868,
+          "drop_matched_single": 0.08743169398907102,
+          "drop_matched_combination": 0.44672131147540994
+        },
+        {
+          "label": "amphibious transport dock",
+          "support": 19,
+          "clean_recall": 0.8421052631578947,
+          "matched_single_recall": 0.7578947368421052,
+          "matched_combination_recall": 0.4605263157894737,
+          "drop_matched_single": 0.08421052631578951,
+          "drop_matched_combination": 0.381578947368421
+        },
+        {
+          "label": "cruiser",
+          "support": 60,
+          "clean_recall": 0.9166666666666666,
+          "matched_single_recall": 0.8333333333333334,
+          "matched_combination_recall": 0.6166666666666666,
+          "drop_matched_single": 0.08333333333333326,
+          "drop_matched_combination": 0.30000000000000004
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9238095238095239,
+          "matched_combination_recall": 0.6785714285714286,
+          "drop_matched_single": 0.07619047619047614,
+          "drop_matched_combination": 0.3214285714285714
+        },
+        {
+          "label": "amphibious assault ship",
+          "support": 32,
+          "clean_recall": 0.90625,
+          "matched_single_recall": 0.8479166666666667,
+          "matched_combination_recall": 0.640625,
+          "drop_matched_single": 0.05833333333333335,
+          "drop_matched_combination": 0.265625
+        },
+        {
+          "label": "destroyer",
+          "support": 110,
+          "clean_recall": 0.9181818181818182,
+          "matched_single_recall": 0.870909090909091,
+          "matched_combination_recall": 0.6590909090909091,
+          "drop_matched_single": 0.047272727272727244,
+          "drop_matched_combination": 0.25909090909090915
+        },
+        {
+          "label": "air carrier",
+          "support": 34,
+          "clean_recall": 0.8823529411764706,
+          "matched_single_recall": 0.8588235294117648,
+          "matched_combination_recall": 0.5955882352941176,
+          "drop_matched_single": 0.0235294117647058,
+          "drop_matched_combination": 0.2867647058823529
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9830065359477125,
+          "matched_combination_recall": 0.696078431372549,
+          "drop_matched_single": 0.01699346405228752,
+          "drop_matched_combination": 0.303921568627451
+        }
+      ],
+      "resnet50": [
+        {
+          "label": "combat boat",
+          "support": 29,
+          "clean_recall": 0.9310344827586207,
+          "matched_single_recall": 0.6735632183908045,
+          "matched_combination_recall": 0.2327586206896552,
+          "drop_matched_single": 0.2574712643678162,
+          "drop_matched_combination": 0.6982758620689655
+        },
+        {
+          "label": "Tarawa-class amphibious assault ship",
+          "support": 18,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.7444444444444446,
+          "matched_combination_recall": 0.2638888888888889,
+          "drop_matched_single": 0.2555555555555554,
+          "drop_matched_combination": 0.7361111111111112
+        },
+        {
+          "label": "command ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.6407407407407407,
+          "matched_combination_recall": 0.2777777777777778,
+          "drop_matched_single": 0.19259259259259265,
+          "drop_matched_combination": 0.5555555555555556
+        },
+        {
+          "label": "landing craft",
+          "support": 22,
+          "clean_recall": 0.9090909090909091,
+          "matched_single_recall": 0.7181818181818181,
+          "matched_combination_recall": 0.4431818181818182,
+          "drop_matched_single": 0.19090909090909092,
+          "drop_matched_combination": 0.4659090909090909
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.6481481481481483,
+          "matched_combination_recall": 0.2777777777777778,
+          "drop_matched_single": 0.18518518518518512,
+          "drop_matched_combination": 0.5555555555555556
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8260869565217391,
+          "matched_single_recall": 0.647342995169082,
+          "matched_combination_recall": 0.2536231884057971,
+          "drop_matched_single": 0.17874396135265713,
+          "drop_matched_combination": 0.572463768115942
+        },
+        {
+          "label": "destroyer",
+          "support": 110,
+          "clean_recall": 0.9454545454545454,
+          "matched_single_recall": 0.8030303030303031,
+          "matched_combination_recall": 0.45454545454545453,
+          "drop_matched_single": 0.14242424242424234,
+          "drop_matched_combination": 0.4909090909090909
+        },
+        {
+          "label": "amphibious assault ship",
+          "support": 32,
+          "clean_recall": 0.9375,
+          "matched_single_recall": 0.7979166666666667,
+          "matched_combination_recall": 0.3984375,
+          "drop_matched_single": 0.13958333333333328,
+          "drop_matched_combination": 0.5390625
+        },
+        {
+          "label": "non-ship",
+          "support": 97,
+          "clean_recall": 0.865979381443299,
+          "matched_single_recall": 0.7395189003436428,
+          "matched_combination_recall": 0.32216494845360827,
+          "drop_matched_single": 0.12646048109965624,
+          "drop_matched_combination": 0.5438144329896908
+        },
+        {
+          "label": "hovercraft",
+          "support": 24,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.8916666666666667,
+          "matched_combination_recall": 0.4166666666666667,
+          "drop_matched_single": 0.10833333333333328,
+          "drop_matched_combination": 0.5833333333333333
+        },
+        {
+          "label": "auxiliary ship",
+          "support": 45,
+          "clean_recall": 0.7333333333333333,
+          "matched_single_recall": 0.6370370370370371,
+          "matched_combination_recall": 0.31666666666666665,
+          "drop_matched_single": 0.09629629629629621,
+          "drop_matched_combination": 0.41666666666666663
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.8484848484848485,
+          "matched_single_recall": 0.7535353535353534,
+          "matched_combination_recall": 0.4242424242424242,
+          "drop_matched_single": 0.09494949494949512,
+          "drop_matched_combination": 0.4242424242424243
+        },
+        {
+          "label": "amphibious transport dock",
+          "support": 19,
+          "clean_recall": 0.7368421052631579,
+          "matched_single_recall": 0.6421052631578947,
+          "matched_combination_recall": 0.42105263157894735,
+          "drop_matched_single": 0.09473684210526312,
+          "drop_matched_combination": 0.3157894736842105
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.5,
+          "matched_single_recall": 0.4100000000000001,
+          "matched_combination_recall": 0.47500000000000003,
+          "drop_matched_single": 0.08999999999999991,
+          "drop_matched_combination": 0.024999999999999967
+        },
+        {
+          "label": "submarine",
+          "support": 48,
+          "clean_recall": 0.9375,
+          "matched_single_recall": 0.85,
+          "matched_combination_recall": 0.6145833333333334,
+          "drop_matched_single": 0.08750000000000002,
+          "drop_matched_combination": 0.32291666666666663
+        },
+        {
+          "label": "frigate",
+          "support": 61,
+          "clean_recall": 0.9508196721311475,
+          "matched_single_recall": 0.8655737704918034,
+          "matched_combination_recall": 0.6352459016393442,
+          "drop_matched_single": 0.08524590163934409,
+          "drop_matched_combination": 0.31557377049180324
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9285714285714286,
+          "matched_combination_recall": 0.4285714285714286,
+          "drop_matched_single": 0.0714285714285714,
+          "drop_matched_combination": 0.5714285714285714
+        },
+        {
+          "label": "cruiser",
+          "support": 60,
+          "clean_recall": 0.9166666666666666,
+          "matched_single_recall": 0.8455555555555555,
+          "matched_combination_recall": 0.5541666666666667,
+          "drop_matched_single": 0.07111111111111112,
+          "drop_matched_combination": 0.36249999999999993
+        },
+        {
+          "label": "medical ship",
+          "support": 10,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9533333333333334,
+          "matched_combination_recall": 0.55,
+          "drop_matched_single": 0.046666666666666634,
+          "drop_matched_combination": 0.44999999999999996
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9542483660130718,
+          "matched_combination_recall": 0.5686274509803921,
+          "drop_matched_single": 0.045751633986928164,
+          "drop_matched_combination": 0.43137254901960786
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.7888888888888891,
+          "matched_combination_recall": 0.4722222222222222,
+          "drop_matched_single": 0.04444444444444429,
+          "drop_matched_combination": 0.36111111111111116
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.8820512820512821,
+          "matched_combination_recall": 0.4038461538461538,
+          "drop_matched_single": 0.04102564102564099,
+          "drop_matched_combination": 0.5192307692307694
+        },
+        {
+          "label": "air carrier",
+          "support": 34,
+          "clean_recall": 0.9411764705882353,
+          "matched_single_recall": 0.9058823529411767,
+          "matched_combination_recall": 0.6470588235294117,
+          "drop_matched_single": 0.03529411764705859,
+          "drop_matched_combination": 0.2941176470588236
+        }
+      ],
+      "convnext_tiny": [
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.7,
+          "matched_single_recall": 0.4866666666666667,
+          "matched_combination_recall": 0.125,
+          "drop_matched_single": 0.21333333333333326,
+          "drop_matched_combination": 0.575
+        },
+        {
+          "label": "non-ship",
+          "support": 97,
+          "clean_recall": 0.8969072164948454,
+          "matched_single_recall": 0.7450171821305841,
+          "matched_combination_recall": 0.38402061855670105,
+          "drop_matched_single": 0.1518900343642613,
+          "drop_matched_combination": 0.5128865979381443
+        },
+        {
+          "label": "auxiliary ship",
+          "support": 45,
+          "clean_recall": 0.8888888888888888,
+          "matched_single_recall": 0.76,
+          "matched_combination_recall": 0.43888888888888883,
+          "drop_matched_single": 0.12888888888888883,
+          "drop_matched_combination": 0.45
+        },
+        {
+          "label": "command ship",
+          "support": 18,
+          "clean_recall": 0.9444444444444444,
+          "matched_single_recall": 0.8222222222222224,
+          "matched_combination_recall": 0.4722222222222222,
+          "drop_matched_single": 0.12222222222222201,
+          "drop_matched_combination": 0.4722222222222222
+        },
+        {
+          "label": "Tarawa-class amphibious assault ship",
+          "support": 18,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.888888888888889,
+          "matched_combination_recall": 0.5416666666666666,
+          "drop_matched_single": 0.11111111111111105,
+          "drop_matched_combination": 0.45833333333333337
+        },
+        {
+          "label": "landing craft",
+          "support": 22,
+          "clean_recall": 0.8636363636363636,
+          "matched_single_recall": 0.7727272727272728,
+          "matched_combination_recall": 0.6022727272727273,
+          "drop_matched_single": 0.09090909090909083,
+          "drop_matched_combination": 0.26136363636363635
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.7246376811594203,
+          "matched_single_recall": 0.633816425120773,
+          "matched_combination_recall": 0.358695652173913,
+          "drop_matched_single": 0.09082125603864732,
+          "drop_matched_combination": 0.36594202898550726
+        },
+        {
+          "label": "amphibious transport dock",
+          "support": 19,
+          "clean_recall": 0.8947368421052632,
+          "matched_single_recall": 0.8070175438596491,
+          "matched_combination_recall": 0.5131578947368421,
+          "drop_matched_single": 0.08771929824561409,
+          "drop_matched_combination": 0.381578947368421
+        },
+        {
+          "label": "amphibious assault ship",
+          "support": 32,
+          "clean_recall": 0.96875,
+          "matched_single_recall": 0.8833333333333333,
+          "matched_combination_recall": 0.5078125,
+          "drop_matched_single": 0.0854166666666667,
+          "drop_matched_combination": 0.4609375
+        },
+        {
+          "label": "frigate",
+          "support": 61,
+          "clean_recall": 0.9672131147540983,
+          "matched_single_recall": 0.884153005464481,
+          "matched_combination_recall": 0.5983606557377049,
+          "drop_matched_single": 0.08306010928961738,
+          "drop_matched_combination": 0.3688524590163934
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.7222222222222222,
+          "matched_single_recall": 0.6407407407407407,
+          "matched_combination_recall": 0.34722222222222227,
+          "drop_matched_single": 0.08148148148148149,
+          "drop_matched_combination": 0.37499999999999994
+        },
+        {
+          "label": "cruiser",
+          "support": 60,
+          "clean_recall": 0.9333333333333333,
+          "matched_single_recall": 0.8544444444444445,
+          "matched_combination_recall": 0.6208333333333333,
+          "drop_matched_single": 0.0788888888888889,
+          "drop_matched_combination": 0.3125
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9476190476190478,
+          "matched_combination_recall": 0.625,
+          "drop_matched_single": 0.052380952380952195,
+          "drop_matched_combination": 0.375
+        },
+        {
+          "label": "hovercraft",
+          "support": 24,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9500000000000001,
+          "matched_combination_recall": 0.6041666666666667,
+          "drop_matched_single": 0.04999999999999993,
+          "drop_matched_combination": 0.39583333333333326
+        },
+        {
+          "label": "combat boat",
+          "support": 29,
+          "clean_recall": 0.8620689655172413,
+          "matched_single_recall": 0.8137931034482759,
+          "matched_combination_recall": 0.4827586206896552,
+          "drop_matched_single": 0.04827586206896539,
+          "drop_matched_combination": 0.37931034482758613
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 0.9803921568627451,
+          "matched_single_recall": 0.934640522875817,
+          "matched_combination_recall": 0.5294117647058824,
+          "drop_matched_single": 0.04575163398692805,
+          "drop_matched_combination": 0.4509803921568627
+        },
+        {
+          "label": "submarine",
+          "support": 48,
+          "clean_recall": 0.9166666666666666,
+          "matched_single_recall": 0.8763888888888889,
+          "matched_combination_recall": 0.71875,
+          "drop_matched_single": 0.040277777777777746,
+          "drop_matched_combination": 0.19791666666666663
+        },
+        {
+          "label": "destroyer",
+          "support": 110,
+          "clean_recall": 0.9545454545454546,
+          "matched_single_recall": 0.9248484848484849,
+          "matched_combination_recall": 0.8295454545454545,
+          "drop_matched_single": 0.029696969696969666,
+          "drop_matched_combination": 0.1250000000000001
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.8974358974358976,
+          "matched_combination_recall": 0.4807692307692308,
+          "drop_matched_single": 0.02564102564102555,
+          "drop_matched_combination": 0.44230769230769235
+        },
+        {
+          "label": "medical ship",
+          "support": 10,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.98,
+          "matched_combination_recall": 0.625,
+          "drop_matched_single": 0.020000000000000018,
+          "drop_matched_combination": 0.375
+        },
+        {
+          "label": "air carrier",
+          "support": 34,
+          "clean_recall": 0.9411764705882353,
+          "matched_single_recall": 0.9254901960784315,
+          "matched_combination_recall": 0.8088235294117647,
+          "drop_matched_single": 0.015686274509803755,
+          "drop_matched_combination": 0.13235294117647056
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.8259259259259261,
+          "matched_combination_recall": 0.5833333333333333,
+          "drop_matched_single": 0.007407407407407307,
+          "drop_matched_combination": 0.2500000000000001
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.9090909090909091,
+          "matched_single_recall": 0.9030303030303028,
+          "matched_combination_recall": 0.5757575757575758,
+          "drop_matched_single": 0.006060606060606211,
+          "drop_matched_combination": 0.33333333333333326
+        }
+      ],
+      "swin_t": [
+        {
+          "label": "non-ship",
+          "support": 97,
+          "clean_recall": 0.8247422680412371,
+          "matched_single_recall": 0.6735395189003436,
+          "matched_combination_recall": 0.3273195876288659,
+          "drop_matched_single": 0.1512027491408935,
+          "drop_matched_combination": 0.49742268041237114
+        },
+        {
+          "label": "bulk carrier",
+          "support": 69,
+          "clean_recall": 0.8115942028985508,
+          "matched_single_recall": 0.6695652173913043,
+          "matched_combination_recall": 0.36594202898550726,
+          "drop_matched_single": 0.14202898550724652,
+          "drop_matched_combination": 0.4456521739130435
+        },
+        {
+          "label": "landing craft",
+          "support": 22,
+          "clean_recall": 0.9090909090909091,
+          "matched_single_recall": 0.7757575757575756,
+          "matched_combination_recall": 0.5227272727272727,
+          "drop_matched_single": 0.13333333333333341,
+          "drop_matched_combination": 0.38636363636363635
+        },
+        {
+          "label": "command ship",
+          "support": 18,
+          "clean_recall": 0.9444444444444444,
+          "matched_single_recall": 0.8222222222222222,
+          "matched_combination_recall": 0.4305555555555556,
+          "drop_matched_single": 0.12222222222222223,
+          "drop_matched_combination": 0.5138888888888888
+        },
+        {
+          "label": "fishing boat",
+          "support": 20,
+          "clean_recall": 0.5,
+          "matched_single_recall": 0.38,
+          "matched_combination_recall": 0.2125,
+          "drop_matched_single": 0.12,
+          "drop_matched_combination": 0.2875
+        },
+        {
+          "label": "auxiliary ship",
+          "support": 45,
+          "clean_recall": 0.7555555555555555,
+          "matched_single_recall": 0.64,
+          "matched_combination_recall": 0.3833333333333333,
+          "drop_matched_single": 0.11555555555555552,
+          "drop_matched_combination": 0.37222222222222223
+        },
+        {
+          "label": "amphibious transport dock",
+          "support": 19,
+          "clean_recall": 0.8947368421052632,
+          "matched_single_recall": 0.7859649122807016,
+          "matched_combination_recall": 0.5263157894736842,
+          "drop_matched_single": 0.10877192982456152,
+          "drop_matched_combination": 0.368421052631579
+        },
+        {
+          "label": "passenger ship",
+          "support": 18,
+          "clean_recall": 0.8888888888888888,
+          "matched_single_recall": 0.788888888888889,
+          "matched_combination_recall": 0.5,
+          "drop_matched_single": 0.09999999999999987,
+          "drop_matched_combination": 0.38888888888888884
+        },
+        {
+          "label": "combat boat",
+          "support": 29,
+          "clean_recall": 0.8620689655172413,
+          "matched_single_recall": 0.7724137931034482,
+          "matched_combination_recall": 0.4568965517241379,
+          "drop_matched_single": 0.08965517241379317,
+          "drop_matched_combination": 0.4051724137931034
+        },
+        {
+          "label": "submarine",
+          "support": 48,
+          "clean_recall": 0.875,
+          "matched_single_recall": 0.7916666666666666,
+          "matched_combination_recall": 0.6041666666666666,
+          "drop_matched_single": 0.08333333333333337,
+          "drop_matched_combination": 0.27083333333333337
+        },
+        {
+          "label": "destroyer",
+          "support": 110,
+          "clean_recall": 0.9363636363636364,
+          "matched_single_recall": 0.8551515151515151,
+          "matched_combination_recall": 0.6204545454545455,
+          "drop_matched_single": 0.08121212121212129,
+          "drop_matched_combination": 0.3159090909090909
+        },
+        {
+          "label": "cruiser",
+          "support": 60,
+          "clean_recall": 0.9,
+          "matched_single_recall": 0.83,
+          "matched_combination_recall": 0.6208333333333333,
+          "drop_matched_single": 0.07000000000000006,
+          "drop_matched_combination": 0.2791666666666667
+        },
+        {
+          "label": "Tarawa-class amphibious assault ship",
+          "support": 18,
+          "clean_recall": 0.8888888888888888,
+          "matched_single_recall": 0.8259259259259261,
+          "matched_combination_recall": 0.5555555555555555,
+          "drop_matched_single": 0.06296296296296278,
+          "drop_matched_combination": 0.33333333333333337
+        },
+        {
+          "label": "medical ship",
+          "support": 10,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9400000000000001,
+          "matched_combination_recall": 0.7,
+          "drop_matched_single": 0.05999999999999994,
+          "drop_matched_combination": 0.30000000000000004
+        },
+        {
+          "label": "frigate",
+          "support": 61,
+          "clean_recall": 0.9836065573770492,
+          "matched_single_recall": 0.9311475409836066,
+          "matched_combination_recall": 0.7213114754098361,
+          "drop_matched_single": 0.052459016393442526,
+          "drop_matched_combination": 0.2622950819672131
+        },
+        {
+          "label": "barge",
+          "support": 13,
+          "clean_recall": 0.9230769230769231,
+          "matched_single_recall": 0.871794871794872,
+          "matched_combination_recall": 0.5192307692307692,
+          "drop_matched_single": 0.0512820512820511,
+          "drop_matched_combination": 0.40384615384615397
+        },
+        {
+          "label": "car carrier",
+          "support": 14,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9571428571428572,
+          "matched_combination_recall": 0.7142857142857143,
+          "drop_matched_single": 0.042857142857142816,
+          "drop_matched_combination": 0.2857142857142857
+        },
+        {
+          "label": "container ship",
+          "support": 18,
+          "clean_recall": 0.8333333333333334,
+          "matched_single_recall": 0.7962962962962963,
+          "matched_combination_recall": 0.4861111111111111,
+          "drop_matched_single": 0.03703703703703709,
+          "drop_matched_combination": 0.34722222222222227
+        },
+        {
+          "label": "air carrier",
+          "support": 34,
+          "clean_recall": 0.9117647058823529,
+          "matched_single_recall": 0.8803921568627452,
+          "matched_combination_recall": 0.6911764705882353,
+          "drop_matched_single": 0.03137254901960773,
+          "drop_matched_combination": 0.22058823529411764
+        },
+        {
+          "label": "hovercraft",
+          "support": 24,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9722222222222222,
+          "matched_combination_recall": 0.625,
+          "drop_matched_single": 0.02777777777777779,
+          "drop_matched_combination": 0.375
+        },
+        {
+          "label": "liquefied gas ship",
+          "support": 51,
+          "clean_recall": 1.0,
+          "matched_single_recall": 0.9725490196078431,
+          "matched_combination_recall": 0.8529411764705883,
+          "drop_matched_single": 0.027450980392156876,
+          "drop_matched_combination": 0.1470588235294117
+        },
+        {
+          "label": "oil tanker",
+          "support": 33,
+          "clean_recall": 0.8484848484848485,
+          "matched_single_recall": 0.8424242424242424,
+          "matched_combination_recall": 0.5909090909090909,
+          "drop_matched_single": 0.0060606060606061,
+          "drop_matched_combination": 0.25757575757575757
+        },
+        {
+          "label": "amphibious assault ship",
+          "support": 32,
+          "clean_recall": 0.96875,
+          "matched_single_recall": 0.975,
+          "matched_combination_recall": 0.8671875,
+          "drop_matched_single": -0.006249999999999978,
+          "drop_matched_combination": 0.1015625
+        }
+      ]
+    },
+    "confusions": {
+      "cdlnet_repro": {
+        "clean": [
+          {
+            "true": "non-ship",
+            "predicted": "bulk carrier",
+            "count": 6
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "non-ship",
+            "count": 6
+          },
+          {
+            "true": "non-ship",
+            "predicted": "auxiliary ship",
+            "count": 4
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "bulk carrier",
+            "count": 4
+          },
+          {
+            "true": "destroyer",
+            "predicted": "cruiser",
+            "count": 4
+          },
+          {
+            "true": "non-ship",
+            "predicted": "passenger ship",
+            "count": 3
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 3
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "frigate",
+            "predicted": "destroyer",
+            "count": 18
+          },
+          {
+            "true": "destroyer",
+            "predicted": "cruiser",
+            "count": 15
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "cruiser",
+            "count": 15
+          },
+          {
+            "true": "non-ship",
+            "predicted": "cruiser",
+            "count": 14
+          },
+          {
+            "true": "frigate",
+            "predicted": "cruiser",
+            "count": 14
+          },
+          {
+            "true": "cruiser",
+            "predicted": "destroyer",
+            "count": 14
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "non-ship",
+            "count": 12
+          },
+          {
+            "true": "hovercraft",
+            "predicted": "non-ship",
+            "count": 12
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "non-ship",
+            "predicted": "liquefied gas ship",
+            "count": 23
+          },
+          {
+            "true": "non-ship",
+            "predicted": "destroyer",
+            "count": 18
+          },
+          {
+            "true": "cruiser",
+            "predicted": "destroyer",
+            "count": 18
+          },
+          {
+            "true": "non-ship",
+            "predicted": "frigate",
+            "count": 16
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "destroyer",
+            "count": 14
+          },
+          {
+            "true": "frigate",
+            "predicted": "destroyer",
+            "count": 14
+          },
+          {
+            "true": "destroyer",
+            "predicted": "cruiser",
+            "count": 13
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "destroyer",
+            "count": 12
+          }
+        ]
+      },
+      "resnet50": {
+        "clean": [
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 5
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "bulk carrier",
+            "count": 4
+          },
+          {
+            "true": "non-ship",
+            "predicted": "auxiliary ship",
+            "count": 3
+          },
+          {
+            "true": "container ship",
+            "predicted": "bulk carrier",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "non-ship",
+            "count": 3
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "non-ship",
+            "count": 3
+          },
+          {
+            "true": "non-ship",
+            "predicted": "fishing boat",
+            "count": 2
+          },
+          {
+            "true": "non-ship",
+            "predicted": "oil tanker",
+            "count": 2
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "non-ship",
+            "predicted": "fishing boat",
+            "count": 48
+          },
+          {
+            "true": "destroyer",
+            "predicted": "submarine",
+            "count": 30
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 29
+          },
+          {
+            "true": "destroyer",
+            "predicted": "frigate",
+            "count": 29
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 27
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "fishing boat",
+            "count": 20
+          },
+          {
+            "true": "frigate",
+            "predicted": "submarine",
+            "count": 20
+          },
+          {
+            "true": "cruiser",
+            "predicted": "frigate",
+            "count": 17
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "non-ship",
+            "predicted": "fishing boat",
+            "count": 81
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "fishing boat",
+            "count": 40
+          },
+          {
+            "true": "destroyer",
+            "predicted": "submarine",
+            "count": 37
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "fishing boat",
+            "count": 37
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "fishing boat",
+            "count": 36
+          },
+          {
+            "true": "destroyer",
+            "predicted": "fishing boat",
+            "count": 36
+          },
+          {
+            "true": "combat boat",
+            "predicted": "fishing boat",
+            "count": 24
+          },
+          {
+            "true": "hovercraft",
+            "predicted": "fishing boat",
+            "count": 22
+          }
+        ]
+      },
+      "convnext_tiny": {
+        "clean": [
+          {
+            "true": "bulk carrier",
+            "predicted": "oil tanker",
+            "count": 5
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "non-ship",
+            "count": 4
+          },
+          {
+            "true": "non-ship",
+            "predicted": "submarine",
+            "count": 3
+          },
+          {
+            "true": "combat boat",
+            "predicted": "auxiliary ship",
+            "count": 3
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "auxiliary ship",
+            "count": 3
+          },
+          {
+            "true": "destroyer",
+            "predicted": "amphibious transport dock",
+            "count": 3
+          },
+          {
+            "true": "non-ship",
+            "predicted": "bulk carrier",
+            "count": 2
+          },
+          {
+            "true": "non-ship",
+            "predicted": "auxiliary ship",
+            "count": 2
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "frigate",
+            "predicted": "destroyer",
+            "count": 35
+          },
+          {
+            "true": "non-ship",
+            "predicted": "destroyer",
+            "count": 32
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "destroyer",
+            "count": 23
+          },
+          {
+            "true": "cruiser",
+            "predicted": "destroyer",
+            "count": 23
+          },
+          {
+            "true": "non-ship",
+            "predicted": "submarine",
+            "count": 20
+          },
+          {
+            "true": "non-ship",
+            "predicted": "frigate",
+            "count": 19
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "destroyer",
+            "count": 19
+          },
+          {
+            "true": "liquefied gas ship",
+            "predicted": "frigate",
+            "count": 17
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "frigate",
+            "predicted": "destroyer",
+            "count": 33
+          },
+          {
+            "true": "non-ship",
+            "predicted": "submarine",
+            "count": 31
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "submarine",
+            "count": 31
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "destroyer",
+            "count": 23
+          },
+          {
+            "true": "non-ship",
+            "predicted": "fishing boat",
+            "count": 22
+          },
+          {
+            "true": "cruiser",
+            "predicted": "destroyer",
+            "count": 20
+          },
+          {
+            "true": "non-ship",
+            "predicted": "destroyer",
+            "count": 19
+          },
+          {
+            "true": "destroyer",
+            "predicted": "submarine",
+            "count": 16
+          }
+        ]
+      },
+      "swin_t": {
+        "clean": [
+          {
+            "true": "non-ship",
+            "predicted": "bulk carrier",
+            "count": 6
+          },
+          {
+            "true": "oil tanker",
+            "predicted": "bulk carrier",
+            "count": 5
+          },
+          {
+            "true": "non-ship",
+            "predicted": "auxiliary ship",
+            "count": 4
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "non-ship",
+            "count": 4
+          },
+          {
+            "true": "fishing boat",
+            "predicted": "non-ship",
+            "count": 4
+          },
+          {
+            "true": "cruiser",
+            "predicted": "frigate",
+            "count": 4
+          },
+          {
+            "true": "non-ship",
+            "predicted": "submarine",
+            "count": 3
+          },
+          {
+            "true": "submarine",
+            "predicted": "non-ship",
+            "count": 3
+          }
+        ],
+        "matched_haze+glare_5": [
+          {
+            "true": "non-ship",
+            "predicted": "submarine",
+            "count": 27
+          },
+          {
+            "true": "destroyer",
+            "predicted": "frigate",
+            "count": 24
+          },
+          {
+            "true": "non-ship",
+            "predicted": "liquefied gas ship",
+            "count": 22
+          },
+          {
+            "true": "bulk carrier",
+            "predicted": "liquefied gas ship",
+            "count": 21
+          },
+          {
+            "true": "frigate",
+            "predicted": "submarine",
+            "count": 15
+          },
+          {
+            "true": "destroyer",
+            "predicted": "amphibious assault ship",
+            "count": 14
+          },
+          {
+            "true": "destroyer",
+            "predicted": "cruiser",
+            "count": 14
+          },
+          {
+            "true": "auxiliary ship",
+            "predicted": "liquefied gas ship",
+            "count": 12
+          }
+        ],
+        "shifted_haze+cloud_5": [
+          {
+            "true": "non-ship",
+            "predicted": "auxiliary ship",
+            "count": 24
+          },
+          {
+            "true": "destroyer",
+            "predicted": "frigate",
+            "count": 19
+          },
+          {
+            "true": "destroyer",
+            "predicted": "submarine",
+            "count": 17
+          },
+          {
+            "true": "non-ship",
+            "predicted": "fishing boat",
+            "count": 15
+          },
+          {
+            "true": "non-ship",
+            "predicted": "frigate",
+            "count": 14
+          },
+          {
+            "true": "non-ship",
+            "predicted": "liquefied gas ship",
+            "count": 14
+          },
+          {
+            "true": "destroyer",
+            "predicted": "amphibious assault ship",
+            "count": 14
+          },
+          {
+            "true": "frigate",
+            "predicted": "submarine",
+            "count": 13
+          }
+        ]
+      }
+    },
+    "confidence": {
+      "cdlnet_repro": {
+        "clean": {
+          "n": 863,
+          "errors": 112,
+          "error_rate": 0.12977983777520277,
+          "high_confidence_errors": 48,
+          "high_confidence_share_of_errors": 0.42857142857142855,
+          "mean_confidence_correct": 0.9715731381655692,
+          "mean_confidence_wrong": 0.7979588620364666,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 863,
+          "errors": 391,
+          "error_rate": 0.45307068366164543,
+          "high_confidence_errors": 68,
+          "high_confidence_share_of_errors": 0.17391304347826086,
+          "mean_confidence_correct": 0.8552390805650818,
+          "mean_confidence_wrong": 0.597570404296031,
+          "clean_correct_to_wrong": 295
+        },
+        "matched_cloud_5": {
+          "n": 863,
+          "errors": 405,
+          "error_rate": 0.46929316338354576,
+          "high_confidence_errors": 82,
+          "high_confidence_share_of_errors": 0.20246913580246914,
+          "mean_confidence_correct": 0.87740707631715,
+          "mean_confidence_wrong": 0.6722711187085988,
+          "clean_correct_to_wrong": 310
+        },
+        "matched_glare_5": {
+          "n": 863,
+          "errors": 297,
+          "error_rate": 0.34414831981460026,
+          "high_confidence_errors": 99,
+          "high_confidence_share_of_errors": 0.3333333333333333,
+          "mean_confidence_correct": 0.9315536311258276,
+          "mean_confidence_wrong": 0.728369558048168,
+          "clean_correct_to_wrong": 206
+        },
+        "matched_haze+glare_5": {
+          "n": 863,
+          "errors": 641,
+          "error_rate": 0.7427578215527231,
+          "high_confidence_errors": 67,
+          "high_confidence_share_of_errors": 0.10452418096723869,
+          "mean_confidence_correct": 0.6599611187907489,
+          "mean_confidence_wrong": 0.4369792986934345,
+          "clean_correct_to_wrong": 546
+        },
+        "matched_haze+cloud_5": {
+          "n": 863,
+          "errors": 640,
+          "error_rate": 0.7415990730011588,
+          "high_confidence_errors": 77,
+          "high_confidence_share_of_errors": 0.1203125,
+          "mean_confidence_correct": 0.7113812145163125,
+          "mean_confidence_wrong": 0.527833556861151,
+          "clean_correct_to_wrong": 537
+        },
+        "shifted_haze+cloud_5": {
+          "n": 863,
+          "errors": 678,
+          "error_rate": 0.7856315179606026,
+          "high_confidence_errors": 63,
+          "high_confidence_share_of_errors": 0.09292035398230089,
+          "mean_confidence_correct": 0.5825289250628368,
+          "mean_confidence_wrong": 0.4690072511413456,
+          "clean_correct_to_wrong": 576
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "n": 863,
+          "errors": 92,
+          "error_rate": 0.10660486674391657,
+          "high_confidence_errors": 32,
+          "high_confidence_share_of_errors": 0.34782608695652173,
+          "mean_confidence_correct": 0.9762463453678769,
+          "mean_confidence_wrong": 0.786049603768017,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 863,
+          "errors": 345,
+          "error_rate": 0.39976825028968715,
+          "high_confidence_errors": 32,
+          "high_confidence_share_of_errors": 0.0927536231884058,
+          "mean_confidence_correct": 0.857649425828549,
+          "mean_confidence_wrong": 0.5551558863857519,
+          "clean_correct_to_wrong": 271
+        },
+        "matched_cloud_5": {
+          "n": 863,
+          "errors": 444,
+          "error_rate": 0.5144843568945539,
+          "high_confidence_errors": 69,
+          "high_confidence_share_of_errors": 0.1554054054054054,
+          "mean_confidence_correct": 0.8373181838053223,
+          "mean_confidence_wrong": 0.6470287670087707,
+          "clean_correct_to_wrong": 369
+        },
+        "matched_glare_5": {
+          "n": 863,
+          "errors": 319,
+          "error_rate": 0.36964078794901506,
+          "high_confidence_errors": 61,
+          "high_confidence_share_of_errors": 0.19122257053291536,
+          "mean_confidence_correct": 0.8885255737832802,
+          "mean_confidence_wrong": 0.6345292089687993,
+          "clean_correct_to_wrong": 242
+        },
+        "matched_haze+glare_5": {
+          "n": 863,
+          "errors": 688,
+          "error_rate": 0.7972190034762456,
+          "high_confidence_errors": 9,
+          "high_confidence_share_of_errors": 0.01308139534883721,
+          "mean_confidence_correct": 0.6129761265856879,
+          "mean_confidence_wrong": 0.39075317212142224,
+          "clean_correct_to_wrong": 608
+        },
+        "matched_haze+cloud_5": {
+          "n": 863,
+          "errors": 719,
+          "error_rate": 0.8331402085747392,
+          "high_confidence_errors": 93,
+          "high_confidence_share_of_errors": 0.12934631432545202,
+          "mean_confidence_correct": 0.6574279243747393,
+          "mean_confidence_wrong": 0.6224188305365028,
+          "clean_correct_to_wrong": 635
+        },
+        "shifted_haze+cloud_5": {
+          "n": 863,
+          "errors": 741,
+          "error_rate": 0.8586326767091541,
+          "high_confidence_errors": 160,
+          "high_confidence_share_of_errors": 0.21592442645074225,
+          "mean_confidence_correct": 0.6731565203823027,
+          "mean_confidence_wrong": 0.6417592239645329,
+          "clean_correct_to_wrong": 664
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "n": 863,
+          "errors": 81,
+          "error_rate": 0.09385863267670916,
+          "high_confidence_errors": 38,
+          "high_confidence_share_of_errors": 0.4691358024691358,
+          "mean_confidence_correct": 0.9821666352584234,
+          "mean_confidence_wrong": 0.8108539890359949,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 863,
+          "errors": 206,
+          "error_rate": 0.23870220162224798,
+          "high_confidence_errors": 35,
+          "high_confidence_share_of_errors": 0.16990291262135923,
+          "mean_confidence_correct": 0.9199063188000901,
+          "mean_confidence_wrong": 0.5546417481184585,
+          "clean_correct_to_wrong": 137
+        },
+        "matched_cloud_5": {
+          "n": 863,
+          "errors": 336,
+          "error_rate": 0.38933951332560834,
+          "high_confidence_errors": 50,
+          "high_confidence_share_of_errors": 0.1488095238095238,
+          "mean_confidence_correct": 0.8549285442541854,
+          "mean_confidence_wrong": 0.6108106344140002,
+          "clean_correct_to_wrong": 267
+        },
+        "matched_glare_5": {
+          "n": 863,
+          "errors": 222,
+          "error_rate": 0.2572421784472769,
+          "high_confidence_errors": 58,
+          "high_confidence_share_of_errors": 0.26126126126126126,
+          "mean_confidence_correct": 0.9189469256146278,
+          "mean_confidence_wrong": 0.670387135969626,
+          "clean_correct_to_wrong": 154
+        },
+        "matched_haze+glare_5": {
+          "n": 863,
+          "errors": 569,
+          "error_rate": 0.6593279258400927,
+          "high_confidence_errors": 23,
+          "high_confidence_share_of_errors": 0.040421792618629174,
+          "mean_confidence_correct": 0.7233369469541271,
+          "mean_confidence_wrong": 0.36721539456783575,
+          "clean_correct_to_wrong": 498
+        },
+        "matched_haze+cloud_5": {
+          "n": 863,
+          "errors": 591,
+          "error_rate": 0.6848203939745076,
+          "high_confidence_errors": 23,
+          "high_confidence_share_of_errors": 0.038917089678511,
+          "mean_confidence_correct": 0.663809887078755,
+          "mean_confidence_wrong": 0.401930778109281,
+          "clean_correct_to_wrong": 516
+        },
+        "shifted_haze+cloud_5": {
+          "n": 863,
+          "errors": 618,
+          "error_rate": 0.7161066048667439,
+          "high_confidence_errors": 21,
+          "high_confidence_share_of_errors": 0.03398058252427184,
+          "mean_confidence_correct": 0.6120184308716229,
+          "mean_confidence_wrong": 0.35821562676319796,
+          "clean_correct_to_wrong": 543
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "n": 863,
+          "errors": 97,
+          "error_rate": 0.11239860950173812,
+          "high_confidence_errors": 52,
+          "high_confidence_share_of_errors": 0.5360824742268041,
+          "mean_confidence_correct": 0.9868547141396345,
+          "mean_confidence_wrong": 0.8352790766770077,
+          "clean_correct_to_wrong": 0
+        },
+        "matched_haze_5": {
+          "n": 863,
+          "errors": 235,
+          "error_rate": 0.272305909617613,
+          "high_confidence_errors": 109,
+          "high_confidence_share_of_errors": 0.46382978723404256,
+          "mean_confidence_correct": 0.9602182482837871,
+          "mean_confidence_wrong": 0.800105298136143,
+          "clean_correct_to_wrong": 160
+        },
+        "matched_cloud_5": {
+          "n": 863,
+          "errors": 335,
+          "error_rate": 0.388180764774044,
+          "high_confidence_errors": 134,
+          "high_confidence_share_of_errors": 0.4,
+          "mean_confidence_correct": 0.9291500733657316,
+          "mean_confidence_wrong": 0.7791124544926544,
+          "clean_correct_to_wrong": 256
+        },
+        "matched_glare_5": {
+          "n": 863,
+          "errors": 282,
+          "error_rate": 0.3267670915411356,
+          "high_confidence_errors": 135,
+          "high_confidence_share_of_errors": 0.4787234042553192,
+          "mean_confidence_correct": 0.9481379200997738,
+          "mean_confidence_wrong": 0.7993596837664327,
+          "clean_correct_to_wrong": 198
+        },
+        "matched_haze+glare_5": {
+          "n": 863,
+          "errors": 591,
+          "error_rate": 0.6848203939745076,
+          "high_confidence_errors": 170,
+          "high_confidence_share_of_errors": 0.2876480541455161,
+          "mean_confidence_correct": 0.869825850788723,
+          "mean_confidence_wrong": 0.7327613638187624,
+          "clean_correct_to_wrong": 501
+        },
+        "matched_haze+cloud_5": {
+          "n": 863,
+          "errors": 537,
+          "error_rate": 0.6222479721900348,
+          "high_confidence_errors": 211,
+          "high_confidence_share_of_errors": 0.3929236499068901,
+          "mean_confidence_correct": 0.8743276462598812,
+          "mean_confidence_wrong": 0.7658577837757559,
+          "clean_correct_to_wrong": 447
+        },
+        "shifted_haze+cloud_5": {
+          "n": 863,
+          "errors": 588,
+          "error_rate": 0.6813441483198146,
+          "high_confidence_errors": 183,
+          "high_confidence_share_of_errors": 0.3112244897959184,
+          "mean_confidence_correct": 0.8398989486694336,
+          "mean_confidence_wrong": 0.7221348690641981,
+          "clean_correct_to_wrong": 501
+        }
+      }
+    },
+    "placement": {
+      "cdlnet_repro": {
+        "cloud_3": {
+          "center": 0.7322927399940297,
+          "border": 0.7583675392407949
+        },
+        "glare_3": {
+          "center": 0.7701730016736923,
+          "border": 0.8674212256116931
+        }
+      },
+      "resnet50": {
+        "cloud_3": {
+          "center": 0.757432712810692,
+          "border": 0.7897305593981939
+        },
+        "glare_3": {
+          "center": 0.7533033591317349,
+          "border": 0.8823098395772402
+        }
+      },
+      "convnext_tiny": {
+        "cloud_3": {
+          "center": 0.8262997647603266,
+          "border": 0.8238087399190137
+        },
+        "glare_3": {
+          "center": 0.833173678514755,
+          "border": 0.8989591715211008
+        }
+      },
+      "swin_t": {
+        "cloud_3": {
+          "center": 0.7680956328796915,
+          "border": 0.8193694234090425
+        },
+        "glare_3": {
+          "center": 0.7447830178718517,
+          "border": 0.8850335613768404
+        }
+      }
+    },
+    "collapse": {
+      "cdlnet_repro": {
+        "clean": {
+          "label": "destroyer",
+          "count": 113,
+          "share": 0.13093858632676708
+        },
+        "matched_haze+glare_5": {
+          "label": "non-ship",
+          "count": 175,
+          "share": 0.20278099652375434
+        },
+        "shifted_haze+cloud_5": {
+          "label": "destroyer",
+          "count": 168,
+          "share": 0.19466975666280417
+        }
+      },
+      "resnet50": {
+        "clean": {
+          "label": "destroyer",
+          "count": 110,
+          "share": 0.12746234067207415
+        },
+        "matched_haze+glare_5": {
+          "label": "fishing boat",
+          "count": 221,
+          "share": 0.25608342989571264
+        },
+        "shifted_haze+cloud_5": {
+          "label": "fishing boat",
+          "count": 415,
+          "share": 0.48088064889918886
+        }
+      },
+      "convnext_tiny": {
+        "clean": {
+          "label": "destroyer",
+          "count": 115,
+          "share": 0.1332560834298957
+        },
+        "matched_haze+glare_5": {
+          "label": "destroyer",
+          "count": 392,
+          "share": 0.4542294322132097
+        },
+        "shifted_haze+cloud_5": {
+          "label": "destroyer",
+          "count": 302,
+          "share": 0.3499420625724218
+        }
+      },
+      "swin_t": {
+        "clean": {
+          "label": "destroyer",
+          "count": 110,
+          "share": 0.12746234067207415
+        },
+        "matched_haze+glare_5": {
+          "label": "liquefied gas ship",
+          "count": 168,
+          "share": 0.19466975666280417
+        },
+        "shifted_haze+cloud_5": {
+          "label": "frigate",
+          "count": 134,
+          "share": 0.1552723059096176
+        }
+      }
+    },
+    "intervals": {
+      "clean": {
+        "low": 0.8398347596807838,
+        "high": 0.8887812656025268,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze_5": {
+        "low": 0.4214187671053695,
+        "high": 0.494605743529785,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_cloud_5": {
+        "low": 0.4570262275511989,
+        "high": 0.5318243608892634,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_glare_5": {
+        "low": 0.5622860929198538,
+        "high": 0.6331123833795187,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze+glare_5": {
+        "low": 0.1568541163856723,
+        "high": 0.21423343186247623,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "matched_haze+cloud_5": {
+        "low": 0.17313076069954808,
+        "high": 0.23705422398445694,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      },
+      "shifted_haze+cloud_5": {
+        "low": 0.10714732735170077,
+        "high": 0.14795444914007186,
+        "repeats": 300,
+        "group_count": 816,
+        "group_unit": "source_group_id (duplicate component if scene unavailable)",
+        "method": "unstratified cluster percentile bootstrap, fixed label set"
+      }
+    },
+    "condition_macro_f1": {
+      "cdlnet_repro": {
+        "clean": 0.8681808195194047,
+        "matched_haze_1": 0.8454496936840259,
+        "matched_haze_2": 0.8197966365991074,
+        "matched_haze_3": 0.7267762911579478,
+        "matched_haze_4": 0.5982299780475814,
+        "matched_haze_5": 0.4613050569852694,
+        "matched_cloud_1": 0.8609224137403453,
+        "matched_cloud_2": 0.8351647914801141,
+        "matched_cloud_3": 0.7635905846130133,
+        "matched_cloud_4": 0.6520003292090214,
+        "matched_cloud_5": 0.49952231735766495,
+        "matched_glare_1": 0.8688587489455423,
+        "matched_glare_2": 0.8556870949281352,
+        "matched_glare_3": 0.8230918021498913,
+        "matched_glare_4": 0.7740251357721639,
+        "matched_glare_5": 0.6033281744989865,
+        "matched_haze+glare_3": 0.6290469615458352,
+        "matched_haze+glare_5": 0.18744162434055295,
+        "matched_haze+cloud_3": 0.5960890662119124,
+        "matched_haze+cloud_5": 0.2067660847488373,
+        "shifted_haze_1": 0.8494007357986197,
+        "shifted_haze_2": 0.8091305596565787,
+        "shifted_haze_3": 0.7248793110142795,
+        "shifted_haze_4": 0.571168731848077,
+        "shifted_haze_5": 0.4086248686717198,
+        "shifted_cloud_1": 0.87607832961047,
+        "shifted_cloud_2": 0.8245326011490026,
+        "shifted_cloud_3": 0.7420889581975443,
+        "shifted_cloud_4": 0.5655166005226677,
+        "shifted_cloud_5": 0.404864747747094,
+        "shifted_glare_1": 0.8681034224775135,
+        "shifted_glare_2": 0.8663839047531315,
+        "shifted_glare_3": 0.8371790748718577,
+        "shifted_glare_4": 0.824459807353656,
+        "shifted_glare_5": 0.7428385494086432,
+        "shifted_haze+glare_3": 0.6697150818870448,
+        "shifted_haze+glare_5": 0.21039697812540067,
+        "shifted_haze+cloud_3": 0.5608053079646529,
+        "shifted_haze+cloud_5": 0.12827794905987075,
+        "matched_cloud_3_center": 0.7322927399940297,
+        "matched_glare_3_center": 0.7701730016736923,
+        "matched_cloud_3_border": 0.7583675392407949,
+        "matched_glare_3_border": 0.8674212256116931
+      },
+      "resnet50": {
+        "clean": 0.8902783773920587,
+        "matched_haze_1": 0.8728504511685841,
+        "matched_haze_2": 0.8489245129492831,
+        "matched_haze_3": 0.822939885885449,
+        "matched_haze_4": 0.7383343802001249,
+        "matched_haze_5": 0.5943216041453895,
+        "matched_cloud_1": 0.8879724189077792,
+        "matched_cloud_2": 0.8599957313030239,
+        "matched_cloud_3": 0.7994675381135643,
+        "matched_cloud_4": 0.6545546525193956,
+        "matched_cloud_5": 0.4716235205697141,
+        "matched_glare_1": 0.8859075571968124,
+        "matched_glare_2": 0.8726265882957619,
+        "matched_glare_3": 0.8301284781126718,
+        "matched_glare_4": 0.7379513901754524,
+        "matched_glare_5": 0.6073578723933316,
+        "matched_haze+glare_3": 0.706122944925964,
+        "matched_haze+glare_5": 0.2009181020445407,
+        "matched_haze+cloud_3": 0.6572124352975155,
+        "matched_haze+cloud_5": 0.14022196811218254,
+        "shifted_haze_1": 0.8789335039687052,
+        "shifted_haze_2": 0.863892060316327,
+        "shifted_haze_3": 0.8059141629745616,
+        "shifted_haze_4": 0.7528811880360777,
+        "shifted_haze_5": 0.5752909762754713,
+        "shifted_cloud_1": 0.8779938114564685,
+        "shifted_cloud_2": 0.8483601558187187,
+        "shifted_cloud_3": 0.7650325038221861,
+        "shifted_cloud_4": 0.6098767831559193,
+        "shifted_cloud_5": 0.3789002025140445,
+        "shifted_glare_1": 0.8894248282263792,
+        "shifted_glare_2": 0.882504842400114,
+        "shifted_glare_3": 0.8665789659494894,
+        "shifted_glare_4": 0.8372177940484662,
+        "shifted_glare_5": 0.7579816463193536,
+        "shifted_haze+glare_3": 0.7729981981002373,
+        "shifted_haze+glare_5": 0.2554502688909635,
+        "shifted_haze+cloud_3": 0.6467639394969668,
+        "shifted_haze+cloud_5": 0.12070004544829441,
+        "matched_cloud_3_center": 0.757432712810692,
+        "matched_glare_3_center": 0.7533033591317349,
+        "matched_cloud_3_border": 0.7897305593981939,
+        "matched_glare_3_border": 0.8823098395772402
+      },
+      "convnext_tiny": {
+        "clean": 0.9065039725006092,
+        "matched_haze_1": 0.8869484738422158,
+        "matched_haze_2": 0.8790488376857735,
+        "matched_haze_3": 0.8513029388222365,
+        "matched_haze_4": 0.8222636295082125,
+        "matched_haze_5": 0.7665332878204691,
+        "matched_cloud_1": 0.8986305981409497,
+        "matched_cloud_2": 0.8797826429758839,
+        "matched_cloud_3": 0.8320422290427473,
+        "matched_cloud_4": 0.7803055930214667,
+        "matched_cloud_5": 0.6279050669301719,
+        "matched_glare_1": 0.8987402734079227,
+        "matched_glare_2": 0.8974630705088493,
+        "matched_glare_3": 0.8716952743267852,
+        "matched_glare_4": 0.8209035732892237,
+        "matched_glare_5": 0.7141914257893806,
+        "matched_haze+glare_3": 0.7904212316852661,
+        "matched_haze+glare_5": 0.31542293057091514,
+        "matched_haze+cloud_3": 0.7661841055628066,
+        "matched_haze+cloud_5": 0.3157795605237861,
+        "shifted_haze_1": 0.8903156268201778,
+        "shifted_haze_2": 0.8782515637200362,
+        "shifted_haze_3": 0.8572174858747744,
+        "shifted_haze_4": 0.8249383993368357,
+        "shifted_haze_5": 0.7398038638824933,
+        "shifted_cloud_1": 0.8991766486554075,
+        "shifted_cloud_2": 0.877121425644382,
+        "shifted_cloud_3": 0.7930264433210568,
+        "shifted_cloud_4": 0.6951157794243165,
+        "shifted_cloud_5": 0.5014704962211637,
+        "shifted_glare_1": 0.9041069689663555,
+        "shifted_glare_2": 0.8994724175094247,
+        "shifted_glare_3": 0.8862805534091592,
+        "shifted_glare_4": 0.8832536793126718,
+        "shifted_glare_5": 0.8154277193394314,
+        "shifted_haze+glare_3": 0.8381568315773642,
+        "shifted_haze+glare_5": 0.4330342350648713,
+        "shifted_haze+cloud_3": 0.7730171869493369,
+        "shifted_haze+cloud_5": 0.2505218910415751,
+        "matched_cloud_3_center": 0.8262997647603266,
+        "matched_glare_3_center": 0.833173678514755,
+        "matched_cloud_3_border": 0.8238087399190137,
+        "matched_glare_3_border": 0.8989591715211008
+      },
+      "swin_t": {
+        "clean": 0.8901995638588108,
+        "matched_haze_1": 0.8756329411402585,
+        "matched_haze_2": 0.86589757546872,
+        "matched_haze_3": 0.8334848458726704,
+        "matched_haze_4": 0.7968358483860287,
+        "matched_haze_5": 0.724211538796141,
+        "matched_cloud_1": 0.8884519338477561,
+        "matched_cloud_2": 0.8497131573020055,
+        "matched_cloud_3": 0.8175984015118479,
+        "matched_cloud_4": 0.7339223641380619,
+        "matched_cloud_5": 0.6302837468209536,
+        "matched_glare_1": 0.8863715630332765,
+        "matched_glare_2": 0.8710832729351033,
+        "matched_glare_3": 0.83344436128668,
+        "matched_glare_4": 0.7605852514232451,
+        "matched_glare_5": 0.6426536142814152,
+        "matched_haze+glare_3": 0.7711963066246222,
+        "matched_haze+glare_5": 0.2769940950549076,
+        "matched_haze+cloud_3": 0.7617640019167492,
+        "matched_haze+cloud_5": 0.3856156947295182,
+        "shifted_haze_1": 0.8805438387780202,
+        "shifted_haze_2": 0.8603596942515879,
+        "shifted_haze_3": 0.8264435298340359,
+        "shifted_haze_4": 0.7922140220817838,
+        "shifted_haze_5": 0.6794388928366274,
+        "shifted_cloud_1": 0.9020631368113051,
+        "shifted_cloud_2": 0.8641269734820562,
+        "shifted_cloud_3": 0.8225258144323397,
+        "shifted_cloud_4": 0.7133419848166149,
+        "shifted_cloud_5": 0.5708010934064702,
+        "shifted_glare_1": 0.889681906912737,
+        "shifted_glare_2": 0.8843495963889489,
+        "shifted_glare_3": 0.8698212629793539,
+        "shifted_glare_4": 0.8430345970108671,
+        "shifted_glare_5": 0.777436131008988,
+        "shifted_haze+glare_3": 0.7989674584598845,
+        "shifted_haze+glare_5": 0.44066791881510053,
+        "shifted_haze+cloud_3": 0.7161402149667642,
+        "shifted_haze+cloud_5": 0.3187567455519739,
+        "matched_cloud_3_center": 0.7680956328796915,
+        "matched_glare_3_center": 0.7447830178718517,
+        "matched_cloud_3_border": 0.8193694234090425,
+        "matched_glare_3_border": 0.8850335613768404
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "output": "reports/figures/restorer_contact_sheet.png",
+  "samples": 5,
+  "kind": "haze+glare",
+  "severity": 5,
+  "degraded_gradient_ratio": 0.11941664562316438,
+  "restored_gradient_ratio": {
+    "17": 0.32989063688192477
+  },
+  "mean_restored_l1": {
+    "17": 0.193585342168808
+  },
+  "per_sample": [
+    {
+      "sample_id": "fgsc23_0c3233ec27fb21f2_865564445",
+      "label": 0,
+      "clean_gradient": 0.04969343543052673,
+      "degraded_gradient": 0.005563072860240936,
+      "restored_gradient": {
+        "17": 0.014879779890179634
+      },
+      "restored_l1": {
+        "17": 0.250112920999527
+      },
+      "restored_psnr": {
+        "17": 9.90183251824186
+      }
+    },
+    {
+      "sample_id": "fgsc23_725e6dd7ce300d44_3390322961",
+      "label": 1,
+      "clean_gradient": 0.029382985085248947,
+      "degraded_gradient": 0.0012876801192760468,
+      "restored_gradient": {
+        "17": 0.0033349685836583376
+      },
+      "restored_l1": {
+        "17": 0.19677436351776123
+      },
+      "restored_psnr": {
+        "17": 11.523440675045558
+      }
+    },
+    {
+      "sample_id": "fgsc23_0231dca0683c4320_2708070406",
+      "label": 2,
+      "clean_gradient": 0.03355275094509125,
+      "degraded_gradient": 0.007343167904764414,
+      "restored_gradient": {
+        "17": 0.018726028501987457
+      },
+      "restored_l1": {
+        "17": 0.15085497498512268
+      },
+      "restored_psnr": {
+        "17": 15.16136909275626
+      }
+    },
+    {
+      "sample_id": "fgsc23_8ca8946c2ac6c620_976417905",
+      "label": 3,
+      "clean_gradient": 0.02343357354402542,
+      "degraded_gradient": 0.002420722506940365,
+      "restored_gradient": {
+        "17": 0.006959746591746807
+      },
+      "restored_l1": {
+        "17": 0.14425581693649292
+      },
+      "restored_psnr": {
+        "17": 15.158174541435603
+      }
+    },
+    {
+      "sample_id": "fgsc23_33ab8a287affea03_1358934579",
+      "label": 4,
+      "clean_gradient": 0.017455123364925385,
+      "degraded_gradient": 0.002079873811453581,
+      "restored_gradient": {
+        "17": 0.006657657213509083
+      },
+      "restored_l1": {
+        "17": 0.2259286344051361
+      },
+      "restored_psnr": {
+        "17": 11.394066579025598
+      }
+    }
+  ]
+}

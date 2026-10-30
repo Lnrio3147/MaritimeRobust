@@ -1,0 +1,79 @@
+{"train": 618, "val": 157, "groups": 152, "classes": 8}
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/external/efmnet_repro/models/miner.py:161: UserWarning: Overwriting convnext_tiny in registry with models.miner.convnext_tiny. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def convnext_tiny(pretrained=False, **kwargs):
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/external/efmnet_repro/models/miner.py:171: UserWarning: Overwriting convnext_small in registry with models.miner.convnext_small. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def convnext_small(pretrained=False, **kwargs):
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/external/efmnet_repro/models/miner.py:181: UserWarning: Overwriting convnext_base in registry with models.miner.convnext_base. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def convnext_base(pretrained=False, M=16, in_22k=False, **kwargs):
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/external/efmnet_repro/models/miner.py:191: UserWarning: Overwriting convnext_large in registry with models.miner.convnext_large. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def convnext_large(pretrained=False, in_22k=False, **kwargs):
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/external/efmnet_repro/models/miner.py:201: UserWarning: Overwriting convnext_xlarge in registry with models.miner.convnext_xlarge. This is because the name being registered conflicts with an existing name. Please check if this is not expected.
+  def convnext_xlarge(pretrained=False, in_22k=False, **kwargs):
+/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/efmnet_eval.py:73: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state = torch.load(checkpoint, map_location="cpu")
+{"cached": "train/clean"}
+{"cached": "train/matched_glare_5"}
+{"cached": "train/matched_haze+glare_5"}
+{"cached": "train/matched_haze+cloud_5"}
+{"cached": "train/shifted_haze+glare_5"}
+{"cached": "val/clean"}
+{"cached": "val/matched_glare_5"}
+{"cached": "val/matched_haze+glare_5"}
+{"cached": "val/matched_haze+cloud_5"}
+{"cached": "val/shifted_haze+glare_5"}
+/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/joblib/externals/loky/backend/r{"family": "resnet50", "C": 0.01, "dims": 2048}
+/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/joblib/externals/loky/process_executor.py:782: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+{"family": "efmnet_convnext_b", "C": 0.3, "dims": 1024}
+{
+ "summary": {
+  "cells": [
+   "convnext_tiny/matched_haze+glare_5",
+   "convnext_tiny/matched_haze+cloud_5",
+   "convnext_tiny/shifted_haze+glare_5",
+   "swin_t/matched_haze+glare_5",
+   "swin_t/matched_haze+cloud_5",
+   "swin_t/shifted_haze+glare_5",
+   "resnet50/matched_haze+glare_5",
+   "resnet50/matched_haze+cloud_5",
+   "resnet50/shifted_haze+glare_5",
+   "efmnet_convnext_b/matched_haze+glare_5",
+   "efmnet_convnext_b/matched_haze+cloud_5",
+   "efmnet_convnext_b/shifted_haze+glare_5"
+  ],
+  "H": {
+   "mean_pp": 3.290870488322718,
+   "ci": [
+    1.021505376344086,
+    5.573345302795029
+   ]
+  },
+  "S": {
+   "mean_pp": 7.749469214437367,
+   "ci": [
+    4.659771423751687,
+    10.775104498407643
+   ]
+  },
+  "T": {
+   "mean_pp": -4.45859872611465,
+   "ci": [
+    -6.774193548387098,
+    -2.109053497942387
+   ]
+  },
+  "n_bh_p2": 0,
+  "n_bh_p1": 0,
+  "shuffle_vs_prior_max_gap_pp": 12.101910828025474
+ },
+ "decision": {
+  "branch": "R0",
+  "hypothesis": "\u4e0d\u786e\u5b9a\uff1a\u51c0\u7a7a\u7684\u5206\u7ec4 CI \u6216 BH \u8ba1\u6570\u672a\u8fc7\u62a4\u680f\uff0c\u7ec8\u6b62\u65b0\u6a21\u5757\u5f00\u53d1",
+  "H_pp": 3.290870488322718,
+  "S_pp": 7.749469214437367,
+  "T_pp": -4.45859872611465,
+  "headroom_guard": false,
+  "shift_guard": true,
+  "terminate": true
+ }
+}

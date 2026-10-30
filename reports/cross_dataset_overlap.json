@@ -1,0 +1,29 @@
+{
+  "fgsc23_images": 4071,
+  "fgsrcs_source_images": 4500,
+  "fgsrcs_crop_images": 11187,
+  "method": {
+    "pixel_sha256": "sha256(size bytes + decoded RGB bytes)",
+    "near_duplicate": "63-bit DCT thumbnail Hamming <= 4 AND 32x32 RGB mean absolute difference <= 0.035",
+    "crop_scope": "FGSRCS known-box crops use 10% context, so crop-level matches approximate same-ship/same-scene overlap but are not proof of identical source scenes"
+  },
+  "exact_matches": {
+    "sources": [],
+    "crops": []
+  },
+  "near_duplicate_candidates": {
+    "sources": [],
+    "crops": []
+  },
+  "counts": {
+    "exact_source_pairs": 0,
+    "exact_crop_pairs": 0,
+    "near_source_pairs": 0,
+    "near_crop_pairs": 0
+  },
+  "limitations": [
+    "Global thumbnails cannot detect crops, rotations, re-scaling or heavy reprocessing.",
+    "No port, capture-time or vessel identity is available for either release; a negative screen does not establish scene or port independence.",
+    "Crop-level near-duplicates are expected when the same ship appears in both datasets and do not by themselves prove shared source imagery."
+  ]
+}

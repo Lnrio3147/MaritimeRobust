@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "based_on": "combined_augmentation.json",
+  "placement_mixture": {
+    "random": 0.5,
+    "center": 0.25,
+    "border": 0.25
+  },
+  "note": "C1 only changes where cloudy/glare degradation is placed during training; the combined clean/degraded mixture, kinds and severities are unchanged."
+}

@@ -1,0 +1,383 @@
+{
+  "run": "runs/fgsc23_research_civilian/swin_t_aug_s17",
+  "condition": "matched_haze+glare_5",
+  "count": 12,
+  "checkpoint_sha256": "3092012eff91b26cd632af1c9e17846905739260d42a7dd5c4b19d55fac33826",
+  "manifest_sha256": "e4178b700d9e16932cf4b01a31afac792b43df4285c487a9034c34cb6f119a61",
+  "selection": "clean-correct and degraded wrong, sorted by confidence, confidence >= 0.9",
+  "degraded_images_regenerated_from_saved_seed": true,
+  "cases": [
+    {
+      "sample_id": "fgsc23_6d44f1b8b7191f3c_3717174398",
+      "path": "data/raw/fgsc23/FGSC-23/test/18/18_4_74_10660.jpg",
+      "label": "oil tanker",
+      "prediction": "bulk carrier",
+      "confidence": 0.9999912977218628,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 2429821445,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.26541668176651,
+        "airlight": [
+          0.8715287830999292,
+          0.9408597475196211,
+          0.8933250910502052
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.21690698366770525,
+          0.38062240085238164
+        ],
+        "saturated_fraction": 0.5815505657708628,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_60c0cb872a15c499_1813713917",
+      "path": "data/raw/fgsc23/FGSC-23/test/20/20_6_38_11264.jpg",
+      "label": "passenger ship",
+      "prediction": "bulk carrier",
+      "confidence": 0.9991121888160706,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 1269027259,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.24686437845230103,
+        "airlight": [
+          0.8598244341037034,
+          0.88116829053805,
+          0.9005384920023265
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.7015923058949685,
+          0.3979807288330198
+        ],
+        "saturated_fraction": 0.6540762902019447,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_b1d340b7e563cc8a_3281819598",
+      "path": "data/raw/fgsc23/FGSC-23/test/17/17_5_31_10208.jpg",
+      "label": "bulk carrier",
+      "prediction": "fishing boat",
+      "confidence": 0.9986822009086609,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 1997611630,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.23498249053955078,
+        "airlight": [
+          0.944223146498126,
+          0.9679658630021939,
+          0.9282538099600011
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.1324036080138929,
+          0.7112844148643229
+        ],
+        "saturated_fraction": 0.4642591411564626,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_35a49678dba8deda_3227138618",
+      "path": "data/raw/fgsc23/FGSC-23/test/20/20_3_21_11218.jpg",
+      "label": "passenger ship",
+      "prediction": "fishing boat",
+      "confidence": 0.9971098303794861,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 3104117156,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.2312438040971756,
+        "airlight": [
+          0.8508848775365747,
+          0.938636172839611,
+          0.8923044206431651
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.8800283295246745,
+          0.31968819243470037
+        ],
+        "saturated_fraction": 0.517691798941799,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_c4ef5590dec1a3ae_882926732",
+      "path": "data/raw/fgsc23/FGSC-23/test/20/20_3_79_11281.jpg",
+      "label": "passenger ship",
+      "prediction": "fishing boat",
+      "confidence": 0.9962969422340393,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 2078050124,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.24474593997001648,
+        "airlight": [
+          0.962148409582923,
+          0.9356810870998346,
+          0.8920085147135435
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.6022713090264069,
+          0.3212660427353087
+        ],
+        "saturated_fraction": 0.7060267857142857,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_b734b303ab0a1d63_1112173875",
+      "path": "data/raw/fgsc23/FGSC-23/test/18/18_5_110_100029.jpg",
+      "label": "oil tanker",
+      "prediction": "bulk carrier",
+      "confidence": 0.9945046305656433,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 193677577,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.25252529978752136,
+        "airlight": [
+          0.9238842912916979,
+          0.9685234808907262,
+          0.8726437889875205
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.5718436091610978,
+          0.17682718955903534
+        ],
+        "saturated_fraction": 0.5662337662337662,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_98ad1496246467db_1518558698",
+      "path": "data/raw/fgsc23/FGSC-23/test/14/14_6_172_11321.jpg",
+      "label": "container ship",
+      "prediction": "bulk carrier",
+      "confidence": 0.9913318157196045,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 1746674895,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.2367926687002182,
+        "airlight": [
+          0.9210548282408751,
+          0.9676079266222308,
+          0.9103476053968488
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.3286520693428898,
+          0.4844101370296192
+        ],
+        "saturated_fraction": 0.7949134199134199,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_b3ceba956de3ca76_1104750031",
+      "path": "data/raw/fgsc23/FGSC-23/test/21/21_5_40_100092.jpg",
+      "label": "liquefied gas ship",
+      "prediction": "oil tanker",
+      "confidence": 0.9868387579917908,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 2265200511,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.25791844725608826,
+        "airlight": [
+          0.9376533273653229,
+          0.9775876032212989,
+          0.8505246644190544
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.7957535264899775,
+          0.10635895905754751
+        ],
+        "saturated_fraction": 0.44333964646464646,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_8774537f0772f364_1593164838",
+      "path": "data/raw/fgsc23/FGSC-23/train/21/21_6_40_100007.jpg",
+      "label": "liquefied gas ship",
+      "prediction": "barge",
+      "confidence": 0.9857695698738098,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 2616384506,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.2594740390777588,
+        "airlight": [
+          0.9500542339177022,
+          0.9653030807635046,
+          0.9131850791963134
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.2398075310472798,
+          0.7963423312684771
+        ],
+        "saturated_fraction": 0.4892413487133984,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_974ef1f2d74e7457_2126429279",
+      "path": "data/raw/fgsc23/FGSC-23/test/20/20_3_57_11244.jpg",
+      "label": "passenger ship",
+      "prediction": "bulk carrier",
+      "confidence": 0.9815951585769653,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 2875647289,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.25306496024131775,
+        "airlight": [
+          0.8997484364527081,
+          0.8877964802832842,
+          0.9461285194575136
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.4326729536342463,
+          0.5181890496707725
+        ],
+        "saturated_fraction": 0.7841929369513169,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_9bfbbb2fb4fb823b_3409367053",
+      "path": "data/raw/fgsc23/FGSC-23/test/20/20_4_115_11273.jpg",
+      "label": "passenger ship",
+      "prediction": "fishing boat",
+      "confidence": 0.9815191030502319,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 314818435,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.26170140504837036,
+        "airlight": [
+          0.8567045766046261,
+          0.9278757505082403,
+          0.8899124018816771
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.5873388981719868,
+          0.7787141031358698
+        ],
+        "saturated_fraction": 0.6455190771960958,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    },
+    {
+      "sample_id": "fgsc23_b3c6cea30be87b22_3222076286",
+      "path": "data/raw/fgsc23/FGSC-23/test/18/18_4_112_11565.jpg",
+      "label": "oil tanker",
+      "prediction": "bulk carrier",
+      "confidence": 0.9732525944709778,
+      "degradation": {
+        "kind": "haze+glare",
+        "severity": 5,
+        "seed": 4060764394,
+        "domain": "matched",
+        "placement": "random",
+        "recipe_version": "1.0",
+        "transmission_mean": 0.2398097813129425,
+        "airlight": [
+          0.944368033270327,
+          0.8672298564938535,
+          0.8842228328929292
+        ],
+        "glare_strength": 2.0,
+        "glare_sigma": 0.25,
+        "glare_center": [
+          0.6754609238583769,
+          0.3832254008429973
+        ],
+        "saturated_fraction": 0.6984916125541125,
+        "affected_fraction": 1.0,
+        "center_proxy_affected_fraction": 1.0,
+        "target_affected_fraction": null
+      }
+    }
+  ]
+}

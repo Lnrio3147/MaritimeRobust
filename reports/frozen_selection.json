@@ -1,0 +1,50 @@
+{
+  "selection": {
+    "civilian": {
+      "ranking": [
+        {
+          "model": "swin_t",
+          "score": 0.8671018214384134
+        },
+        {
+          "model": "convnext_tiny",
+          "score": 0.850700893719694
+        },
+        {
+          "model": "resnet50",
+          "score": 0.8059886369010796
+        }
+      ],
+      "selected_models": [
+        "swin_t",
+        "convnext_tiny"
+      ],
+      "dcp_model": "swin_t"
+    },
+    "all": {
+      "ranking": [
+        {
+          "model": "convnext_tiny",
+          "score": 0.8774420195713037
+        },
+        {
+          "model": "swin_t",
+          "score": 0.8703080261525626
+        },
+        {
+          "model": "resnet50",
+          "score": 0.8563146869431295
+        }
+      ],
+      "selected_models": [
+        "convnext_tiny",
+        "swin_t"
+      ],
+      "dcp_model": "convnext_tiny"
+    }
+  },
+  "protocol_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "time": 1793151868.4341385,
+  "basis": "seed17 validation only; equal clean/robust weight; average over clean and augmented variants"
+}

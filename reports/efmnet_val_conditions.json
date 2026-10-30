@@ -1,0 +1,248 @@
+{
+  "model": "EFM-Net (ConvNeXt-B + MHA + BPP), architecture reimplementation",
+  "run_dir": "runs_external/fgsc23_civ8/fgsc23_civ8_10-29-17-34-01/",
+  "checkpoint": "checkpoint-best.pth",
+  "manifest": "data/manifests/fgsc23_research_civilian.jsonl",
+  "split": "val",
+  "n": 157,
+  "project_to_efmnet": {
+    "0": 3,
+    "1": 2,
+    "2": 1,
+    "3": 6,
+    "4": 4,
+    "5": 7,
+    "6": 5,
+    "7": 0
+  },
+  "efmnet_classes": [
+    "barge",
+    "bulk_carrier",
+    "car_carrier",
+    "container_ship",
+    "fishing_boat",
+    "liquefied_gas_ship",
+    "oil_tanker",
+    "passenger_ship"
+  ],
+  "results": {
+    "clean": {
+      "accuracy": 0.7834394904458599,
+      "macro_f1": 0.8097669536260217,
+      "n": 157
+    },
+    "conditions": {
+      "matched_haze_1": {
+        "accuracy": 0.7643312101910829,
+        "macro_f1": 0.7875894260441225,
+        "n": 157
+      },
+      "matched_haze_2": {
+        "accuracy": 0.7133757961783439,
+        "macro_f1": 0.7358759629562315,
+        "n": 157
+      },
+      "matched_haze_3": {
+        "accuracy": 0.7388535031847133,
+        "macro_f1": 0.7587474230320953,
+        "n": 157
+      },
+      "matched_haze_4": {
+        "accuracy": 0.7197452229299363,
+        "macro_f1": 0.7303396105700768,
+        "n": 157
+      },
+      "matched_haze_5": {
+        "accuracy": 0.7261146496815286,
+        "macro_f1": 0.7415380575823873,
+        "n": 157
+      },
+      "matched_cloud_1": {
+        "accuracy": 0.7770700636942676,
+        "macro_f1": 0.8026064593811382,
+        "n": 157
+      },
+      "matched_cloud_2": {
+        "accuracy": 0.7579617834394905,
+        "macro_f1": 0.7926786654410852,
+        "n": 157
+      },
+      "matched_cloud_3": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7530077876687332,
+        "n": 157
+      },
+      "matched_cloud_4": {
+        "accuracy": 0.732484076433121,
+        "macro_f1": 0.7463764664464624,
+        "n": 157
+      },
+      "matched_cloud_5": {
+        "accuracy": 0.6815286624203821,
+        "macro_f1": 0.6499986899065846,
+        "n": 157
+      },
+      "matched_glare_1": {
+        "accuracy": 0.7961783439490446,
+        "macro_f1": 0.8249172397260705,
+        "n": 157
+      },
+      "matched_glare_2": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7927616347058273,
+        "n": 157
+      },
+      "matched_glare_3": {
+        "accuracy": 0.7388535031847133,
+        "macro_f1": 0.7573955415499533,
+        "n": 157
+      },
+      "matched_glare_4": {
+        "accuracy": 0.7388535031847133,
+        "macro_f1": 0.756361803010653,
+        "n": 157
+      },
+      "matched_glare_5": {
+        "accuracy": 0.6369426751592356,
+        "macro_f1": 0.6097361456736456,
+        "n": 157
+      },
+      "matched_haze+glare_3": {
+        "accuracy": 0.7070063694267515,
+        "macro_f1": 0.7102074464212053,
+        "n": 157
+      },
+      "matched_haze+glare_5": {
+        "accuracy": 0.47770700636942676,
+        "macro_f1": 0.4121368904461462,
+        "n": 157
+      },
+      "matched_haze+cloud_3": {
+        "accuracy": 0.7197452229299363,
+        "macro_f1": 0.7108148306902028,
+        "n": 157
+      },
+      "matched_haze+cloud_5": {
+        "accuracy": 0.49044585987261147,
+        "macro_f1": 0.3940019660607896,
+        "n": 157
+      },
+      "shifted_haze_1": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7682630168507224,
+        "n": 157
+      },
+      "shifted_haze_2": {
+        "accuracy": 0.7261146496815286,
+        "macro_f1": 0.7353859387976962,
+        "n": 157
+      },
+      "shifted_haze_3": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7594681755087765,
+        "n": 157
+      },
+      "shifted_haze_4": {
+        "accuracy": 0.7133757961783439,
+        "macro_f1": 0.7301790542664905,
+        "n": 157
+      },
+      "shifted_haze_5": {
+        "accuracy": 0.6560509554140127,
+        "macro_f1": 0.6558987885736276,
+        "n": 157
+      },
+      "shifted_cloud_1": {
+        "accuracy": 0.7834394904458599,
+        "macro_f1": 0.7977006568349636,
+        "n": 157
+      },
+      "shifted_cloud_2": {
+        "accuracy": 0.7834394904458599,
+        "macro_f1": 0.8070278096806407,
+        "n": 157
+      },
+      "shifted_cloud_3": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7725012230866732,
+        "n": 157
+      },
+      "shifted_cloud_4": {
+        "accuracy": 0.7452229299363057,
+        "macro_f1": 0.7342563529269674,
+        "n": 157
+      },
+      "shifted_cloud_5": {
+        "accuracy": 0.6687898089171974,
+        "macro_f1": 0.6500075769797632,
+        "n": 157
+      },
+      "shifted_glare_1": {
+        "accuracy": 0.7834394904458599,
+        "macro_f1": 0.8097669536260217,
+        "n": 157
+      },
+      "shifted_glare_2": {
+        "accuracy": 0.802547770700637,
+        "macro_f1": 0.8247289112261843,
+        "n": 157
+      },
+      "shifted_glare_3": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7974773554420294,
+        "n": 157
+      },
+      "shifted_glare_4": {
+        "accuracy": 0.7452229299363057,
+        "macro_f1": 0.7519134026508865,
+        "n": 157
+      },
+      "shifted_glare_5": {
+        "accuracy": 0.7452229299363057,
+        "macro_f1": 0.7375994643228625,
+        "n": 157
+      },
+      "shifted_haze+glare_3": {
+        "accuracy": 0.7197452229299363,
+        "macro_f1": 0.7386994611615105,
+        "n": 157
+      },
+      "shifted_haze+glare_5": {
+        "accuracy": 0.4840764331210191,
+        "macro_f1": 0.3885339327943684,
+        "n": 157
+      },
+      "shifted_haze+cloud_3": {
+        "accuracy": 0.7133757961783439,
+        "macro_f1": 0.6849939208139395,
+        "n": 157
+      },
+      "shifted_haze+cloud_5": {
+        "accuracy": 0.4968152866242038,
+        "macro_f1": 0.4360263975155279,
+        "n": 157
+      },
+      "matched_cloud_3_center": {
+        "accuracy": 0.7388535031847133,
+        "macro_f1": 0.7545232053098186,
+        "n": 157
+      },
+      "matched_glare_3_center": {
+        "accuracy": 0.7197452229299363,
+        "macro_f1": 0.747383979067626,
+        "n": 157
+      },
+      "matched_cloud_3_border": {
+        "accuracy": 0.732484076433121,
+        "macro_f1": 0.7451236492499365,
+        "n": 157
+      },
+      "matched_glare_3_border": {
+        "accuracy": 0.7579617834394905,
+        "macro_f1": 0.7973728726859204,
+        "n": 157
+      }
+    }
+  },
+  "note": "project pipeline (contain->corrupt->pad->normalize); EFM-Net trained with its own augmentation recipe"
+}

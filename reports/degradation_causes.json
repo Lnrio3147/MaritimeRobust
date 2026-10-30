@@ -1,0 +1,1368 @@
+{
+  "scope": "civilian",
+  "models": [
+    "resnet50",
+    "convnext_tiny",
+    "swin_t"
+  ],
+  "key": {
+    "resnet50": {
+      "clean": {
+        "accuracy": 0.8983050847457628,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 0,
+          "flip_rate": 0.0
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9480429328275177,
+          "error_mean_maxprob": 0.7615878383318583,
+          "errors": 24,
+          "overconfident_errors": 8,
+          "overconfident_share": 0.3333333333333333
+        }
+      },
+      "matched_haze_5": {
+        "accuracy": 0.826271186440678,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 23,
+          "flip_rate": 0.10849056603773585
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9281976204652053,
+          "error_mean_maxprob": 0.6759975588903194,
+          "errors": 41,
+          "overconfident_errors": 8,
+          "overconfident_share": 0.1951219512195122
+        }
+      },
+      "matched_cloud_5": {
+        "accuracy": 0.8305084745762712,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 22,
+          "flip_rate": 0.10377358490566038
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9020316211544738,
+          "error_mean_maxprob": 0.68209735378623,
+          "errors": 40,
+          "overconfident_errors": 9,
+          "overconfident_share": 0.225
+        }
+      },
+      "matched_glare_5": {
+        "accuracy": 0.7457627118644068,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 40,
+          "flip_rate": 0.18867924528301888
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.857477861202576,
+          "error_mean_maxprob": 0.6578605895241102,
+          "errors": 60,
+          "overconfident_errors": 8,
+          "overconfident_share": 0.13333333333333333
+        }
+      },
+      "matched_haze+glare_5": {
+        "accuracy": 0.4703389830508475,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 106,
+          "flip_rate": 0.5
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.638997466983022,
+          "error_mean_maxprob": 0.45234642016887666,
+          "errors": 125,
+          "overconfident_errors": 2,
+          "overconfident_share": 0.016
+        }
+      },
+      "matched_haze+cloud_5": {
+        "accuracy": 0.711864406779661,
+        "flips": {
+          "clean_correct": 212,
+          "flipped": 51,
+          "flip_rate": 0.24056603773584906
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.7651433336238066,
+          "error_mean_maxprob": 0.6075850302243934,
+          "errors": 68,
+          "overconfident_errors": 6,
+          "overconfident_share": 0.08823529411764706
+        }
+      }
+    },
+    "convnext_tiny": {
+      "clean": {
+        "accuracy": 0.8771186440677966,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 0,
+          "flip_rate": 0.0
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9705702774766563,
+          "error_mean_maxprob": 0.8303739387413551,
+          "errors": 29,
+          "overconfident_errors": 14,
+          "overconfident_share": 0.4827586206896552
+        }
+      },
+      "matched_haze_5": {
+        "accuracy": 0.8559322033898306,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 9,
+          "flip_rate": 0.043478260869565216
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9587697996066349,
+          "error_mean_maxprob": 0.7915871800745234,
+          "errors": 34,
+          "overconfident_errors": 14,
+          "overconfident_share": 0.4117647058823529
+        }
+      },
+      "matched_cloud_5": {
+        "accuracy": 0.8686440677966102,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 6,
+          "flip_rate": 0.028985507246376812
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.959196412563324,
+          "error_mean_maxprob": 0.8116802621272302,
+          "errors": 31,
+          "overconfident_errors": 15,
+          "overconfident_share": 0.4838709677419355
+        }
+      },
+      "matched_glare_5": {
+        "accuracy": 0.826271186440678,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 21,
+          "flip_rate": 0.10144927536231885
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9288088155098451,
+          "error_mean_maxprob": 0.7613094936056835,
+          "errors": 41,
+          "overconfident_errors": 18,
+          "overconfident_share": 0.43902439024390244
+        }
+      },
+      "matched_haze+glare_5": {
+        "accuracy": 0.6567796610169492,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 61,
+          "flip_rate": 0.2946859903381642
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.8294914728210818,
+          "error_mean_maxprob": 0.6484095925166283,
+          "errors": 81,
+          "overconfident_errors": 15,
+          "overconfident_share": 0.18518518518518517
+        }
+      },
+      "matched_haze+cloud_5": {
+        "accuracy": 0.8220338983050848,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 21,
+          "flip_rate": 0.10144927536231885
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9500450087884038,
+          "error_mean_maxprob": 0.7397867767583757,
+          "errors": 42,
+          "overconfident_errors": 11,
+          "overconfident_share": 0.2619047619047619
+        }
+      }
+    },
+    "swin_t": {
+      "clean": {
+        "accuracy": 0.8771186440677966,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 0,
+          "flip_rate": 0.0
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9778408624123835,
+          "error_mean_maxprob": 0.8150591819450773,
+          "errors": 29,
+          "overconfident_errors": 13,
+          "overconfident_share": 0.4482758620689655
+        }
+      },
+      "matched_haze_5": {
+        "accuracy": 0.864406779661017,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 6,
+          "flip_rate": 0.028985507246376812
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.9700077821811041,
+          "error_mean_maxprob": 0.8251204025000334,
+          "errors": 32,
+          "overconfident_errors": 13,
+          "overconfident_share": 0.40625
+        }
+      },
+      "matched_cloud_5": {
+        "accuracy": 0.8516949152542372,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 10,
+          "flip_rate": 0.04830917874396135
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.959385501508096,
+          "error_mean_maxprob": 0.8213007824761527,
+          "errors": 35,
+          "overconfident_errors": 16,
+          "overconfident_share": 0.45714285714285713
+        }
+      },
+      "matched_glare_5": {
+        "accuracy": 0.7966101694915254,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 24,
+          "flip_rate": 0.11594202898550725
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.949523870615249,
+          "error_mean_maxprob": 0.7974888067692518,
+          "errors": 48,
+          "overconfident_errors": 21,
+          "overconfident_share": 0.4375
+        }
+      },
+      "matched_haze+glare_5": {
+        "accuracy": 0.6313559322033898,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 65,
+          "flip_rate": 0.3140096618357488
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.8115752769396609,
+          "error_mean_maxprob": 0.6314571950284914,
+          "errors": 87,
+          "overconfident_errors": 17,
+          "overconfident_share": 0.19540229885057472
+        }
+      },
+      "matched_haze+cloud_5": {
+        "accuracy": 0.8008474576271186,
+        "flips": {
+          "clean_correct": 207,
+          "flipped": 26,
+          "flip_rate": 0.12560386473429952
+        },
+        "confidence": {
+          "correct_mean_maxprob": 0.949084048233335,
+          "error_mean_maxprob": 0.7892886875791753,
+          "errors": 47,
+          "overconfident_errors": 18,
+          "overconfident_share": 0.3829787234042553
+        }
+      }
+    }
+  },
+  "consensus": {
+    "clean": {
+      "n": 236,
+      "share_all_wrong": 0.05508474576271186,
+      "share_some_correct": 0.9449152542372882,
+      "share_all_correct": 0.8220338983050848,
+      "wrong_by_count": {
+        "0": 13,
+        "1": 14,
+        "2": 15,
+        "3": 194
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 24,
+          "errors_universal": 13,
+          "share_errors_universal": 0.5416666666666666
+        },
+        "convnext_tiny": {
+          "errors": 29,
+          "errors_universal": 13,
+          "share_errors_universal": 0.4482758620689655
+        },
+        "swin_t": {
+          "errors": 29,
+          "errors_universal": 13,
+          "share_errors_universal": 0.4482758620689655
+        }
+      }
+    },
+    "matched_haze_5": {
+      "n": 236,
+      "share_all_wrong": 0.07627118644067797,
+      "share_some_correct": 0.923728813559322,
+      "share_all_correct": 0.7542372881355932,
+      "wrong_by_count": {
+        "0": 18,
+        "1": 13,
+        "2": 27,
+        "3": 178
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 41,
+          "errors_universal": 18,
+          "share_errors_universal": 0.43902439024390244
+        },
+        "convnext_tiny": {
+          "errors": 34,
+          "errors_universal": 18,
+          "share_errors_universal": 0.5294117647058824
+        },
+        "swin_t": {
+          "errors": 32,
+          "errors_universal": 18,
+          "share_errors_universal": 0.5625
+        }
+      }
+    },
+    "matched_cloud_5": {
+      "n": 236,
+      "share_all_wrong": 0.07627118644067797,
+      "share_some_correct": 0.923728813559322,
+      "share_all_correct": 0.7584745762711864,
+      "wrong_by_count": {
+        "0": 18,
+        "1": 13,
+        "2": 26,
+        "3": 179
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 40,
+          "errors_universal": 18,
+          "share_errors_universal": 0.45
+        },
+        "convnext_tiny": {
+          "errors": 31,
+          "errors_universal": 18,
+          "share_errors_universal": 0.5806451612903226
+        },
+        "swin_t": {
+          "errors": 35,
+          "errors_universal": 18,
+          "share_errors_universal": 0.5142857142857142
+        }
+      }
+    },
+    "matched_glare_5": {
+      "n": 236,
+      "share_all_wrong": 0.09745762711864407,
+      "share_some_correct": 0.902542372881356,
+      "share_all_correct": 0.6652542372881356,
+      "wrong_by_count": {
+        "0": 23,
+        "1": 24,
+        "2": 32,
+        "3": 157
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 60,
+          "errors_universal": 23,
+          "share_errors_universal": 0.38333333333333336
+        },
+        "convnext_tiny": {
+          "errors": 41,
+          "errors_universal": 23,
+          "share_errors_universal": 0.5609756097560976
+        },
+        "swin_t": {
+          "errors": 48,
+          "errors_universal": 23,
+          "share_errors_universal": 0.4791666666666667
+        }
+      }
+    },
+    "matched_haze+glare_5": {
+      "n": 236,
+      "share_all_wrong": 0.211864406779661,
+      "share_some_correct": 0.788135593220339,
+      "share_all_correct": 0.3559322033898305,
+      "wrong_by_count": {
+        "0": 50,
+        "1": 41,
+        "2": 61,
+        "3": 84
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 125,
+          "errors_universal": 50,
+          "share_errors_universal": 0.4
+        },
+        "convnext_tiny": {
+          "errors": 81,
+          "errors_universal": 50,
+          "share_errors_universal": 0.6172839506172839
+        },
+        "swin_t": {
+          "errors": 87,
+          "errors_universal": 50,
+          "share_errors_universal": 0.5747126436781609
+        }
+      }
+    },
+    "matched_haze+cloud_5": {
+      "n": 236,
+      "share_all_wrong": 0.09322033898305085,
+      "share_some_correct": 0.9067796610169492,
+      "share_all_correct": 0.6186440677966102,
+      "wrong_by_count": {
+        "0": 22,
+        "1": 23,
+        "2": 45,
+        "3": 146
+      },
+      "per_model": {
+        "resnet50": {
+          "errors": 68,
+          "errors_universal": 22,
+          "share_errors_universal": 0.3235294117647059
+        },
+        "convnext_tiny": {
+          "errors": 42,
+          "errors_universal": 22,
+          "share_errors_universal": 0.5238095238095238
+        },
+        "swin_t": {
+          "errors": 47,
+          "errors_universal": 22,
+          "share_errors_universal": 0.46808510638297873
+        }
+      }
+    }
+  },
+  "parameters": {
+    "haze": {
+      "params": {
+        "transmission_mean": {
+          "resnet50": {
+            "pooled_rho": 0.04565812773830295,
+            "within_severity_rho": -0.0707515782858177,
+            "severity5_tertiles": {
+              "low_acc": 0.8974358974358975,
+              "high_acc": 0.782051282051282,
+              "low_range": [
+                0.22723470628261566,
+                0.24778632819652557
+              ],
+              "high_range": [
+                0.2544870674610138,
+                0.2725830674171448
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": 0.010814562869699286,
+            "within_severity_rho": -0.03154362123746632,
+            "severity5_tertiles": {
+              "low_acc": 0.8974358974358975,
+              "high_acc": 0.8589743589743589,
+              "low_range": [
+                0.22723470628261566,
+                0.24778632819652557
+              ],
+              "high_range": [
+                0.2544870674610138,
+                0.2725830674171448
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": 0.007888523767878105,
+            "within_severity_rho": -0.04255200249114598,
+            "severity5_tertiles": {
+              "low_acc": 0.9230769230769231,
+              "high_acc": 0.8974358974358975,
+              "low_range": [
+                0.22723470628261566,
+                0.24778632819652557
+              ],
+              "high_range": [
+                0.2544870674610138,
+                0.2725830674171448
+              ]
+            }
+          }
+        },
+        "center_proxy_affected_fraction": {
+          "resnet50": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "convnext_tiny": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "swin_t": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          }
+        }
+      },
+      "severity": {
+        "matched_haze_1": {
+          "resnet50": 0.885593220338983,
+          "convnext_tiny": 0.8728813559322034,
+          "swin_t": 0.8813559322033898
+        },
+        "matched_haze_2": {
+          "resnet50": 0.864406779661017,
+          "convnext_tiny": 0.864406779661017,
+          "swin_t": 0.885593220338983
+        },
+        "matched_haze_3": {
+          "resnet50": 0.8305084745762712,
+          "convnext_tiny": 0.864406779661017,
+          "swin_t": 0.8898305084745762
+        },
+        "matched_haze_4": {
+          "resnet50": 0.826271186440678,
+          "convnext_tiny": 0.8559322033898306,
+          "swin_t": 0.8813559322033898
+        },
+        "matched_haze_5": {
+          "resnet50": 0.826271186440678,
+          "convnext_tiny": 0.8559322033898306,
+          "swin_t": 0.864406779661017
+        }
+      }
+    },
+    "cloud": {
+      "params": {
+        "cloud_area_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.03952397256810554,
+            "within_severity_rho": 0.01740215879693078,
+            "severity5_tertiles": {
+              "low_acc": 0.8205128205128205,
+              "high_acc": 0.8333333333333334,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500054442508711,
+                0.5500372023809523
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.01329426794237055,
+            "within_severity_rho": 0.011790687408848772,
+            "severity5_tertiles": {
+              "low_acc": 0.8846153846153846,
+              "high_acc": 0.8333333333333334,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500054442508711,
+                0.5500372023809523
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.041522950540134974,
+            "within_severity_rho": -0.008574523003038136,
+            "severity5_tertiles": {
+              "low_acc": 0.8974358974358975,
+              "high_acc": 0.7948717948717948,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500054442508711,
+                0.5500372023809523
+              ]
+            }
+          }
+        },
+        "affected_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.03412527934913478,
+            "within_severity_rho": 0.07613138098904607,
+            "severity5_tertiles": {
+              "low_acc": 0.8076923076923077,
+              "high_acc": 0.8846153846153846,
+              "low_range": [
+                0.5932275835866262,
+                0.6147959183673469
+              ],
+              "high_range": [
+                0.6262073225516622,
+                0.6586368458274399
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.0022888380203134537,
+            "within_severity_rho": 0.06093009082679579,
+            "severity5_tertiles": {
+              "low_acc": 0.8589743589743589,
+              "high_acc": 0.9102564102564102,
+              "low_range": [
+                0.5932275835866262,
+                0.6147959183673469
+              ],
+              "high_range": [
+                0.6262073225516622,
+                0.6586368458274399
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.03129061961425942,
+            "within_severity_rho": 0.07386780743705641,
+            "severity5_tertiles": {
+              "low_acc": 0.7948717948717948,
+              "high_acc": 0.8974358974358975,
+              "low_range": [
+                0.5932275835866262,
+                0.6147959183673469
+              ],
+              "high_range": [
+                0.6262073225516622,
+                0.6586368458274399
+              ]
+            }
+          }
+        },
+        "center_proxy_affected_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.06523717822373451,
+            "within_severity_rho": -0.05248368455282669,
+            "severity5_tertiles": {
+              "low_acc": 0.8589743589743589,
+              "high_acc": 0.7564102564102564,
+              "low_range": [
+                0.3338585434173669,
+                0.6726190476190477
+              ],
+              "high_range": [
+                0.7686688311688312,
+                0.970873786407767
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.009436167553921772,
+            "within_severity_rho": -0.005835955396374446,
+            "severity5_tertiles": {
+              "low_acc": 0.8461538461538461,
+              "high_acc": 0.8461538461538461,
+              "low_range": [
+                0.3338585434173669,
+                0.6726190476190477
+              ],
+              "high_range": [
+                0.7686688311688312,
+                0.970873786407767
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.012226959410647728,
+            "within_severity_rho": 0.02839020117036125,
+            "severity5_tertiles": {
+              "low_acc": 0.8076923076923077,
+              "high_acc": 0.8461538461538461,
+              "low_range": [
+                0.3338585434173669,
+                0.6726190476190477
+              ],
+              "high_range": [
+                0.7686688311688312,
+                0.970873786407767
+              ]
+            }
+          }
+        }
+      },
+      "severity": {
+        "matched_cloud_1": {
+          "resnet50": 0.8728813559322034,
+          "convnext_tiny": 0.885593220338983,
+          "swin_t": 0.8940677966101694
+        },
+        "matched_cloud_2": {
+          "resnet50": 0.885593220338983,
+          "convnext_tiny": 0.885593220338983,
+          "swin_t": 0.8940677966101694
+        },
+        "matched_cloud_3": {
+          "resnet50": 0.8686440677966102,
+          "convnext_tiny": 0.8813559322033898,
+          "swin_t": 0.8686440677966102
+        },
+        "matched_cloud_4": {
+          "resnet50": 0.847457627118644,
+          "convnext_tiny": 0.885593220338983,
+          "swin_t": 0.8686440677966102
+        },
+        "matched_cloud_5": {
+          "resnet50": 0.8305084745762712,
+          "convnext_tiny": 0.8686440677966102,
+          "swin_t": 0.8516949152542372
+        }
+      }
+    },
+    "glare": {
+      "params": {
+        "saturated_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.15174028990946986,
+            "within_severity_rho": -0.03470910497642712,
+            "severity5_tertiles": {
+              "low_acc": 0.8589743589743589,
+              "high_acc": 0.6794871794871795,
+              "low_range": [
+                0.17549653790087463,
+                0.3082521645021645
+              ],
+              "high_range": [
+                0.40760679271708683,
+                0.676647592738753
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.05491151231755954,
+            "within_severity_rho": 0.004674920473752975,
+            "severity5_tertiles": {
+              "low_acc": 0.9487179487179487,
+              "high_acc": 0.717948717948718,
+              "low_range": [
+                0.17549653790087463,
+                0.3082521645021645
+              ],
+              "high_range": [
+                0.40760679271708683,
+                0.676647592738753
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.0633743870594653,
+            "within_severity_rho": 0.029070350309636072,
+            "severity5_tertiles": {
+              "low_acc": 0.9230769230769231,
+              "high_acc": 0.7307692307692307,
+              "low_range": [
+                0.17549653790087463,
+                0.3082521645021645
+              ],
+              "high_range": [
+                0.40760679271708683,
+                0.676647592738753
+              ]
+            }
+          }
+        },
+        "affected_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.1740831511927793,
+            "within_severity_rho": -0.08569808556629907,
+            "severity5_tertiles": {
+              "low_acc": 0.9102564102564102,
+              "high_acc": 0.6538461538461539,
+              "low_range": [
+                0.4484911844484629,
+                0.6461715367965368
+              ],
+              "high_range": [
+                0.7806122448979592,
+                0.9610830745341615
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.07842194621662221,
+            "within_severity_rho": -0.055773389033079476,
+            "severity5_tertiles": {
+              "low_acc": 0.9102564102564102,
+              "high_acc": 0.6923076923076923,
+              "low_range": [
+                0.4484911844484629,
+                0.6461715367965368
+              ],
+              "high_range": [
+                0.7806122448979592,
+                0.9610830745341615
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.10050406122320261,
+            "within_severity_rho": -0.06331754496212508,
+            "severity5_tertiles": {
+              "low_acc": 0.8846153846153846,
+              "high_acc": 0.6794871794871795,
+              "low_range": [
+                0.4484911844484629,
+                0.6461715367965368
+              ],
+              "high_range": [
+                0.7806122448979592,
+                0.9610830745341615
+              ]
+            }
+          }
+        },
+        "center_proxy_affected_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.17023093213197954,
+            "within_severity_rho": -0.06863235967107813,
+            "severity5_tertiles": {
+              "low_acc": 0.8846153846153846,
+              "high_acc": 0.6153846153846154,
+              "low_range": [
+                0.5978498542274052,
+                0.9502551020408163
+              ],
+              "high_range": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.061561954558983015,
+            "within_severity_rho": -0.012210234315201008,
+            "severity5_tertiles": {
+              "low_acc": 0.8974358974358975,
+              "high_acc": 0.6794871794871795,
+              "low_range": [
+                0.5978498542274052,
+                0.9502551020408163
+              ],
+              "high_range": [
+                1.0,
+                1.0
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.08550903478827854,
+            "within_severity_rho": -0.02888413783895457,
+            "severity5_tertiles": {
+              "low_acc": 0.8846153846153846,
+              "high_acc": 0.6666666666666666,
+              "low_range": [
+                0.5978498542274052,
+                0.9502551020408163
+              ],
+              "high_range": [
+                1.0,
+                1.0
+              ]
+            }
+          }
+        }
+      },
+      "severity": {
+        "matched_glare_1": {
+          "resnet50": 0.8898305084745762,
+          "convnext_tiny": 0.8771186440677966,
+          "swin_t": 0.8771186440677966
+        },
+        "matched_glare_2": {
+          "resnet50": 0.902542372881356,
+          "convnext_tiny": 0.885593220338983,
+          "swin_t": 0.8813559322033898
+        },
+        "matched_glare_3": {
+          "resnet50": 0.864406779661017,
+          "convnext_tiny": 0.8686440677966102,
+          "swin_t": 0.885593220338983
+        },
+        "matched_glare_4": {
+          "resnet50": 0.809322033898305,
+          "convnext_tiny": 0.826271186440678,
+          "swin_t": 0.8389830508474576
+        },
+        "matched_glare_5": {
+          "resnet50": 0.7457627118644068,
+          "convnext_tiny": 0.826271186440678,
+          "swin_t": 0.7966101694915254
+        }
+      }
+    },
+    "haze+glare": {
+      "params": {
+        "transmission_mean": {
+          "resnet50": {
+            "pooled_rho": 0.3210576039918117,
+            "within_severity_rho": 0.02661894018806083,
+            "severity5_tertiles": {
+              "low_acc": 0.41025641025641024,
+              "high_acc": 0.5128205128205128,
+              "low_range": [
+                0.22314836084842682,
+                0.2466626912355423
+              ],
+              "high_range": [
+                0.253946989774704,
+                0.2742593586444855
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": 0.21778991711739068,
+            "within_severity_rho": 0.06642612728555264,
+            "severity5_tertiles": {
+              "low_acc": 0.5897435897435898,
+              "high_acc": 0.6666666666666666,
+              "low_range": [
+                0.22314836084842682,
+                0.2466626912355423
+              ],
+              "high_range": [
+                0.253946989774704,
+                0.2742593586444855
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": 0.2634789163736371,
+            "within_severity_rho": 0.035434737084558535,
+            "severity5_tertiles": {
+              "low_acc": 0.5897435897435898,
+              "high_acc": 0.7051282051282052,
+              "low_range": [
+                0.22314836084842682,
+                0.2466626912355423
+              ],
+              "high_range": [
+                0.253946989774704,
+                0.2742593586444855
+              ]
+            }
+          }
+        },
+        "saturated_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.3369614865140049,
+            "within_severity_rho": -0.07044472159904755,
+            "severity5_tertiles": {
+              "low_acc": 0.47435897435897434,
+              "high_acc": 0.44871794871794873,
+              "low_range": [
+                0.36886160714285715,
+                0.5456124757595345
+              ],
+              "high_range": [
+                0.6709315169366715,
+                0.8799495341614907
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.26526201446762815,
+            "within_severity_rho": -0.16381434159244931,
+            "severity5_tertiles": {
+              "low_acc": 0.7307692307692307,
+              "high_acc": 0.5512820512820513,
+              "low_range": [
+                0.36886160714285715,
+                0.5456124757595345
+              ],
+              "high_range": [
+                0.6709315169366715,
+                0.8799495341614907
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.29109981828829296,
+            "within_severity_rho": -0.1019264812983008,
+            "severity5_tertiles": {
+              "low_acc": 0.7051282051282052,
+              "high_acc": 0.5512820512820513,
+              "low_range": [
+                0.36886160714285715,
+                0.5456124757595345
+              ],
+              "high_range": [
+                0.6709315169366715,
+                0.8799495341614907
+              ]
+            }
+          }
+        },
+        "center_proxy_affected_fraction": {
+          "resnet50": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "convnext_tiny": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "swin_t": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          }
+        }
+      },
+      "severity": {
+        "matched_haze+glare_3": {
+          "resnet50": 0.809322033898305,
+          "convnext_tiny": 0.8432203389830508,
+          "swin_t": 0.8728813559322034
+        },
+        "matched_haze+glare_5": {
+          "resnet50": 0.4703389830508475,
+          "convnext_tiny": 0.6567796610169492,
+          "swin_t": 0.6313559322033898
+        }
+      }
+    },
+    "haze+cloud": {
+      "params": {
+        "transmission_mean": {
+          "resnet50": {
+            "pooled_rho": 0.1309729028209551,
+            "within_severity_rho": 0.0007388716028215465,
+            "severity5_tertiles": {
+              "low_acc": 0.717948717948718,
+              "high_acc": 0.7051282051282052,
+              "low_range": [
+                0.22723862528800964,
+                0.24590237438678741
+              ],
+              "high_range": [
+                0.2538818120956421,
+                0.27856719493865967
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": 0.03553801996206352,
+            "within_severity_rho": -0.02901459955699021,
+            "severity5_tertiles": {
+              "low_acc": 0.8461538461538461,
+              "high_acc": 0.8076923076923077,
+              "low_range": [
+                0.22723862528800964,
+                0.24590237438678741
+              ],
+              "high_range": [
+                0.2538818120956421,
+                0.27856719493865967
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": 0.051443390811807536,
+            "within_severity_rho": -0.08085874208676942,
+            "severity5_tertiles": {
+              "low_acc": 0.8846153846153846,
+              "high_acc": 0.7435897435897436,
+              "low_range": [
+                0.22723862528800964,
+                0.24590237438678741
+              ],
+              "high_range": [
+                0.2538818120956421,
+                0.27856719493865967
+              ]
+            }
+          }
+        },
+        "cloud_area_fraction": {
+          "resnet50": {
+            "pooled_rho": -0.09829556386420135,
+            "within_severity_rho": 0.07324717215914714,
+            "severity5_tertiles": {
+              "low_acc": 0.6794871794871795,
+              "high_acc": 0.717948717948718,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500056154537286,
+                0.5500372023809523
+              ]
+            }
+          },
+          "convnext_tiny": {
+            "pooled_rho": -0.016024852623303873,
+            "within_severity_rho": 0.07026571653582774,
+            "severity5_tertiles": {
+              "low_acc": 0.782051282051282,
+              "high_acc": 0.8205128205128205,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500056154537286,
+                0.5500372023809523
+              ]
+            }
+          },
+          "swin_t": {
+            "pooled_rho": -0.10175442605862925,
+            "within_severity_rho": -0.0012381130413376823,
+            "severity5_tertiles": {
+              "low_acc": 0.8461538461538461,
+              "high_acc": 0.7435897435897436,
+              "low_range": [
+                0.5499656593406593,
+                0.5499944543034605
+              ],
+              "high_range": [
+                0.5500056154537286,
+                0.5500372023809523
+              ]
+            }
+          }
+        },
+        "center_proxy_affected_fraction": {
+          "resnet50": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "convnext_tiny": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          },
+          "swin_t": {
+            "pooled_rho": null,
+            "within_severity_rho": null,
+            "severity5_tertiles": null
+          }
+        }
+      },
+      "severity": {
+        "matched_haze+cloud_3": {
+          "resnet50": 0.8389830508474576,
+          "convnext_tiny": 0.864406779661017,
+          "swin_t": 0.8813559322033898
+        },
+        "matched_haze+cloud_5": {
+          "resnet50": 0.711864406779661,
+          "convnext_tiny": 0.8220338983050848,
+          "swin_t": 0.8008474576271186
+        }
+      }
+    }
+  },
+  "classes": [
+    {
+      "class": "container ship",
+      "n": 18,
+      "clean": 0.7777777777777778,
+      "matched_glare_5": 0.7222222222222222,
+      "matched_glare_5_dest": {
+        "bulk carrier": 5
+      },
+      "matched_haze+glare_5": 0.6111111111111112,
+      "matched_haze+glare_5_dest": {
+        "bulk carrier": 6,
+        "car carrier": 1
+      },
+      "matched_haze+cloud_5": 0.7777777777777778,
+      "matched_haze+cloud_5_dest": {
+        "passenger ship": 1,
+        "bulk carrier": 1,
+        "car carrier": 1,
+        "oil tanker": 1
+      }
+    },
+    {
+      "class": "car carrier",
+      "n": 14,
+      "clean": 1.0,
+      "matched_glare_5": 0.8571428571428571,
+      "matched_glare_5_dest": {
+        "bulk carrier": 2
+      },
+      "matched_haze+glare_5": 0.9285714285714286,
+      "matched_haze+glare_5_dest": {
+        "fishing boat": 1
+      },
+      "matched_haze+cloud_5": 0.8571428571428571,
+      "matched_haze+cloud_5_dest": {
+        "bulk carrier": 2
+      }
+    },
+    {
+      "class": "bulk carrier",
+      "n": 69,
+      "clean": 0.8985507246376812,
+      "matched_glare_5": 0.8695652173913043,
+      "matched_glare_5_dest": {
+        "oil tanker": 2,
+        "fishing boat": 3,
+        "passenger ship": 2,
+        "car carrier": 2
+      },
+      "matched_haze+glare_5": 0.7391304347826086,
+      "matched_haze+glare_5_dest": {
+        "oil tanker": 8,
+        "passenger ship": 1,
+        "fishing boat": 4,
+        "car carrier": 3,
+        "barge": 1,
+        "liquefied gas ship": 1
+      },
+      "matched_haze+cloud_5": 0.7681159420289855,
+      "matched_haze+cloud_5_dest": {
+        "oil tanker": 6,
+        "fishing boat": 3,
+        "barge": 1,
+        "car carrier": 5,
+        "container ship": 1
+      }
+    },
+    {
+      "class": "oil tanker",
+      "n": 33,
+      "clean": 0.7575757575757576,
+      "matched_glare_5": 0.6060606060606061,
+      "matched_glare_5_dest": {
+        "bulk carrier": 11,
+        "passenger ship": 2
+      },
+      "matched_haze+glare_5": 0.45454545454545453,
+      "matched_haze+glare_5_dest": {
+        "fishing boat": 1,
+        "bulk carrier": 13,
+        "liquefied gas ship": 2,
+        "passenger ship": 1,
+        "car carrier": 1
+      },
+      "matched_haze+cloud_5": 0.7575757575757576,
+      "matched_haze+cloud_5_dest": {
+        "car carrier": 1,
+        "bulk carrier": 6,
+        "fishing boat": 1
+      }
+    },
+    {
+      "class": "fishing boat",
+      "n": 20,
+      "clean": 0.65,
+      "matched_glare_5": 0.45,
+      "matched_glare_5_dest": {
+        "passenger ship": 7,
+        "bulk carrier": 4
+      },
+      "matched_haze+glare_5": 0.55,
+      "matched_haze+glare_5_dest": {
+        "bulk carrier": 5,
+        "passenger ship": 3,
+        "barge": 1
+      },
+      "matched_haze+cloud_5": 0.7,
+      "matched_haze+cloud_5_dest": {
+        "bulk carrier": 5,
+        "passenger ship": 1
+      }
+    },
+    {
+      "class": "passenger ship",
+      "n": 18,
+      "clean": 0.8888888888888888,
+      "matched_glare_5": 0.8333333333333334,
+      "matched_glare_5_dest": {
+        "oil tanker": 1,
+        "bulk carrier": 2
+      },
+      "matched_haze+glare_5": 0.5555555555555556,
+      "matched_haze+glare_5_dest": {
+        "bulk carrier": 6,
+        "fishing boat": 2
+      },
+      "matched_haze+cloud_5": 0.6111111111111112,
+      "matched_haze+cloud_5_dest": {
+        "fishing boat": 3,
+        "bulk carrier": 3,
+        "oil tanker": 1
+      }
+    },
+    {
+      "class": "liquefied gas ship",
+      "n": 51,
+      "clean": 1.0,
+      "matched_glare_5": 0.9411764705882353,
+      "matched_glare_5_dest": {
+        "bulk carrier": 1,
+        "oil tanker": 1,
+        "barge": 1
+      },
+      "matched_haze+glare_5": 0.6274509803921569,
+      "matched_haze+glare_5_dest": {
+        "barge": 13,
+        "bulk carrier": 2,
+        "fishing boat": 3,
+        "oil tanker": 1
+      },
+      "matched_haze+cloud_5": 0.9411764705882353,
+      "matched_haze+cloud_5_dest": {
+        "barge": 2,
+        "oil tanker": 1
+      }
+    },
+    {
+      "class": "barge",
+      "n": 13,
+      "clean": 0.9230769230769231,
+      "matched_glare_5": 0.8461538461538461,
+      "matched_glare_5_dest": {
+        "oil tanker": 1,
+        "liquefied gas ship": 1
+      },
+      "matched_haze+glare_5": 0.46153846153846156,
+      "matched_haze+glare_5_dest": {
+        "liquefied gas ship": 4,
+        "bulk carrier": 2,
+        "oil tanker": 1
+      },
+      "matched_haze+cloud_5": 0.9230769230769231,
+      "matched_haze+cloud_5_dest": {
+        "oil tanker": 1
+      }
+    }
+  ]
+}

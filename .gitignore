@@ -1,0 +1,16 @@
+.venv/
+.genvenv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+data/raw/
+artifacts/weights/
+runs/
+runs_modules/
+*.part
+runs_joint/
+restorers/
+
+reports/probe_features/
+*.npz
+*.pt

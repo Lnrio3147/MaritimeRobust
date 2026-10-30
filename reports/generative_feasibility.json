@@ -1,0 +1,105 @@
+{
+  "GenDeg": {
+    "official_code": "https://github.com/sudraj2002/GenDeg",
+    "checkpoint_probes": [
+      {
+        "url": "https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sambasa2_jh_edu/EV8NY5aUDdNKo1SkvU92Fi8B2r53oS7pqlBmoyC5dVbLAQ?e=XhtfQk",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_length": null,
+        "final_url": "https://livejohnshopkins-my.sharepoint.com/personal/sambasa2_jh_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsambasa2_jh_edu%2FDocuments%2Fgendeg.ckpt&parent=%2Fpersonal%2Fsambasa2_jh_edu%2FDocuments&ga=1",
+        "response_preview": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0004\u0000��\u0007`\u001cI�%&/m�{J�J��t�\b�`\u0013$ؐ@\u0010������\u001diG#)�*��eVe]f\u0016@�흼��{���{���;�N'���?\\fd\u0001l��J�ɞ!���\u001f?~|\u001f?\"~������˓7����t�.�#�\u0000?�2[^|�Q��^7\u001f����죲�?J�e�4�}�h���I�~���lv�x��Y��\u0016�g\u001f}~�����/_Q�j�������(�u�T�m�z���˪X�\u001f�w��yۮ��_�..?��D^�n�W�\u0007��ߵw��a:%\bM�~�nϷ\u000f�@"
+      },
+      {
+        "url": "https://livejohnshopkins-my.sharepoint.com/:u:/g/personal/sambasa2_jh_edu/EfAIJSa9JfxJvSng_a9Xcp4BTwUmggXBnr9u9Jj_omTnfA?e=HJUQOm",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_length": null,
+        "final_url": "https://livejohnshopkins-my.sharepoint.com/personal/sambasa2_jh_edu/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsambasa2_jh_edu%2FDocuments%2Fnafnet_sd.ckpt&parent=%2Fpersonal%2Fsambasa2_jh_edu%2FDocuments&ga=1",
+        "response_preview": "\u001f�\b\u0000\u0000\u0000\u0000\u0000\u0004\u0000��\u0007`\u001cI�%&/m�{J�J��t�\b�`\u0013$ؐ@\u0010������\u001diG#)�*��eVe]f\u0016@�흼��{���{���;�N'���?\\fd\u0001l��J�ɞ!���\u001f?~|\u001f?\"~������˓7����t�.�#�\u0000?�2[^|�Q��^7\u001f����죲�?J�e�4�}�h���I�~���lv�x��Y��\u0016�g\u001f}~�����/_Q�j�������(�u�T�m�z���˪X�\u001f�w��yۮ��_�..?��D^�n�W�\u0007��ߵw��a:%\bM�~�nϷ\u000f�@"
+      }
+    ],
+    "inference_performed": true,
+    "checkpoint_access": {
+      "official_code": "https://github.com/sudraj2002/GenDeg",
+      "sparse_checkpoint_part_bytes": 7706335711,
+      "all_required_zip_chunks_crc_verified": true,
+      "converted_inference_checkpoint": "artifacts/generation_weights/gendeg_inference_ema.pt",
+      "converted_checkpoint_bytes": 4267855422,
+      "converted_checkpoint_sha256": "33693b576576eccca75ee90e584932e4d6466bcf5f92c6f364c129bcb108370d",
+      "conversion_report": "reports/gendeg_ema_conversion.json",
+      "ema_weights_applied": true,
+      "ema_scope_used_after_conversion": false,
+      "missing_keys": [],
+      "unexpected_keys": []
+    },
+    "pilot": {
+      "script": "scripts/gendeg_pilot.py",
+      "data_scope": "FGSC-23 civilian validation split only (one image per class)",
+      "samples": 8,
+      "classes": [
+        "container ship",
+        "car carrier",
+        "bulk carrier",
+        "oil tanker",
+        "fishing boat",
+        "passenger ship",
+        "liquefied gas ship",
+        "barge"
+      ],
+      "conditions": [
+        {
+          "mu": 0.1,
+          "sigma": 0.05
+        },
+        {
+          "mu": 0.25,
+          "sigma": 0.1
+        }
+      ],
+      "generated_images": 16,
+      "clean_reference_images": 8,
+      "steps": 30,
+      "seed": 17,
+      "input_resolution": 512,
+      "output_resolution": 512,
+      "text_cfg_scale": 7.5,
+      "image_cfg_scale": 1.5,
+      "mean_seconds_per_generated_image": 2.81,
+      "range_seconds_per_generated_image": [
+        2.76,
+        2.95
+      ],
+      "provenance": "artifacts/gendeg_pilot/provenance.json",
+      "samples_manifest": "artifacts/gendeg_pilot/samples.json",
+      "review_sheet": "reports/gendeg_pilot_sheet.png",
+      "per_sample_review": "reports/gendeg_pilot_review.json"
+    },
+    "quality_review": {
+      "method": "single visual inspection of the review sheet; not a domain-expert annotation study and not a quantitative image-quality benchmark",
+      "mu_0.10": "7/8 retain recognizable hull and superstructure. Passenger ship is already heavily overexposed at mu=0.10 (hull outline retained, most deck detail lost). Several samples show a global color cast and altered water/background texture.",
+      "mu_0.25": "5/8 retain recognizable class cues. Fishing boat loses essentially all structure (near-blank white); passenger ship is severely overexposed; barge is only a faint silhouette.",
+      "label_validity": "3 of 16 generated images judged not label-valid (fishing boat, passenger ship, barge at mu=0.25); one additional passenger-ship sample at mu=0.10 is heavily overexposed and flagged. Any use would require per-image quality filtering and human review.",
+      "failure_modes": [
+        "global color/tint shift and background replacement",
+        "overexposure at high haze strength",
+        "structure erasure for small or low-contrast vessels",
+        "no explicit control of fragmented cloud or specular glare in this pilot"
+      ]
+    },
+    "assessment": {
+      "feasible_as_small_scale_haze_augmentation_candidate": true,
+      "accepted_for_training": false,
+      "excluded_from_classifier_training": true,
+      "downstream_classifier_evaluation": "none",
+      "replaces_synthetic_degradation_matrix": false,
+      "conclusion": "GenDeg is runnable with the official generator and structure-correction weights after a verified partial checkpoint conversion, and can synthesize plausible haze on a small validation-only pilot. Quality is uneven at higher strength: three of eight classes lose label-valid structure, and color/background fidelity is not guaranteed. It does not provide controlled fragmented-cloud or glare synthesis and was therefore not used for training or for any performance claim. Any next-round use requires an admission gate (human label-validity review, source-group split, synthetic-baseline comparison) and generated images must remain excluded from validation/test."
+    }
+  },
+  "GenHaze": {
+    "paper_verified": true,
+    "official_code_identified": false,
+    "inference_performed": false,
+    "reason": "No official runnable code/weights identified in paper or author/project search; checked guessed path returned 404, which alone is not proof of non-release."
+  }
+}

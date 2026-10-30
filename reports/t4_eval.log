@@ -1,0 +1,6 @@
+{"run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_i22k_s17", "clean": 0.8446601941747572, "combo_mean": 0.7050970873786409, "combo_min": 0.529126213592233}
+{"run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_i22k_s29", "clean": 0.8252427184466019, "combo_mean": 0.7408980582524272, "combo_min": 0.5922330097087378}
+{"run": "runs/fgsc23_civ8_fold1/convnext_tiny_none_e40_i22k_s17", "clean": 0.8883495145631068, "combo_mean": 0.7694174757281553, "combo_min": 0.5631067961165048}
+{"run": "runs/fgsc23_civ8_fold1/convnext_tiny_none_e40_i22k_s29", "clean": 0.8980582524271845, "combo_mean": 0.8009708737864077, "combo_min": 0.5679611650485437}
+{"run": "runs/fgsc23_civ8_fold2/convnext_tiny_none_e40_i22k_s17", "clean": 0.8349514563106796, "combo_mean": 0.7433252427184466, "combo_min": 0.558252427184466}
+{"run": "runs/fgsc23_civ8_fold2/convnext_tiny_none_e40_i22k_s29", "clean": 0.8495145631067961, "combo_mean": 0.7603155339805825, "combo_min": 0.6262135922330098}

@@ -1,0 +1,72 @@
+{
+  "dataset": "FGSRCS",
+  "archive_sha256": "10127ac654d4aba79ad00dba9c74d713b5e959acdf6eadd3ee1661162ad56598",
+  "source_image_count": 4500,
+  "unique_source_pixel_groups": 4500,
+  "object_crops": 11187,
+  "invalid_objects": [],
+  "class_counts": {
+    "cruiser": 240,
+    "destroyer": 1404,
+    "amphibious-transport-dock": 355,
+    "frigate": 2594,
+    "patrol-vessel": 1399,
+    "replenishment-oiler": 608,
+    "landing-ship": 667,
+    "aircraft-carrier": 317,
+    "oil-tanker": 290,
+    "cruise-ship": 173,
+    "littoral-combat-ship": 158,
+    "corvette": 869,
+    "submarine": 1359,
+    "sand-carrier": 188,
+    "amphibious-assault-ship": 176,
+    "container-ship": 211,
+    "mine-warfare-vessel": 179
+  },
+  "publisher_source_counts": {
+    "train": 3150,
+    "val": 1350
+  },
+  "publisher_cross_split_exact_groups": 0,
+  "split_crop_counts": {
+    "development": 3448,
+    "sealed_test": 7739
+  },
+  "split_group_counts": {
+    "development": 1350,
+    "sealed_test": 3150
+  },
+  "group_intersection": 0,
+  "civilian_crops": 862,
+  "strict_mapping": {
+    "container-ship": {
+      "fgsc23_original_label": 14,
+      "label_name": "container ship"
+    },
+    "oil-tanker": {
+      "fgsc23_original_label": 18,
+      "label_name": "oil tanker"
+    }
+  },
+  "strict_mapping_counts": {
+    "development": {
+      "oil-tanker": 119,
+      "container-ship": 65
+    },
+    "sealed_test": {
+      "oil-tanker": 171,
+      "container-ship": 146
+    }
+  },
+  "weather_annotations_available": false,
+  "recognition_evaluation_performed": false,
+  "readiness": "Crops and source-image grouping ready; strict independent weather validation not yet certified",
+  "limitations": [
+    "Port, capture-time and vessel identities absent in released hierarchy; no port-independent claim.",
+    "Oriented box region is not a pixel-level ship segmentation mask.",
+    "Per-sample weather type and severity need annotation; not inferred from dataset-level descriptions.",
+    "Cross-dataset near-duplicate/source overlap with FGSC-23 remains to be audited before independent cross-dataset claims.",
+    "Only container ship and oil tanker have direct strict label mappings; cruise/sand carrier are not force-mapped."
+  ]
+}

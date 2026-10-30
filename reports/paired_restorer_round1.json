@@ -1,0 +1,525 @@
+{
+  "val": {
+    "resnet50": {
+      "rows": [
+        {
+          "classifier": "resnet50_s17",
+          "seed": 17,
+          "identity": {
+            "clean": 0.8791222591913836,
+            "matched single": 0.8432902625533103,
+            "shifted single": 0.8397385332098115,
+            "matched combination": 0.663690267371234,
+            "shifted combination": 0.729696876065705,
+            "worst": 0.40126428761297184
+          },
+          "restored": {
+            "clean": 0.8746774465829747,
+            "matched single": 0.8230222439999297,
+            "shifted single": 0.8248311877877553,
+            "matched combination": 0.593934513307285,
+            "shifted combination": 0.6468212443414423,
+            "worst": 0.304215235745745
+          },
+          "delta": {
+            "clean": -0.4444812608408899,
+            "matched single": -2.0268018553380562,
+            "shifted single": -1.4907345422056184,
+            "matched combination": -6.975575406394907,
+            "shifted combination": -8.287563172426271,
+            "worst": -9.704905186722684
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": -0.8083323496397399,
+              "matched single": -2.6369846949813147,
+              "shifted single": -1.6332851069725929,
+              "matched combination": -8.179740233362976,
+              "shifted combination": -8.189579835318472,
+              "worst": -10.551266372291801
+            },
+            "29": {
+              "clean": -0.9495104863142423,
+              "matched single": -1.7055126303143653,
+              "shifted single": -0.8412885337839127,
+              "matched combination": -6.034731176967023,
+              "shifted combination": -7.366461112433209,
+              "worst": -11.283870829033372
+            },
+            "43": {
+              "clean": 0.42439905343130135,
+              "matched single": -1.7379082407184887,
+              "shifted single": -1.9976299858603164,
+              "matched combination": -6.712254808854734,
+              "shifted combination": -9.306648569527166,
+              "worst": -7.279578358842875
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.04713375796178344,
+          "hce_restored": 0.05180467091295118,
+          "rescue": {
+            "rescue_rate": 0.3079391891891892,
+            "error_induction_rate": 0.2290760214573565,
+            "recoverable_n": 160
+          }
+        }
+      ],
+      "admission": {
+        "pass": false,
+        "means": {
+          "clean": -0.4444812608408899,
+          "matched single": -2.0268018553380562,
+          "shifted single": -1.4907345422056184,
+          "matched combination": -6.975575406394907,
+          "shifted combination": -8.287563172426271,
+          "worst": -9.704905186722684
+        },
+        "seed_matched_combination": [
+          -6.975575406394907
+        ],
+        "seed_clean": [
+          -0.4444812608408899
+        ],
+        "positive": 0,
+        "n": 1,
+        "restorer_positive_fraction": 0.0,
+        "reason": "admission failed"
+      },
+      "pixel": null
+    },
+    "convnext_tiny": {
+      "rows": [
+        {
+          "classifier": "convnext_tiny_s17",
+          "seed": 17,
+          "identity": {
+            "clean": 0.8885850035342651,
+            "matched single": 0.8583206143309419,
+            "shifted single": 0.8580618740597044,
+            "matched combination": 0.7590405246387433,
+            "shifted combination": 0.7666937273409608,
+            "worst": 0.5903458386042588
+          },
+          "restored": {
+            "clean": 0.8913710639862295,
+            "matched single": 0.8370497686010351,
+            "shifted single": 0.8439213726366304,
+            "matched combination": 0.6579136091528084,
+            "shifted combination": 0.7087768364890868,
+            "worst": 0.4235157066929589
+          },
+          "delta": {
+            "clean": 0.27860604519643895,
+            "matched single": -2.1270845729906784,
+            "shifted single": -1.4140501423073992,
+            "matched combination": -10.112691548593489,
+            "shifted combination": -5.79168908518739,
+            "worst": -16.68301319112999
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": 0.41790906779466397,
+              "matched single": -2.5613343914840048,
+              "shifted single": -1.6767971398497172,
+              "matched combination": -10.699869006660833,
+              "shifted combination": -4.136130934810057,
+              "worst": -20.455020659194993
+            },
+            "29": {
+              "clean": 0.41790906779466397,
+              "matched single": -1.8591473128444669,
+              "shifted single": -1.3762581270073126,
+              "matched combination": -10.793976685130469,
+              "shifted combination": -6.087847873711915,
+              "worst": -19.059309763669287
+            },
+            "43": {
+              "clean": 0.0,
+              "matched single": -1.9607720146435526,
+              "shifted single": -1.18909516006519,
+              "matched combination": -8.84422895398913,
+              "shifted combination": -7.151088447040221,
+              "worst": -10.534709150525712
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.07261146496815288,
+          "hce_restored": 0.09511677282377921,
+          "rescue": {
+            "rescue_rate": 0.381370523415978,
+            "error_induction_rate": 0.21501133835851635,
+            "recoverable_n": 88
+          }
+        },
+        {
+          "classifier": "convnext_tiny_s29",
+          "seed": 29,
+          "identity": {
+            "clean": 0.8867915489019318,
+            "matched single": 0.8462306704153288,
+            "shifted single": 0.847358282217252,
+            "matched combination": 0.7545230037653206,
+            "shifted combination": 0.7631433443790998,
+            "worst": 0.5663510598386021
+          },
+          "restored": {
+            "clean": 0.8865782086023847,
+            "matched single": 0.8344037380687055,
+            "shifted single": 0.8411095666788329,
+            "matched combination": 0.6886833551183524,
+            "shifted combination": 0.7320546362777037,
+            "worst": 0.439658320524964
+          },
+          "delta": {
+            "clean": -0.021334029954711564,
+            "matched single": -1.1826932346623353,
+            "shifted single": -0.6248715538419103,
+            "matched combination": -6.583964864696812,
+            "shifted combination": -3.108870810139608,
+            "worst": -12.669273931363811
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": 0.0,
+              "matched single": -0.6256288584429948,
+              "shifted single": -0.26132560221209244,
+              "matched combination": -7.369746582316228,
+              "shifted combination": -1.5396325109110265,
+              "worst": -15.108111493478994
+            },
+            "29": {
+              "clean": -0.0320010449320729,
+              "matched single": -1.3190703241058088,
+              "shifted single": -0.9004757345827175,
+              "matched combination": -7.305130068168875,
+              "shifted combination": -4.579869067905151,
+              "worst": -12.726505492460067
+            },
+            "43": {
+              "clean": -0.0320010449320729,
+              "matched single": -1.6033805214381691,
+              "shifted single": -0.7128133247309321,
+              "matched combination": -5.077017943605366,
+              "shifted combination": -3.2071108516026126,
+              "worst": -10.17320480815238
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.08025477707006369,
+          "hce_restored": 0.08704883227176223,
+          "rescue": {
+            "rescue_rate": 0.22540350877192983,
+            "error_induction_rate": 0.14335218263237098,
+            "recoverable_n": 95
+          }
+        },
+        {
+          "classifier": "convnext_tiny_s43",
+          "seed": 43,
+          "identity": {
+            "clean": 0.8732836101522474,
+            "matched single": 0.8372495102613067,
+            "shifted single": 0.8413838106761325,
+            "matched combination": 0.7453694688968071,
+            "shifted combination": 0.7527009742962568,
+            "worst": 0.5883996706884094
+          },
+          "restored": {
+            "clean": 0.8693684747424394,
+            "matched single": 0.811245573501442,
+            "shifted single": 0.8188524650093744,
+            "matched combination": 0.6535976535402843,
+            "shifted combination": 0.6913244206826842,
+            "worst": 0.4589215181117731
+          },
+          "delta": {
+            "clean": -0.3915135409808035,
+            "matched single": -2.6003936759864676,
+            "shifted single": -2.2531345666758185,
+            "matched combination": -9.177181535652279,
+            "shifted combination": -6.137655361357264,
+            "worst": -12.947815257663626
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": -0.3915135409808035,
+              "matched single": -2.5852515923972974,
+              "shifted single": -2.225780559807966,
+              "matched combination": -9.635773076215093,
+              "shifted combination": -5.858774233913133,
+              "worst": -13.69041737041906
+            },
+            "29": {
+              "clean": -0.3915135409808035,
+              "matched single": -2.7407568082178257,
+              "shifted single": -1.6844053560418848,
+              "matched combination": -7.061578385094558,
+              "shifted combination": -4.554840276079586,
+              "worst": -11.179921053531771
+            },
+            "43": {
+              "clean": -0.3915135409808035,
+              "matched single": -2.4751726273443353,
+              "shifted single": -2.8492177841776156,
+              "matched combination": -10.834193145647198,
+              "shifted combination": -7.999351574079094,
+              "worst": -13.973107349040049
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.07643312101910829,
+          "hce_restored": 0.0853503184713376,
+          "rescue": {
+            "rescue_rate": 0.28782505910165485,
+            "error_induction_rate": 0.19232142857142856,
+            "recoverable_n": 94
+          }
+        }
+      ],
+      "admission": {
+        "pass": false,
+        "means": {
+          "clean": -0.044747175246358704,
+          "matched single": -1.9700571612131605,
+          "shifted single": -1.4306854209417093,
+          "matched combination": -8.624612649647526,
+          "shifted combination": -5.012738418894753,
+          "worst": -14.100034126719143
+        },
+        "seed_matched_combination": [
+          -10.112691548593489,
+          -6.583964864696812,
+          -9.177181535652279
+        ],
+        "seed_clean": [
+          0.27860604519643895,
+          -0.021334029954711564,
+          -0.3915135409808035
+        ],
+        "positive": 0,
+        "n": 3,
+        "restorer_positive_fraction": 0.0,
+        "reason": "admission failed"
+      },
+      "pixel": null
+    },
+    "swin_t": {
+      "rows": [
+        {
+          "classifier": "swin_t_s17",
+          "seed": 17,
+          "identity": {
+            "clean": 0.8651225966523282,
+            "matched single": 0.8356871669477297,
+            "shifted single": 0.8289595375389472,
+            "matched combination": 0.7367495609366084,
+            "shifted combination": 0.7826036510706835,
+            "worst": 0.5606150586323
+          },
+          "restored": {
+            "clean": 0.8577484318076213,
+            "matched single": 0.8162462851746715,
+            "shifted single": 0.8189233437061179,
+            "matched combination": 0.6382135936738735,
+            "shifted combination": 0.679701279658208,
+            "worst": 0.3850495858459919
+          },
+          "delta": {
+            "clean": -0.7374164844706876,
+            "matched single": -1.944088177305825,
+            "shifted single": -1.0036193832829388,
+            "matched combination": -9.853596726273484,
+            "shifted combination": -10.290237141247548,
+            "worst": -17.55654727863081
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": -1.4007718646991796,
+              "matched single": -1.9260444031712565,
+              "shifted single": -1.1380198624723392,
+              "matched combination": -9.66822745663226,
+              "shifted combination": -9.04641482276799,
+              "worst": -17.72577009409979
+            },
+            "29": {
+              "clean": -0.4057387943564361,
+              "matched single": -2.1834033624347216,
+              "shifted single": -0.8047565246140032,
+              "matched combination": -8.645793523341272,
+              "shifted combination": -10.760977571372088,
+              "worst": -17.837299514023652
+            },
+            "43": {
+              "clean": -0.4057387943564361,
+              "matched single": -1.722816766311508,
+              "shifted single": -1.068081762762485,
+              "matched combination": -11.246769198846929,
+              "shifted combination": -11.063319029602559,
+              "worst": -17.10657222776898
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.0980891719745223,
+          "hce_restored": 0.11592356687898091,
+          "rescue": {
+            "rescue_rate": 0.3605343400609844,
+            "error_induction_rate": 0.22298156954891962,
+            "recoverable_n": 97
+          }
+        },
+        {
+          "classifier": "swin_t_s29",
+          "seed": 29,
+          "identity": {
+            "clean": 0.8762955348477908,
+            "matched single": 0.8482248712038981,
+            "shifted single": 0.8416554520934089,
+            "matched combination": 0.7231862808467049,
+            "shifted combination": 0.7513757561707015,
+            "worst": 0.5174849972722313
+          },
+          "restored": {
+            "clean": 0.8778645938602154,
+            "matched single": 0.8225627067811866,
+            "shifted single": 0.8318044980809088,
+            "matched combination": 0.5977914654036085,
+            "shifted combination": 0.6463001424161562,
+            "worst": 0.349191715585145
+          },
+          "delta": {
+            "clean": 0.15690590124246562,
+            "matched single": -2.566216442271152,
+            "shifted single": -0.9850954012500024,
+            "matched combination": -12.539481544309638,
+            "shifted combination": -10.507561375454532,
+            "worst": -16.829328168708628
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": 0.0,
+              "matched single": -3.1602245881654056,
+              "shifted single": -1.4936011033116592,
+              "matched combination": -13.41335241927113,
+              "shifted combination": -9.982919662731483,
+              "worst": -19.538232075190322
+            },
+            "29": {
+              "clean": 0.0,
+              "matched single": -2.0405735425392812,
+              "shifted single": 0.17953896721828455,
+              "matched combination": -12.497703840870189,
+              "shifted combination": -11.361590179804182,
+              "worst": -16.918741125536137
+            },
+            "43": {
+              "clean": 0.47071770372739685,
+              "matched single": -2.497851196108747,
+              "shifted single": -1.6412240676565992,
+              "matched combination": -11.707388372787598,
+              "shifted combination": -10.178174283827946,
+              "worst": -14.031011305399431
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.050955414012738856,
+          "hce_restored": 0.08619957537154989,
+          "rescue": {
+            "rescue_rate": 0.25542005420054203,
+            "error_induction_rate": 0.23343380727597968,
+            "recoverable_n": 108
+          }
+        },
+        {
+          "classifier": "swin_t_s43",
+          "seed": 43,
+          "identity": {
+            "clean": 0.8806917049987002,
+            "matched single": 0.8419186636783587,
+            "shifted single": 0.8477628718657836,
+            "matched combination": 0.7383467083458105,
+            "shifted combination": 0.7666613558565598,
+            "worst": 0.5371217948717948
+          },
+          "restored": {
+            "clean": 0.8651928636298832,
+            "matched single": 0.8129740342355842,
+            "shifted single": 0.8269965289217892,
+            "matched combination": 0.6428658681820261,
+            "shifted combination": 0.66774065340881,
+            "worst": 0.428771754200535
+          },
+          "delta": {
+            "clean": -1.5498841368816962,
+            "matched single": -2.8944629442774428,
+            "shifted single": -2.0766342943994376,
+            "matched combination": -9.548084016378445,
+            "shifted combination": -9.892070244774986,
+            "worst": -10.83500406712598
+          },
+          "per_restorer_delta": {
+            "17": {
+              "clean": -2.329479306038662,
+              "matched single": -3.9341044700501815,
+              "shifted single": -2.4969891324315707,
+              "matched combination": -9.921992966967307,
+              "shifted combination": -10.280359012702512,
+              "worst": -11.693557681732337
+            },
+            "29": {
+              "clean": -1.2330566857516434,
+              "matched single": -2.4755088406285375,
+              "shifted single": -1.7611968930117627,
+              "matched combination": -7.705616027570683,
+              "shifted combination": -9.782563413150081,
+              "worst": -8.053602647757307
+            },
+            "43": {
+              "clean": -1.0871164188547944,
+              "matched single": -2.2737755221535982,
+              "shifted single": -1.9717168577549904,
+              "matched combination": -11.016643054597363,
+              "shifted combination": -9.61328830847239,
+              "worst": -12.757851871888299
+            }
+          },
+          "restorer_positive": 0.0,
+          "hce_identity": 0.07898089171974523,
+          "hce_restored": 0.10488322717622083,
+          "rescue": {
+            "rescue_rate": 0.20351008215085883,
+            "error_induction_rate": 0.17271648370012854,
+            "recoverable_n": 103
+          }
+        }
+      ],
+      "admission": {
+        "pass": false,
+        "means": {
+          "clean": -0.7101315733699728,
+          "matched single": -2.46825585461814,
+          "shifted single": -1.355116359644126,
+          "matched combination": -10.647054095653855,
+          "shifted combination": -10.229956253825689,
+          "worst": -15.073626504821805
+        },
+        "seed_matched_combination": [
+          -9.853596726273484,
+          -12.539481544309638,
+          -9.548084016378445
+        ],
+        "seed_clean": [
+          -0.7374164844706876,
+          0.15690590124246562,
+          -1.5498841368816962
+        ],
+        "positive": 0,
+        "n": 3,
+        "restorer_positive_fraction": 0.0,
+        "reason": "admission failed"
+      },
+      "pixel": null
+    }
+  },
+  "test": {}
+}

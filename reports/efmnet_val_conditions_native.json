@@ -1,0 +1,250 @@
+{
+  "model": "EFM-Net (ConvNeXt-B + MHA + BPP), architecture reimplementation",
+  "run_dir": "runs_external/fgsc23_civ8/fgsc23_civ8_10-29-17-34-01/",
+  "checkpoint": "checkpoint-best.pth",
+  "manifest": "data/manifests/fgsc23_research_civilian.jsonl",
+  "split": "val",
+  "n": 157,
+  "project_to_efmnet": {
+    "0": 3,
+    "1": 2,
+    "2": 1,
+    "3": 6,
+    "4": 4,
+    "5": 7,
+    "6": 5,
+    "7": 0
+  },
+  "efmnet_classes": [
+    "barge",
+    "bulk_carrier",
+    "car_carrier",
+    "container_ship",
+    "fishing_boat",
+    "liquefied_gas_ship",
+    "oil_tanker",
+    "passenger_ship"
+  ],
+  "results": {
+    "clean": {
+      "accuracy": 0.8598726114649682,
+      "macro_f1": 0.8780196154109227,
+      "n": 157
+    },
+    "conditions": {
+      "matched_haze_1": {
+        "accuracy": 0.7770700636942676,
+        "macro_f1": 0.7701528117022457,
+        "n": 157
+      },
+      "matched_haze_2": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7649994202851846,
+        "n": 157
+      },
+      "matched_haze_3": {
+        "accuracy": 0.7579617834394905,
+        "macro_f1": 0.7458563278906597,
+        "n": 157
+      },
+      "matched_haze_4": {
+        "accuracy": 0.7770700636942676,
+        "macro_f1": 0.7505671950805846,
+        "n": 157
+      },
+      "matched_haze_5": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7602393288797564,
+        "n": 157
+      },
+      "matched_cloud_1": {
+        "accuracy": 0.8280254777070064,
+        "macro_f1": 0.8443686113145503,
+        "n": 157
+      },
+      "matched_cloud_2": {
+        "accuracy": 0.8280254777070064,
+        "macro_f1": 0.8541011320125242,
+        "n": 157
+      },
+      "matched_cloud_3": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.7931847126962673,
+        "n": 157
+      },
+      "matched_cloud_4": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.7706006072538331,
+        "n": 157
+      },
+      "matched_cloud_5": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.733353700052483,
+        "n": 157
+      },
+      "matched_glare_1": {
+        "accuracy": 0.8343949044585988,
+        "macro_f1": 0.8503341727748641,
+        "n": 157
+      },
+      "matched_glare_2": {
+        "accuracy": 0.8089171974522293,
+        "macro_f1": 0.8174491869918699,
+        "n": 157
+      },
+      "matched_glare_3": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.7943214624559501,
+        "n": 157
+      },
+      "matched_glare_4": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.7926563781935325,
+        "n": 157
+      },
+      "matched_glare_5": {
+        "accuracy": 0.6751592356687898,
+        "macro_f1": 0.6564132655747932,
+        "n": 157
+      },
+      "matched_haze+glare_3": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7312272016639216,
+        "n": 157
+      },
+      "matched_haze+glare_5": {
+        "accuracy": 0.49044585987261147,
+        "macro_f1": 0.4281882308390657,
+        "n": 157
+      },
+      "matched_haze+cloud_3": {
+        "accuracy": 0.7515923566878981,
+        "macro_f1": 0.7430076650225308,
+        "n": 157
+      },
+      "matched_haze+cloud_5": {
+        "accuracy": 0.5987261146496815,
+        "macro_f1": 0.5189392217168084,
+        "n": 157
+      },
+      "shifted_haze_1": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7496009461476899,
+        "n": 157
+      },
+      "shifted_haze_2": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7568641964982714,
+        "n": 157
+      },
+      "shifted_haze_3": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7628323506822083,
+        "n": 157
+      },
+      "shifted_haze_4": {
+        "accuracy": 0.7707006369426752,
+        "macro_f1": 0.7494313678324929,
+        "n": 157
+      },
+      "shifted_haze_5": {
+        "accuracy": 0.7579617834394905,
+        "macro_f1": 0.751943662416233,
+        "n": 157
+      },
+      "shifted_cloud_1": {
+        "accuracy": 0.8407643312101911,
+        "macro_f1": 0.8579282223218849,
+        "n": 157
+      },
+      "shifted_cloud_2": {
+        "accuracy": 0.8152866242038217,
+        "macro_f1": 0.8294010200856478,
+        "n": 157
+      },
+      "shifted_cloud_3": {
+        "accuracy": 0.7834394904458599,
+        "macro_f1": 0.774746919959076,
+        "n": 157
+      },
+      "shifted_cloud_4": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.8045887221812948,
+        "n": 157
+      },
+      "shifted_cloud_5": {
+        "accuracy": 0.732484076433121,
+        "macro_f1": 0.7309047277949767,
+        "n": 157
+      },
+      "shifted_glare_1": {
+        "accuracy": 0.8598726114649682,
+        "macro_f1": 0.8780196154109227,
+        "n": 157
+      },
+      "shifted_glare_2": {
+        "accuracy": 0.8535031847133758,
+        "macro_f1": 0.8724047851695585,
+        "n": 157
+      },
+      "shifted_glare_3": {
+        "accuracy": 0.8152866242038217,
+        "macro_f1": 0.8218949674464381,
+        "n": 157
+      },
+      "shifted_glare_4": {
+        "accuracy": 0.7834394904458599,
+        "macro_f1": 0.7726350047948899,
+        "n": 157
+      },
+      "shifted_glare_5": {
+        "accuracy": 0.8089171974522293,
+        "macro_f1": 0.7888047371607305,
+        "n": 157
+      },
+      "shifted_haze+glare_3": {
+        "accuracy": 0.7643312101910829,
+        "macro_f1": 0.7446257223625236,
+        "n": 157
+      },
+      "shifted_haze+glare_5": {
+        "accuracy": 0.5732484076433121,
+        "macro_f1": 0.519245580280824,
+        "n": 157
+      },
+      "shifted_haze+cloud_3": {
+        "accuracy": 0.7643312101910829,
+        "macro_f1": 0.7546931622967396,
+        "n": 157
+      },
+      "shifted_haze+cloud_5": {
+        "accuracy": 0.6242038216560509,
+        "macro_f1": 0.5737552883791113,
+        "n": 157
+      },
+      "matched_cloud_3_center": {
+        "accuracy": 0.7898089171974523,
+        "macro_f1": 0.7849157327105563,
+        "n": 157
+      },
+      "matched_glare_3_center": {
+        "accuracy": 0.7579617834394905,
+        "macro_f1": 0.7459474886620955,
+        "n": 157
+      },
+      "matched_cloud_3_border": {
+        "accuracy": 0.7770700636942676,
+        "macro_f1": 0.7981751191275124,
+        "n": 157
+      },
+      "matched_glare_3_border": {
+        "accuracy": 0.8343949044585988,
+        "macro_f1": 0.855220944264556,
+        "n": 157
+      }
+    }
+  },
+  "preprocess": "efmnet",
+  "note": "EFM-Net's own eval transform (resize 256 squash -> center crop 224)",
+  "role": "efmnet"
+}

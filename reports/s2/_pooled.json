@@ -1,0 +1,15 @@
+{
+ "dir": "reports/s2",
+ "suffix": "_e40",
+ "methods": {
+  "convnext_tiny_t1_e40": {
+   "delta_pp": -0.1949917898193761,
+   "ci": [
+    -1.1288998357963875,
+    0.7561063218390807
+   ],
+   "clusters": 609,
+   "measurements": 1854
+  }
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "clean_probability": 0.5,
+  "degraded_mixture": {
+    "single": 0.5,
+    "combined": 0.5
+  },
+  "single_kinds": ["haze", "cloud", "glare"],
+  "single_severities": [1, 2, 3, 4, 5],
+  "combined_kinds": ["haze+glare", "haze+cloud"],
+  "combined_severities": [3, 5],
+  "domain": "matched",
+  "placement": "random",
+  "note": "Budget-matched with single-degradation augmentation: equal clean probability; among degraded draws, half single and half combined. Combined severities match the evaluated 3/5 levels."
+}

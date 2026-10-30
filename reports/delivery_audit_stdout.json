@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "errors": [],
+  "pending": [],
+  "completed_evaluated_runs": [
+    "runs/fgsc23_official_all/convnext_tiny_clean_s17",
+    "runs/fgsc23_official_all/resnet50_clean_s17",
+    "runs/fgsc23_official_all/swin_t_clean_s17",
+    "runs/fgsc23_research_all/convnext_tiny_aug_s17",
+    "runs/fgsc23_research_all/convnext_tiny_aug_s29",
+    "runs/fgsc23_research_all/convnext_tiny_aug_s43",
+    "runs/fgsc23_research_all/convnext_tiny_clean_s17",
+    "runs/fgsc23_research_all/convnext_tiny_clean_s29",
+    "runs/fgsc23_research_all/convnext_tiny_clean_s43",
+    "runs/fgsc23_research_all/resnet50_aug_s17",
+    "runs/fgsc23_research_all/resnet50_clean_s17",
+    "runs/fgsc23_research_all/swin_t_aug_s17",
+    "runs/fgsc23_research_all/swin_t_aug_s29",
+    "runs/fgsc23_research_all/swin_t_aug_s43",
+    "runs/fgsc23_research_all/swin_t_clean_s17",
+    "runs/fgsc23_research_all/swin_t_clean_s29",
+    "runs/fgsc23_research_all/swin_t_clean_s43",
+    "runs/fgsc23_research_civilian/convnext_tiny_aug_s17",
+    "runs/fgsc23_research_civilian/convnext_tiny_aug_s29",
+    "runs/fgsc23_research_civilian/convnext_tiny_aug_s43",
+    "runs/fgsc23_research_civilian/convnext_tiny_clean_s17",
+    "runs/fgsc23_research_civilian/convnext_tiny_clean_s29",
+    "runs/fgsc23_research_civilian/convnext_tiny_clean_s43",
+    "runs/fgsc23_research_civilian/resnet50_aug_s17",
+    "runs/fgsc23_research_civilian/resnet50_clean_s17",
+    "runs/fgsc23_research_civilian/swin_t_aug_s17",
+    "runs/fgsc23_research_civilian/swin_t_aug_s29",
+    "runs/fgsc23_research_civilian/swin_t_aug_s43",
+    "runs/fgsc23_research_civilian/swin_t_clean_s17",
+    "runs/fgsc23_research_civilian/swin_t_clean_s29",
+    "runs/fgsc23_research_civilian/swin_t_clean_s43"
+  ],
+  "checked_manifests": [
+    {
+      "manifest": "data/manifests/fgsc23_research_all.jsonl",
+      "sha256": "31fab7cb9dcaf9e98d8ad63ca2639a62f42d40ff96128b76b8d88bc2271bb196",
+      "samples": 4071
+    },
+    {
+      "manifest": "data/manifests/fgsc23_research_civilian.jsonl",
+      "sha256": "e4178b700d9e16932cf4b01a31afac792b43df4285c487a9034c34cb6f119a61",
+      "samples": 1011
+    }
+  ],
+  "disk_bytes": 33534420266,
+  "charged_gpu_wall_hours": 2.291758045794785,
+  "queue": {
+    "stage": "all",
+    "status": "complete",
+    "started": 1793150427.3486938,
+    "pid": 11736,
+    "ended": 1793157692.311278
+  },
+  "external_limitations": [
+    "Domain-specific method reproduction depends on author implementation availability.",
+    "Generative feasibility and real-data annotation status are separate from synthetic benchmark completion."
+  ]
+}

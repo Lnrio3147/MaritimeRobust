@@ -1,0 +1,62 @@
+{
+  "split": "val",
+  "includes_image_decode": false,
+  "environment": {
+    "python": "3.10.20",
+    "torch": "2.5.1+cu121",
+    "torchvision": "0.20.1+cu121",
+    "cuda": "12.1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "time_utc": "2026-10-28T01:47:56Z"
+  },
+  "results": [
+    {
+      "method": "haze",
+      "severity": 3,
+      "n": 64,
+      "cpu_ms_median": 3.003045974764973,
+      "cpu_ms_p95": 4.238106741104274,
+      "total_cpu_wall_seconds": 0.18710422003641725
+    },
+    {
+      "method": "cloud",
+      "severity": 3,
+      "n": 64,
+      "cpu_ms_median": 3.410390461795032,
+      "cpu_ms_p95": 5.018382286652922,
+      "total_cpu_wall_seconds": 0.2233388472814113
+    },
+    {
+      "method": "glare",
+      "severity": 3,
+      "n": 64,
+      "cpu_ms_median": 4.397868469823152,
+      "cpu_ms_p95": 5.869110533967613,
+      "total_cpu_wall_seconds": 0.2666348797501996
+    },
+    {
+      "method": "haze+glare",
+      "severity": 3,
+      "n": 64,
+      "cpu_ms_median": 5.614881461951882,
+      "cpu_ms_p95": 7.651466660900041,
+      "total_cpu_wall_seconds": 0.34945492923725396
+    },
+    {
+      "method": "haze+cloud",
+      "severity": 3,
+      "n": 64,
+      "cpu_ms_median": 7.4783265590667725,
+      "cpu_ms_p95": 11.242706910707057,
+      "total_cpu_wall_seconds": 0.48114511312451214
+    },
+    {
+      "method": "DCP",
+      "severity": null,
+      "n": 64,
+      "cpu_ms_median": 9.906579973176122,
+      "cpu_ms_p95": 13.510004518320784,
+      "total_cpu_wall_seconds": 0.6062731954734772
+    }
+  ]
+}

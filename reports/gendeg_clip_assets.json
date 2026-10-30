@@ -1,0 +1,32 @@
+[
+  {
+    "name": "config.json",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/config.json",
+    "sha256": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a",
+    "bytes": 4519
+  },
+  {
+    "name": "vocab.json",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/vocab.json",
+    "sha256": "3f0c4f7d2086b61b38487075278ea9ed04edb53a03cbb045b86c27190fa8fb69",
+    "bytes": 961143
+  },
+  {
+    "name": "merges.txt",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/merges.txt",
+    "sha256": "9fd691f7c8039210e0fced15865466c65820d09b63988b0174bfe25de299051a",
+    "bytes": 524619
+  },
+  {
+    "name": "tokenizer_config.json",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/tokenizer_config.json",
+    "sha256": "deef455e52fa5e8151e339add0582e4235f066009601360999d3a9cda83b1129",
+    "bytes": 905
+  },
+  {
+    "name": "special_tokens_map.json",
+    "url": "https://huggingface.co/openai/clip-vit-large-patch14/resolve/main/special_tokens_map.json",
+    "sha256": "f8c0d6c39aee3f8431078ef6646567b0aba7f2246e9c54b8b99d55c22b707cbf",
+    "bytes": 389
+  }
+]

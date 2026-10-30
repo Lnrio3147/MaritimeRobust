@@ -1,0 +1,51 @@
+{
+ "dir": "reports/s2b",
+ "suffix": "_e40",
+ "methods": {
+  "convnext_tiny_i2_e40": {
+   "delta_pp": -2.563115763546798,
+   "ci": [
+    -3.8614147167487682,
+    -1.2160688628899836
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_none_e40_i22k": {
+   "delta_pp": -0.7594417077175698,
+   "ci": [
+    -2.068067528735632,
+    0.5233990147783251
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_r1_e40": {
+   "delta_pp": -1.1032430213464697,
+   "ci": [
+    -2.2296413177339898,
+    0.046246408045977246
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_t2_e40": {
+   "delta_pp": -5.036432676518884,
+   "ci": [
+    -6.522026375205254,
+    -3.5354448891625614
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  },
+  "convnext_tiny_t3_e40": {
+   "delta_pp": -8.761802134646961,
+   "ci": [
+    -10.137199815270934,
+    -7.404556650246305
+   ],
+   "clusters": 609,
+   "measurements": 1236
+  }
+ }
+}

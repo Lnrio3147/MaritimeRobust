@@ -1,0 +1,862 @@
+{
+  "run_count": 45,
+  "research_run_count": 42,
+  "research_single_run_count": 14,
+  "research_combined_run_count": 14,
+  "official_run_count": 3,
+  "conditions": [
+    "clean",
+    "matched_haze_1",
+    "matched_haze_2",
+    "matched_haze_3",
+    "matched_haze_4",
+    "matched_haze_5",
+    "matched_cloud_1",
+    "matched_cloud_2",
+    "matched_cloud_3",
+    "matched_cloud_4",
+    "matched_cloud_5",
+    "matched_glare_1",
+    "matched_glare_2",
+    "matched_glare_3",
+    "matched_glare_4",
+    "matched_glare_5",
+    "matched_haze+glare_3",
+    "matched_haze+glare_5",
+    "matched_haze+cloud_3",
+    "matched_haze+cloud_5",
+    "shifted_haze_1",
+    "shifted_haze_2",
+    "shifted_haze_3",
+    "shifted_haze_4",
+    "shifted_haze_5",
+    "shifted_cloud_1",
+    "shifted_cloud_2",
+    "shifted_cloud_3",
+    "shifted_cloud_4",
+    "shifted_cloud_5",
+    "shifted_glare_1",
+    "shifted_glare_2",
+    "shifted_glare_3",
+    "shifted_glare_4",
+    "shifted_glare_5",
+    "shifted_haze+glare_3",
+    "shifted_haze+glare_5",
+    "shifted_haze+cloud_3",
+    "shifted_haze+cloud_5",
+    "matched_cloud_3_center",
+    "matched_glare_3_center",
+    "matched_cloud_3_border",
+    "matched_glare_3_border"
+  ],
+  "severity_curves": {
+    "all/clean": {
+      "clean": 0.8895064896500225,
+      "curves": {
+        "haze": [
+          0.8775913529578457,
+          0.8646467826267914,
+          0.8387107970905283,
+          0.7997336461770213,
+          0.7220310085611864
+        ],
+        "cloud": [
+          0.8846449797547755,
+          0.8601867618057328,
+          0.8170773864000079,
+          0.742874266913318,
+          0.5975903796982395
+        ],
+        "glare": [
+          0.8856444708167529,
+          0.8752055918571563,
+          0.8462426415320902,
+          0.7807877681910409,
+          0.6569875862759685
+        ]
+      }
+    },
+    "all/single": {
+      "clean": 0.891200357207827,
+      "curves": {
+        "haze": [
+          0.8913577112764177,
+          0.8866365145679302,
+          0.8838500337299006,
+          0.8790691691589594,
+          0.8714395027060658
+        ],
+        "cloud": [
+          0.8938460841099954,
+          0.8869180470545107,
+          0.8839406566742892,
+          0.8776554452538778,
+          0.8564470451055478
+        ],
+        "glare": [
+          0.8914672462306285,
+          0.8891013812647947,
+          0.8770829172069786,
+          0.8505036803426945,
+          0.784306229286316
+        ]
+      }
+    },
+    "all/combined": {
+      "clean": 0.8930891802001184,
+      "curves": {
+        "haze": [
+          0.8910541229787856,
+          0.8880608425677537,
+          0.8808900665774232,
+          0.8736553462210059,
+          0.8716527994889545
+        ],
+        "cloud": [
+          0.8890782371752166,
+          0.8857326661642843,
+          0.8823951602757102,
+          0.8728604470551663,
+          0.8582883490843277
+        ],
+        "glare": [
+          0.892434390401982,
+          0.888557896225372,
+          0.8704177114471651,
+          0.8569073699543461,
+          0.7883520784649222
+        ]
+      }
+    },
+    "civilian/clean": {
+      "clean": 0.8670401690177982,
+      "curves": {
+        "haze": [
+          0.8563509130932858,
+          0.8345898911696787,
+          0.8023821117873664,
+          0.7624249151112223,
+          0.7062635480389968
+        ],
+        "cloud": [
+          0.8609959495771057,
+          0.8511284603749346,
+          0.8255159302873362,
+          0.7705041687929071,
+          0.6522104449065576
+        ],
+        "glare": [
+          0.8618783858711205,
+          0.8527673434859895,
+          0.8073964075872806,
+          0.7557360460777262,
+          0.6519407034973902
+        ]
+      }
+    },
+    "civilian/single": {
+      "clean": 0.876084355200398,
+      "curves": {
+        "haze": [
+          0.8749156562140983,
+          0.8704689224786567,
+          0.880851405012806,
+          0.8540926828905008,
+          0.8244908833822565
+        ],
+        "cloud": [
+          0.8843831582537659,
+          0.8847007037385564,
+          0.8794980640007491,
+          0.8690332276680758,
+          0.8364884835952757
+        ],
+        "glare": [
+          0.8738491700725243,
+          0.8750283218599231,
+          0.8674742878456358,
+          0.8307114737345623,
+          0.7759906414387786
+        ]
+      }
+    },
+    "civilian/combined": {
+      "clean": 0.8829448875850665,
+      "curves": {
+        "haze": [
+          0.874006003236463,
+          0.8698077394517331,
+          0.8558546669574906,
+          0.8515301710479486,
+          0.8352017140423357
+        ],
+        "cloud": [
+          0.8802806184957368,
+          0.8811541201064047,
+          0.8738570063690131,
+          0.8673814216473061,
+          0.8421444055728766
+        ],
+        "glare": [
+          0.8821131895659108,
+          0.8762763716810958,
+          0.8647550661649749,
+          0.8204650723770834,
+          0.7830741851489516
+        ]
+      }
+    }
+  },
+  "condition_means": {
+    "clean": 0.8836423562041125,
+    "matched_haze_1": 0.883136683745258,
+    "matched_haze_2": 0.8785527185232934,
+    "matched_haze_3": 0.8823507193713533,
+    "matched_haze_4": 0.86658092602473,
+    "matched_haze_5": 0.8479651930441612,
+    "matched_cloud_1": 0.8891146211818807,
+    "matched_cloud_2": 0.8858093753965335,
+    "matched_cloud_3": 0.8817193603375192,
+    "matched_cloud_4": 0.8733443364609768,
+    "matched_cloud_5": 0.8464677643504118,
+    "matched_glare_1": 0.8826582081515764,
+    "matched_glare_2": 0.8820648515623588,
+    "matched_glare_3": 0.8722786025263072,
+    "matched_glare_4": 0.8406075770386284,
+    "matched_glare_5": 0.7801484353625473,
+    "matched_haze+glare_3": 0.8455602256395903,
+    "matched_haze+glare_5": 0.5201881231233295,
+    "matched_haze+cloud_3": 0.8646023188135353,
+    "matched_haze+cloud_5": 0.6906350749802594,
+    "shifted_haze_1": 0.8845858307445083,
+    "shifted_haze_2": 0.8809469230685066,
+    "shifted_haze_3": 0.8745238832914686,
+    "shifted_haze_4": 0.8716570315706249,
+    "shifted_haze_5": 0.8477752671141909,
+    "shifted_cloud_1": 0.89026903472887,
+    "shifted_cloud_2": 0.8828703605005974,
+    "shifted_cloud_3": 0.8729701630765876,
+    "shifted_cloud_4": 0.8543128833913104,
+    "shifted_cloud_5": 0.8123896687306814,
+    "shifted_glare_1": 0.881810842794898,
+    "shifted_glare_2": 0.883389962191645,
+    "shifted_glare_3": 0.8811301815521139,
+    "shifted_glare_4": 0.8750911326583063,
+    "shifted_glare_5": 0.8552747672565266,
+    "shifted_haze+glare_3": 0.8645041667395182,
+    "shifted_haze+glare_5": 0.663944983883179,
+    "shifted_haze+cloud_3": 0.8596466629688844,
+    "shifted_haze+cloud_5": 0.658432914003643,
+    "matched_cloud_3_center": 0.8809916319627273,
+    "matched_glare_3_center": 0.8418107234302669,
+    "matched_cloud_3_border": 0.8823236721303375,
+    "matched_glare_3_border": 0.8843354871414111
+  },
+  "condition_means_combined": {
+    "clean": 0.8880170338925925,
+    "matched_haze_1": 0.8825300631076243,
+    "matched_haze_2": 0.8789342910097434,
+    "matched_haze_3": 0.8683723667674569,
+    "matched_haze_4": 0.8625927586344773,
+    "matched_haze_5": 0.853427256765645,
+    "matched_cloud_1": 0.8846794278354767,
+    "matched_cloud_2": 0.8834433931353445,
+    "matched_cloud_3": 0.8781260833223616,
+    "matched_cloud_4": 0.8701209343512362,
+    "matched_cloud_5": 0.8502163773286022,
+    "matched_glare_1": 0.8872737899839465,
+    "matched_glare_2": 0.882417133953234,
+    "matched_glare_3": 0.86758638880607,
+    "matched_glare_4": 0.8386862211657148,
+    "matched_glare_5": 0.7857131318069368,
+    "matched_haze+glare_3": 0.8430237644513144,
+    "matched_haze+glare_5": 0.5932609055972905,
+    "matched_haze+cloud_3": 0.8667179608763661,
+    "matched_haze+cloud_5": 0.7938145658858033,
+    "shifted_haze_1": 0.8834765058846163,
+    "shifted_haze_2": 0.876114418243406,
+    "shifted_haze_3": 0.8700481277271751,
+    "shifted_haze_4": 0.8659490251985535,
+    "shifted_haze_5": 0.8504102006359505,
+    "shifted_cloud_1": 0.8885558783726754,
+    "shifted_cloud_2": 0.8851459913293018,
+    "shifted_cloud_3": 0.8710471414161003,
+    "shifted_cloud_4": 0.8460577945646719,
+    "shifted_cloud_5": 0.8111879083628856,
+    "shifted_glare_1": 0.887102557342091,
+    "shifted_glare_2": 0.888623016696948,
+    "shifted_glare_3": 0.8785102447395622,
+    "shifted_glare_4": 0.87231905207829,
+    "shifted_glare_5": 0.8508882755328705,
+    "shifted_haze+glare_3": 0.8615347129906687,
+    "shifted_haze+glare_5": 0.7065302782866999,
+    "shifted_haze+cloud_3": 0.8657763879314665,
+    "shifted_haze+cloud_5": 0.749165754097065,
+    "matched_cloud_3_center": 0.878533605571559,
+    "matched_glare_3_center": 0.8264628659836399,
+    "matched_cloud_3_border": 0.879232948351125,
+    "matched_glare_3_border": 0.8840715927961826
+  },
+  "shifted_minus_matched": {
+    "haze_3": -0.00782683607988477,
+    "haze_5": -0.00018992592997024715,
+    "cloud_3": -0.008749197260931596,
+    "cloud_5": -0.03407809561973041,
+    "glare_3": 0.008851579025806688,
+    "glare_5": 0.07512633189397933
+  },
+  "combinations": {
+    "matched_haze+glare_3": 0.8455602256395903,
+    "matched_haze+glare_5": 0.5201881231233295,
+    "matched_haze+cloud_3": 0.8646023188135353,
+    "matched_haze+cloud_5": 0.6906350749802594
+  },
+  "combinations_combined": {
+    "matched_haze+glare_3": 0.8430237644513144,
+    "matched_haze+glare_5": 0.5932609055972905,
+    "matched_haze+cloud_3": 0.8667179608763661,
+    "matched_haze+cloud_5": 0.7938145658858033
+  },
+  "combined_vs_single_pairs": [
+    {
+      "scope": "all",
+      "model": "convnext_tiny",
+      "seed": 17,
+      "single_combination": 0.7750223536875822,
+      "combined_combination": 0.8083444895735208,
+      "combination_difference": 0.033322135885938575,
+      "single_shifted_combination": 0.8005337280617424,
+      "combined_shifted_combination": 0.8372441381814282,
+      "shifted_combination_difference": 0.03671041011968579,
+      "single_clean": 0.8941881157140794,
+      "combined_clean": 0.8961604567882976
+    },
+    {
+      "scope": "all",
+      "model": "convnext_tiny",
+      "seed": 29,
+      "single_combination": 0.7642073089567001,
+      "combined_combination": 0.8018881748111355,
+      "combination_difference": 0.03768086585443542,
+      "single_shifted_combination": 0.8074264477935753,
+      "combined_shifted_combination": 0.828172606792769,
+      "shifted_combination_difference": 0.020746158999193742,
+      "single_clean": 0.9060646579683638,
+      "combined_clean": 0.9057528395638713
+    },
+    {
+      "scope": "all",
+      "model": "convnext_tiny",
+      "seed": 43,
+      "single_combination": 0.7777345152471831,
+      "combined_combination": 0.7989734245840108,
+      "combination_difference": 0.021238909336827705,
+      "single_shifted_combination": 0.8211201158066425,
+      "combined_shifted_combination": 0.8201193302009107,
+      "shifted_combination_difference": -0.001000785605731802,
+      "single_clean": 0.8921609973747947,
+      "combined_clean": 0.8928451695597424
+    },
+    {
+      "scope": "all",
+      "model": "resnet50",
+      "seed": 17,
+      "single_combination": 0.6831842683360716,
+      "combined_combination": 0.7723894108129906,
+      "combination_difference": 0.08920514247691902,
+      "single_shifted_combination": 0.7074850764760857,
+      "combined_shifted_combination": 0.7793206664393675,
+      "shifted_combination_difference": 0.07183558996328177,
+      "single_clean": 0.8790297942343407,
+      "combined_clean": 0.8939032767839735
+    },
+    {
+      "scope": "all",
+      "model": "swin_t",
+      "seed": 17,
+      "single_combination": 0.755509093510323,
+      "combined_combination": 0.800613012302893,
+      "combination_difference": 0.04510391879256992,
+      "single_shifted_combination": 0.7755445809313961,
+      "combined_shifted_combination": 0.817208704662365,
+      "shifted_combination_difference": 0.04166412373096884,
+      "single_clean": 0.8776305921022692,
+      "combined_clean": 0.887922715572945
+    },
+    {
+      "scope": "all",
+      "model": "swin_t",
+      "seed": 29,
+      "single_combination": 0.742471833422834,
+      "combined_combination": 0.7812654098689019,
+      "combination_difference": 0.03879357644606796,
+      "single_shifted_combination": 0.7712634144380489,
+      "combined_shifted_combination": 0.8003730880453412,
+      "shifted_combination_difference": 0.02910967360729233,
+      "single_clean": 0.8953120078326163,
+      "combined_clean": 0.8838531800841251
+    },
+    {
+      "scope": "all",
+      "model": "swin_t",
+      "seed": 43,
+      "single_combination": 0.751050207722767,
+      "combined_combination": 0.7909842180846811,
+      "combination_difference": 0.03993401036191413,
+      "single_shifted_combination": 0.772049411968514,
+      "combined_shifted_combination": 0.8230610767417386,
+      "shifted_combination_difference": 0.05101166477322461,
+      "single_clean": 0.8940163352283246,
+      "combined_clean": 0.8911866230478737
+    },
+    {
+      "scope": "civilian",
+      "model": "convnext_tiny",
+      "seed": 17,
+      "single_combination": 0.7202502382086097,
+      "combined_combination": 0.7892915667162104,
+      "combination_difference": 0.0690413285076007,
+      "single_shifted_combination": 0.7742888313121862,
+      "combined_shifted_combination": 0.8011384366816302,
+      "shifted_combination_difference": 0.02684960536944403,
+      "single_clean": 0.8717738088717404,
+      "combined_clean": 0.8804316909512343
+    },
+    {
+      "scope": "civilian",
+      "model": "convnext_tiny",
+      "seed": 29,
+      "single_combination": 0.764134010453138,
+      "combined_combination": 0.7867951717074193,
+      "combination_difference": 0.022661161254281303,
+      "single_shifted_combination": 0.7804467785638929,
+      "combined_shifted_combination": 0.798169712688371,
+      "shifted_combination_difference": 0.017722934124478118,
+      "single_clean": 0.8938631628583384,
+      "combined_clean": 0.8899232861247948
+    },
+    {
+      "scope": "civilian",
+      "model": "convnext_tiny",
+      "seed": 43,
+      "single_combination": 0.7550634336278524,
+      "combined_combination": 0.7521394662350669,
+      "combination_difference": -0.0029239673927855536,
+      "single_shifted_combination": 0.7829288359011846,
+      "combined_shifted_combination": 0.7794903845959824,
+      "shifted_combination_difference": -0.0034384513052021504,
+      "single_clean": 0.8848767303179068,
+      "combined_clean": 0.8805361471033113
+    },
+    {
+      "scope": "civilian",
+      "model": "resnet50",
+      "seed": 17,
+      "single_combination": 0.6359871212947886,
+      "combined_combination": 0.6960925365559366,
+      "combination_difference": 0.06010541526114799,
+      "single_shifted_combination": 0.6750843139233093,
+      "combined_shifted_combination": 0.7211505550140476,
+      "shifted_combination_difference": 0.046066241090738314,
+      "single_clean": 0.8113303611040013,
+      "combined_clean": 0.8859597082010875
+    },
+    {
+      "scope": "civilian",
+      "model": "swin_t",
+      "seed": 17,
+      "single_combination": 0.7289311143514909,
+      "combined_combination": 0.7867877170854004,
+      "combination_difference": 0.05785660273390947,
+      "single_shifted_combination": 0.7588900346101288,
+      "combined_shifted_combination": 0.7849553425047291,
+      "shifted_combination_difference": 0.026065307894600265,
+      "single_clean": 0.8848782879508719,
+      "combined_clean": 0.8756478294495729
+    },
+    {
+      "scope": "civilian",
+      "model": "swin_t",
+      "seed": 29,
+      "single_combination": 0.7209588203695706,
+      "combined_combination": 0.7257712440012996,
+      "combination_difference": 0.004812423631728957,
+      "single_shifted_combination": 0.7598975383030234,
+      "combined_shifted_combination": 0.7720557544413786,
+      "shifted_combination_difference": 0.012158216138355216,
+      "single_clean": 0.8886035280122797,
+      "combined_clean": 0.8806451951279537
+    },
+    {
+      "scope": "civilian",
+      "model": "swin_t",
+      "seed": 43,
+      "single_combination": 0.6489457797595901,
+      "combined_combination": 0.7475243464982438,
+      "combination_difference": 0.09857856673865373,
+      "single_shifted_combination": 0.6758914384935564,
+      "combined_shifted_combination": 0.7780651695805914,
+      "shifted_combination_difference": 0.10217373108703498,
+      "single_clean": 0.8972646072876473,
+      "combined_clean": 0.8874703561375115
+    }
+  ],
+  "placement": {
+    "all/cloud": {
+      "random": 0.8839406566742892,
+      "center": 0.8812514160668891,
+      "border": 0.8857530830573449
+    },
+    "all/glare": {
+      "random": 0.8770829172069786,
+      "center": 0.8623758048999679,
+      "border": 0.8933147651880704
+    },
+    "civilian/cloud": {
+      "random": 0.8794980640007491,
+      "center": 0.8807318478585657,
+      "border": 0.8788942612033301
+    },
+    "civilian/glare": {
+      "random": 0.8674742878456358,
+      "center": 0.8212456419605658,
+      "border": 0.8753562090947516
+    }
+  },
+  "resolution_proxy": {
+    "short_side_lt96": {
+      "mean_samples": 230,
+      "mean_accuracy": 0.8463935574229692
+    },
+    "short_side_96_191": {
+      "mean_samples": 160.5,
+      "mean_accuracy": 0.8916904694854568
+    },
+    "short_side_ge192": {
+      "mean_samples": 159,
+      "mean_accuracy": 0.9555022008803521
+    }
+  },
+  "high_confidence_errors": {
+    "clean": {
+      "mean_count": 27.214285714285715,
+      "mean_clean_correct_to_wrong": 0
+    },
+    "matched_haze_5": {
+      "mean_count": 31.857142857142858,
+      "mean_clean_correct_to_wrong": 23.642857142857142
+    },
+    "matched_cloud_5": {
+      "mean_count": 30.142857142857142,
+      "mean_clean_correct_to_wrong": 28.928571428571427
+    },
+    "matched_glare_5": {
+      "mean_count": 40.357142857142854,
+      "mean_clean_correct_to_wrong": 64.28571428571429
+    },
+    "matched_haze+glare_5": {
+      "mean_count": 45.92857142857143,
+      "mean_clean_correct_to_wrong": 192.42857142857142
+    },
+    "shifted_haze+cloud_5": {
+      "mean_count": 47.42857142857143,
+      "mean_clean_correct_to_wrong": 129.42857142857142
+    }
+  },
+  "confusions": {
+    "all": {
+      "clean": [
+        {
+          "true": "non-ship",
+          "predicted": "auxiliary ship",
+          "count": 26
+        },
+        {
+          "true": "auxiliary ship",
+          "predicted": "bulk carrier",
+          "count": 25
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "non-ship",
+          "count": 24
+        },
+        {
+          "true": "non-ship",
+          "predicted": "submarine",
+          "count": 22
+        },
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 21
+        },
+        {
+          "true": "auxiliary ship",
+          "predicted": "fishing boat",
+          "count": 20
+        }
+      ],
+      "matched_haze+glare_5": [
+        {
+          "true": "destroyer",
+          "predicted": "frigate",
+          "count": 95
+        },
+        {
+          "true": "non-ship",
+          "predicted": "fishing boat",
+          "count": 73
+        },
+        {
+          "true": "frigate",
+          "predicted": "destroyer",
+          "count": 68
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "oil tanker",
+          "count": 64
+        },
+        {
+          "true": "cruiser",
+          "predicted": "frigate",
+          "count": 55
+        },
+        {
+          "true": "non-ship",
+          "predicted": "submarine",
+          "count": 52
+        }
+      ],
+      "matched_cloud_5": [
+        {
+          "true": "bulk carrier",
+          "predicted": "non-ship",
+          "count": 34
+        },
+        {
+          "true": "non-ship",
+          "predicted": "submarine",
+          "count": 29
+        },
+        {
+          "true": "cruiser",
+          "predicted": "destroyer",
+          "count": 29
+        },
+        {
+          "true": "auxiliary ship",
+          "predicted": "combat boat",
+          "count": 27
+        },
+        {
+          "true": "auxiliary ship",
+          "predicted": "passenger ship",
+          "count": 26
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "non-ship",
+          "count": 23
+        }
+      ],
+      "matched_glare_5": [
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 42
+        },
+        {
+          "true": "non-ship",
+          "predicted": "fishing boat",
+          "count": 41
+        },
+        {
+          "true": "non-ship",
+          "predicted": "bulk carrier",
+          "count": 38
+        },
+        {
+          "true": "non-ship",
+          "predicted": "auxiliary ship",
+          "count": 35
+        },
+        {
+          "true": "cruiser",
+          "predicted": "destroyer",
+          "count": 34
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "non-ship",
+          "count": 29
+        }
+      ]
+    },
+    "civilian": {
+      "clean": [
+        {
+          "true": "bulk carrier",
+          "predicted": "fishing boat",
+          "count": 24
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "bulk carrier",
+          "count": 23
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "oil tanker",
+          "count": 21
+        },
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 21
+        },
+        {
+          "true": "container ship",
+          "predicted": "bulk carrier",
+          "count": 19
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "passenger ship",
+          "count": 17
+        }
+      ],
+      "matched_haze+glare_5": [
+        {
+          "true": "bulk carrier",
+          "predicted": "oil tanker",
+          "count": 97
+        },
+        {
+          "true": "liquefied gas ship",
+          "predicted": "oil tanker",
+          "count": 71
+        },
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 68
+        },
+        {
+          "true": "container ship",
+          "predicted": "bulk carrier",
+          "count": 56
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "bulk carrier",
+          "count": 51
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "fishing boat",
+          "count": 50
+        }
+      ],
+      "matched_cloud_5": [
+        {
+          "true": "bulk carrier",
+          "predicted": "fishing boat",
+          "count": 38
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "oil tanker",
+          "count": 28
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "bulk carrier",
+          "count": 27
+        },
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 24
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "oil tanker",
+          "count": 19
+        },
+        {
+          "true": "container ship",
+          "predicted": "bulk carrier",
+          "count": 18
+        }
+      ],
+      "matched_glare_5": [
+        {
+          "true": "bulk carrier",
+          "predicted": "oil tanker",
+          "count": 44
+        },
+        {
+          "true": "oil tanker",
+          "predicted": "bulk carrier",
+          "count": 42
+        },
+        {
+          "true": "bulk carrier",
+          "predicted": "fishing boat",
+          "count": 39
+        },
+        {
+          "true": "liquefied gas ship",
+          "predicted": "barge",
+          "count": 32
+        },
+        {
+          "true": "passenger ship",
+          "predicted": "bulk carrier",
+          "count": 28
+        },
+        {
+          "true": "fishing boat",
+          "predicted": "bulk carrier",
+          "count": 27
+        }
+      ]
+    }
+  },
+  "augmentation": {
+    "all/single": {
+      "runs": 7,
+      "mean_clean_change": 0.0016938675578043818,
+      "mean_matched_change": 0.07024441622069677,
+      "mean_combination_change": 0.22398436334141167,
+      "mean_shifted_combination_change": 0.23363531062132104,
+      "mean_recovery_fraction": 0.8247530017678537
+    },
+    "all/combined": {
+      "runs": 7,
+      "mean_clean_change": 0.003582690550095778,
+      "mean_matched_change": 0.06935880422826392,
+      "mean_combination_change": 0.26759558607779355,
+      "mean_shifted_combination_change": 0.26936057284816617,
+      "mean_recovery_fraction": 0.8049048420213812
+    },
+    "civilian/single": {
+      "runs": 7,
+      "mean_clean_change": 0.009044186182599707,
+      "mean_matched_change": 0.0686594575018179,
+      "mean_combination_change": 0.16024365827610698,
+      "mean_shifted_combination_change": 0.18525362696496167,
+      "mean_recovery_fraction": 0.9334839979391546
+    },
+    "civilian/combined": {
+      "runs": 7,
+      "mean_clean_change": 0.01590471856726829,
+      "mean_matched_change": 0.06705443548042847,
+      "mean_combination_change": 0.2045481626667551,
+      "mean_shifted_combination_change": 0.2177675675934543,
+      "mean_recovery_fraction": 0.9433536032757821
+    }
+  }
+}

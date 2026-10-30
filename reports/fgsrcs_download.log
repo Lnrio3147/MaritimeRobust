@@ -1,0 +1,314 @@
+fgsrcs.archive: 44/198 chunks
+fgsrcs.archive: 45/198 chunks
+fgsrcs.archive: 46/198 chunks
+fgsrcs.archive: 47/198 chunks
+fgsrcs.archive: 48/198 chunks
+fgsrcs.archive: 49/198 chunks
+fgsrcs.archive: 50/198 chunks
+fgsrcs.archive: 51/198 chunks
+fgsrcs.archive: 52/198 chunks
+fgsrcs.archive: 53/198 chunks
+fgsrcs.archive: 54/198 chunks
+fgsrcs.archive: 55/198 chunks
+fgsrcs.archive: 56/198 chunks
+fgsrcs.archive: 57/198 chunks
+fgsrcs.archive: 58/198 chunks
+fgsrcs.archive: 59/198 chunks
+fgsrcs.archive: 60/198 chunks
+fgsrcs.archive: 61/198 chunks
+fgsrcs.archive: 62/198 chunks
+fgsrcs.archive: 63/198 chunks
+fgsrcs.archive: 64/198 chunks
+fgsrcs.archive: 65/198 chunks
+fgsrcs.archive: 66/198 chunks
+fgsrcs.archive: 67/198 chunks
+fgsrcs.archive: 68/198 chunks
+fgsrcs.archive: 69/198 chunks
+Traceback (most recent call last):
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 774, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1055, in _prepare_proxy
+    conn.connect()
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=7899): Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=7899): Failed to establish a new connection: [Errno 111] Connection refused"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download&confirm=t&uuid=689864e3-423b-4395-ab06-b0797aa280a8 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=7899): Failed to establish a new connection: [Errno 111] Connection refused")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 60, in fetch
+    write_json(state_path,state)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 723, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download&confirm=t&uuid=689864e3-423b-4395-ab06-b0797aa280a8 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=7899): Failed to establish a new connection: [Errno 111] Connection refused")))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 95, in <module>
+    
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 78, in download
+    return start
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 73, in fetch
+    if offset+len(content)>end+1:raise ValueError("Oversized range")
+RuntimeError: Range 2415919104 failed
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download&confirm=t&uuid=0a35b037-fb55-41cc-b32e-29d99b66ebdc (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 104, in <module>
+    print(json.dumps(download(drive_url(args.drive_id) if args.drive_id else args.url,args.output,args.prefix,args.threads),indent=2))
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 37, in download
+    r=requests.get(url,headers={"Range":"bytes=0-0","Accept-Encoding":"identity"},stream=True,timeout=40)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 727, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download&confirm=t&uuid=0a35b037-fb55-41cc-b32e-29d99b66ebdc (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))
+fgsrcs.archive: 70/198 chunks
+fgsrcs.archive: 71/198 chunks
+fgsrcs.archive: 72/198 chunks
+fgsrcs.archive: 73/198 chunks
+fgsrcs.archive: 74/198 chunks
+fgsrcs.archive: 75/198 chunks
+fgsrcs.archive: 76/198 chunks
+fgsrcs.archive: 77/198 chunks
+fgsrcs.archive: 78/198 chunks
+fgsrcs.archive: 79/198 chunks
+fgsrcs.archive: 80/198 chunks
+fgsrcs.archive: 81/198 chunks
+fgsrcs.archive: 82/198 chunks
+fgsrcs.archive: 83/198 chunks
+fgsrcs.archive: 84/198 chunks
+fgsrcs.archive: 85/198 chunks
+fgsrcs.archive: 86/198 chunks
+fgsrcs.archive: 87/198 chunks
+fgsrcs.archive: 88/198 chunks
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 696, in send
+    resp = conn.urlopen(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/connectionpool.py", line 842, in urlopen
+    retries = retries.increment(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/urllib3/util/retry.py", line 543, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 23, in request_get
+    return requests.get(*args, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 805, in send
+    history = [resp for resp in gen]
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 805, in <listcomp>
+    history = [resp for resp in gen]
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 292, in resolve_redirects
+    resp = self.send(
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/requests/adapters.py", line 727, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='drive.usercontent.google.com', port=443): Max retries exceeded with url: /download?id=1HHUsGGQOpJh9ozHSVfmKIuj6niUsK9HF&export=download (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1017)')))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 121, in <module>
+    print(json.dumps(download(drive_url(args.drive_id) if args.drive_id else args.url,args.output,args.prefix,args.threads),indent=2))
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 34, in drive_url
+    r=request_get("https://drive.google.com/uc",params={"export":"download","id":file_id},timeout=30)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/download_public.py", line 27, in request_get
+    raise RuntimeError("Public HTTP endpoint unavailable after retries") from error
+RuntimeError: Public HTTP endpoint unavailable after retries
+fgsrcs.archive: 89/198 chunks
+fgsrcs.archive: 90/198 chunks
+fgsrcs.archive: 91/198 chunks
+fgsrcs.archive: 92/198 chunks
+fgsrcs.archive: 89/198 chunks
+fgsrcs.archive: 90/198 chunks
+fgsrcs.archive: 91/198 chunks
+fgsrcs.archive: 92/198 chunks
+fgsrcs.archive: 93/198 chunks
+fgsrcs.archive: 94/198 chunks
+fgsrcs.archive: 93/198 chunks
+fgsrcs.archive: 94/198 chunks
+fgsrcs.archive: 95/198 chunks
+fgsrcs.archive: 96/198 chunks
+fgsrcs.archive: 97/198 chunks
+fgsrcs.archive: 98/198 chunks
+fgsrcs.archive: 99/198 chunks
+fgsrcs.archive: 100/198 chunks
+fgsrcs.archive: 101/198 chunks
+fgsrcs.archive: 102/198 chunks
+fgsrcs.archive: 103/198 chunks
+fgsrcs.archive: 104/198 chunks
+fgsrcs.archive: 105/198 chunks
+fgsrcs.archive: 106/198 chunks
+fgsrcs.archive: 107/198 chunks
+fgsrcs.archive: 108/198 chunks
+fgsrcs.archive: 109/198 chunks
+fgsrcs.archive: 110/198 chunks
+fgsrcs.archive: 111/198 chunks
+fgsrcs.archive: 112/198 chunks
+fgsrcs.archive: 113/198 chunks
+fgsrcs.archive: 114/198 chunks
+fgsrcs.archive: 115/198 chunks
+fgsrcs.archive: 116/198 chunks
+fgsrcs.archive: 117/198 chunks
+fgsrcs.archive: 118/198 chunks
+fgsrcs.archive: 119/198 chunks
+fgsrcs.archive: 120/198 chunks
+fgsrcs.archive: 121/198 chunks
+fgsrcs.archive: 122/198 chunks
+fgsrcs.archive: 123/198 chunks
+fgsrcs.archive: 124/198 chunks
+fgsrcs.archive: 125/198 chunks
+fgsrcs.archive: 126/198 chunks
+fgsrcs.archive: 127/198 chunks
+fgsrcs.archive: 128/198 chunks
+fgsrcs.archive: 129/198 chunks
+fgsrcs.archive: 130/198 chunks
+fgsrcs.archive: 131/198 chunks
+fgsrcs.archive: 132/198 chunks
+fgsrcs.archive: 133/198 chunks
+fgsrcs.archive: 134/198 chunks
+fgsrcs.archive: 135/198 chunks
+fgsrcs.archive: 136/198 chunks
+fgsrcs.archive: 137/198 chunks
+fgsrcs.archive: 138/198 chunks
+fgsrcs.archive: 139/198 chunks
+fgsrcs.archive: 140/198 chunks
+fgsrcs.archive: 141/198 chunks
+fgsrcs.archive: 142/198 chunks
+fgsrcs.archive: 143/198 chunks
+fgsrcs.archive: 144/198 chunks
+fgsrcs.archive: 145/198 chunks
+fgsrcs.archive: 146/198 chunks
+fgsrcs.archive: 147/198 chunks
+fgsrcs.archive: 148/198 chunks
+fgsrcs.archive: 149/198 chunks
+fgsrcs.archive: 150/198 chunks
+fgsrcs.archive: 151/198 chunks
+fgsrcs.archive: 152/198 chunks
+fgsrcs.archive: 153/198 chunks
+fgsrcs.archive: 154/198 chunks
+fgsrcs.archive: 155/198 chunks
+fgsrcs.archive: 156/198 chunks
+fgsrcs.archive: 157/198 chunks
+fgsrcs.archive: 158/198 chunks
+fgsrcs.archive: 159/198 chunks
+fgsrcs.archive: 160/198 chunks
+fgsrcs.archive: 161/198 chunks
+fgsrcs.archive: 162/198 chunks
+fgsrcs.archive: 163/198 chunks
+fgsrcs.archive: 164/198 chunks
+fgsrcs.archive: 165/198 chunks
+fgsrcs.archive: 166/198 chunks
+fgsrcs.archive: 167/198 chunks
+fgsrcs.archive: 168/198 chunks
+fgsrcs.archive: 169/198 chunks
+fgsrcs.archive: 170/198 chunks
+fgsrcs.archive: 171/198 chunks
+fgsrcs.archive: 172/198 chunks
+fgsrcs.archive: 173/198 chunks
+fgsrcs.archive: 174/198 chunks
+fgsrcs.archive: 175/198 chunks
+fgsrcs.archive: 176/198 chunks
+fgsrcs.archive: 177/198 chunks
+fgsrcs.archive: 178/198 chunks
+fgsrcs.archive: 179/198 chunks
+fgsrcs.archive: 180/198 chunks
+fgsrcs.archive: 181/198 chunks
+fgsrcs.archive: 182/198 chunks
+fgsrcs.archive: 183/198 chunks
+fgsrcs.archive: 184/198 chunks
+fgsrcs.archive: 185/198 chunks
+fgsrcs.archive: 186/198 chunks
+fgsrcs.archive: 187/198 chunks
+fgsrcs.archive: 188/198 chunks
+fgsrcs.archive: 189/198 chunks
+fgsrcs.archive: 190/198 chunks
+fgsrcs.archive: 191/198 chunks
+fgsrcs.archive: 192/198 chunks
+fgsrcs.archive: 193/198 chunks
+fgsrcs.archive: 194/198 chunks
+fgsrcs.archive: 195/198 chunks
+fgsrcs.archive: 196/198 chunks
+fgsrcs.archive: 197/198 chunks
+fgsrcs.archive: 198/198 chunks
+{
+  "path": "data/raw/fgsrcs.archive",
+  "bytes": 6639045215,
+  "sha256": "10127ac654d4aba79ad00dba9c74d713b5e959acdf6eadd3ee1661162ad56598",
+  "seconds": 46322.203845500946
+}

@@ -1,0 +1,11 @@
+{
+  "sample_ids": [
+    "fgsc23_0c3233ec27fb21f2_865564445",
+    "fgsc23_725e6dd7ce300d44_3390322961",
+    "fgsc23_0231dca0683c4320_2708070406"
+  ],
+  "split": "val",
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+  "review": "Approximate fog/soft cloud/overexposure levels span mild to severe; no model test scores used to choose parameters.",
+  "limitations": "Not calibrated against measured maritime weather or physical visibility; no real vessel segmentation."
+}

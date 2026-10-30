@@ -1,0 +1,20 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Obtaining file:///home/uestc/mount_2T/uestc/lnrio/MaritimeRobust
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: maritime-robust
+  Building editable for maritime-robust (pyproject.toml): started
+  Building editable for maritime-robust (pyproject.toml): finished with status 'done'
+  Created wheel for maritime-robust: filename=maritime_robust-0.1.0-0.editable-py3-none-any.whl size=1745 sha256=941ad35517190e0d0579e59b76a8e0970fafb51b535f3b57302dc3899ba2df93
+  Stored in directory: /tmp/pip-ephem-wheel-cache-cssmxylx/wheels/51/66/92/01c1b82b5d8711ccaa8ff5ee7bb63f9027c5be18101af37fca
+Successfully built maritime-robust
+Installing collected packages: maritime-robust
+Successfully installed maritime-robust-0.1.0
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting lmdb
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/1c/c0/05c6e8e7e0c2bd9edb9c2e59e729d9839bb6055f137c3d006a64a19ec7ae/lmdb-3.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (560 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 560.9/560.9 kB 96.3 kB/s eta 0:00:00
+Installing collected packages: lmdb
+Successfully installed lmdb-3.0.0

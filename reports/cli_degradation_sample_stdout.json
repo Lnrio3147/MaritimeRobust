@@ -1,0 +1,32 @@
+{
+  "kind": "haze",
+  "severity": 3,
+  "seed": 17,
+  "domain": "matched",
+  "placement": "random",
+  "recipe_version": "1.0",
+  "transmission_mean": 0.5458812713623047,
+  "airlight": [
+    0.9168989845177924,
+    0.8862820863156896,
+    0.9318893655884852
+  ],
+  "saturated_fraction": 0.0,
+  "affected_fraction": 1.0,
+  "center_proxy_affected_fraction": 1.0,
+  "target_affected_fraction": null,
+  "input_sha256": "0c3233ec27fb21f205d83aebf879d0cacdeb4988525850bcb619ffaf300d6998",
+  "original_size": [
+    163,
+    291
+  ],
+  "content_size": [
+    125,
+    224
+  ],
+  "output_size": [
+    224,
+    224
+  ],
+  "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718"
+}
