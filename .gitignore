@@ -17,3 +17,6 @@ reports/probe_features/
 .venv-gendeg/
 artifacts/
 data/fgsrcs_crops/
+external/
+logs/
+modules/
