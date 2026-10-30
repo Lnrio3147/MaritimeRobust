@@ -1,0 +1,140 @@
+{
+ "matched_haze_1": {
+  "sat_fraction": 0.0014750989139587875,
+  "blown_fraction": 0.0039605249715177334,
+  "mean_luminance": 0.40260091640995543,
+  "contrast": 0.1581336397098974
+ },
+ "matched_haze_2": {
+  "sat_fraction": 0.0005449748922627303,
+  "blown_fraction": 0.0022063114535862886,
+  "mean_luminance": 0.492036850128359,
+  "contrast": 0.13126745201574946
+ },
+ "matched_haze_3": {
+  "sat_fraction": 0.00013157568852783833,
+  "blown_fraction": 0.0010418666101149198,
+  "mean_luminance": 0.5829196349509711,
+  "contrast": 0.10524594252115314
+ },
+ "matched_haze_4": {
+  "sat_fraction": 4.847016172974044e-05,
+  "blown_fraction": 0.00019300992545076283,
+  "mean_luminance": 0.6728356688925363,
+  "contrast": 0.07898548160435505
+ },
+ "matched_haze_5": {
+  "sat_fraction": 4.5471010005944124e-06,
+  "blown_fraction": 0.00029265916014464035,
+  "mean_luminance": 0.7652758947275218,
+  "contrast": 0.05402979186003648
+ },
+ "matched_cloud_1": {
+  "sat_fraction": 0.004080297546809985,
+  "blown_fraction": 0.004891035980532989,
+  "mean_luminance": 0.33421534997890295,
+  "contrast": 0.18604647473079486
+ },
+ "matched_cloud_2": {
+  "sat_fraction": 0.003828368802011095,
+  "blown_fraction": 0.005132322574053894,
+  "mean_luminance": 0.37183138880046823,
+  "contrast": 0.20042496456683262
+ },
+ "matched_cloud_3": {
+  "sat_fraction": 0.0032850386058549627,
+  "blown_fraction": 0.0057417308549633445,
+  "mean_luminance": 0.42651142780352563,
+  "contrast": 0.22227712597661806
+ },
+ "matched_cloud_4": {
+  "sat_fraction": 0.002325890535218942,
+  "blown_fraction": 0.007220602895284326,
+  "mean_luminance": 0.49671927803349725,
+  "contrast": 0.25068107724768446
+ },
+ "matched_cloud_5": {
+  "sat_fraction": 0.0018014259708737865,
+  "blown_fraction": 0.010955030525559737,
+  "mean_luminance": 0.5840766131877899,
+  "contrast": 0.2749275592634979
+ },
+ "matched_glare_1": {
+  "sat_fraction": 0.008045369619328314,
+  "blown_fraction": 0.007395327669902913,
+  "mean_luminance": 0.3245660028628354,
+  "contrast": 0.1888966027611089
+ },
+ "matched_glare_2": {
+  "sat_fraction": 0.025580152039577968,
+  "blown_fraction": 0.021349219678769564,
+  "mean_luminance": 0.3619927897760012,
+  "contrast": 0.2183695115438364
+ },
+ "matched_glare_3": {
+  "sat_fraction": 0.08648615127179513,
+  "blown_fraction": 0.06965907191153159,
+  "mean_luminance": 0.43128258713240764,
+  "contrast": 0.26753817035735233
+ },
+ "matched_glare_4": {
+  "sat_fraction": 0.2100704549113335,
+  "blown_fraction": 0.18720714734619576,
+  "mean_luminance": 0.5339683466455312,
+  "contrast": 0.3084055761110435
+ },
+ "matched_glare_5": {
+  "sat_fraction": 0.37880573004383794,
+  "blown_fraction": 0.3516391234892015,
+  "mean_luminance": 0.6672540800374689,
+  "contrast": 0.30683677969048323
+ },
+ "matched_haze+glare_2": {
+  "sat_fraction": 0.03985214762482663,
+  "blown_fraction": 0.03502699623538736,
+  "mean_luminance": 0.5399787491097033,
+  "contrast": 0.17316082553956116
+ },
+ "matched_haze+glare_3": {
+  "sat_fraction": 0.15874248857613435,
+  "blown_fraction": 0.14805902640182286,
+  "mean_luminance": 0.6826814196063477,
+  "contrast": 0.17965330147338146
+ },
+ "matched_haze+glare_4": {
+  "sat_fraction": 0.3486138501213592,
+  "blown_fraction": 0.3366898033485239,
+  "mean_luminance": 0.8180100582178357,
+  "contrast": 0.15361795415288038
+ },
+ "matched_haze+glare_5": {
+  "sat_fraction": 0.6010407443468893,
+  "blown_fraction": 0.5845518919036061,
+  "mean_luminance": 0.926721381330953,
+  "contrast": 0.09396332229297717
+ },
+ "matched_haze+cloud_2": {
+  "sat_fraction": 0.00044851830295224886,
+  "blown_fraction": 0.003197192484396671,
+  "mean_luminance": 0.5363615176920752,
+  "contrast": 0.1435778328732958
+ },
+ "matched_haze+cloud_3": {
+  "sat_fraction": 0.00011851486650485437,
+  "blown_fraction": 0.0025820761405290268,
+  "mean_luminance": 0.6509837453226441,
+  "contrast": 0.12999742507066542
+ },
+ "matched_haze+cloud_4": {
+  "sat_fraction": 2.0897315236774323e-05,
+  "blown_fraction": 0.004649362399692886,
+  "mean_luminance": 0.7591134714848787,
+  "contrast": 0.11168439487375102
+ },
+ "matched_haze+cloud_5": {
+  "sat_fraction": 7.739746383990489e-07,
+  "blown_fraction": 0.02849861690732118,
+  "mean_luminance": 0.8539352231812709,
+  "contrast": 0.08543596178003886
+ }
+}
