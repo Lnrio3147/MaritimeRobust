@@ -18,7 +18,7 @@ reports/physical/cells/
 .venv-gendeg/
 artifacts/
 data/fgsrcs_crops/
-external/
+/external/
 logs/
 modules/
 
@@ -32,3 +32,7 @@ reports/composition/*/
 reports/composition_r50/*/
 # per-cell eval logs; the JSON next to them is the artifact
 reports/*_f[0-9]_s*.log
+
+# CIFAR-10-C replication: checkpoints and the unpacked archive are local
+runs_cifar/
+data/cifar/

@@ -102,7 +102,8 @@ class Budget:
 
     def check(self, force=False):
         self.job["elapsed_seconds"] = time.monotonic() - self.started
-        phase_limits = {"preflight": 8, "baseline": 24, "augmentation": 24, "evaluation": 16}
+        phase_limits = {"preflight": 8, "baseline": 24, "augmentation": 24,
+                        "evaluation": 16, "cifar": 30}
         total = sum(j["elapsed_seconds"] for j in self.state["jobs"])
         phase = sum(j["elapsed_seconds"] for j in self.state["jobs"] if j["phase"] == self.phase)
         if force or time.monotonic() - self.last_write > 15:
