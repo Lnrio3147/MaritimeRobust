@@ -1,9 +1,9 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T15:39:40+00:00",
+ "generated_at": "2026-10-30T15:49:57+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "2344da4966884df0d52a986ec077f2d7e63e4fae",
+  "commit": "bd34dfa345d69861e011ac805977064de805d71e",
   "branch": "master",
   "dirty": true,
   "tracked_files": 745
@@ -20,6 +20,10 @@
   "src/maritime_robust/common.py": {
    "sha256": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
    "bytes": 4279
+  },
+  "src/maritime_robust/corruptions_extra.py": {
+   "sha256": "4c72f7df12ffa0fdcfd943b62a6e404427f320448ce44412992403b0523ea560",
+   "bytes": 3412
   },
   "src/maritime_robust/degradations.py": {
    "sha256": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
@@ -92,6 +96,10 @@
   "scripts/combined_baseline_report.py": {
    "sha256": "f5e258cef8a19c2cf8b54e9ed0e5cd344e2eeb4801ffb24e0dc7e122dcd6d209",
    "bytes": 6114
+  },
+  "scripts/composition_probe.py": {
+   "sha256": "e1e3e264e58a5738200f5b92f2eb6fc3170ae03caabd3e7ab34b95f3e4091d9e",
+   "bytes": 4424
   },
   "scripts/compound_reanalysis.py": {
    "sha256": "4ee8cecfbd96191973658d82677368c3c45dfa338b7cee8a02cba69d8a540880",
@@ -341,6 +349,10 @@
    "sha256": "b7b46be0c69fb14399125bdbac7f92948b406821d5ba65315f0c273756e2b804",
    "bytes": 12453
   },
+  "scripts/tta_probe.py": {
+   "sha256": "780fa91e966e796e5a0f61d35c1e5eb24a387089c2251af13f4f7bf2fa94a1e7",
+   "bytes": 6413
+  },
   "configs/combined_augmentation.json": {
    "sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
    "bytes": 532
@@ -537,6 +549,10 @@
    "sha256": "8e84428a278fccb3ed00b46f0bf9f81a88dc4dfe2839ea50bbbb842c5439e41a",
    "bytes": 2870
   },
+  "reports/PREREG_TTA_RECENTERING.md": {
+   "sha256": "f89aa6521a9fb4fddef6baa903eb55688ade3827b173e8d440d5a9387cb5aa32",
+   "bytes": 3733
+  },
   "reports/PROBE_PREREGISTRATION.md": {
    "sha256": "7bcbec6fd5a7ddb551a81719b735fb1fd7b66f6641a2f49fc9edc61e26cc3868",
    "bytes": 7610
@@ -613,6 +629,10 @@
    "sha256": "ce609a4beea197d546c61a192cf30907c869e30876cda106464955cff5ddffd8",
    "bytes": 24646
   },
+  "reports/TTA_RECENTERING.md": {
+   "sha256": "35975b94b28d01feae08ddc2bb6b48fd54cfb462f63f98f9612446e83669bcd4",
+   "bytes": 2788
+  },
   "reports/cdlnet_ablation.json": {
    "sha256": "0ce6bbcaffb2376f64435cf2d34c0220e1ad1ba75dd2248b6937e2ee478a411d",
    "bytes": 10067
@@ -636,6 +656,10 @@
   "reports/combined_queue_status.json": {
    "sha256": "db57dbacbcd6e90d18961d75e681b9ce617b0cdd77c91a46ff2c37ad777cebca",
    "bytes": 227
+  },
+  "reports/composition_probe.json": {
+   "sha256": "6d8c8b9b9b6ccdeea5be8b4093993dccde3688a703d131abebada543b47aa841",
+   "bytes": 3472
   },
   "reports/compound_analysis.json": {
    "sha256": "b5d6fce995548f18ca1a6f9ec69af0817e18c48d377f9d75777a83df13d55a08",
@@ -866,7 +890,7 @@
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "e67850060a23f7ea4e747d7d47c50cb73427dcc29ce9ce4603646f9ffa938e46",
+   "sha256": "268b5e5f3be8037de7ceffe9569de3072efac6d436ed3289c7a1e4aa87e5ad24",
    "bytes": 371201
   },
   "reports/validation_calibration.json": {
