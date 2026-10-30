@@ -49,8 +49,17 @@ def apply(image, name, severity):
 
 
 def apply_pair(image, pair, severity):
-    """``pair[1]`` applied on top of ``pair[0]``, both at ``severity``."""
-    return apply(apply(image, pair[0], severity), pair[1], severity)
+    """``pair[1]`` applied on top of ``pair[0]``.
+
+    ``severity`` is either one level for both, or a mapping family -> level, which
+    is what the calibrated arms use: matching the two families on their damage
+    instead of on the nominal severity index.
+    """
+    if isinstance(severity, dict):
+        first, second = severity[pair[0]], severity[pair[1]]
+    else:
+        first = second = severity
+    return apply(apply(image, pair[0], first), pair[1], second)
 
 
 def all_pairs(names=NAMES):
@@ -58,3 +67,29 @@ def all_pairs(names=NAMES):
     names = list(names)
     return [(names[i], names[j]) for i in range(len(names))
             for j in range(i + 1, len(names))]
+
+
+# Held out of every training pool for the coverage arms. Chosen to span distinct
+# mechanisms -- weather+noise, blur+photometric, compression+weather,
+# blur+photometric, geometric+pixelation -- so a transfer gain cannot come from
+# one family being easy to cover.
+HELD_OUT = (("gaussian_noise", "fog"), ("defocus_blur", "contrast"),
+            ("jpeg_compression", "snow"), ("motion_blur", "brightness"),
+            ("elastic_transform", "pixelate"))
+
+
+def pool(k, held=HELD_OUT):
+    """First ``k`` pairs of a family-balanced order, excluding the held-out pairs.
+
+    Balanced in the component sense: the greedy order minimises the spread in how
+    often each family has been drawn, so a pool of k pairs is k pairs of *distinct*
+    components wherever k allows it, rather than k-1 pairs around one family.
+    """
+    from maritime_robust.lattice import balanced_order
+
+    excluded = {frozenset(pair) for pair in held}
+    usable = [p for p in all_pairs() if frozenset(p) not in excluded]
+    order = balanced_order(usable)
+    if k > len(order):
+        raise ValueError(f"pool of {k} exceeds the {len(order)} non-held-out pairs")
+    return order[:k]

@@ -101,7 +101,7 @@ def main():
 
     lines = ["# CIFAR-10-C: compound excess over the union baseline", "",
              "`delta = e(a+b) - |E_a u E_b|`, 105 unordered pairs x 5 severities, "
-             "15000 test images per condition. `super` is the accuracy-space "
+             "10000 test images per condition. `super` is the accuracy-space "
              "superadditivity `e(a+b) - e(a) - e(b)` that the compound-corruption "
              "literature reports; the two disagree, and the disagreement is the point.",
              "",
@@ -147,30 +147,26 @@ def main():
         lines.append(f"| {label} | " + " | ".join(f"{means[s]:+.2f}" for s in range(1, 6)) + " |")
 
     # --- which families carry the excess
-    lines += ["", "## By family", "",
-              "Mean delta over the ten compounds each family appears in, per severity.",
-              "", "| family | " + " | ".join(f"s{s}" for s in range(1, 6)) + " | mean |",
-              "|---|" + "---:|" * 6]
     first = next((r for r in arms.values() if r), [])
     families = sorted({r["a"] for r in first} | {r["b"] for r in first})
     for label, rows in arms.items():
-        payload[label]["family"] = {}
-    for family in families:
-        row = [family]
-        entry = {}
-        for s in range(1, 6):
-            vals = [r["delta_pp"] for r in first if r["severity"] == s
-                    and family in (r["a"], r["b"])]
-            entry[str(s)] = float(np.mean(vals)) if vals else float("nan")
-        payload[[k for k in arms][0]]["family"][family] = entry
-        row += [f"{entry[str(s)]:+.1f}" for s in range(1, 6)]
-        row.append(f"{np.mean(list(entry.values())):+.1f}")
-        if len(arms) == 1:
-            lines.append("| " + " | ".join(row) + " |")
-    if len(arms) > 1:
-        lines.append("")
-        lines.append("(per-family table written for the first arm only; the arms share "
-                     "the condition grid)")
+        if not rows:
+            continue
+        table = {}
+        for family in families:
+            table[family] = {
+                str(s): float(np.mean([r["delta_pp"] for r in rows
+                                       if r["severity"] == s and family in (r["a"], r["b"])]))
+                for s in range(1, 6)}
+        payload[label]["family"] = table
+        lines += ["", f"### By family — {label}", "",
+                  "Mean delta over the ten compounds each family appears in, per severity.",
+                  "", "| family | " + " | ".join(f"s{s}" for s in range(1, 6)) + " | mean |",
+                  "|---|" + "---:|" * 6]
+        for family in families:
+            entry = table[family]
+            lines.append(f"| {family} | " + " | ".join(f"{entry[str(s)]:+.1f}" for s in range(1, 6))
+                         + f" | {np.mean(list(entry.values())):+.1f} |")
 
     (PROJECT / args.out).write_text("\n".join(lines) + "\n")
     (PROJECT / args.json).write_text(json.dumps(payload, indent=1, default=float) + "\n")

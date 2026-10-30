@@ -79,6 +79,8 @@ def main():
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--aug", default="clean", choices=["clean", "lattice", "singles"])
     ap.add_argument("--pairs", default="", help="comma-separated a:b pairs; empty means all")
+    ap.add_argument("--pool-k", type=int, default=None,
+                    help="use the first k pairs of the balanced non-held-out pool")
     ap.add_argument("--severity", type=int, default=3)
     ap.add_argument("--corrupt-probability", type=float, default=0.5)
     ap.add_argument("--suffix", default=None)
@@ -94,10 +96,11 @@ def main():
     pairs = []
     if args.aug != "clean":
         pairs = ([tuple(p.split(":")) for p in args.pairs.split(",") if p]
-                 or cifar_c.all_pairs())
+                 or (cifar_c.pool(args.pool_k) if args.pool_k else cifar_c.all_pairs()))
         if args.aug == "singles":
             pairs = [(n, n) for n in cifar_c.NAMES]
-    suffix = args.suffix or (f"_{args.aug}" + (f"_{args.arch}" if args.aug == "clean" else ""))
+    suffix = args.suffix or (f"_{args.aug}" + (f"_{args.arch}" if args.aug == "clean" else "")
+                             + (f"_k{args.pool_k}" if args.pool_k else ""))
     tag = f"cifar10_{args.arch}{suffix}_s{args.seed}"
     out = ROOT / "runs_cifar" / tag
     if (out / "complete.json").exists():
@@ -106,6 +109,7 @@ def main():
 
     settings = {"dataset": "cifar10", "arch": args.arch, "aug": args.aug,
                 "pairs": ["+".join(p) for p in pairs], "severity": args.severity,
+                "held_out": ["+".join(p) for p in cifar_c.HELD_OUT],
                 "corrupt_probability": args.corrupt_probability, "seed": args.seed,
                 "epochs": args.epochs, "batch_size": args.batch_size,
                 "optimizer": {"name": "sgd", "lr": 0.1, "momentum": 0.9,
