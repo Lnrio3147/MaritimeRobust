@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T09:42:48+00:00",
+ "generated_at": "2026-10-30T10:09:22+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "559cd9a6a86153e7bc4fcf4c2e938bcc672250e1",
+  "commit": "60bed4eef27925824b29a2d4556809d43b2546a5",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 653
+  "tracked_files": 665
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -197,6 +197,10 @@
    "sha256": "00f51952c633f8b395af695763918fd955ecdda4ba071c3cc5aa9086d1bc294d",
    "bytes": 7302
   },
+  "scripts/make_figures.py": {
+   "sha256": "95fe9b1c77888c2e9804d694c566eb4f84523f716302bf6617c9da75a1d84bf8",
+   "bytes": 5097
+  },
   "scripts/merge_degradation_labels.py": {
    "sha256": "a7b7e8c10a6a8cebdd30315140817b14190a462ceb1db0a632819e52cf67a995",
    "bytes": 5184
@@ -264,6 +268,14 @@
   "scripts/run_first_round.py": {
    "sha256": "b7e81ae4c1b16dbe86487ab192e3f76d67164c70b415e43ef55ecb0abfbcefc9",
    "bytes": 5706
+  },
+  "scripts/severity_curve.py": {
+   "sha256": "7317af183dec6c598ed87891955ff4a2e6a3c11371b301c14753755e3fd1734e",
+   "bytes": 8223
+  },
+  "scripts/severity_curve_eval.py": {
+   "sha256": "1cd3acf1e9c462cf61a277c50d03c1e433a5e57cd43dca0c1322665dc2b837d4",
+   "bytes": 3715
   },
   "scripts/snapshot.py": {
    "sha256": "d98703e20b8632b6d765ee229e120fefa300c6bc70d4020ac2170362aaccd9ab",
@@ -429,6 +441,10 @@
    "sha256": "65288d41abd09b1706c35eb30289b643618a4fd199c1ee38c0675187e0efc47a",
    "bytes": 7580
   },
+  "reports/PREREG_SEVERITY_2_4.md": {
+   "sha256": "d268022ae044ef17924a90fe7595d68c0a2a169358edc79761a114df400f0839",
+   "bytes": 3558
+  },
   "reports/PROBE_PREREGISTRATION.md": {
    "sha256": "7bcbec6fd5a7ddb551a81719b735fb1fd7b66f6641a2f49fc9edc61e26cc3868",
    "bytes": 7610
@@ -476,6 +492,10 @@
   "reports/S2_CONFIRMATION.md": {
    "sha256": "a4dd3d1f905dc181e785de5648fe124db9249eeb118e21c997a1c1378cc655e7",
    "bytes": 2643
+  },
+  "reports/SEVERITY_CURVE.md": {
+   "sha256": "661ddf90e76235b6cb7b63c2c2f62f3e74e21b6218576a8d7f67be2b99065aa8",
+   "bytes": 3855
   },
   "reports/SOTA_MODEL_SURVEY.md": {
    "sha256": "967558591f9c002ff823082de87b83cef140b9bbcf9dd398b74bc268938196e0",
@@ -701,9 +721,13 @@
    "sha256": "1601b11ee87d179363cb7cb0445d7f2061eca40cba91c80b909d81e634d39d6b",
    "bytes": 9520
   },
+  "reports/severity_curve_results.json": {
+   "sha256": "a1f9e550534de1bd25a2f4f49961aa3a3a513a762cff0839af194de18679ad25",
+   "bytes": 12774
+  },
   "reports/snapshot.json": {
-   "sha256": "96cf529a210b80c324a5253675a2b31c0df122df7874c39a90ada18578fc3868",
-   "bytes": 357401
+   "sha256": "c1cd0396a97a499005ea29de74139ca9d19fff473038f1fd61d9c03da1fefc18",
+   "bytes": 341798
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",

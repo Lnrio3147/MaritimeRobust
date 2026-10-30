@@ -93,8 +93,11 @@ def main():
                     d_cell = 100 * (base - sum(c[cell]) / n)
                     max_single = max(100 * (base - sum(c[f"matched_{k}_{s}"]) / n)
                                      for k in pair for s in SEVERITIES)
+                    d_a = 100 * (base - sum(c[f"matched_{pair[0]}_{sev}"]) / n)
+                    d_b = 100 * (base - sum(c[f"matched_{pair[1]}_{sev}"]) / n)
                     per_run.append({"fold": fold, "seed": seed, "drop_pp": d_cell,
-                                    "max_single_pp": max_single})
+                                    "max_single_pp": max_single,
+                                    "excess_pp": d_cell - d_a - d_b})
                 # per-sample arrays averaged over seeds
                 for i in range(n):
                     ex = 0.0
