@@ -37,3 +37,11 @@ grep -n 'split.*test' scripts/part_occlusion.py scripts/local_recovery.py script
 python -c "import json;print({p:json.load(open(p))['n'] for p in ['reports/part_occlusion.json','reports/local_recovery.json','reports/restoration_probe.json']})"
 grep -rn 'split' scripts/explore_folds.py   # 只取 split=="train"
 ```
+
+2026-10-30 实测：
+
+| 检查 | 结果 |
+|---|---|
+| `scripts/explore_folds.py:36` | `rows = [r for r in read_jsonl(...) if r["split"] == "train"]`，只取 train |
+| `scripts/explore_train.py` 中的 `"test"` | 仅出现在 `L114` 的**泄漏断言**（检查 source_group 是否跨划分重叠），不读取 test 行用于训练或评估 |
+| `scripts/explore_eval.py` | 读 fold 清单的 `split == "val"` 行 |
