@@ -37,8 +37,14 @@ def resolve_augmentation(augmented=False, augmentation=None):
     return augmentation
 
 
-def combined_recipe():
-    recipe=json.loads(COMBINED_RECIPE_PATH.read_text())
+def combined_recipe(path=None):
+    """Validated augmentation recipe; ``path`` overrides the frozen default.
+
+    The override exists for controlled probes that change only the sampling
+    distribution (e.g. specialist upper-bound runs); every run records which
+    file it used and its hash.
+    """
+    recipe=json.loads(Path(path or COMBINED_RECIPE_PATH).read_text())
     mixture=recipe["degraded_mixture"]
     if set(mixture)!= {"single","combined"} or abs(sum(mixture.values())-1)>1e-9:
         raise ValueError("Degraded mixture must sum to one and name single/combined")
@@ -80,12 +86,12 @@ def metrics(y, pred, n):
 
 
 class ShipDataset(Dataset):
-    def __init__(self, rows, train=False, augmented=False, augmentation=None, seed=17, condition=None, restore=False):
+    def __init__(self, rows, train=False, augmented=False, augmentation=None, seed=17, condition=None, restore=False, recipe_path=None):
         self.rows=rows
         self.train=train
         self.augmentation=resolve_augmentation(augmented,augmentation)
         self.augmented=self.augmentation!="clean"
-        self.combined_recipe=combined_recipe() if self.augmentation=="combined" else None
+        self.combined_recipe=combined_recipe(recipe_path) if self.augmentation=="combined" else None
         self.clean_probability=self.combined_recipe["clean_probability"] if self.combined_recipe else .5
         self.seed=seed
         self.epoch=0

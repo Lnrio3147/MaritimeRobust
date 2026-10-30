@@ -1,0 +1,15 @@
+{
+  "version": "1.1-specialist",
+  "clean_probability": 0.5,
+  "degraded_mixture": {
+    "single": 0.0,
+    "combined": 1.0
+  },
+  "single_kinds": ["haze", "cloud", "glare"],
+  "single_severities": [1, 2, 3, 4, 5],
+  "combined_kinds": ["haze+glare", "haze+cloud"],
+  "combined_severities": [5],
+  "domain": "matched",
+  "placement": "random",
+  "note": "Upper-bound probe only (reports/PREREG_SPECIALIST_PROBE.md). Every degraded draw is a severity-5 compound; used to ask whether the severity-5 region is recoverable at all, not as a method candidate."
+}

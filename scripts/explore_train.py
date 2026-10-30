@@ -103,10 +103,14 @@ def main():
     ap.add_argument("--init", default="imagenet1k", choices=("imagenet1k", "timm22k"),
                     help="timm22k = convnext_tiny.fb_in22k_ft_in1k, initialization control only")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--recipe", default=None,
+                    help="augmentation recipe override (default configs/combined_augmentation.json); "
+                         "used only by controlled sampling probes")
     # Budget's phase table is fixed; screening is augmentation work and fits
     # inside the existing augmentation allowance (24 h).
     ap.add_argument("--phase", default="augmentation")
     args = ap.parse_args()
+    recipe = (ROOT / args.recipe) if args.recipe else None
 
     manifest = PROJECT / f"data/manifests/folds/fgsc23_civ8_fold{args.fold}.jsonl"
     config = json.loads((ROOT / "configs/protocol.json").read_text())
@@ -144,8 +148,9 @@ def main():
         "val_n": len(val_rows), "scope": rows[0]["scope"], "protocol": rows[0]["protocol"],
         "config_sha256": digest(ROOT / "configs/protocol.json"),
         "recipe_sha256": digest(ROOT / "configs/degradations.json"),
-        "combined_recipe": combined_recipe(),
-        "combined_recipe_sha256": digest(ROOT / "configs/combined_augmentation.json"),
+        "combined_recipe": combined_recipe(recipe),
+        "combined_recipe_sha256": digest(Path(recipe) if recipe else
+                                         ROOT / "configs/combined_augmentation.json"),
         "lambda_consistency": args.lambda_consistency if args.method == "t1" else None,
         "environment": environment(), "smoke_only": bool(args.limit),
     }
@@ -173,9 +178,11 @@ def main():
             ds = PairDataset(train_rows, seed=args.seed)
         elif args.method in ("t2", "t3", "m1"):
             ds = AugDataset(train_rows, seed=args.seed, curriculum=args.method == "t3",
-                            total_epochs=args.epochs, with_mask=args.method == "m1")
+                            total_epochs=args.epochs, with_mask=args.method == "m1",
+                            recipe_path=recipe)
         else:
-            ds = ShipDataset(train_rows, train=True, augmentation="combined", seed=args.seed)
+            ds = ShipDataset(train_rows, train=True, augmentation="combined", seed=args.seed,
+                             recipe_path=recipe)
         val_ds = MaskedClean(val_rows) if args.method == "m1" else ShipDataset(val_rows)
         # T2: group DRO weights over the six degradation groups
         q = torch.full((len(KINDS),), 1.0 / len(KINDS), device="cuda")

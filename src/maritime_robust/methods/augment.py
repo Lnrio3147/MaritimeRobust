@@ -52,14 +52,15 @@ class MaskedClean(Dataset):
 
 
 class AugDataset(Dataset):
-    def __init__(self, rows, seed=17, curriculum=False, total_epochs=40, with_mask=False):
+    def __init__(self, rows, seed=17, curriculum=False, total_epochs=40, with_mask=False,
+                 recipe_path=None):
         self.rows = rows
         self.seed = seed
         self.epoch = 0
         self.curriculum = curriculum
         self.with_mask = with_mask
         self.total_epochs = total_epochs
-        self.recipe = combined_recipe()
+        self.recipe = combined_recipe(recipe_path)
         self.clean_probability = self.recipe["clean_probability"]
 
     def __len__(self):
