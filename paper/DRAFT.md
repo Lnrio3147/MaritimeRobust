@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Maritime images are rarely degraded by one factor at a time: haze, cloud cover and sun glare co-occur, and operational recognition systems meet them in combination. Existing maritime robustness studies nonetheless vary one degradation at a time. We introduce a paired evaluation protocol for compound degradations and apply it to fine-grained ship-type recognition on FGSC-23 (eight civilian classes). The protocol fixes the preprocessing pipeline, derives the corruption instance for every image from a deterministic function of the image identity, and evaluates all conditions per image, so that any two models — or any two conditions — can be differenced without confounding. Using four backbone families we find that compound conditions produce accuracy drops of up to 43 percentage points and that these drops are not a linear function of the single-factor drops. Studying the severity axis with a pre-registered four-point design, we locate the phenomenon precisely: at severities 2–4 the observed compound drop is statistically indistinguishable from the additive prediction (all confidence intervals cover zero), whereas at severity 5 the compound drop exceeds the additive prediction by **+11.3 pp (95% CI [+7.2, +15.3], BH q < 0.001)** and exceeds the largest drop any single degradation produces in **6 of 6** runs. Per-image analysis shows these are not merely harder instances of the same errors: **41.5%** of the errors made under the severe compound condition are made by no single degradation at any severity. Finally, we report a pre-registered negative result: seven single-point interventions — input conditioning, Retinex preprocessing, multi-scale fusion, feature denoising, consistency training, group DRO and curriculum training — plus an ImageNet-22K initialization control, none improves on a strong combined-augmentation baseline after full training. We analyse why, and we report one methodological artefact that matters beyond this task: a +1.66 pp gain measured at a 24-epoch screening budget disappears (−0.18 pp) when the same candidate is trained to 40 epochs. We release the protocol, the paired evaluation harness, all checkpoints and a hash manifest that reproduces the published numbers bit-exactly.
+Maritime images are rarely degraded by one factor at a time: haze, cloud cover and sun glare co-occur, and operational recognition systems meet them in combination. Existing maritime robustness studies nonetheless vary one degradation at a time. We introduce a paired evaluation protocol for compound degradations and apply it to fine-grained ship-type recognition on FGSC-23 (eight civilian classes). The protocol fixes the preprocessing pipeline, derives the corruption instance for every image from a deterministic function of the image identity, and evaluates all conditions per image, so that any two models — or any two conditions — can be differenced without confounding. Using four backbone families we find that compound conditions produce accuracy drops of up to 43 percentage points and that these drops are not a linear function of the single-factor drops. Studying the severity axis with a pre-registered four-point design, we locate the phenomenon precisely: at severities 2–4 the observed compound drop is statistically indistinguishable from the additive prediction (all confidence intervals cover zero), whereas at severity 5 the compound drop exceeds the additive prediction by **+11.3 pp (95% CI [+7.2, +15.3], BH q < 0.001)** and exceeds the largest drop any single degradation produces in **6 of 6** runs. Per-image analysis shows these are not merely harder instances of the same errors: **41.5%** of the errors made under the severe compound condition are made by no single degradation at any severity — within the three families, five severities and two domains tested, at the same model and seed. Pixel statistics explain much of the severity-5 drop at the condition level (saturation and contrast, R² = 0.80) but only weakly per image (r = 0.13, 0.26); the two tests derived from that reading both fail to support it as the mechanism: a soft-shoulder re-render removes about a third of the excess-over-additive, and a clipped-pixel mask input yields no accuracy gain. Finally, we report a pre-registered negative result: seven single-point interventions — input conditioning, Retinex preprocessing, multi-scale fusion, feature denoising, consistency training, group DRO and curriculum training — plus an ImageNet-22K initialization control, none improves on a strong combined-augmentation baseline after full training. We analyse why, and we report one methodological artefact that matters beyond this task: a +1.66 pp gain measured at a 24-epoch screening budget disappears (−0.18 pp) when the same candidate is trained to 40 epochs. We release the protocol, the paired evaluation harness, all checkpoints and a hash manifest that reproduces the published numbers bit-exactly.
 
 **Keywords:** maritime computer vision; ship classification; robustness evaluation; compound degradations; superadditivity; negative results
 
@@ -59,7 +59,7 @@ Answering it required three design decisions that turned out to matter more than
 
 **Inference.** Cluster bootstrap over `source_group_id`, 2000–4000 resamples, with the two seeds of an image kept in the same cluster. Multiplicity controlled by Benjamini–Hochberg where a family of tests is reported. All gains are computed per image, same fold, same seed, same corruption instance.
 
-**Total cost.** 126 training runs, ≈3.3 GPU-hours on a single RTX 4090.
+**Total cost.** 128 training runs, ≈3.3 GPU-hours on a single RTX 4090.
 
 ---
 
@@ -83,7 +83,7 @@ We define superadditivity in accuracy space as
 
 E(s) = [acc(clean) − acc(a+b, s)] − {[acc(clean) − acc(a, s)] + [acc(clean) − acc(b, s)]},
 
-so that E(s) is the share of the compound drop not explained by the two marginal drops. Because a reviewer can reasonably object that any such measure is an artefact of the metric, we report it in accuracy space (the margin-space version appears in the appendix and agrees in sign).
+so that E(s) is the share of the compound drop not explained by the two marginal drops. The additive baseline is the sum of those two marginals, each measured on the same images, same model, same seed, at the same severity, in the same domain as the compound; E(s) is what the sum leaves unexplained. Because a reviewer can reasonably object that any such measure is an artefact of the metric, we report it in accuracy space (the margin-space version appears in the appendix and agrees in sign).
 
 ![Severity curve](figures/fig1_severity_curve.png)
 
@@ -124,13 +124,23 @@ For each compound condition we ask, per image and per seed: is this image miscla
 
 Error counts are per (fold, seed) evaluation, summed over the six runs; they share images across seeds and are descriptive, not independent observations. For the severity-3 and severity-5 conditions we additionally compute the overlap with the strongest single condition: 73.4% and 44.4% respectively for haze+glare (`reports/COMPOUND_ANALYSIS.md`).
 
-At severity 5, four in ten compound errors are errors that no single degradation produces on that image — not even the strongest one, not at any severity. The phenomenon cannot be explained by saying the compound is simply more severe: there is no single degradation of comparable severity to compare against, since the compound drop (25.7 pp) exceeds the largest single drop (11.3 pp) in all six runs.
+At severity 5, four in ten compound errors are errors that no single degradation produces on that image — not even the strongest one, not at any severity. **Scope of that statement:** it is bounded by the comparison set actually run — three degradation families × five severities × two domains, the same model, the same seed, the same image. It does not claim that no conceivable single degradation could produce them; an untested family, an intermediate severity or a different corruption implementation lies outside the comparison. The phenomenon cannot be explained by saying the compound is simply more severe: there is no single degradation of comparable severity to compare against, since the compound drop (25.7 pp) exceeds the largest single drop (11.3 pp) in all six runs.
 
 This is a behavioural analysis, not a mechanistic one. It does not say *why* the combination produces new errors; candidate mechanisms — feature loss at the transition between two degradation fields, attention displacement by the glare point source under haze, class-boundary motion — are untested.
 
 ### 4.5 Clean accuracy does not rank models under compound degradation
 
 Two observations in the intervention study (§5) point the same way. The curriculum candidate achieved the highest clean accuracy of any candidate (85.1%) and the worst compound accuracy (67.3%). The ImageNet-22K initialization improved clean accuracy by +0.73 pp while reducing compound accuracy by −0.71 pp. Neither result is significant on its own, but together they caution against selecting models by clean validation accuracy when deployment is under weather.
+
+### 4.6 Where the excess comes from: two probes and their limits
+
+The first probe measures the degradation pipeline itself, not the model. Over the 23 `matched` conditions (three single families × five severities, two compounds × four severities), haze+glare at severity 5 saturates 60.2% of pixels (any channel ≥ 0.99) against 38% for the most saturated single condition (glare_5), and is the only condition that combines high saturation with low contrast (luminance s.d. 0.094). Fitting the condition-level drop as a two-parameter function of saturation fraction and contrast over those 23 conditions gives **R² = 0.80** (coefficients +30.7 / −16.7 pp); adding an interaction term raises it only to 0.814. Two boundaries apply. It is a **condition-level** relation: at the per-image level the correlation between an image's saturation fraction and its being misclassified is only 0.13 and 0.26 (two seeds). And it is incomplete: haze+cloud at severity 5 saturates nothing, still exceeds the additive prediction, and is the largest residual of the fit (≈6 pp).
+
+The second probe asks whether hard highlight clipping — the mechanism the first probe points at — is what produces the excess. Everything is recomposed as `corrupt()` does, except that the highlight is rolled off softly above 0.7 instead of clipped at 1.0, and the marginal drops used in the additive prediction are measured in the same re-rendered world. Under clipping the excess at haze+glare_5 is +9.7 pp, under the soft shoulder +6.3 pp (saturation 60.2% → 40.7%). Roughly a third of the excess is attributable to hard clipping; the rest survives without it. This is a single fold and seed on the baseline arm, so it is a directional result, not an estimate.
+
+The third test turns the same reading into a model change and fails: a fourth input channel marking pixels clipped in any channel (zero-initialised mask stem, censored-evidence pooling, +1536 parameters), trained on exactly the baseline recipe and scored on the same 43 paired conditions with per-image McNemar, moves compound accuracy by +0.61 pp (p = 0.43, seed 17) and +0.97 pp (p = 0.27, seed 29), costs single-degradation accuracy (−0.47 pp, p = 0.046; −0.29 pp, p = 0.41), and changes sign between seeds on the worst compound condition (−1.9 / +5.8 pp). Telling the network which pixels are censored does not help it.
+
+Together the three probes support one statement only: saturation and contrast are a good description of the severity-5 drop **at the level of conditions**, and a poor one of which images fail. We do not claim a mechanism for the new errors.
 
 ---
 
@@ -178,9 +188,10 @@ On 157 FGSC-23 validation images annotated for the presence of real degradation 
 ### 7.2 What it does not support
 
 - **No performance ceiling.** Frequency-domain methods were not tested; deeper backbones, larger data and multi-factor interventions were not tested. We tested seven single-point changes and found no gain; that is all.
-- **No mechanism.** The novelty analysis is behavioural. The mechanism behind new errors is unknown.
+- **No mechanism.** The novelty analysis is behavioural. The saturation/contrast fit of §4.6 is a condition-level association (R² = 0.80) with weak per-image correlation (r = 0.13, 0.26) and is not evidence of per-image causation. Both mechanism tests derived from it are negative or partial: removing hard clipping removes about a third of the excess, and a clipped-pixel mask gives no gain. The mechanism behind new errors is unknown.
+- **No established threshold.** "Threshold" is an inference from four severity levels, not a localised boundary. E is indistinguishable from its additive prediction at 2, 3 and 4 and large at 5, but with no point at 4.5 the crossover is only bounded to (4, 5); our own pre-registered monotonicity prediction failed (2 of 6 runs). The supported claim is the descriptive one, not a law of the severity axis.
 - **No generalization to real weather.** §6 is observational with insufficient heavy-degradation samples.
-- **No monotone severity law.** Our own pre-registered prediction of monotonicity failed; the supported claim is the threshold at severity 5.
+- **No monotone severity law.** Our own pre-registered prediction of monotonicity failed (P1, 2/6); the supported claim is the severity-5 jump.
 
 ### 7.3 Data disclosure
 
@@ -188,7 +199,7 @@ The 236 images in FGSC-23's `test` split were used by three diagnostic analyses 
 
 ### 7.4 Threats to validity
 
-Single dataset; 618 training images; one corruption implementation per family; two seeds; a five-level severity scale with no point between 4 and 5. The cluster bootstrap accounts for the two seeds per image but not for multiplicity across the full condition grid.
+Single dataset; 618 training images; one corruption implementation per family; two seeds; a five-level severity scale with no point between 4 and 5. The cluster bootstrap accounts for the two seeds per image but not for multiplicity across the full condition grid. The pixel-statistics probe is condition-level and the HDR re-render probe is one fold and one seed, so neither carries an interval. No result here is on an unseen test set (§7.3).
 
 ---
 
@@ -200,7 +211,7 @@ Compound weather degradations do something to maritime ship classifiers that sin
 
 ## Appendix A. Reproduction
 
-Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (138 runs, code, configs, splits, reports). A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`.
+Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (140 runs, code, configs, splits, reports). The probes of §4.6 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`.
 
 ## Appendix B. Margin-space superadditivity
 

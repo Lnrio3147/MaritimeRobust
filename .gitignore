@@ -24,3 +24,6 @@ modules/
 # visual review scratch (images duplicated from data/)
 reviews/
 __pycache__/
+
+# External experiment outputs
+/runs_external/

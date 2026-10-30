@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T10:09:22+00:00",
+ "generated_at": "2026-10-30T12:00:32+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "60bed4eef27925824b29a2d4556809d43b2546a5",
+  "commit": "70127a3118ebffaa59643bcd6cfb330cb025f41c",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 665
+  "tracked_files": 693
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -34,12 +34,12 @@
    "bytes": 20010
   },
   "src/maritime_robust/methods/__init__.py": {
-   "sha256": "0b6291ec2594e6ad8b5d3524dbe7e976c3e261d048f65f8fa0476df19f9397d1",
-   "bytes": 6823
+   "sha256": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
+   "bytes": 8539
   },
   "src/maritime_robust/methods/augment.py": {
-   "sha256": "f7f875f012535d8e76b33903b440e02ef54261dcde77b5f1fd3ae12af3d81b4a",
-   "bytes": 4127
+   "sha256": "971f18ee7b9ec54161edcfe3eca37d5549c4f2b66edf9668fb56c83d62118650",
+   "bytes": 5265
   },
   "src/maritime_robust/prepare.py": {
    "sha256": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
@@ -162,8 +162,8 @@
    "bytes": 3973
   },
   "scripts/explore_train.py": {
-   "sha256": "d07b0fa14cd47353a7d10ffb902bc23ad59b13a5a291ae1645dec99720c9d561",
-   "bytes": 12849
+   "sha256": "ce36636ba5c428c7ba49b28ce5bbbdd2479198a3b2a4b3b90539c8a6638be4f1",
+   "bytes": 12985
   },
   "scripts/failure_analysis.py": {
    "sha256": "d6ade32ef164c89374a58985b9986bf8562bfd3147e6f4eb45f32129eee8bd57",
@@ -189,6 +189,10 @@
    "sha256": "83f4e7a816e3806934c19113723342312c578162c49b60d40640542faaa9b3c5",
    "bytes": 7551
   },
+  "scripts/hdr_render_probe.py": {
+   "sha256": "8e83eb48be5e210937e01ce57c537725af08339f88651e43348f1cee4e653c88",
+   "bytes": 6125
+  },
   "scripts/joint_report.py": {
    "sha256": "94b772e6f61187b23231deba3427c10e9b1218adbebaf3a09bba45d992f37064",
    "bytes": 12684
@@ -196,6 +200,10 @@
   "scripts/local_recovery.py": {
    "sha256": "00f51952c633f8b395af695763918fd955ecdda4ba071c3cc5aa9086d1bc294d",
    "bytes": 7302
+  },
+  "scripts/m1_eval.py": {
+   "sha256": "541f9b358af86e6266f7b807568cc6d670cc720d44134e03cd3862113e2ffce1",
+   "bytes": 7207
   },
   "scripts/make_figures.py": {
    "sha256": "95fe9b1c77888c2e9804d694c566eb4f84523f716302bf6617c9da75a1d84bf8",
@@ -268,6 +276,10 @@
   "scripts/run_first_round.py": {
    "sha256": "b7e81ae4c1b16dbe86487ab192e3f76d67164c70b415e43ef55ecb0abfbcefc9",
    "bytes": 5706
+  },
+  "scripts/saturation_probe.py": {
+   "sha256": "179b126e66caf1efefb10d9574030ed8f94509415c386b06fcf0f449d84ec1dc",
+   "bytes": 2699
   },
   "scripts/severity_curve.py": {
    "sha256": "7317af183dec6c598ed87891955ff4a2e6a3c11371b301c14753755e3fd1734e",
@@ -425,6 +437,10 @@
    "sha256": "7c44ea1bffd10b54b514bc6f864b7c6686b136e50713d7206b5bd39b411d6d0f",
    "bytes": 10516
   },
+  "reports/M1_KILL_TEST.md": {
+   "sha256": "ce57398e1bb9adc06d1211f3633179c72d778de51c52b9498cb0ea2a23e3d493",
+   "bytes": 3883
+  },
   "reports/NEXT_PHASE_PLAN.md": {
    "sha256": "b76543932d3fdf5b4ba172e46c81e8cfdd21417df4a2cbd9713fad40414e17f8",
    "bytes": 8334
@@ -492,6 +508,10 @@
   "reports/S2_CONFIRMATION.md": {
    "sha256": "a4dd3d1f905dc181e785de5648fe124db9249eeb118e21c997a1c1378cc655e7",
    "bytes": 2643
+  },
+  "reports/SATURATION_PROBE.md": {
+   "sha256": "6a3e1b2623a5d0998b62d7f865a6ff1155584851d64a520077742ece08b70da2",
+   "bytes": 2673
   },
   "reports/SEVERITY_CURVE.md": {
    "sha256": "661ddf90e76235b6cb7b63c2c2f62f3e74e21b6218576a8d7f67be2b99065aa8",
@@ -649,6 +669,10 @@
    "sha256": "24f9e4786fe5478128f8cc9913129c2965df77a1296b4352475877c6d2cf978f",
    "bytes": 6706
   },
+  "reports/hdr_render_probe.json": {
+   "sha256": "6ddca6bcb86ee9d5e0ac5febc189636734bf06200d98bdbdacd28942be76c424",
+   "bytes": 4618
+  },
   "reports/joint_round1.json": {
    "sha256": "26851a89de12560589152a048956aaf274fd0a1653900176814865d859319f8a",
    "bytes": 19385
@@ -656,6 +680,14 @@
   "reports/local_recovery.json": {
    "sha256": "8c8bf20fbbfeb63b1f78b112020df326cd063425421adbd4aca799e539efdc9d",
    "bytes": 55139
+  },
+  "reports/m1_eval_s17.json": {
+   "sha256": "22dd2712d35411574b096a88040c63698385fc672300622b6374a51c73bea204",
+   "bytes": 14529
+  },
+  "reports/m1_eval_s29.json": {
+   "sha256": "b05473fd9bf67b1ee7d0ed34b30b50cb756ee9f3a17cadad53a204a5de6e4bd2",
+   "bytes": 14475
   },
   "reports/paired_augmentation_changes.json": {
    "sha256": "921e8c6f47a3ae1d7ec327374cf30c29d5e56a0c5dcb648b406967592f3ae5b7",
@@ -721,13 +753,17 @@
    "sha256": "1601b11ee87d179363cb7cb0445d7f2061eca40cba91c80b909d81e634d39d6b",
    "bytes": 9520
   },
+  "reports/saturation_probe.json": {
+   "sha256": "f3183826cbf2cd5ecbc6f73405a2a75ba3b649bf8d1f858e83d24e0f06335544",
+   "bytes": 4226
+  },
   "reports/severity_curve_results.json": {
    "sha256": "a1f9e550534de1bd25a2f4f49961aa3a3a513a762cff0839af194de18679ad25",
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "c1cd0396a97a499005ea29de74139ca9d19fff473038f1fd61d9c03da1fefc18",
-   "bytes": 341798
+   "sha256": "83f5fe98e540f0f5075fd673800777fa7c6a28d311e06bddee3a0d1e13f0319e",
+   "bytes": 342633
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",
@@ -1137,7 +1173,7 @@
   }
  },
  "weights_verified": false,
- "run_count": 138,
+ "run_count": 140,
  "runs": [
   {
    "run": "runs/fgsc23_civ8_fold0/convnext_tiny_combo_s17",
@@ -1491,6 +1527,110 @@
     },
     "best.pt": {
      "bytes": 111375488,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_m1_e40_s17",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 17,
+   "model": "convnext_tiny",
+   "declared_method": "m1",
+   "seed": 17,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8754628125686321,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/methods/__init__.py": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
+    "src/maritime_robust/methods/augment.py": "971f18ee7b9ec54161edcfe3eca37d5549c4f2b66edf9668fb56c83d62118650",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27827816,
+   "training_wall_seconds": 62.11267462698743,
+   "peak_cuda_allocated_bytes": 2431261696,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "217491667b940396576b1ecff07f5c8ce7cfd69d467f7ba7ea8a37f89c53ba8f",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3313
+    },
+    "config.json": {
+     "bytes": 3024
+    },
+    "history.json": {
+     "bytes": 10118
+    },
+    "best.pt": {
+     "bytes": 111381632,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs/fgsc23_civ8_fold0/convnext_tiny_m1_e40_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": "convnext_tiny",
+   "declared_method": "m1",
+   "seed": 29,
+   "epochs": 40,
+   "train_n": 412,
+   "val_n": 206,
+   "best_val_macro_f1": 0.8459247172502504,
+   "manifest_sha256": "4cdfb4c94c466cada612f2bb279a3e62c39f599b63a03d36064b4da796ac49bc",
+   "config_sha256": "bf4cf2c030bd6ead823242c7ea8944c236adf00a06cb5f9a1f5a7f9fef681204",
+   "recipe_sha256": "c029c70080d08ec9c0f763c2ada68a6ba4e43148f5ad326de7bbd809c886e718",
+   "combined_recipe_sha256": "c3a5b4db7cb5d811a0b8012f10a4d534bac26b46d174f571bc98a8f6a37c00ba",
+   "source_sha256": {
+    "src/maritime_robust/__init__.py": "d9f2ff27da5098bc2cabc9ac01eaf10aa5c77fbbd6b9b821193360a43b14ffd8",
+    "src/maritime_robust/cli.py": "57c0001abff32c7c5de4789c2fa10ad0a2ad8f0bdf400456cc183b0e9e56d27e",
+    "src/maritime_robust/common.py": "2bb620bb3bdba3132bd2a8178d5a41594feed7a0a72810303a5326b64dd9851a",
+    "src/maritime_robust/degradations.py": "f29b4e4a750140a258d0d8ee6fa2325ba912cd211b6a6956207357dbbe2a02e3",
+    "src/maritime_robust/depth_fog.py": "37049cafd0ca02f28ad40085545d773bccf322f750d0ca1b9a26aaf6a4a841a0",
+    "src/maritime_robust/engine.py": "ba7184822088b4d0922d62286aac18e0b7a157a8096a1de39b18168bc34bb616",
+    "src/maritime_robust/methods/__init__.py": "1fe132a1de5e919ff98fb80a0f608b957f32c4acc5777167369cd4a28f9e8e72",
+    "src/maritime_robust/methods/augment.py": "971f18ee7b9ec54161edcfe3eca37d5549c4f2b66edf9668fb56c83d62118650",
+    "src/maritime_robust/prepare.py": "23f0854eedf79f4626da6b468373929b2621773b070ac967370d6ad00351c61e",
+    "src/maritime_robust/report.py": "b41f729edfd911c56a69129ba52ef7a35b4704233f71e171527040605a1db1f8"
+   },
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": 27827816,
+   "training_wall_seconds": 67.57768016401678,
+   "peak_cuda_allocated_bytes": 2430655488,
+   "smoke_only": false,
+   "recorded_checkpoint_sha256": "68a202dc6fcbdc753ba620bb1cf1c2e1c9c62808f7aaeeb387e5ab295dc0becf",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 3313
+    },
+    "config.json": {
+     "bytes": 3024
+    },
+    "history.json": {
+     "bytes": 10117
+    },
+    "best.pt": {
+     "bytes": 111381632,
      "exists": true
     }
    }
