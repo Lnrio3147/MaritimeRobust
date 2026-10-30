@@ -1,0 +1,223 @@
+{
+  "prereg": "reports/PREREG_PHYSICAL_RENDERER.md",
+  "per_seed": {
+    "17": {
+      "P1_cliff_survives": {
+        "E5_pp": 14.563106796116509,
+        "threshold_pp": 5.0,
+        "pass": true
+      },
+      "P2_low_severity_additive": {
+        "E_pp": {
+          "2": -0.4854368932038833,
+          "3": 0.9708737864077666,
+          "4": 9.708737864077676
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      },
+      "P3_severity_matching": {
+        "per_severity": {
+          "2": {
+            "saturation_delta": 1.5741874704391923e-06,
+            "transmission_delta": 2.4246938012950636e-08
+          },
+          "3": {
+            "saturation_delta": 1.7698960369239014e-06,
+            "transmission_delta": 2.5982995643936135e-08
+          },
+          "4": {
+            "saturation_delta": 5.1480232445277885e-06,
+            "transmission_delta": 1.038741143100097e-08
+          },
+          "5": {
+            "saturation_delta": 0.008320461813725033,
+            "transmission_delta": 1.540751132234064e-08
+          }
+        },
+        "pass": true
+      },
+      "P4_depth_ablation": {
+        "per_severity": {
+          "3": {
+            "E_uniform_pp": 3.8834951456310662,
+            "E_depth_pp": 0.9708737864077666,
+            "delta_pp": -2.9126213592232997
+          },
+          "5": {
+            "E_uniform_pp": 12.621359223300976,
+            "E_depth_pp": 14.563106796116509,
+            "delta_pp": 1.9417475728155331
+          }
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      }
+    },
+    "29": {
+      "P1_cliff_survives": {
+        "E5_pp": 21.844660194174764,
+        "threshold_pp": 5.0,
+        "pass": true
+      },
+      "P2_low_severity_additive": {
+        "E_pp": {
+          "2": 0.0,
+          "3": 2.9126213592232997,
+          "4": 4.3689320388349495
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      },
+      "P3_severity_matching": {
+        "per_severity": {
+          "2": {
+            "saturation_delta": 1.5741874704391923e-06,
+            "transmission_delta": 2.4246938012950636e-08
+          },
+          "3": {
+            "saturation_delta": 1.7698960369239014e-06,
+            "transmission_delta": 2.5982995643936135e-08
+          },
+          "4": {
+            "saturation_delta": 5.1480232445277885e-06,
+            "transmission_delta": 1.038741143100097e-08
+          },
+          "5": {
+            "saturation_delta": 0.008320461813725033,
+            "transmission_delta": 1.540751132234064e-08
+          }
+        },
+        "pass": true
+      },
+      "P4_depth_ablation": {
+        "per_severity": {
+          "3": {
+            "E_uniform_pp": 5.339805825242716,
+            "E_depth_pp": 2.9126213592232997,
+            "delta_pp": -2.4271844660194164
+          },
+          "5": {
+            "E_uniform_pp": 15.533980582524276,
+            "E_depth_pp": 21.844660194174764,
+            "delta_pp": 6.310679611650489
+          }
+        },
+        "threshold_pp": 3.0,
+        "pass": true
+      }
+    }
+  },
+  "stage2_per_seed": {
+    "17": {
+      "P1_cliff_survives": {
+        "E5_pp": 10.19417475728156,
+        "threshold_pp": 5.0,
+        "pass": true
+      },
+      "P2_low_severity_additive": {
+        "E_pp": {
+          "2": 1.4563106796116498,
+          "3": -2.9126213592232997,
+          "4": 8.252427184466015
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      },
+      "P3_severity_matching": {
+        "per_severity": {
+          "2": {
+            "saturation_delta": 1.5741874704391923e-06,
+            "transmission_delta": 2.4246938012950636e-08
+          },
+          "3": {
+            "saturation_delta": 1.7698960369239014e-06,
+            "transmission_delta": 2.5982995643936135e-08
+          },
+          "4": {
+            "saturation_delta": 5.1480232445277885e-06,
+            "transmission_delta": 1.038741143100097e-08
+          },
+          "5": {
+            "saturation_delta": 0.008320461813725033,
+            "transmission_delta": 1.540751132234064e-08
+          }
+        },
+        "pass": true
+      },
+      "P4_depth_ablation": {
+        "per_severity": {
+          "3": {
+            "E_uniform_pp": -0.9708737864077666,
+            "E_depth_pp": -2.9126213592232997,
+            "delta_pp": -1.9417475728155331
+          },
+          "5": {
+            "E_uniform_pp": 10.679611650485443,
+            "E_depth_pp": 10.19417475728156,
+            "delta_pp": -0.4854368932038824
+          }
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      }
+    },
+    "29": {
+      "P1_cliff_survives": {
+        "E5_pp": 16.019417475728158,
+        "threshold_pp": 5.0,
+        "pass": true
+      },
+      "P2_low_severity_additive": {
+        "E_pp": {
+          "2": 0.9708737864077666,
+          "3": 4.3689320388349495,
+          "4": 7.7669902912621325
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      },
+      "P3_severity_matching": {
+        "per_severity": {
+          "2": {
+            "saturation_delta": 1.5741874704391923e-06,
+            "transmission_delta": 2.4246938012950636e-08
+          },
+          "3": {
+            "saturation_delta": 1.7698960369239014e-06,
+            "transmission_delta": 2.5982995643936135e-08
+          },
+          "4": {
+            "saturation_delta": 5.1480232445277885e-06,
+            "transmission_delta": 1.038741143100097e-08
+          },
+          "5": {
+            "saturation_delta": 0.008320461813725033,
+            "transmission_delta": 1.540751132234064e-08
+          }
+        },
+        "pass": true
+      },
+      "P4_depth_ablation": {
+        "per_severity": {
+          "3": {
+            "E_uniform_pp": 1.4563106796116498,
+            "E_depth_pp": 4.3689320388349495,
+            "delta_pp": 2.9126213592232997
+          },
+          "5": {
+            "E_uniform_pp": 13.592233009708742,
+            "E_depth_pp": 16.019417475728158,
+            "delta_pp": 2.4271844660194155
+          }
+        },
+        "threshold_pp": 3.0,
+        "pass": false
+      }
+    }
+  },
+  "stage2_superadditive": true,
+  "stage2_decision": "superadditivity at s=5 survives independent rendering and matched training",
+  "stage1_admitted": false,
+  "decision": "Stage 2 (retrain with the physical renderer) is mandatory before any conclusion about renderer dependence"
+}

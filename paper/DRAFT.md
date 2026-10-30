@@ -29,7 +29,7 @@ Answering it required three design decisions that turned out to matter more than
 **Contributions.**
 
 - A paired protocol for compound-degradation evaluation in maritime recognition, with a strong combined-augmentation baseline, group-disjoint folds and cluster bootstrap inference (§3).
-- Evidence that the effect of compound degradation is **not** separable into its constituents, and that this non-separability is a **threshold phenomenon confined to the highest severity** rather than a smooth gradient (§4.3) — including one pre-registered prediction that failed.
+- Evidence that the effect of compound degradation is **not** separable into its constituents, and that under the shipped renderer this non-separability appears as a **threshold confined to the highest severity** rather than a smooth gradient (§4.3) — including one pre-registered prediction that failed. A second, physically-motivated renderer, applied both to a frozen model and to models retrained under it, reproduces the severity-5 excess (10.2 / 16.0 pp against 9.7 / 12.6 pp) but produces it from severity 4 upwards: the excess is not an artefact of one rendering, while the *onset severity* is (§7.4).
 - Evidence that compound failures are qualitatively new: 41.5% of severe-compound errors occur on images that every single degradation leaves correct (§4.4).
 - A pre-registered negative result on eight interventions, and a documented case in which a limited training budget manufactures a gain (§5).
 
@@ -59,7 +59,7 @@ Answering it required three design decisions that turned out to matter more than
 
 **Inference.** Cluster bootstrap over `source_group_id`, 2000–4000 resamples, with the two seeds of an image kept in the same cluster. Multiplicity controlled by Benjamini–Hochberg where a family of tests is reported. All gains are computed per image, same fold, same seed, same corruption instance.
 
-**Total cost.** 128 training runs, ≈3.3 GPU-hours on a single RTX 4090.
+**Total cost.** 130 training runs, ≈3.4 GPU-hours on a single RTX 4090.
 
 ---
 
@@ -106,6 +106,8 @@ We pre-registered four predictions before running severities 2 and 4. Two are co
 - P1 (E increases monotonically with severity in at least five of six runs): **failed — 2/6**. The pooled mean is ordered, but the run-to-run noise (−3.4 to +4.9 pp at severities 2–4) exceeds the difference between adjacent severities.
 
 We report P1's failure rather than redefining the test, because it changes the claim: the data do not support "superadditivity grows with severity". They support a sharper statement: **at severities 2–4 the compound effect is additive, and at severity 5 it is not.** In all six runs, E(5) exceeds every E(s ≤ 4) of the same run. With no point at severity 4.5, the crossover lies between 4 and 5 and cannot be localised further.
+
+This statement is scoped to one rendering. Under an independent, physically-motivated renderer with severity matched on transmission and saturated-pixel fraction, the severity-5 excess is preserved (+14.6 / +21.8 pp on the frozen baseline, +10.2 / +16.0 pp after retraining under that renderer) but E first becomes large at severity 4 (+4.4 … +9.7 pp). What survives is the excess and its growth with severity; the location of the onset is a property of the renderer (§7.4, `reports/PHYSICAL_RENDERER.md`).
 
 ### 4.4 Compound failures are new failures
 
@@ -189,7 +191,7 @@ On 157 FGSC-23 validation images annotated for the presence of real degradation 
 
 - **No performance ceiling.** Frequency-domain methods were not tested; deeper backbones, larger data and multi-factor interventions were not tested. We tested seven single-point changes and found no gain; that is all.
 - **No mechanism.** The novelty analysis is behavioural. The saturation/contrast fit of §4.6 is a condition-level association (R² = 0.80) with weak per-image correlation (r = 0.13, 0.26) and is not evidence of per-image causation. Both mechanism tests derived from it are negative or partial: removing hard clipping removes about a third of the excess, and a clipped-pixel mask gives no gain. A per-image drift signal does predict failure (AUC 0.78–0.82), but using it as a training weight fails in both directions (α = +1: −1.29 and +0.16 pp on the six moderate-severity compound conditions; α = −1: +0.65 and +2.99 pp, with the larger gain spread across clean and single degradations rather than compound ones). The diagnostic also does not survive deployment: with the clean reference removed, a test-time cosine distance to the nearest clean class centroid detects errors less well than prediction entropy in all six fold-seed units (−0.020 and −0.034 AUROC on the compound groups). The drift signal is paired by construction, and nothing unpaired reconstructs it. The mechanism behind new errors is unknown.
-- **No established threshold.** "Threshold" is an inference from four severity levels, not a localised boundary. E is indistinguishable from its additive prediction at 2, 3 and 4 and large at 5, but with no point at 4.5 the crossover is only bounded to (4, 5); our own pre-registered monotonicity prediction failed (2 of 6 runs). The supported claim is the descriptive one, not a law of the severity axis.
+- **No established threshold, and no renderer-independent onset.** "Threshold" is an inference from four severity levels, not a localised boundary. Under the shipped renderer E is indistinguishable from its additive prediction at 2, 3 and 4 and large at 5, but with no point at 4.5 the crossover is only bounded to (4, 5); our own pre-registered monotonicity prediction failed (2 of 6 runs). A physically-motivated re-rendering (§7.4) moves the onset to severity 4 while preserving the severity-5 excess, so the supported claim is the descriptive one — an excess that grows with severity — not a law of the severity axis nor a fixed crossover.
 - **No generalization to real weather.** §6 is observational with insufficient heavy-degradation samples.
 - **No monotone severity law.** Our own pre-registered prediction of monotonicity failed (P1, 2/6); the supported claim is the severity-5 jump.
 
@@ -199,19 +201,21 @@ The 236 images in FGSC-23's `test` split were used by three diagnostic analyses 
 
 ### 7.4 Threats to validity
 
-Single dataset; 618 training images; one corruption implementation per family; two seeds; a five-level severity scale with no point between 4 and 5. The cluster bootstrap accounts for the two seeds per image but not for multiplicity across the full condition grid. The pixel-statistics probe is condition-level and the HDR re-render probe is one fold and one seed, so neither carries an interval. No result here is on an unseen test set (§7.3).
+Single dataset; 618 training images; two seeds; a five-level severity scale with no point between 4 and 5.
+
+**Two renderers, not one.** The core severity-5 result does not depend on a single corruption implementation. Re-rendering haze with Koschmieder depth-dependent transmission and glare with a specular lobe plus sensor blooming — severity matched to the original on mean transmission and saturated-pixel fraction (Δ ≤ 0.008 and ≤ 3e-8) — gives E(5) = +14.6 / +21.8 pp on the frozen baseline, and +10.2 / +16.0 pp after retraining under the new renderer (contrast: +9.7 / +12.6 pp under the original). The excess is therefore a property of the degradation interaction, not of one clipping model. Two limits follow from the same experiment. First, the excess appears from severity 4 under the new renderer, so the *onset* is renderer-dependent even though the excess is not. Second, matching severity on saturation pins the saturated fraction by construction: the experiment shows that spatial structure matters at fixed saturation, not that saturation is the cause. The physical renderer covers `haze+glare` only; cloud is unchanged and `haze+cloud` was not re-rendered. The three remaining single-renderer caveats are the corruption implementations for cloud, the single backbone family used in the physical test, and one fold. The cluster bootstrap accounts for the two seeds per image but not for multiplicity across the full condition grid. The pixel-statistics probe is condition-level and the HDR re-render probe is one fold and one seed, so neither carries an interval. No result here is on an unseen test set (§7.3).
 
 ---
 
 ## 8. Conclusion
 
-Compound weather degradations do something to maritime ship classifiers that single degradations do not: at the highest tested severity their joint effect exceeds the additive prediction by 11.3 pp and exceeds what any single degradation can do, and 41.5% of the resulting errors are errors no single degradation produces. At moderate severities the same conditions are additive. Nine interventions failed to improve on a strong combined-augmentation baseline. The protocol, the predictions, the failed pre-registered test and the negative results are released together, so that the negative half of this paper is as checkable as the positive half.
+Compound weather degradations do something to maritime ship classifiers that single degradations do not: at the highest tested severity their joint effect exceeds the additive prediction by 11.3 pp and exceeds what any single degradation can do, and 41.5% of the resulting errors are errors no single degradation produces. At moderate severities, and under the shipped renderer, the same conditions are additive; a second, physically-motivated renderer preserves the severity-5 excess but moves its onset down to severity 4, so what we claim is the excess and its growth with severity rather than a fixed crossover. Nine interventions failed to improve on a strong combined-augmentation baseline. The protocol, the predictions, the failed pre-registered test and the negative results are released together, so that the negative half of this paper is as checkable as the positive half.
 
 ---
 
 ## Appendix A. Reproduction
 
-Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (140 runs, code, configs, splits, reports). The probes of §4.6 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`.
+Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (148 runs, code, configs, splits, reports). The probes of §4.6 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). The second renderer of §7.4 is `reports/PHYSICAL_RENDERER.md`, produced by `scripts/physical_eval.py` from `src/maritime_robust/physical.py` and gated by `scripts/physical_gate.py`; its pre-registration is `reports/PREREG_PHYSICAL_RENDERER.md`. A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`.
 
 ## Appendix B. Margin-space superadditivity
 

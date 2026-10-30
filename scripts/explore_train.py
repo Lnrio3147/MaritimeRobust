@@ -40,7 +40,7 @@ from maritime_robust.engine import (ShipDataset, combined_recipe, loader,  # noq
                                     predict)
 from maritime_robust.methods import build as build_method, load_imagenet22k  # noqa: E402
 from maritime_robust.methods.augment import (KINDS, AugDataset, DriftDataset,  # noqa: E402
-                                             MaskedClean)
+                                             MaskedClean, PhysicalAugDataset)
 
 MEAN, STD, FILL = [.485, .456, .406], [.229, .224, .225], (124, 116, 104)
 PAIRS = [("haze", "glare"), ("haze", "cloud")]
@@ -97,7 +97,7 @@ def main():
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--method", default="none",
                     choices=("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1",
-                             "d1", "d1inv"))
+                             "d1", "d1inv", "p1"))
     ap.add_argument("--alpha", type=float, default=1.0,
                     help="d1/d1inv: exponent on the within-batch drift rank; "
                          "d1 uses +1, d1inv uses -1, 0 must reproduce the baseline")
@@ -171,7 +171,8 @@ def main():
         seed_all(args.seed)
         torch.set_num_threads(4)
         torch.hub.set_dir(str(ROOT / "artifacts/weights"))
-        model = build_method(args.model, n, args.method)
+        # p1 is a recipe arm, not an architectural one: same wrapper as "none"
+        model = build_method(args.model, n, "none" if args.method == "p1" else args.method)
         if args.init == "timm22k":
             settings["init"] = "timm22k"
             settings["init_transfer"] = load_imagenet22k(model)
@@ -204,6 +205,8 @@ def main():
                             recipe_path=recipe)
         elif args.method in ("d1", "d1inv"):
             ds = DriftDataset(train_rows, seed=args.seed, recipe_path=recipe)
+        elif args.method == "p1":
+            ds = PhysicalAugDataset(train_rows, seed=args.seed, recipe_path=recipe)
         else:
             ds = ShipDataset(train_rows, train=True, augmentation="combined", seed=args.seed,
                              recipe_path=recipe)

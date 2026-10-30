@@ -12,6 +12,7 @@ runs_joint/
 restorers/
 
 reports/probe_features/
+reports/physical/cells/
 *.npz
 *.pt
 .venv-gendeg/

@@ -1,0 +1,27 @@
+{
+  "2": {
+    "haze_transmission": 0.7,
+    "glare_saturation": 0.02601777470377715,
+    "compound_saturation": 0.03727328302360317
+  },
+  "3": {
+    "haze_transmission": 0.55,
+    "glare_saturation": 0.08585921221275152,
+    "compound_saturation": 0.15772522051243712
+  },
+  "4": {
+    "haze_transmission": 0.4,
+    "glare_saturation": 0.21696338078804248,
+    "compound_saturation": 0.34788469121198734
+  },
+  "5": {
+    "haze_transmission": 0.25,
+    "glare_saturation": 0.3801941265733287,
+    "compound_saturation": 0.607125548872366
+  },
+  "1": {
+    "haze_transmission": 0.85,
+    "glare_saturation": 0.00801624793007079,
+    "compound_saturation": 0.005713914476756202
+  }
+}

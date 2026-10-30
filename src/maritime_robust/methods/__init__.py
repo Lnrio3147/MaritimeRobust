@@ -83,6 +83,9 @@ class MethodModel(nn.Module):
 
     def __init__(self, model_name, num_classes, method="none"):
         super().__init__()
+        # p1 is the physical-renderer *recipe* arm: same network as "none"
+        if method == "p1":
+            method = "none"
         if method not in METHODS:
             raise ValueError(method)
         base = build_model(model_name, num_classes, pretrained=True)

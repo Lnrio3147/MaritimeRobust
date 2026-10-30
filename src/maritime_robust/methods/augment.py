@@ -22,6 +22,7 @@ from maritime_robust.common import ROOT, stable_seed
 from maritime_robust.degradations import corrupt, corruption_seed
 from maritime_robust.engine import combined_recipe
 from maritime_robust.methods import clip_mask
+from maritime_robust.physical import render
 
 MEAN, STD, FILL = [.485, .456, .406], [.229, .224, .225], (124, 116, 104)
 KINDS = ("clean", "haze", "cloud", "glare", "haze+glare", "haze+cloud")
@@ -111,6 +112,69 @@ class AugDataset(Dataset):
                                condition["severity"], "matched", self.seed)
         image, _ = corrupt(image, seed=seed, kind=condition["kind"],
                            severity=condition["severity"], domain="matched", placement="random")
+        image = ImageOps.pad(image, (224, 224), method=Image.Resampling.BICUBIC, color=FILL)
+        raw = TF.to_tensor(image)
+        tensor = TF.normalize(raw, MEAN, STD)
+        if self.with_mask:
+            tensor = torch.cat([tensor, clip_mask(raw)], 0)
+        return tensor, row["label"], KIND_INDEX[condition["kind"]]
+
+
+def physical_degrade(image, kind, severity, targets, seed):
+    """``corrupt`` with haze and glare replaced by the physical renderer.
+
+    Cloud is not physicalised (see reports/PREREG_PHYSICAL_RENDERER.md), so it
+    still comes from ``corrupt``; ``haze+cloud`` applies the physical haze first
+    and the original cloud on top of it.
+    """
+    if kind == "clean":
+        return image
+    target = targets[severity]
+    transmission = target["haze_transmission"]
+    if kind in ("haze", "glare", "haze+glare"):
+        saturation = {"haze": 0.0, "glare": target["glare_saturation"],
+                      "haze+glare": target["compound_saturation"]}[kind]
+        out, _ = render(image, kind, transmission, saturation, seed=seed)
+        return out
+    if kind == "cloud":
+        return corrupt(image, seed=seed, kind="cloud", severity=severity,
+                       domain="matched", placement="random")[0]
+    out, _ = render(image, "haze", transmission, 0.0, seed=seed)
+    return corrupt(out, seed=seed, kind="cloud", severity=severity,
+                   domain="matched", placement="random")[0]
+
+
+class PhysicalAugDataset(AugDataset):
+    """Stage 2 of the renderer-validity test: ``AugDataset`` draws, physical render.
+
+    Every draw -- clean gate, mixture, kind, severity, geometry, corruption
+    seed -- is identical to ``AugDataset``; only the rendering of haze and glare
+    differs, so a difference in the learned behaviour is attributable to the
+    renderer and not to a different exposure pattern.
+    """
+
+    def __init__(self, rows, targets_path=None, **kwargs):
+        super().__init__(rows, **kwargs)
+        path = targets_path or ROOT / "reports/physical/targets.json"
+        self.targets = {int(k): v for k, v in json.loads(path.read_text()).items()}
+
+    def __getitem__(self, index):
+        row = self.rows[index]
+        with Image.open(ROOT / row["path"]) as handle:
+            image = handle.convert("RGB")
+        image = ImageOps.contain(image, (224, 224), Image.Resampling.BICUBIC)
+        rng = np.random.default_rng(stable_seed(self.seed, self.epoch, row["sample_id"], "geometry"))
+        if rng.random() < .5:
+            image = ImageOps.mirror(image)
+        if rng.random() < .5:
+            image = ImageOps.flip(image)
+        image = image.rotate(90 * int(rng.integers(4)), expand=True)
+        rng = np.random.default_rng(stable_seed(self.seed, self.epoch, row["sample_id"], "augmentation"))
+        condition = self.draw(rng)
+        seed = corruption_seed(row["sample_id"], f"train_epoch_{self.epoch}", condition["kind"],
+                               condition["severity"], "matched", self.seed)
+        image = physical_degrade(image, condition["kind"], condition["severity"],
+                                 self.targets, seed)
         image = ImageOps.pad(image, (224, 224), method=Image.Resampling.BICUBIC, color=FILL)
         raw = TF.to_tensor(image)
         tensor = TF.normalize(raw, MEAN, STD)
