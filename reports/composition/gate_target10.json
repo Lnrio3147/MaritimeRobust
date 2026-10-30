@@ -1,0 +1,48 @@
+{
+  "target_pp": 10.0,
+  "discovery": "fold0 s17",
+  "n_cells": 4,
+  "criteria": {
+    "C1": false,
+    "C2": false,
+    "C3": false,
+    "C4": false,
+    "C5": true
+  },
+  "c1_cells": {
+    "fold0 s29": [
+      5,
+      8
+    ],
+    "fold1 s17": [
+      5,
+      8
+    ],
+    "fold1 s29": [
+      6,
+      8
+    ]
+  },
+  "c2_lowpass_mean": {
+    "fold0 s17": -3.8834951456310685,
+    "fold0 s29": -0.647249190938517,
+    "fold1 s17": -0.4854368932038871,
+    "fold1 s29": -2.103559870550164
+  },
+  "c3_noise_mean": {
+    "fold0 s17": -0.09708737864077648,
+    "fold0 s29": -1.45631067961165,
+    "fold1 s17": 8.640776699029129,
+    "fold1 s29": 8.640776699029127
+  },
+  "c4_additive_r2": {
+    "fold0 s17": 0.49898261191268944,
+    "fold0 s29": 0.2732189481536751,
+    "fold1 s17": 0.5864752952687122,
+    "fold1 s29": 0.8611233264927196
+  },
+  "c5_strong_predictor_counts": {
+    "overlap_delta": 1
+  },
+  "all_pass": false
+}

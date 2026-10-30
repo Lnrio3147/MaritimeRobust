@@ -1,0 +1,22 @@
+=== r50 training 01:37:18
+--- train fold0 s17 01:37:18
+/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py:129: UserWarning: CUDA initialization: CUDA driver initialization failed, you might not have a CUDA gpu. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:108.)
+  return torch._C._cuda_getDeviceCount() > 0
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_train.py", line 318, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_train.py", line 180, in main
+    model = model.cuda()
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.

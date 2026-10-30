@@ -1,0 +1,1031 @@
+=== fold0 s29 01:00:14
+clean     level 0.0  acc  82.04
+defocus   level 0.1  acc  81.55
+defocus   level 0.2  acc  77.67
+defocus   level 0.3  acc  69.42
+defocus   level 0.4  acc  64.56
+defocus   level 0.5  acc  57.28
+defocus   level 0.6  acc  50.00
+defocus   level 0.7  acc  45.15
+defocus   level 0.8  acc  36.41
+defocus   level 0.9  acc  34.95
+defocus   level 1.0  acc  32.52
+motion    level 0.1  acc  81.55
+motion    level 0.2  acc  76.70
+motion    level 0.3  acc  73.30
+motion    level 0.4  acc  67.96
+motion    level 0.5  acc  65.05
+motion    level 0.6  acc  62.14
+motion    level 0.7  acc  61.65
+motion    level 0.8  acc  60.19
+motion    level 0.9  acc  55.83
+motion    level 1.0  acc  52.91
+noise     level 0.1  acc  78.16
+noise     level 0.2  acc  72.82
+noise     level 0.3  acc  69.90
+noise     level 0.4  acc  68.45
+noise     level 0.5  acc  65.05
+noise     level 0.6  acc  64.08
+noise     level 0.7  acc  59.22
+noise     level 0.8  acc  54.85
+noise     level 0.9  acc  47.09
+noise     level 1.0  acc  45.15
+rain      level 0.1  acc  81.55
+rain      level 0.2  acc  77.18
+rain      level 0.3  acc  72.33
+rain      level 0.4  acc  64.56
+rain      level 0.5  acc  59.71
+rain      level 0.6  acc  54.37
+rain      level 0.7  acc  46.60
+rain      level 0.8  acc  39.81
+rain      level 0.9  acc  29.61
+rain      level 1.0  acc  23.79
+pixelate  level 0.1  acc  72.33
+pixelate  level 0.2  acc  70.39
+pixelate  level 0.3  acc  68.45
+pixelate  level 0.4  acc  64.08
+pixelate  level 0.5  acc  56.80
+pixelate  level 0.6  acc  53.88
+pixelate  level 0.7  acc  47.57
+pixelate  level 0.8  acc  37.86
+pixelate  level 0.9  acc  28.16
+pixelate  level 1.0  acc  29.13
+impulse   level 0.1  acc  79.13
+impulse   level 0.2  acc  71.84
+impulse   level 0.3  acc  67.48
+impulse   level 0.4  acc  63.59
+impulse   level 0.5  acc  61.17
+impulse   level 0.6  acc  53.88
+impulse   level 0.7  acc  51.46
+impulse   level 0.8  acc  43.69
+impulse   level 0.9  acc  39.32
+impulse   level 1.0  acc  32.04
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       0.5    4.4   12.6   17.5   24.8   32.0   36.9   45.6   47.1   49.5
+motion        0.5    5.3    8.7   14.1   17.0   19.9   20.4   21.8   26.2   29.1
+noise         3.9    9.2   12.1   13.6   17.0   18.0   22.8   27.2   35.0   36.9
+rain          0.5    4.9    9.7   17.5   22.3   27.7   35.4   42.2   52.4   58.3
+pixelate      9.7   11.7   13.6   18.0   25.2   28.2   34.5   44.2   53.9   52.9
+impulse       2.9   10.2   14.6   18.4   20.9   28.2   30.6   38.3   42.7   50.0
+skip motion @ 30.0: ladder tops out at 29.1 pp
+calibrated levels: {"defocus@10": 0.268, "motion@10": 0.324, "noise@10": 0.227, "rain@10": 0.304, "pixelate@10": 0.115, "impulse@10": 0.197, "defocus@20": 0.435, "motion@20": 0.62, "noise@20": 0.642, "rain@20": 0.452, "pixelate@20": 0.428, "impulse@20": 0.464, "defocus@30": 0.572, "noise@30": 0.836, "rain@30": 0.63, "pixelate@30": 0.629, "impulse@30": 0.676}
+clean                              acc  82.04
+single_defocus_10                  acc  71.36
+single_motion_10                   acc  72.33
+single_noise_10                    acc  71.84
+single_rain_10                     acc  71.84
+single_pixelate_10                 acc  76.70
+single_impulse_10                  acc  72.33
+single_defocus_20                  acc  62.14
+single_motion_20                   acc  62.62
+single_noise_20                    acc  63.11
+single_rain_20                     acc  61.65
+single_pixelate_20                 acc  63.11
+single_impulse_20                  acc  61.65
+single_defocus_30                  acc  51.46
+single_noise_30                    acc  50.49
+single_rain_30                     acc  51.46
+single_pixelate_30                 acc  46.60
+single_impulse_30                  acc  51.46
+pair_defocus+motion_10             acc  60.68
+pair_defocus+noise_10              acc  66.99
+pair_defocus+rain_10               acc  60.19
+pair_defocus+pixelate_10           acc  66.50
+pair_defocus+impulse_10            acc  63.59
+pair_motion+noise_10               acc  64.56
+pair_motion+rain_10                acc  58.74
+pair_motion+pixelate_10            acc  66.99
+pair_motion+impulse_10             acc  61.65
+pair_noise+rain_10                 acc  51.94
+pair_noise+pixelate_10             acc  65.53
+pair_noise+impulse_10              acc  62.14
+pair_rain+pixelate_10              acc  68.45
+pair_rain+impulse_10               acc  57.28
+pair_pixelate+impulse_10           acc  69.90
+pair_defocus+motion_20             acc  47.57
+pair_defocus+noise_20              acc  40.29
+pair_defocus+rain_20               acc  34.47
+pair_defocus+pixelate_20           acc  46.12
+pair_defocus+impulse_20            acc  36.89
+pair_motion+noise_20               acc  36.89
+pair_motion+rain_20                acc  33.50
+pair_motion+pixelate_20            acc  47.57
+pair_motion+impulse_20             acc  35.92
+pair_noise+rain_20                 acc  31.07
+pair_noise+pixelate_20             acc  35.92
+pair_noise+impulse_20              acc  34.95
+pair_rain+pixelate_20              acc  45.63
+pair_rain+impulse_20               acc  35.92
+pair_pixelate+impulse_20           acc  52.43
+pair_defocus+noise_30              acc  27.18
+pair_defocus+rain_30               acc  18.45
+pair_defocus+pixelate_30           acc  39.32
+pair_defocus+impulse_30            acc  27.67
+pair_noise+rain_30                 acc  18.45
+pair_noise+pixelate_30             acc  21.36
+pair_noise+impulse_30              acc  21.84
+pair_rain+pixelate_30              acc  29.13
+pair_rain+impulse_30               acc  19.90
+pair_pixelate+impulse_30           acc  36.41
+
+pair                             target  drop_a  drop_b  drop_ab       E
+noise+rain                           20    18.9    20.4     51.0   +11.7
+noise+rain                           10    10.2    10.2     30.1    +9.7
+motion+rain                          20    19.4    20.4     48.5    +8.7
+noise+pixelate                       20    18.9    18.9     46.1    +8.3
+noise+impulse                        20    18.9    20.4     47.1    +7.8
+defocus+rain                         20    19.9    20.4     47.6    +7.3
+motion+noise                         20    19.4    18.9     45.1    +6.8
+motion+impulse                       20    19.4    20.4     46.1    +6.3
+rain+impulse                         20    20.4    20.4     46.1    +5.3
+rain+impulse                         10    10.2     9.7     24.8    +4.9
+defocus+impulse                      20    19.9    20.4     45.1    +4.9
+motion+rain                          10     9.7    10.2     23.3    +3.4
+defocus+noise                        20    19.9    18.9     41.7    +2.9
+defocus+rain                         30    30.6    30.6     63.6    +2.4
+noise+rain                           30    31.6    30.6     63.6    +1.5
+defocus+motion                       10    10.7     9.7     21.4    +1.0
+defocus+rain                         10    10.7    10.2     21.8    +1.0
+motion+impulse                       10     9.7     9.7     20.4    +1.0
+noise+pixelate                       10    10.2     5.3     16.5    +1.0
+rain+impulse                         30    30.6    30.6     62.1    +1.0
+noise+impulse                        10    10.2     9.7     19.9    +0.0
+motion+pixelate                      10     9.7     5.3     15.0    +0.0
+defocus+pixelate                     10    10.7     5.3     15.5    -0.5
+defocus+impulse                      10    10.7     9.7     18.4    -1.9
+noise+impulse                        30    31.6    30.6     60.2    -1.9
+rain+pixelate                        10    10.2     5.3     13.6    -1.9
+motion+noise                         10     9.7    10.2     17.5    -2.4
+pixelate+impulse                     10     5.3     9.7     12.1    -2.9
+defocus+pixelate                     20    19.9    18.9     35.9    -2.9
+rain+pixelate                        20    20.4    18.9     36.4    -2.9
+motion+pixelate                      20    19.4    18.9     34.5    -3.9
+defocus+motion                       20    19.9    19.4     34.5    -4.9
+defocus+noise                        10    10.7    10.2     15.0    -5.8
+noise+pixelate                       30    31.6    35.4     60.7    -6.3
+defocus+impulse                      30    30.6    30.6     54.4    -6.8
+defocus+noise                        30    30.6    31.6     54.9    -7.3
+pixelate+impulse                     20    18.9    20.4     29.6    -9.7
+rain+pixelate                        30    30.6    35.4     52.9   -13.1
+pixelate+impulse                     30    35.4    30.6     45.6   -20.4
+defocus+pixelate                     30    30.6    35.4     42.7   -23.3
+defocus   level 0.435  acc  62.14
+motion    level 0.620  acc  62.62
+noise     level 0.642  acc  63.11
+rain      level 0.452  acc  61.65
+pixelate  level 0.428  acc  63.11
+impulse   level 0.464  acc  61.65
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             65.0    48.5     26.7   +16.5    +7.8  +0.539
+noise+rain                68.9    55.8     19.4   +13.1   +11.7  +0.068
+motion+impulse            64.1    51.9     23.8   +12.1    +6.3  +0.249
+noise+pixelate            64.1    52.9     20.9   +11.2    +8.3  +0.390
+defocus+impulse           63.1    52.9     23.3   +10.2    +4.9  +0.227
+defocus+rain              65.5    56.3     19.9    +9.2    +7.3  -0.002
+motion+noise              63.1    53.9     20.4    +9.2    +6.8  +0.106
+rain+impulse              64.1    55.3     21.4    +8.7    +5.3  +0.136
+motion+rain               66.5    58.3     17.5    +8.3    +8.7  +0.150
+defocus+noise             59.7    53.9     20.9    +5.8    +2.9  -0.000
+defocus+motion            52.4    48.5     26.7    +3.9    -4.9  +0.790
+rain+pixelate             54.4    53.4     21.8    +1.0    -2.9  +0.313
+defocus+pixelate          53.9    53.4     21.4    +0.5    -2.9  +0.306
+motion+pixelate           52.4    54.4     19.9    -1.9    -3.9  +0.463
+pixelate+impulse          47.6    52.9     22.3    -5.3    -9.7  +0.338
+
+Spearman(cos, E)        = -0.420 (p=0.119)
+Spearman(cos, delta)    = -0.223 (p=0.423)
+Spearman(overlap, E)    = -0.457 (p=0.087)
+Spearman(overlap, delta)= +0.055 (p=0.846)
+additive R^2 on E       = 0.670
+additive R^2 on delta   = 0.691
+mean delta = +6.8 pp, mean E = +3.0 pp
+main effects on delta: noise +6.8  impulse +3.4  rain +2.9  motion +0.7  defocus +0.2  pixelate -5.8
+=== fold1 s17 01:03:37
+clean     level 0.0  acc  86.89
+defocus   level 0.1  acc  85.92
+defocus   level 0.2  acc  81.07
+defocus   level 0.3  acc  77.67
+defocus   level 0.4  acc  72.33
+defocus   level 0.5  acc  68.45
+defocus   level 0.6  acc  62.62
+defocus   level 0.7  acc  53.40
+defocus   level 0.8  acc  48.54
+defocus   level 0.9  acc  45.15
+defocus   level 1.0  acc  43.69
+motion    level 0.1  acc  86.41
+motion    level 0.2  acc  82.04
+motion    level 0.3  acc  80.10
+motion    level 0.4  acc  75.24
+motion    level 0.5  acc  68.93
+motion    level 0.6  acc  65.05
+motion    level 0.7  acc  63.11
+motion    level 0.8  acc  61.65
+motion    level 0.9  acc  58.25
+motion    level 1.0  acc  56.80
+noise     level 0.1  acc  83.50
+noise     level 0.2  acc  82.52
+noise     level 0.3  acc  77.18
+noise     level 0.4  acc  71.84
+noise     level 0.5  acc  61.65
+noise     level 0.6  acc  51.46
+noise     level 0.7  acc  41.75
+noise     level 0.8  acc  33.98
+noise     level 0.9  acc  23.30
+noise     level 1.0  acc  20.39
+rain      level 0.1  acc  80.58
+rain      level 0.2  acc  79.13
+rain      level 0.3  acc  74.76
+rain      level 0.4  acc  68.45
+rain      level 0.5  acc  65.05
+rain      level 0.6  acc  61.65
+rain      level 0.7  acc  50.97
+rain      level 0.8  acc  42.23
+rain      level 0.9  acc  31.55
+rain      level 1.0  acc  25.73
+pixelate  level 0.1  acc  77.18
+pixelate  level 0.2  acc  69.90
+pixelate  level 0.3  acc  68.93
+pixelate  level 0.4  acc  66.02
+pixelate  level 0.5  acc  57.28
+pixelate  level 0.6  acc  54.37
+pixelate  level 0.7  acc  47.57
+pixelate  level 0.8  acc  41.75
+pixelate  level 0.9  acc  45.15
+pixelate  level 1.0  acc  35.44
+impulse   level 0.1  acc  81.55
+impulse   level 0.2  acc  71.36
+impulse   level 0.3  acc  65.05
+impulse   level 0.4  acc  58.74
+impulse   level 0.5  acc  50.00
+impulse   level 0.6  acc  45.15
+impulse   level 0.7  acc  39.81
+impulse   level 0.8  acc  36.41
+impulse   level 0.9  acc  36.89
+impulse   level 1.0  acc  36.89
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       1.0    5.8    9.2   14.6   18.4   24.3   33.5   38.3   41.7   43.2
+motion        0.5    4.9    6.8   11.7   18.0   21.8   23.8   25.2   28.6   30.1
+noise         3.4    4.4    9.7   15.0   25.2   35.4   45.1   52.9   63.6   66.5
+rain          6.3    7.8   12.1   18.4   21.8   25.2   35.9   44.7   55.3   61.2
+pixelate      9.7   17.0   18.0   20.9   29.6   32.5   39.3   45.1   41.7   51.5
+impulse       5.3   15.5   21.8   28.2   36.9   41.7   47.1   50.5   50.0   50.0
+calibrated levels: {"defocus@10": 0.315, "motion@10": 0.366, "noise@10": 0.305, "rain@10": 0.251, "pixelate@10": 0.104, "impulse@10": 0.146, "defocus@20": 0.527, "motion@20": 0.553, "noise@20": 0.449, "rain@20": 0.446, "pixelate@20": 0.37, "impulse@20": 0.271, "defocus@30": 0.662, "motion@30": 0.993, "noise@30": 0.547, "rain@30": 0.645, "pixelate@30": 0.513, "impulse@30": 0.421}
+clean                              acc  86.89
+single_defocus_10                  acc  77.18
+single_motion_10                   acc  77.18
+single_noise_10                    acc  76.21
+single_rain_10                     acc  76.70
+single_pixelate_10                 acc  76.21
+single_impulse_10                  acc  78.16
+single_defocus_20                  acc  67.48
+single_motion_20                   acc  68.45
+single_noise_20                    acc  63.59
+single_rain_20                     acc  67.96
+single_pixelate_20                 acc  65.53
+single_impulse_20                  acc  67.48
+single_defocus_30                  acc  56.80
+single_motion_30                   acc  57.28
+single_noise_30                    acc  56.31
+single_rain_30                     acc  55.34
+single_pixelate_30                 acc  59.22
+single_impulse_30                  acc  56.80
+pair_defocus+motion_10             acc  68.45
+pair_defocus+noise_10              acc  59.22
+pair_defocus+rain_10               acc  45.63
+pair_defocus+pixelate_10           acc  68.45
+pair_defocus+impulse_10            acc  64.08
+pair_motion+noise_10               acc  59.22
+pair_motion+rain_10                acc  47.09
+pair_motion+pixelate_10            acc  67.96
+pair_motion+impulse_10             acc  60.68
+pair_noise+rain_10                 acc  57.77
+pair_noise+pixelate_10             acc  61.17
+pair_noise+impulse_10              acc  47.09
+pair_rain+pixelate_10              acc  60.68
+pair_rain+impulse_10               acc  56.80
+pair_pixelate+impulse_10           acc  65.53
+pair_defocus+motion_20             acc  54.85
+pair_defocus+noise_20              acc  31.55
+pair_defocus+rain_20               acc  19.90
+pair_defocus+pixelate_20           acc  55.34
+pair_defocus+impulse_20            acc  40.78
+pair_motion+noise_20               acc  34.95
+pair_motion+rain_20                acc  24.27
+pair_motion+pixelate_20            acc  56.80
+pair_motion+impulse_20             acc  44.17
+pair_noise+rain_20                 acc  34.95
+pair_noise+pixelate_20             acc  36.41
+pair_noise+impulse_20              acc  31.55
+pair_rain+pixelate_20              acc  39.32
+pair_rain+impulse_20               acc  34.95
+pair_pixelate+impulse_20           acc  50.97
+pair_defocus+motion_30             acc  45.15
+pair_defocus+noise_30              acc  19.90
+pair_defocus+rain_30               acc  13.11
+pair_defocus+pixelate_30           acc  46.60
+pair_defocus+impulse_30            acc  34.47
+pair_motion+noise_30               acc  21.36
+pair_motion+rain_30                acc  15.53
+pair_motion+pixelate_30            acc  47.09
+pair_motion+impulse_30             acc  31.07
+pair_noise+rain_30                 acc  20.39
+pair_noise+pixelate_30             acc  24.76
+pair_noise+impulse_30              acc  25.73
+pair_rain+pixelate_30              acc  31.55
+pair_rain+impulse_30               acc  22.82
+pair_pixelate+impulse_30           acc  42.23
+
+pair                             target  drop_a  drop_b  drop_ab       E
+defocus+rain                         20    19.4    18.9     67.0   +28.6
+motion+rain                          20    18.4    18.9     62.6   +25.2
+defocus+rain                         10     9.7    10.2     41.3   +21.4
+noise+impulse                        10    10.7     8.7     39.8   +20.4
+motion+rain                          10     9.7    10.2     39.8   +19.9
+rain+impulse                         20    18.9    19.4     51.9   +13.6
+defocus+noise                        20    19.4    23.3     55.3   +12.6
+noise+impulse                        20    23.3    19.4     55.3   +12.6
+defocus+rain                         30    30.1    31.6     73.8   +12.1
+rain+impulse                         10    10.2     8.7     30.1   +11.2
+motion+noise                         20    18.4    23.3     51.9   +10.2
+motion+rain                          30    29.6    31.6     71.4   +10.2
+noise+rain                           20    23.3    18.9     51.9    +9.7
+noise+rain                           10    10.7    10.2     29.1    +8.3
+motion+impulse                       10     9.7     8.7     26.2    +7.8
+rain+pixelate                        20    18.9    21.4     47.6    +7.3
+defocus+impulse                      20    19.4    19.4     46.1    +7.3
+defocus+noise                        10     9.7    10.7     27.7    +7.3
+motion+noise                         10     9.7    10.7     27.7    +7.3
+defocus+noise                        30    30.1    30.6     67.0    +6.3
+noise+pixelate                       20    23.3    21.4     50.5    +5.8
+rain+pixelate                        10    10.2    10.7     26.2    +5.3
+motion+noise                         30    29.6    30.6     65.5    +5.3
+motion+impulse                       20    18.4    19.4     42.7    +4.9
+noise+pixelate                       10    10.7    10.7     25.7    +4.4
+defocus+impulse                      10     9.7     8.7     22.8    +4.4
+noise+rain                           30    30.6    31.6     66.5    +4.4
+noise+pixelate                       30    30.6    27.7     62.1    +3.9
+rain+impulse                         30    31.6    30.1     64.1    +2.4
+pixelate+impulse                     10    10.7     8.7     21.4    +1.9
+noise+impulse                        30    30.6    30.1     61.2    +0.5
+defocus+motion                       10     9.7     9.7     18.4    -1.0
+motion+pixelate                      10     9.7    10.7     18.9    -1.5
+defocus+pixelate                     10     9.7    10.7     18.4    -1.9
+motion+impulse                       30    29.6    30.1     55.8    -3.9
+rain+pixelate                        30    31.6    27.7     55.3    -3.9
+pixelate+impulse                     20    21.4    19.4     35.9    -4.9
+defocus+motion                       20    19.4    18.4     32.0    -5.8
+defocus+impulse                      30    30.1    30.1     52.4    -7.8
+defocus+pixelate                     20    19.4    21.4     31.6    -9.2
+motion+pixelate                      20    18.4    21.4     30.1    -9.7
+pixelate+impulse                     30    27.7    30.1     44.7   -13.1
+defocus+pixelate                     30    30.1    27.7     40.3   -17.5
+motion+pixelate                      30    29.6    27.7     39.8   -17.5
+defocus+motion                       30    30.1    29.6     41.7   -18.0
+defocus   level 0.527  acc  67.48
+motion    level 0.553  acc  68.45
+noise     level 0.449  acc  63.59
+rain      level 0.446  acc  67.96
+pixelate  level 0.370  acc  65.53
+impulse   level 0.271  acc  67.48
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              80.1    48.5     16.0   +31.6   +28.6  +0.210
+motion+rain               75.7    47.6     16.0   +28.2   +25.2  +0.296
+noise+impulse             68.4    46.1     22.8   +22.3   +12.6  +0.344
+rain+impulse              65.0    49.5     15.0   +15.5   +13.6  +0.132
+noise+rain                65.0    50.0     18.4   +15.0    +9.7  +0.031
+defocus+noise             68.4    53.4     15.5   +15.0   +12.6  -0.086
+motion+noise              65.0    53.4     14.6   +11.7   +10.2  +0.089
+noise+pixelate            63.6    52.9     18.0   +10.7    +5.8  +0.189
+defocus+impulse           59.2    49.5     15.5    +9.7    +7.3  +0.003
+motion+impulse            55.8    46.6     17.5    +9.2    +4.9  +0.139
+rain+pixelate             60.7    51.5     15.0    +9.2    +7.3  +0.326
+defocus+motion            45.1    43.7     20.4    +1.5    -5.8  +0.674
+pixelate+impulse          49.0    48.1     18.9    +1.0    -4.9  +0.258
+defocus+pixelate          44.7    51.5     15.5    -6.8    -9.2  +0.176
+motion+pixelate           43.2    50.0     16.0    -6.8    -9.7  +0.391
+
+Spearman(cos, E)        = -0.275 (p=0.321)
+Spearman(cos, delta)    = -0.243 (p=0.383)
+Spearman(overlap, E)    = -0.232 (p=0.404)
+Spearman(overlap, delta)= -0.026 (p=0.926)
+additive R^2 on E       = 0.688
+additive R^2 on delta   = 0.693
+mean delta = +11.1 pp, mean E = +7.2 pp
+main effects on delta: rain +13.2  noise +7.0  impulse +2.8  defocus +1.1  motion -0.8  pixelate -9.9
+=== fold1 s29 01:05:45
+clean     level 0.0  acc  86.41
+defocus   level 0.1  acc  85.92
+defocus   level 0.2  acc  82.04
+defocus   level 0.3  acc  78.16
+defocus   level 0.4  acc  70.87
+defocus   level 0.5  acc  62.14
+defocus   level 0.6  acc  55.34
+defocus   level 0.7  acc  49.51
+defocus   level 0.8  acc  43.20
+defocus   level 0.9  acc  41.26
+defocus   level 1.0  acc  40.29
+motion    level 0.1  acc  85.44
+motion    level 0.2  acc  82.52
+motion    level 0.3  acc  80.58
+motion    level 0.4  acc  74.76
+motion    level 0.5  acc  70.87
+motion    level 0.6  acc  67.96
+motion    level 0.7  acc  65.53
+motion    level 0.8  acc  64.08
+motion    level 0.9  acc  62.14
+motion    level 1.0  acc  57.77
+noise     level 0.1  acc  81.07
+noise     level 0.2  acc  80.58
+noise     level 0.3  acc  76.70
+noise     level 0.4  acc  71.36
+noise     level 0.5  acc  65.53
+noise     level 0.6  acc  60.19
+noise     level 0.7  acc  53.40
+noise     level 0.8  acc  46.12
+noise     level 0.9  acc  42.72
+noise     level 1.0  acc  37.38
+rain      level 0.1  acc  84.95
+rain      level 0.2  acc  83.01
+rain      level 0.3  acc  79.13
+rain      level 0.4  acc  75.24
+rain      level 0.5  acc  69.42
+rain      level 0.6  acc  61.65
+rain      level 0.7  acc  50.49
+rain      level 0.8  acc  41.26
+rain      level 0.9  acc  33.01
+rain      level 1.0  acc  29.61
+pixelate  level 0.1  acc  73.30
+pixelate  level 0.2  acc  69.90
+pixelate  level 0.3  acc  65.53
+pixelate  level 0.4  acc  61.17
+pixelate  level 0.5  acc  56.80
+pixelate  level 0.6  acc  51.94
+pixelate  level 0.7  acc  50.97
+pixelate  level 0.8  acc  44.17
+pixelate  level 0.9  acc  32.04
+pixelate  level 1.0  acc  13.11
+impulse   level 0.1  acc  83.50
+impulse   level 0.2  acc  78.16
+impulse   level 0.3  acc  68.93
+impulse   level 0.4  acc  63.11
+impulse   level 0.5  acc  57.28
+impulse   level 0.6  acc  50.97
+impulse   level 0.7  acc  45.15
+impulse   level 0.8  acc  41.75
+impulse   level 0.9  acc  37.86
+impulse   level 1.0  acc  33.50
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       0.5    4.4    8.3   15.5   24.3   31.1   36.9   43.2   45.1   46.1
+motion        1.0    3.9    5.8   11.7   15.5   18.4   20.9   22.3   24.3   28.6
+noise         5.3    5.8    9.7   15.0   20.9   26.2   33.0   40.3   43.7   49.0
+rain          1.5    3.4    7.3   11.2   17.0   24.8   35.9   45.1   53.4   56.8
+pixelate     13.1   16.5   20.9   25.2   29.6   34.5   35.4   42.2   54.4   73.3
+impulse       2.9    8.3   17.5   23.3   29.1   35.4   41.3   44.7   48.5   52.9
+skip motion @ 30.0: ladder tops out at 28.6 pp
+calibrated levels: {"defocus@10": 0.324, "motion@10": 0.372, "noise@10": 0.305, "rain@10": 0.37, "pixelate@10": 1.0, "impulse@10": 0.219, "defocus@20": 0.451, "motion@20": 0.664, "noise@20": 0.485, "rain@20": 0.539, "pixelate@20": 0.28, "impulse@20": 0.343, "defocus@30": 0.584, "noise@30": 0.656, "rain@30": 0.647, "pixelate@30": 0.508, "impulse@30": 0.514}
+clean                              acc  86.41
+single_defocus_10                  acc  76.70
+single_motion_10                   acc  76.21
+single_noise_10                    acc  76.21
+single_rain_10                     acc  77.18
+single_pixelate_10                 acc  13.11
+single_impulse_10                  acc  76.70
+single_defocus_20                  acc  68.93
+single_motion_20                   acc  66.50
+single_noise_20                    acc  67.48
+single_rain_20                     acc  66.50
+single_pixelate_20                 acc  66.99
+single_impulse_20                  acc  64.08
+single_defocus_30                  acc  56.31
+single_noise_30                    acc  56.80
+single_rain_30                     acc  54.85
+single_pixelate_30                 acc  57.28
+single_impulse_30                  acc  54.85
+pair_defocus+motion_10             acc  65.53
+pair_defocus+noise_10              acc  58.25
+pair_defocus+rain_10               acc  48.54
+pair_defocus+pixelate_10           acc  15.53
+pair_defocus+impulse_10            acc  56.31
+pair_motion+noise_10               acc  59.71
+pair_motion+rain_10                acc  47.09
+pair_motion+pixelate_10            acc  14.56
+pair_motion+impulse_10             acc  53.40
+pair_noise+rain_10                 acc  51.46
+pair_noise+pixelate_10             acc  13.59
+pair_noise+impulse_10              acc  53.88
+pair_rain+pixelate_10              acc  14.08
+pair_rain+impulse_10               acc  51.46
+pair_pixelate+impulse_10           acc  32.52
+pair_defocus+motion_20             acc  52.43
+pair_defocus+noise_20              acc  44.66
+pair_defocus+rain_20               acc  33.01
+pair_defocus+pixelate_20           acc  56.31
+pair_defocus+impulse_20            acc  48.54
+pair_motion+noise_20               acc  40.78
+pair_motion+rain_20                acc  29.61
+pair_motion+pixelate_20            acc  56.31
+pair_motion+impulse_20             acc  45.15
+pair_noise+rain_20                 acc  30.58
+pair_noise+pixelate_20             acc  51.94
+pair_noise+impulse_20              acc  38.35
+pair_rain+pixelate_20              acc  49.03
+pair_rain+impulse_20               acc  33.98
+pair_pixelate+impulse_20           acc  50.00
+pair_defocus+noise_30              acc  30.58
+pair_defocus+rain_30               acc  20.87
+pair_defocus+pixelate_30           acc  51.46
+pair_defocus+impulse_30            acc  36.41
+pair_noise+rain_30                 acc  18.45
+pair_noise+pixelate_30             acc  45.15
+pair_noise+impulse_30              acc  25.24
+pair_rain+pixelate_30              acc  42.72
+pair_rain+impulse_30               acc  31.07
+pair_pixelate+impulse_30           acc  44.17
+
+pair                             target  drop_a  drop_b  drop_ab       E
+motion+rain                          10    10.2     9.2     39.3   +19.9
+defocus+rain                         10     9.7     9.2     37.9   +18.9
+motion+rain                          20    19.9    19.9     56.8   +17.0
+noise+rain                           20    18.9    19.9     55.8   +17.0
+defocus+rain                         20    17.5    19.9     53.4   +16.0
+rain+impulse                         10     9.2     9.7     35.0   +16.0
+noise+rain                           10    10.2     9.2     35.0   +15.5
+motion+impulse                       10    10.2     9.7     33.0   +13.1
+noise+impulse                        10    10.2     9.7     32.5   +12.6
+defocus+impulse                      10     9.7     9.7     30.1   +10.7
+rain+impulse                         20    19.9    22.3     52.4   +10.2
+defocus+noise                        10     9.7    10.2     28.2    +8.3
+motion+noise                         20    19.9    18.9     45.6    +6.8
+noise+impulse                        20    18.9    22.3     48.1    +6.8
+noise+rain                           30    29.6    31.6     68.0    +6.8
+motion+noise                         10    10.2    10.2     26.7    +6.3
+defocus+noise                        20    17.5    18.9     41.7    +5.3
+defocus+rain                         30    30.1    31.6     65.5    +3.9
+defocus+motion                       10     9.7    10.2     20.9    +1.0
+noise+impulse                        30    29.6    31.6     61.2    +0.0
+motion+impulse                       20    19.9    22.3     41.3    -1.0
+defocus+impulse                      20    17.5    22.3     37.9    -1.9
+rain+pixelate                        20    19.9    19.4     37.4    -1.9
+defocus+motion                       20    17.5    19.9     34.0    -3.4
+noise+pixelate                       20    18.9    19.4     34.5    -3.9
+defocus+noise                        30    30.1    29.6     55.8    -3.9
+pixelate+impulse                     20    19.4    22.3     36.4    -5.3
+defocus+pixelate                     20    17.5    19.4     30.1    -6.8
+rain+impulse                         30    31.6    31.6     55.3    -7.8
+motion+pixelate                      20    19.9    19.4     30.1    -9.2
+rain+pixelate                        10     9.2    73.3     72.3   -10.2
+noise+pixelate                       10    10.2    73.3     72.8   -10.7
+motion+pixelate                      10    10.2    73.3     71.8   -11.7
+defocus+impulse                      30    30.1    31.6     50.0   -11.7
+defocus+pixelate                     10     9.7    73.3     70.9   -12.1
+rain+pixelate                        30    31.6    29.1     43.7   -17.0
+noise+pixelate                       30    29.6    29.1     41.3   -17.5
+pixelate+impulse                     30    29.1    31.6     42.2   -18.4
+defocus+pixelate                     30    30.1    29.1     35.0   -24.3
+pixelate+impulse                     10    73.3     9.7     53.9   -29.1
+defocus   level 0.451  acc  68.93
+motion    level 0.664  acc  66.50
+noise     level 0.485  acc  67.48
+rain      level 0.539  acc  66.50
+pixelate  level 0.280  acc  66.99
+impulse   level 0.343  acc  64.08
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                69.4    48.1     18.0   +21.4   +17.0  +0.105
+motion+rain               70.4    51.9     15.0   +18.4   +17.0  +0.136
+defocus+rain              67.0    50.0     14.6   +17.0   +16.0  -0.004
+noise+impulse             61.7    46.1     22.3   +15.5    +6.8  +0.594
+rain+impulse              66.0    51.5     18.0   +14.6   +10.2  +0.196
+motion+noise              59.2    49.0     17.0   +10.2    +6.8  +0.101
+defocus+noise             55.3    45.6     18.0    +9.7    +5.3  +0.040
+motion+impulse            54.9    49.5     19.9    +5.3    -1.0  +0.205
+defocus+motion            47.6    43.7     20.9    +3.9    -3.4  +0.730
+defocus+impulse           51.5    47.6     19.4    +3.9    -1.9  +0.160
+noise+pixelate            48.1    45.1     20.4    +2.9    -3.9  +0.259
+pixelate+impulse          50.0    48.5     20.4    +1.5    -5.3  +0.346
+rain+pixelate             51.0    50.0     16.5    +1.0    -1.9  +0.315
+defocus+pixelate          43.7    44.7     19.4    -1.0    -6.8  +0.065
+motion+pixelate           43.7    50.0     16.5    -6.3    -9.2  +0.262
+
+Spearman(cos, E)        = -0.423 (p=0.117)
+Spearman(cos, delta)    = -0.372 (p=0.172)
+Spearman(overlap, E)    = -0.386 (p=0.156)
+Spearman(overlap, delta)= -0.208 (p=0.458)
+additive R^2 on E       = 0.905
+additive R^2 on delta   = 0.898
+mean delta = +7.9 pp, mean E = +3.0 pp
+main effects on delta: rain +9.8  noise +6.7  impulse +1.9  defocus +0.1  motion -0.4  pixelate -8.7
+=== fold2 s17 01:13:38
+clean     level 0.0  acc  84.95
+defocus   level 0.1  acc  84.47
+defocus   level 0.2  acc  78.64
+defocus   level 0.3  acc  69.42
+defocus   level 0.4  acc  56.80
+defocus   level 0.5  acc  46.60
+defocus   level 0.6  acc  42.23
+defocus   level 0.7  acc  35.92
+defocus   level 0.8  acc  34.47
+defocus   level 0.9  acc  33.50
+defocus   level 1.0  acc  29.61
+motion    level 0.1  acc  83.01
+motion    level 0.2  acc  81.07
+motion    level 0.3  acc  74.27
+motion    level 0.4  acc  69.42
+motion    level 0.5  acc  67.48
+motion    level 0.6  acc  61.17
+motion    level 0.7  acc  58.74
+motion    level 0.8  acc  57.77
+motion    level 0.9  acc  57.77
+motion    level 1.0  acc  56.31
+noise     level 0.1  acc  80.58
+noise     level 0.2  acc  77.67
+noise     level 0.3  acc  70.39
+noise     level 0.4  acc  66.50
+noise     level 0.5  acc  59.71
+noise     level 0.6  acc  54.37
+noise     level 0.7  acc  51.94
+noise     level 0.8  acc  48.54
+noise     level 0.9  acc  46.12
+noise     level 1.0  acc  40.78
+rain      level 0.1  acc  81.55
+rain      level 0.2  acc  80.58
+rain      level 0.3  acc  77.18
+rain      level 0.4  acc  73.30
+rain      level 0.5  acc  69.42
+rain      level 0.6  acc  65.05
+rain      level 0.7  acc  58.25
+rain      level 0.8  acc  47.09
+rain      level 0.9  acc  36.41
+rain      level 1.0  acc  27.18
+pixelate  level 0.1  acc  75.24
+pixelate  level 0.2  acc  70.39
+pixelate  level 0.3  acc  66.50
+pixelate  level 0.4  acc  61.65
+pixelate  level 0.5  acc  59.22
+pixelate  level 0.6  acc  45.63
+pixelate  level 0.7  acc  42.72
+pixelate  level 0.8  acc  39.32
+pixelate  level 0.9  acc  38.83
+pixelate  level 1.0  acc  34.47
+impulse   level 0.1  acc  78.64
+impulse   level 0.2  acc  74.27
+impulse   level 0.3  acc  61.65
+impulse   level 0.4  acc  56.80
+impulse   level 0.5  acc  47.57
+impulse   level 0.6  acc  44.17
+impulse   level 0.7  acc  41.75
+impulse   level 0.8  acc  39.32
+impulse   level 0.9  acc  35.92
+impulse   level 1.0  acc  36.41
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       0.5    6.3   15.5   28.2   38.3   42.7   49.0   50.5   51.5   55.3
+motion        1.9    3.9   10.7   15.5   17.5   23.8   26.2   27.2   27.2   28.6
+noise         4.4    7.3   14.6   18.4   25.2   30.6   33.0   36.4   38.8   44.2
+rain          3.4    4.4    7.8   11.7   15.5   19.9   26.7   37.9   48.5   57.8
+pixelate      9.7   14.6   18.4   23.3   25.7   39.3   42.2   45.6   46.1   50.5
+impulse       6.3   10.7   23.3   28.2   37.4   40.8   43.2   45.6   49.0   48.5
+skip motion @ 30.0: ladder tops out at 28.6 pp
+calibrated levels: {"defocus@10": 0.24, "motion@10": 0.29, "noise@10": 0.237, "rain@10": 0.358, "pixelate@10": 0.106, "impulse@10": 0.184, "defocus@20": 0.335, "motion@20": 0.54, "noise@20": 0.423, "rain@20": 0.601, "pixelate@20": 0.332, "impulse@20": 0.274, "defocus@30": 0.418, "noise@30": 0.589, "rain@30": 0.73, "pixelate@30": 0.531, "impulse@30": 0.42}
+clean                              acc  84.95
+single_defocus_10                  acc  75.24
+single_motion_10                   acc  74.76
+single_noise_10                    acc  75.24
+single_rain_10                     acc  75.73
+single_pixelate_10                 acc  73.30
+single_impulse_10                  acc  75.73
+single_defocus_20                  acc  64.08
+single_motion_20                   acc  63.59
+single_noise_20                    acc  65.05
+single_rain_20                     acc  64.08
+single_pixelate_20                 acc  65.53
+single_impulse_20                  acc  64.08
+single_defocus_30                  acc  54.85
+single_noise_30                    acc  54.37
+single_rain_30                     acc  54.37
+single_pixelate_30                 acc  56.31
+single_impulse_30                  acc  53.40
+pair_defocus+motion_10             acc  63.11
+pair_defocus+noise_10              acc  60.68
+pair_defocus+rain_10               acc  42.72
+pair_defocus+pixelate_10           acc  64.56
+pair_defocus+impulse_10            acc  62.62
+pair_motion+noise_10               acc  57.77
+pair_motion+rain_10                acc  44.17
+pair_motion+pixelate_10            acc  63.11
+pair_motion+impulse_10             acc  63.59
+pair_noise+rain_10                 acc  59.71
+pair_noise+pixelate_10             acc  65.05
+pair_noise+impulse_10              acc  53.88
+pair_rain+pixelate_10              acc  53.88
+pair_rain+impulse_10               acc  58.25
+pair_pixelate+impulse_10           acc  64.56
+pair_defocus+motion_20             acc  42.23
+pair_defocus+noise_20              acc  47.09
+pair_defocus+rain_20               acc  23.79
+pair_defocus+pixelate_20           acc  50.97
+pair_defocus+impulse_20            acc  50.00
+pair_motion+noise_20               acc  43.69
+pair_motion+rain_20                acc  22.82
+pair_motion+pixelate_20            acc  46.60
+pair_motion+impulse_20             acc  41.75
+pair_noise+rain_20                 acc  39.32
+pair_noise+pixelate_20             acc  51.46
+pair_noise+impulse_20              acc  42.23
+pair_rain+pixelate_20              acc  32.52
+pair_rain+impulse_20               acc  42.72
+pair_pixelate+impulse_20           acc  49.51
+pair_defocus+noise_30              acc  37.86
+pair_defocus+rain_30               acc  17.48
+pair_defocus+pixelate_30           acc  44.66
+pair_defocus+impulse_30            acc  39.32
+pair_noise+rain_30                 acc  25.24
+pair_noise+pixelate_30             acc  37.86
+pair_noise+impulse_30              acc  36.89
+pair_rain+pixelate_30              acc  33.01
+pair_rain+impulse_30               acc  34.95
+pair_pixelate+impulse_30           acc  42.23
+
+pair                             target  drop_a  drop_b  drop_ab       E
+defocus+rain                         10     9.7     9.2     42.2   +23.3
+motion+rain                          10    10.2     9.2     40.8   +21.4
+motion+rain                          20    21.4    20.9     62.1   +19.9
+defocus+rain                         20    20.9    20.9     61.2   +19.4
+rain+pixelate                        20    20.9    19.4     52.4   +12.1
+noise+impulse                        10     9.7     9.2     31.1   +12.1
+rain+pixelate                        10     9.2    11.7     31.1   +10.2
+rain+impulse                         10     9.2     9.2     26.7    +8.3
+motion+noise                         10    10.2     9.7     27.2    +7.3
+defocus+rain                         30    30.1    30.6     67.5    +6.8
+noise+rain                           10     9.7     9.2     25.2    +6.3
+noise+rain                           20    19.9    20.9     45.6    +4.9
+defocus+noise                        10     9.7     9.7     24.3    +4.9
+defocus+impulse                      10     9.7     9.2     22.3    +3.4
+noise+impulse                        20    19.9    20.9     42.7    +1.9
+defocus+motion                       10     9.7    10.2     21.8    +1.9
+motion+impulse                       10    10.2     9.2     21.4    +1.9
+motion+impulse                       20    21.4    20.9     43.2    +1.0
+defocus+motion                       20    20.9    21.4     42.7    +0.5
+rain+impulse                         20    20.9    20.9     42.2    +0.5
+motion+noise                         20    21.4    19.9     41.3    +0.0
+motion+pixelate                      10    10.2    11.7     21.8    +0.0
+pixelate+impulse                     10    11.7     9.2     20.4    -0.5
+defocus+pixelate                     10     9.7    11.7     20.4    -1.0
+noise+pixelate                       10     9.7    11.7     19.9    -1.5
+noise+rain                           30    30.6    30.6     59.7    -1.5
+motion+pixelate                      20    21.4    19.4     38.3    -2.4
+defocus+noise                        20    20.9    19.9     37.9    -2.9
+pixelate+impulse                     20    19.4    20.9     35.4    -4.9
+noise+pixelate                       20    19.9    19.4     33.5    -5.8
+defocus+pixelate                     20    20.9    19.4     34.0    -6.3
+defocus+impulse                      20    20.9    20.9     35.0    -6.8
+rain+pixelate                        30    30.6    28.6     51.9    -7.3
+noise+pixelate                       30    30.6    28.6     47.1   -12.1
+rain+impulse                         30    30.6    31.6     50.0   -12.1
+defocus+noise                        30    30.1    30.6     47.1   -13.6
+noise+impulse                        30    30.6    31.6     48.1   -14.1
+defocus+impulse                      30    30.1    31.6     45.6   -16.0
+pixelate+impulse                     30    28.6    31.6     42.7   -17.5
+defocus+pixelate                     30    30.1    28.6     40.3   -18.4
+defocus   level 0.335  acc  64.08
+motion    level 0.540  acc  63.59
+noise     level 0.423  acc  65.05
+rain      level 0.601  acc  64.08
+pixelate  level 0.332  acc  65.53
+impulse   level 0.274  acc  64.08
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               77.2    55.3     17.0   +21.8   +19.9  +0.220
+defocus+rain              76.2    57.3     14.6   +18.9   +19.4  +0.188
+rain+pixelate             67.5    55.3     15.0   +12.1   +12.1  +0.251
+noise+impulse             57.8    46.1     24.8   +11.7    +1.9  +0.438
+defocus+motion            57.8    48.5     23.8    +9.2    +0.5  +0.771
+motion+impulse            58.3    51.9     20.4    +6.3    +1.0  +0.129
+pixelate+impulse          50.5    45.1     25.2    +5.3    -4.9  +0.382
+noise+rain                60.7    56.8     14.1    +3.9    +4.9  -0.116
+rain+impulse              57.3    53.4     18.4    +3.9    +0.5  +0.140
+motion+noise              56.3    54.9     16.5    +1.5    +0.0  +0.021
+motion+pixelate           53.4    51.9     18.9    +1.5    -2.4  +0.216
+noise+pixelate            48.5    48.5     20.9    +0.0    -5.8  +0.225
+defocus+noise             52.9    56.8     14.1    -3.9    -2.9  -0.133
+defocus+impulse           50.0    54.9     17.0    -4.9    -6.8  -0.070
+defocus+pixelate          49.0    54.9     15.5    -5.8    -6.3  +0.037
+
+Spearman(cos, E)        = +0.243 (p=0.383)
+Spearman(cos, delta)    = +0.590 (p=0.021)
+Spearman(overlap, E)    = -0.220 (p=0.430)
+Spearman(overlap, delta)= +0.150 (p=0.595)
+additive R^2 on E       = 0.739
+additive R^2 on delta   = 0.507
+mean delta = +5.4 pp, mean E = +2.1 pp
+main effects on delta: rain +9.5  motion +4.4  impulse -0.1  defocus -2.3  noise -2.4  pixelate -2.4
+=== fold2 s29 01:15:44
+clean     level 0.0  acc  84.95
+defocus   level 0.1  acc  83.98
+defocus   level 0.2  acc  81.55
+defocus   level 0.3  acc  64.08
+defocus   level 0.4  acc  55.34
+defocus   level 0.5  acc  47.57
+defocus   level 0.6  acc  40.29
+defocus   level 0.7  acc  34.47
+defocus   level 0.8  acc  32.04
+defocus   level 0.9  acc  30.10
+defocus   level 1.0  acc  28.16
+motion    level 0.1  acc  85.92
+motion    level 0.2  acc  81.07
+motion    level 0.3  acc  74.27
+motion    level 0.4  acc  69.90
+motion    level 0.5  acc  65.53
+motion    level 0.6  acc  62.62
+motion    level 0.7  acc  59.71
+motion    level 0.8  acc  58.74
+motion    level 0.9  acc  59.22
+motion    level 1.0  acc  57.28
+noise     level 0.1  acc  81.07
+noise     level 0.2  acc  78.64
+noise     level 0.3  acc  75.24
+noise     level 0.4  acc  66.99
+noise     level 0.5  acc  61.65
+noise     level 0.6  acc  57.28
+noise     level 0.7  acc  53.40
+noise     level 0.8  acc  48.06
+noise     level 0.9  acc  43.20
+noise     level 1.0  acc  37.86
+rain      level 0.1  acc  83.98
+rain      level 0.2  acc  79.61
+rain      level 0.3  acc  78.16
+rain      level 0.4  acc  73.79
+rain      level 0.5  acc  69.90
+rain      level 0.6  acc  62.62
+rain      level 0.7  acc  50.49
+rain      level 0.8  acc  40.78
+rain      level 0.9  acc  33.50
+rain      level 1.0  acc  25.24
+pixelate  level 0.1  acc  72.33
+pixelate  level 0.2  acc  69.42
+pixelate  level 0.3  acc  65.05
+pixelate  level 0.4  acc  59.71
+pixelate  level 0.5  acc  53.88
+pixelate  level 0.6  acc  45.15
+pixelate  level 0.7  acc  40.78
+pixelate  level 0.8  acc  36.89
+pixelate  level 0.9  acc  37.38
+pixelate  level 1.0  acc  17.48
+impulse   level 0.1  acc  82.04
+impulse   level 0.2  acc  76.70
+impulse   level 0.3  acc  65.53
+impulse   level 0.4  acc  60.19
+impulse   level 0.5  acc  54.37
+impulse   level 0.6  acc  49.03
+impulse   level 0.7  acc  44.66
+impulse   level 0.8  acc  39.32
+impulse   level 0.9  acc  32.04
+impulse   level 1.0  acc  28.64
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       1.0    3.4   20.9   29.6   37.4   44.7   50.5   52.9   54.9   56.8
+motion       -1.0    3.9   10.7   15.0   19.4   22.3   25.2   26.2   25.7   27.7
+noise         3.9    6.3    9.7   18.0   23.3   27.7   31.6   36.9   41.7   47.1
+rain          1.0    5.3    6.8   11.2   15.0   22.3   34.5   44.2   51.5   59.7
+pixelate     12.6   15.5   19.9   25.2   31.1   39.8   44.2   48.1   47.6   67.5
+impulse       2.9    8.3   19.4   24.8   30.6   35.9   40.3   45.6   52.9   56.3
+skip motion @ 30.0: ladder tops out at 27.7 pp
+calibrated levels: {"defocus@10": 0.238, "motion@10": 0.29, "noise@10": 0.304, "rain@10": 0.373, "pixelate@10": 1.0, "impulse@10": 0.216, "defocus@20": 0.295, "motion@20": 0.52, "noise@20": 0.438, "rain@20": 0.568, "pixelate@20": 0.302, "impulse@20": 0.311, "defocus@30": 0.405, "noise@30": 0.66, "rain@30": 0.663, "pixelate@30": 0.482, "impulse@30": 0.49}
+clean                              acc  84.95
+single_defocus_10                  acc  73.30
+single_motion_10                   acc  76.21
+single_noise_10                    acc  75.24
+single_rain_10                     acc  76.21
+single_pixelate_10                 acc  17.48
+single_impulse_10                  acc  75.73
+single_defocus_20                  acc  64.56
+single_motion_20                   acc  65.53
+single_noise_20                    acc  65.05
+single_rain_20                     acc  63.11
+single_pixelate_20                 acc  63.59
+single_impulse_20                  acc  65.05
+single_defocus_30                  acc  53.88
+single_noise_30                    acc  54.85
+single_rain_30                     acc  54.37
+single_pixelate_30                 acc  54.37
+single_impulse_30                  acc  55.34
+pair_defocus+motion_10             acc  55.34
+pair_defocus+noise_10              acc  59.22
+pair_defocus+rain_10               acc  47.57
+pair_defocus+pixelate_10           acc  18.45
+pair_defocus+impulse_10            acc  64.56
+pair_motion+noise_10               acc  57.77
+pair_motion+rain_10                acc  45.63
+pair_motion+pixelate_10            acc  19.90
+pair_motion+impulse_10             acc  60.68
+pair_noise+rain_10                 acc  58.25
+pair_noise+pixelate_10             acc  17.48
+pair_noise+impulse_10              acc  50.49
+pair_rain+pixelate_10              acc  25.24
+pair_rain+impulse_10               acc  54.85
+pair_pixelate+impulse_10           acc  37.86
+pair_defocus+motion_20             acc  47.57
+pair_defocus+noise_20              acc  50.00
+pair_defocus+rain_20               acc  30.10
+pair_defocus+pixelate_20           acc  52.91
+pair_defocus+impulse_20            acc  53.88
+pair_motion+noise_20               acc  42.72
+pair_motion+rain_20                acc  28.16
+pair_motion+pixelate_20            acc  52.43
+pair_motion+impulse_20             acc  45.63
+pair_noise+rain_20                 acc  39.81
+pair_noise+pixelate_20             acc  50.49
+pair_noise+impulse_20              acc  41.75
+pair_rain+pixelate_20              acc  50.00
+pair_rain+impulse_20               acc  40.78
+pair_pixelate+impulse_20           acc  52.91
+pair_defocus+noise_30              acc  31.55
+pair_defocus+rain_30               acc  22.33
+pair_defocus+pixelate_30           acc  43.69
+pair_defocus+impulse_30            acc  41.26
+pair_noise+rain_30                 acc  28.16
+pair_noise+pixelate_30             acc  36.89
+pair_noise+impulse_30              acc  34.95
+pair_rain+pixelate_30              acc  37.38
+pair_rain+impulse_30               acc  33.01
+pair_pixelate+impulse_30           acc  43.69
+
+pair                             target  drop_a  drop_b  drop_ab       E
+motion+rain                          10     8.7     8.7     39.3   +21.8
+defocus+rain                         10    11.7     8.7     37.4   +17.0
+motion+rain                          20    19.4    21.8     56.8   +15.5
+noise+impulse                        10     9.7     9.2     34.5   +15.5
+defocus+rain                         20    20.4    21.8     54.9   +12.6
+rain+impulse                         10     8.7     9.2     30.1   +12.1
+defocus+motion                       10    11.7     8.7     29.6    +9.2
+motion+noise                         10     8.7     9.7     27.2    +8.7
+noise+rain                           10     9.7     8.7     26.7    +8.3
+motion+impulse                       10     8.7     9.2     24.3    +6.3
+defocus+noise                        10    11.7     9.7     25.7    +4.4
+noise+rain                           20    19.9    21.8     45.1    +3.4
+noise+impulse                        20    19.9    19.9     43.2    +3.4
+motion+noise                         20    19.4    19.9     42.2    +2.9
+rain+impulse                         20    21.8    19.9     44.2    +2.4
+defocus+rain                         30    31.1    30.6     62.6    +1.0
+motion+impulse                       20    19.4    19.9     39.3    +0.0
+defocus+impulse                      10    11.7     9.2     20.4    -0.5
+defocus+motion                       20    20.4    19.4     37.4    -2.4
+noise+rain                           30    30.1    30.6     56.8    -3.9
+defocus+noise                        20    20.4    19.9     35.0    -5.3
+noise+pixelate                       20    19.9    21.4     34.5    -6.8
+defocus+noise                        30    31.1    30.1     53.4    -7.8
+motion+pixelate                      20    19.4    21.4     32.5    -8.3
+rain+pixelate                        20    21.8    21.4     35.0    -8.3
+rain+impulse                         30    30.6    29.6     51.9    -8.3
+pixelate+impulse                     20    21.4    19.9     32.0    -9.2
+defocus+impulse                      20    20.4    19.9     31.1    -9.2
+defocus+pixelate                     20    20.4    21.4     32.0    -9.7
+noise+pixelate                       10     9.7    67.5     67.5    -9.7
+noise+impulse                        30    30.1    29.6     50.0    -9.7
+motion+pixelate                      10     8.7    67.5     65.0   -11.2
+defocus+pixelate                     10    11.7    67.5     66.5   -12.6
+noise+pixelate                       30    30.1    30.6     48.1   -12.6
+rain+pixelate                        30    30.6    30.6     47.6   -13.6
+rain+pixelate                        10     8.7    67.5     59.7   -16.5
+defocus+impulse                      30    31.1    29.6     43.7   -17.0
+pixelate+impulse                     30    30.6    29.6     41.3   -18.9
+defocus+pixelate                     30    31.1    30.6     41.3   -20.4
+pixelate+impulse                     10    67.5     9.2     47.1   -29.6
+defocus   level 0.295  acc  64.56
+motion    level 0.520  acc  65.53
+noise     level 0.438  acc  65.05
+rain      level 0.568  acc  63.11
+pixelate  level 0.302  acc  63.59
+impulse   level 0.311  acc  65.05
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               71.8    54.4     17.0   +17.5   +15.5  +0.006
+defocus+rain              69.9    56.3     16.0   +13.6   +12.6  -0.051
+noise+impulse             58.3    44.7     25.2   +13.6    +3.4  +0.562
+rain+impulse              59.2    54.4     17.5    +4.9    +2.4  +0.061
+defocus+motion            52.4    48.1     21.8    +4.4    -2.4  +0.778
+motion+impulse            54.4    50.0     19.4    +4.4    +0.0  +0.058
+noise+pixelate            49.5    45.6     25.7    +3.9    -6.8  +0.370
+noise+rain                60.2    57.3     14.6    +2.9    +3.4  -0.017
+motion+noise              57.3    55.3     14.1    +1.9    +2.9  +0.047
+pixelate+impulse          47.1    49.5     21.8    -2.4    -9.2  +0.377
+defocus+impulse           46.1    51.5     18.9    -5.3    -9.2  -0.076
+defocus+noise             50.0    56.8     13.6    -6.8    -5.3  -0.194
+motion+pixelate           47.6    54.4     16.5    -6.8    -8.3  +0.111
+rain+pixelate             50.0    57.8     15.5    -7.8    -8.3  +0.156
+defocus+pixelate          47.1    56.8     15.0    -9.7    -9.7  -0.070
+
+Spearman(cos, E)        = -0.009 (p=0.975)
+Spearman(cos, delta)    = +0.236 (p=0.397)
+Spearman(overlap, E)    = -0.091 (p=0.746)
+Spearman(overlap, delta)= +0.432 (p=0.107)
+additive R^2 on E       = 0.734
+additive R^2 on delta   = 0.478
+mean delta = +1.9 pp, mean E = -1.3 pp
+main effects on delta: rain +5.8  motion +3.4  noise +1.9  impulse +1.8  defocus -2.9  pixelate -7.7
+=== DONE 01:17:55

@@ -1,0 +1,233 @@
+{
+  "run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s29",
+  "fold": 0,
+  "seed": 29,
+  "target_pp": 10.0,
+  "hf_ratio": {
+    "defocus": 0.21308079043888356,
+    "motion": 0.3413502467537184,
+    "noise": 3.3998660378564467,
+    "rain": 1.002042773514121,
+    "pixelate": 1.0589864171452377,
+    "impulse": 9.2974564194551
+  },
+  "pairs": [
+    {
+      "pair": "defocus+motion",
+      "a": "defocus",
+      "b": "motion",
+      "alignment": 0.6044409871101379,
+      "overlap_pp": 20.388349514563107,
+      "class_error_corr": 0.9295752013039116,
+      "hf_a": 0.21308079043888356,
+      "hf_b": 0.3413502467537184,
+      "hf_product": 0.07273518039479027,
+      "same_mechanism": true,
+      "delta_pp": 3.398058252427184
+    },
+    {
+      "pair": "defocus+noise",
+      "a": "defocus",
+      "b": "noise",
+      "alignment": 0.1950761377811432,
+      "overlap_pp": 17.475728155339805,
+      "class_error_corr": 0.46634672968565855,
+      "hf_a": 0.21308079043888356,
+      "hf_b": 3.3998660378564467,
+      "hf_product": 0.7244461427327669,
+      "same_mechanism": false,
+      "delta_pp": -6.310679611650485
+    },
+    {
+      "pair": "defocus+rain",
+      "a": "defocus",
+      "b": "rain",
+      "alignment": 0.1549801528453827,
+      "overlap_pp": 14.077669902912621,
+      "class_error_corr": -0.6008392848631678,
+      "hf_a": 0.21308079043888356,
+      "hf_b": 1.002042773514121,
+      "hf_product": 0.2135160662339601,
+      "same_mechanism": false,
+      "delta_pp": -2.9126213592232943
+    },
+    {
+      "pair": "defocus+pixelate",
+      "a": "defocus",
+      "b": "pixelate",
+      "alignment": 0.2863923907279968,
+      "overlap_pp": 16.019417475728158,
+      "class_error_corr": 0.33585887050512614,
+      "hf_a": 0.21308079043888356,
+      "hf_b": 1.0589864171452377,
+      "hf_product": 0.2256496628293485,
+      "same_mechanism": true,
+      "delta_pp": -2.427184466019426
+    },
+    {
+      "pair": "defocus+impulse",
+      "a": "defocus",
+      "b": "impulse",
+      "alignment": 0.3209438920021057,
+      "overlap_pp": 15.53398058252427,
+      "class_error_corr": -0.22492315294663234,
+      "hf_a": 0.21308079043888356,
+      "hf_b": 9.2974564194551,
+      "hf_product": 1.981109362928565,
+      "same_mechanism": false,
+      "delta_pp": -4.368932038834956
+    },
+    {
+      "pair": "motion+noise",
+      "a": "motion",
+      "b": "noise",
+      "alignment": 0.20038701593875885,
+      "overlap_pp": 17.475728155339805,
+      "class_error_corr": 0.6260985110394414,
+      "hf_a": 0.3413502467537184,
+      "hf_b": 3.3998660378564467,
+      "hf_product": 1.160545110951885,
+      "same_mechanism": false,
+      "delta_pp": -2.9126213592233015
+    },
+    {
+      "pair": "motion+rain",
+      "a": "motion",
+      "b": "rain",
+      "alignment": 0.21741905808448792,
+      "overlap_pp": 14.077669902912621,
+      "class_error_corr": -0.5000092082645187,
+      "hf_a": 0.3413502467537184,
+      "hf_b": 1.002042773514121,
+      "hf_product": 0.3420475479968256,
+      "same_mechanism": false,
+      "delta_pp": -0.4854368932038753
+    },
+    {
+      "pair": "motion+pixelate",
+      "a": "motion",
+      "b": "pixelate",
+      "alignment": 0.2814079821109772,
+      "overlap_pp": 15.048543689320388,
+      "class_error_corr": 0.46071847398209814,
+      "hf_a": 0.3413502467537184,
+      "hf_b": 1.0589864171452377,
+      "hf_product": 0.36148527480136305,
+      "same_mechanism": true,
+      "delta_pp": -2.9126213592233086
+    },
+    {
+      "pair": "motion+impulse",
+      "a": "motion",
+      "b": "impulse",
+      "alignment": 0.29877328872680664,
+      "overlap_pp": 13.592233009708737,
+      "class_error_corr": -0.023746747716162125,
+      "hf_a": 0.3413502467537184,
+      "hf_b": 9.2974564194551,
+      "hf_product": 3.1736890429629416,
+      "same_mechanism": false,
+      "delta_pp": -3.3980582524271767
+    },
+    {
+      "pair": "noise+rain",
+      "a": "noise",
+      "b": "rain",
+      "alignment": 0.22342196106910706,
+      "overlap_pp": 12.62135922330097,
+      "class_error_corr": -0.23893364482652302,
+      "hf_a": 3.3998660378564467,
+      "hf_b": 1.002042773514121,
+      "hf_product": 3.4068111941501398,
+      "same_mechanism": true,
+      "delta_pp": 4.368932038834956
+    },
+    {
+      "pair": "noise+pixelate",
+      "a": "noise",
+      "b": "pixelate",
+      "alignment": 0.2765986919403076,
+      "overlap_pp": 15.53398058252427,
+      "class_error_corr": 0.7490847865383087,
+      "hf_a": 3.3998660378564467,
+      "hf_b": 1.0589864171452377,
+      "hf_product": 3.6004119542033735,
+      "same_mechanism": false,
+      "delta_pp": -1.4563106796116614
+    },
+    {
+      "pair": "noise+impulse",
+      "a": "noise",
+      "b": "impulse",
+      "alignment": 0.4205930829048157,
+      "overlap_pp": 16.990291262135923,
+      "class_error_corr": 0.3833955729034127,
+      "hf_a": 3.3998660378564467,
+      "hf_b": 9.2974564194551,
+      "hf_product": 31.610106318955797,
+      "same_mechanism": true,
+      "delta_pp": -0.9708737864077577
+    },
+    {
+      "pair": "rain+pixelate",
+      "a": "rain",
+      "b": "pixelate",
+      "alignment": 0.2993413209915161,
+      "overlap_pp": 13.592233009708737,
+      "class_error_corr": 0.22175085453030102,
+      "hf_a": 1.002042773514121,
+      "hf_b": 1.0589864171452377,
+      "hf_product": 1.0611496865499959,
+      "same_mechanism": false,
+      "delta_pp": -6.310679611650489
+    },
+    {
+      "pair": "rain+impulse",
+      "a": "rain",
+      "b": "impulse",
+      "alignment": 0.3547597825527191,
+      "overlap_pp": 16.50485436893204,
+      "class_error_corr": 0.5495009139883631,
+      "hf_a": 1.002042773514121,
+      "hf_b": 9.2974564194551,
+      "hf_product": 9.316449017177458,
+      "same_mechanism": true,
+      "delta_pp": 3.398058252427191
+    },
+    {
+      "pair": "pixelate+impulse",
+      "a": "pixelate",
+      "b": "impulse",
+      "alignment": 0.3663989007472992,
+      "overlap_pp": 14.563106796116504,
+      "class_error_corr": 0.38359481817970803,
+      "hf_a": 1.0589864171452377,
+      "hf_b": 9.2974564194551,
+      "hf_product": 9.845880062202747,
+      "same_mechanism": false,
+      "delta_pp": -6.310679611650489
+    }
+  ],
+  "spearman": {
+    "alignment_delta": [
+      0.04468277029981736,
+      0.8743623219190317
+    ],
+    "hf_product_delta": [
+      -0.008936554059963471,
+      0.9747840925301918
+    ],
+    "overlap_delta": [
+      0.1336327706960176,
+      0.6349320611172593
+    ],
+    "class_error_corr_delta": [
+      0.0661305000437297,
+      0.814862448620158
+    ],
+    "same_mechanism_delta": [
+      0.6305039898812785,
+      0.011739793646600164
+    ]
+  }
+}

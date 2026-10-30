@@ -1,0 +1,34 @@
+clean                      acc  84.95
+matched_haze_1             acc  85.92
+matched_haze_2             acc  84.95
+matched_haze_3             acc  84.47
+matched_haze_4             acc  82.52
+matched_haze_5             acc  82.04
+matched_glare_1            acc  83.98
+matched_glare_2            acc  84.95
+matched_glare_3            acc  81.55
+matched_glare_4            acc  79.61
+matched_glare_5            acc  75.24
+matched_cloud_1            acc  83.50
+matched_cloud_2            acc  82.52
+matched_cloud_3            acc  82.52
+matched_cloud_4            acc  85.44
+matched_cloud_5            acc  81.55
+matched_haze+glare_2       acc  83.01
+matched_haze+glare_3       acc  82.04
+matched_haze+glare_4       acc  75.73
+matched_haze+glare_5       acc  62.62
+matched_haze+cloud_2       acc  83.50
+matched_haze+cloud_3       acc  84.95
+matched_haze+cloud_4       acc  81.07
+matched_haze+cloud_5       acc  77.67
+
+pair         sev  drop_a  drop_b  drop_ab       E   union   delta
+haze+glare     2     0.0     0.0      1.9    +1.9    17.5    -0.5
+haze+glare     3     0.5     3.4      2.9    -1.0    18.9    -1.0
+haze+glare     4     2.4     5.3      9.2    +1.5    24.3    +0.0
+haze+glare     5     2.9     9.7     22.3    +9.7    29.6    +7.8
+haze+cloud     2     0.0     2.4      1.5    -1.0    19.9    -3.4
+haze+cloud     3     0.5     2.4      0.0    -2.9    20.4    -5.3
+haze+cloud     4     2.4    -0.5      3.9    +1.9    20.4    -1.5
+haze+cloud     5     2.9     3.4      7.3    +1.0    22.3    +0.0

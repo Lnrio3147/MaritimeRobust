@@ -30,7 +30,8 @@ Answering it required three design decisions that turned out to matter more than
 
 - A paired protocol for compound-degradation evaluation in maritime recognition, with a strong combined-augmentation baseline, group-disjoint folds and cluster bootstrap inference (§3).
 - Evidence that the effect of compound degradation is **not** separable into its constituents, and that under the shipped renderer this non-separability appears as a **threshold confined to the highest severity** rather than a smooth gradient (§4.3) — including one pre-registered prediction that failed. A second, physically-motivated renderer, applied both to a frozen model and to models retrained under it, reproduces the severity-5 excess (10.2 / 16.0 pp against 9.7 / 12.6 pp) but produces it from severity 4 upwards: the excess is not an artefact of one rendering, while the *onset severity* is (§7.4).
-- Evidence that compound failures are qualitatively new: 41.5% of severe-compound errors occur on images that every single degradation leaves correct (§4.4).
+- Evidence that compound failures are qualitatively new: 41.5% of severe-compound errors occur on images that every single degradation leaves correct (§4.4). Against the stronger independent-failure baseline (the union of single-corruption error sets), the severity-5 haze+glare excess survives in 6/6 cells (+7.3 to +13.1 pp, mean +9.9), while the haze+cloud excess vanishes (mean −0.7 pp); at severities 2–4 both pairs are mildly sub-additive (§4.7).
+- A composition study over fifteen calibrated pairs: at matched marginal damage the interaction decomposes additively into per-family main effects (R² 0.42–0.90 across two backbones and twelve cells), no single-corruption geometric predictor recovers the ordering, and the per-family values themselves are backbone-dependent (§4.7).
 - A pre-registered negative result on eight interventions, and a documented case in which a limited training budget manufactures a gain (§5).
 
 ---
@@ -59,7 +60,7 @@ Answering it required three design decisions that turned out to matter more than
 
 **Inference.** Cluster bootstrap over `source_group_id`, 2000–4000 resamples, with the two seeds of an image kept in the same cluster. Multiplicity controlled by Benjamini–Hochberg where a family of tests is reported. All gains are computed per image, same fold, same seed, same corruption instance.
 
-**Total cost.** 130 training runs, ≈3.4 GPU-hours on a single RTX 4090.
+**Total cost.** 136 training runs, ≈3.5 GPU-hours on a single RTX 4090.
 
 ---
 
@@ -144,6 +145,18 @@ The third test turns the same reading into a model change and fails: a fourth in
 
 Together the three probes support one statement only: saturation and contrast are a good description of the severity-5 drop **at the level of conditions**, and a poor one of which images fail. We do not claim a mechanism for the new errors.
 
+### 4.7 The interaction is additive over corruption families
+
+Everything above concerns three hand-picked degradations. To ask whether the failure of additivity has structure beyond them, we added six synthetic families (defocus, motion, noise, rain, pixelate, impulse) with continuous levels, calibrated each level so that it alone costs a matched 10 or 20 pp on the frozen baseline, and measured all fifteen pairs over three folds × two seeds.
+
+Raw `E` conflates interaction with error overlap: two degradations that break the same images cannot add up. Taking the union of the two single-corruption error sets as the independent-failure baseline, `delta = e(a+b) − |E_a ∪ E_b|`, the severity-5 haze+glare excess survives in all six cells (fold0/1/2 × seed17/29; +7.3 to +13.1 pp, mean +9.9), while haze+cloud falls to a mean of −0.7 pp and is positive in only two cells. At severities 2–4 both compounds sit 0.4–2.3 pp *below* the union baseline. The headline result is therefore not an artefact of overlap, but haze+cloud should not be described as superadditive.
+
+Across the fifteen added pairs, delta ranges from −4.4 to +18.3 pp (ConvNeXt-T). An additive model in per-family main effects, `delta(a,b) ≈ m_a + m_b`, explains R² = 0.48–0.90 in all six cells, and R² = 0.42–0.75 in all six ResNet-50 cells: which pair fails is largely predicted by which families it contains. The family values themselves do not transfer between backbones (impulse contributes +1.7 pp on ConvNeXt and −8.2 pp on ResNet-50), so superadditivity is a property of a (model, corruption) pair rather than of a corruption pair alone.
+
+No single-corruption geometric predictor recovers the ordering — mean feature-shift cosine, per-image displacement alignment, retained high-frequency energy and per-class error correlation all fail (|ρ| < 0.6 with unstable sign across cells). Predicting which composition will explode requires measuring part of the composition.
+
+A six-cell replication gate fixed before folds 1–2 were run passed four of five criteria on ConvNeXt-T (the failed one, sub-additivity of two low-pass families, held in 4/6 cells). The ResNet-50 study passes all five but was not pre-registered and is not used to overturn that.
+
 ---
 
 ## 5. Interventions: a pre-registered negative result
@@ -209,13 +222,13 @@ Single dataset; 618 training images; two seeds; a five-level severity scale with
 
 ## 8. Conclusion
 
-Compound weather degradations do something to maritime ship classifiers that single degradations do not: at the highest tested severity their joint effect exceeds the additive prediction by 11.3 pp and exceeds what any single degradation can do, and 41.5% of the resulting errors are errors no single degradation produces. At moderate severities, and under the shipped renderer, the same conditions are additive; a second, physically-motivated renderer preserves the severity-5 excess but moves its onset down to severity 4, so what we claim is the excess and its growth with severity rather than a fixed crossover. Nine interventions failed to improve on a strong combined-augmentation baseline. The protocol, the predictions, the failed pre-registered test and the negative results are released together, so that the negative half of this paper is as checkable as the positive half.
+Compound weather degradations do something to maritime ship classifiers that single degradations do not: at the highest tested severity their joint effect exceeds the additive prediction by 11.3 pp and exceeds what any single degradation can do, and 41.5% of the resulting errors are errors no single degradation produces. At moderate severities, and under the shipped renderer, the same conditions are additive; a second, physically-motivated renderer preserves the severity-5 excess but moves its onset down to severity 4, so what we claim is the excess and its growth with severity rather than a fixed crossover. Against the union-of-errors baseline the haze+glare excess survives in all six cells (mean +9.9 pp) while the haze+cloud excess disappears (mean −0.7 pp). Extending to fifteen calibrated pairs, we find that the interaction is additively governed by per-family main effects (R² 0.42–0.90 across two backbones) but that the per-family values change with the backbone, and that no single-corruption geometric quantity predicts which pair will explode. Nine interventions failed to improve on a strong combined-augmentation baseline. The protocol, the predictions, the failed pre-registered test and the negative results are released together, so that the negative half of this paper is as checkable as the positive half.
 
 ---
 
 ## Appendix A. Reproduction
 
-Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (148 runs, code, configs, splits, reports). The probes of §4.6 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). The second renderer of §7.4 is `reports/PHYSICAL_RENDERER.md`, produced by `scripts/physical_eval.py` from `src/maritime_robust/physical.py` and gated by `scripts/physical_gate.py`; its pre-registration is `reports/PREREG_PHYSICAL_RENDERER.md`. A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`.
+Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (154 runs, code, configs, splits, reports). The probes of §4.6 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). The second renderer of §7.4 is `reports/PHYSICAL_RENDERER.md`, produced by `scripts/physical_eval.py` from `src/maritime_robust/physical.py` and gated by `scripts/physical_gate.py`; its pre-registration is `reports/PREREG_PHYSICAL_RENDERER.md`. A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`. The error-overlap decomposition of §4.7 is `reports/COMPOSITION.md` §2, from `scripts/overlap_main_grid.py`; the fifteen-pair composition study and its replication gate are the rest of `reports/COMPOSITION.md`, from `scripts/composition_{calibrate,pairs,interaction,predictors,aggregate,gate}.py`, with the gate pre-registered in `reports/PREREG_COMPOSITION_REPLICATION.md`. All composition measurements are frozen-model inference; the only training added is six ResNet-50 clean baselines.
 
 ## Appendix B. Margin-space superadditivity
 

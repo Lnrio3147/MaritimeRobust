@@ -1,0 +1,2531 @@
+=== rebuild 01:46:17
+--- fold0 s17 target20 01:46:17
+defocus   level 0.410  acc  64.08
+motion    level 0.528  acc  64.56
+noise     level 0.435  acc  66.02
+rain      level 0.392  acc  65.53
+pixelate  level 0.353  acc  65.53
+impulse   level 0.475  acc  62.62
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             71.8    50.0     21.4   +21.8   +16.0  +0.587
+motion+rain               68.9    53.4     16.5   +15.5   +14.6  +0.070
+defocus+rain              69.4    54.4     16.0   +15.0   +14.6  +0.034
+noise+rain                60.7    51.9     16.5    +8.7    +7.8  +0.060
+noise+pixelate            55.8    48.1     20.4    +7.8    +2.9  +0.239
+defocus+noise             58.3    51.9     18.0    +6.3    +3.9  -0.130
+motion+noise              55.8    52.4     17.0    +3.4    +1.9  -0.009
+rain+impulse              56.8    54.4     17.5    +2.4    +0.5  +0.229
+rain+pixelate             52.4    50.5     18.4    +1.9    -1.0  +0.308
+motion+impulse            55.3    54.4     18.4    +1.0    -1.9  +0.091
+pixelate+impulse          49.0    51.9     19.9    -2.9    -7.3  +0.291
+defocus+impulse           51.9    54.9     18.4    -2.9    -5.8  -0.074
+defocus+pixelate          46.6    50.5     19.9    -3.9    -8.3  +0.101
+motion+pixelate           47.6    51.9     18.0    -4.4    -6.8  +0.401
+defocus+motion            44.2    49.0     22.3    -4.9   -11.7  +0.704
+
+Spearman(cos, E)        = -0.332 (p=0.226)
+Spearman(cos, delta)    = -0.289 (p=0.296)
+Spearman(overlap, E)    = -0.485 (p=0.067)
+Spearman(overlap, delta)= -0.413 (p=0.126)
+additive R^2 on E       = 0.603
+additive R^2 on delta   = 0.530
+mean delta = +4.3 pp, mean E = +1.3 pp
+main effects on delta: noise +7.5  rain +6.4  impulse +0.3  motion -1.9  defocus -2.1  pixelate -4.9
+defocus   level 0.410  hf_ratio 0.092
+motion    level 0.528  hf_ratio 0.234
+noise     level 0.435  hf_ratio 8.872
+rain      level 0.392  hf_ratio 1.099
+pixelate  level 0.353  hf_ratio 1.113
+impulse   level 0.475  hf_ratio 20.558
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.627     21.4   +0.484  182.384   +21.8
+motion+rain             +0.274     16.5   -0.605    0.257   +15.5
+defocus+rain            +0.218     16.0   -0.518    0.101   +15.0
+noise+rain              +0.307     16.5   -0.072    9.753    +8.7
+noise+pixelate          +0.431     20.4   +0.689    9.876    +7.8
+defocus+noise           +0.288     18.0   +0.316    0.819    +6.3
+motion+noise            +0.298     17.0   +0.317    2.075    +3.4
+rain+impulse            +0.378     17.5   -0.130   22.600    +2.4
+rain+pixelate           +0.355     18.4   -0.252    1.224    +1.9
+motion+impulse          +0.328     18.4   +0.630    4.807    +1.0
+pixelate+impulse        +0.459     19.9   +0.190   22.886    -2.9
+defocus+impulse         +0.310     18.4   +0.307    1.897    -2.9
+defocus+pixelate        +0.378     19.9   +0.506    0.103    -3.9
+motion+pixelate         +0.406     18.0   +0.447    0.260    -4.4
+defocus+motion          +0.560     22.3   +0.822    0.022    -4.9
+
+Spearman(alignment       , delta) = -0.379 (p=0.164)
+Spearman(hf_product      , delta) = +0.311 (p=0.260)
+Spearman(overlap         , delta) = -0.413 (p=0.126)
+Spearman(class_error_corr, delta) = -0.429 (p=0.111)
+Spearman(same_mechanism  , delta) = -0.220 (p=0.430)
+
+  lowpass+lowpass        n= 3  mean delta   -4.4 pp  range [-4.9, -3.9]
+  stochastic+stochastic  n= 3  mean delta  +11.0 pp  range [+2.4, +21.8]
+  mixed                  n= 9  mean delta   +5.0 pp  range [-2.9, +15.5]
+--- fold0 s17 target10 01:46:54
+defocus   level 0.282  acc  73.30
+motion    level 0.340  acc  74.76
+noise     level 0.208  acc  74.76
+rain      level 0.176  acc  74.76
+pixelate  level 1.000  acc  29.13
+impulse   level 0.212  acc  74.27
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             48.5    35.0     16.0   +13.6   +13.1  +0.434
+motion+rain               45.6    35.4     15.0   +10.2   +10.7  +0.060
+motion+impulse            43.2    35.9     15.0    +7.3    +7.8  +0.006
+defocus+rain              43.7    39.3     12.6    +4.4    +7.3  -0.131
+rain+impulse              38.3    35.0     16.0    +3.4    +2.9  +0.290
+pixelate+impulse          82.0    79.1     17.5    +2.9    +1.0  +0.109
+defocus+motion            36.4    34.0     18.0    +2.4    +0.0  +0.769
+noise+rain                35.4    35.9     14.6    -0.5    +0.5  +0.019
+motion+noise              34.5    37.9     12.6    -3.4    -0.5  -0.093
+noise+pixelate            71.8    76.2     19.9    -4.4    -8.7  +0.063
+defocus+impulse           34.5    39.8     12.6    -5.3    -2.4  -0.166
+defocus+noise             33.0    38.8     13.1    -5.8    -3.4  -0.235
+defocus+pixelate          72.8    79.1     18.4    -6.3    -9.2  +0.039
+motion+pixelate           70.4    78.2     18.0    -7.8   -10.2  +0.082
+rain+pixelate             68.4    82.0     14.1   -13.6   -12.1  +0.142
+
+Spearman(cos, E)        = +0.086 (p=0.761)
+Spearman(cos, delta)    = +0.171 (p=0.541)
+Spearman(overlap, E)    = -0.160 (p=0.569)
+Spearman(overlap, delta)= -0.050 (p=0.859)
+additive R^2 on E       = 0.669
+additive R^2 on delta   = 0.499
+mean delta = -0.2 pp, mean E = -0.2 pp
+main effects on delta: impulse +5.7  motion +2.4  rain +1.2  noise +0.1  defocus -2.5  pixelate -7.1
+defocus   level 0.282  hf_ratio 0.195
+motion    level 0.340  hf_ratio 0.337
+noise     level 0.208  hf_ratio 3.036
+rain      level 0.176  hf_ratio 0.921
+pixelate  level 1.000  hf_ratio 0.640
+impulse   level 0.212  hf_ratio 9.927
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.486     16.0   +0.680   30.137   +13.6
+motion+rain             +0.195     15.0   -0.248    0.310   +10.2
+motion+impulse          +0.243     15.0   +0.164    3.346    +7.3
+defocus+rain            +0.112     12.6   -0.313    0.179    +4.4
+rain+impulse            +0.339     16.0   +0.432    9.138    +3.4
+pixelate+impulse        +0.360     17.5   -0.196    6.352    +2.9
+defocus+motion          +0.575     18.0   +0.855    0.066    +2.4
+noise+rain              +0.225     14.6   +0.320    2.795    -0.5
+motion+noise            +0.199     12.6   +0.428    1.023    -3.4
+noise+pixelate          +0.317     19.9   +0.172    1.943    -4.4
+defocus+impulse         +0.211     12.6   -0.248    1.933    -5.3
+defocus+noise           +0.176     13.1   +0.159    0.591    -5.8
+defocus+pixelate        +0.283     18.4   -0.187    0.125    -6.3
+motion+pixelate         +0.290     18.0   -0.039    0.216    -7.8
+rain+pixelate           +0.302     14.1   -0.439    0.589   -13.6
+
+Spearman(alignment       , delta) = +0.068 (p=0.810)
+Spearman(hf_product      , delta) = +0.418 (p=0.121)
+Spearman(overlap         , delta) = -0.050 (p=0.859)
+Spearman(class_error_corr, delta) = +0.279 (p=0.315)
+Spearman(same_mechanism  , delta) = +0.000 (p=1.000)
+
+  lowpass+lowpass        n= 3  mean delta   -3.9 pp  range [-7.8, +2.4]
+  stochastic+stochastic  n= 3  mean delta   +5.5 pp  range [-0.5, +13.6]
+  mixed                  n= 9  mean delta   -0.9 pp  range [-13.6, +10.2]
+--- fold0 s29 target20 01:47:24
+defocus   level 0.435  acc  62.14
+motion    level 0.620  acc  62.62
+noise     level 0.642  acc  63.11
+rain      level 0.452  acc  61.65
+pixelate  level 0.428  acc  63.11
+impulse   level 0.464  acc  61.65
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             65.0    48.5     26.7   +16.5    +7.8  +0.539
+noise+rain                68.9    55.8     19.4   +13.1   +11.7  +0.068
+motion+impulse            64.1    51.9     23.8   +12.1    +6.3  +0.249
+noise+pixelate            64.1    52.9     20.9   +11.2    +8.3  +0.390
+defocus+impulse           63.1    52.9     23.3   +10.2    +4.9  +0.227
+defocus+rain              65.5    56.3     19.9    +9.2    +7.3  -0.002
+motion+noise              63.1    53.9     20.4    +9.2    +6.8  +0.106
+rain+impulse              64.1    55.3     21.4    +8.7    +5.3  +0.136
+motion+rain               66.5    58.3     17.5    +8.3    +8.7  +0.150
+defocus+noise             59.7    53.9     20.9    +5.8    +2.9  -0.000
+defocus+motion            52.4    48.5     26.7    +3.9    -4.9  +0.790
+rain+pixelate             54.4    53.4     21.8    +1.0    -2.9  +0.313
+defocus+pixelate          53.9    53.4     21.4    +0.5    -2.9  +0.306
+motion+pixelate           52.4    54.4     19.9    -1.9    -3.9  +0.463
+pixelate+impulse          47.6    52.9     22.3    -5.3    -9.7  +0.338
+
+Spearman(cos, E)        = -0.420 (p=0.119)
+Spearman(cos, delta)    = -0.223 (p=0.423)
+Spearman(overlap, E)    = -0.457 (p=0.087)
+Spearman(overlap, delta)= +0.055 (p=0.846)
+additive R^2 on E       = 0.670
+additive R^2 on delta   = 0.691
+mean delta = +6.8 pp, mean E = +3.0 pp
+main effects on delta: noise +6.8  impulse +3.4  rain +2.9  motion +0.7  defocus +0.2  pixelate -5.8
+defocus   level 0.435  hf_ratio 0.081
+motion    level 0.620  hf_ratio 0.204
+noise     level 0.642  hf_ratio 16.299
+rain      level 0.452  hf_ratio 1.185
+pixelate  level 0.428  hf_ratio 1.120
+impulse   level 0.464  hf_ratio 20.118
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.657     26.7   +0.714  327.893   +16.5
+noise+rain              +0.346     19.4   -0.054   19.321   +13.1
+motion+impulse          +0.391     23.8   +0.738    4.110   +12.1
+noise+pixelate          +0.499     20.9   +0.487   18.250   +11.2
+defocus+impulse         +0.416     23.3   +0.378    1.624   +10.2
+defocus+rain            +0.236     19.9   -0.571    0.096    +9.2
+motion+noise            +0.357     20.4   +0.382    3.330    +9.2
+rain+impulse            +0.384     21.4   -0.288   23.847    +8.7
+motion+rain             +0.301     17.5   -0.598    0.242    +8.3
+defocus+noise           +0.363     20.9   +0.088    1.316    +5.8
+defocus+motion          +0.600     26.7   +0.831    0.016    +3.9
+rain+pixelate           +0.362     21.8   -0.318    1.327    +1.0
+defocus+pixelate        +0.460     21.4   +0.405    0.090    +0.5
+motion+pixelate         +0.441     19.9   +0.281    0.229    -1.9
+pixelate+impulse        +0.501     22.3   +0.018   22.526    -5.3
+
+Spearman(alignment       , delta) = -0.130 (p=0.643)
+Spearman(hf_product      , delta) = +0.500 (p=0.057)
+Spearman(overlap         , delta) = +0.055 (p=0.846)
+Spearman(class_error_corr, delta) = +0.239 (p=0.390)
+Spearman(same_mechanism  , delta) = -0.032 (p=0.911)
+
+  lowpass+lowpass        n= 3  mean delta   +0.8 pp  range [-1.9, +3.9]
+  stochastic+stochastic  n= 3  mean delta  +12.8 pp  range [+8.7, +16.5]
+  mixed                  n= 9  mean delta   +6.9 pp  range [-5.3, +12.1]
+--- fold0 s29 target10 01:48:01
+defocus   level 0.268  acc  71.36
+motion    level 0.324  acc  72.33
+noise     level 0.227  acc  71.84
+rain      level 0.304  acc  71.84
+pixelate  level 0.115  acc  76.70
+impulse   level 0.197  acc  72.33
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                48.1    43.7     12.6    +4.4    +9.7  -0.137
+rain+impulse              42.7    39.3     16.5    +3.4    +4.9  +0.212
+defocus+motion            39.3    35.9     20.4    +3.4    +1.0  +0.865
+motion+rain               41.3    41.7     14.1    -0.5    +3.4  +0.091
+noise+impulse             37.9    38.8     17.0    -1.0    +0.0  +0.144
+noise+pixelate            34.5    35.9     15.5    -1.5    +1.0  -0.048
+defocus+pixelate          33.5    35.9     16.0    -2.4    -0.5  +0.136
+defocus+rain              39.8    42.7     14.1    -2.9    +1.0  -0.057
+motion+noise              35.4    38.3     17.5    -2.9    -2.4  -0.134
+motion+pixelate           33.0    35.9     15.0    -2.9    +0.0  +0.220
+motion+impulse            38.3    41.7     13.6    -3.4    +1.0  +0.277
+defocus+impulse           36.4    40.8     15.5    -4.4    -1.9  +0.282
+defocus+noise             33.0    39.3     17.5    -6.3    -5.8  -0.215
+rain+pixelate             31.6    37.9     13.6    -6.3    -1.9  +0.484
+pixelate+impulse          30.1    36.4     14.6    -6.3    -2.9  +0.275
+
+Spearman(cos, E)        = -0.039 (p=0.889)
+Spearman(cos, delta)    = -0.252 (p=0.365)
+Spearman(overlap, E)    = -0.326 (p=0.236)
+Spearman(overlap, delta)= +0.134 (p=0.635)
+additive R^2 on E       = 0.451
+additive R^2 on delta   = 0.273
+mean delta = -2.0 pp, mean E = +0.4 pp
+main effects on delta: rain +1.6  motion +0.5  noise +0.3  impulse -0.8  defocus -1.1  pixelate -2.8
+defocus   level 0.268  hf_ratio 0.213
+motion    level 0.324  hf_ratio 0.341
+noise     level 0.227  hf_ratio 3.400
+rain      level 0.304  hf_ratio 1.002
+pixelate  level 0.115  hf_ratio 1.059
+impulse   level 0.197  hf_ratio 9.297
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.223     12.6   -0.239    3.407    +4.4
+rain+impulse            +0.355     16.5   +0.550    9.316    +3.4
+defocus+motion          +0.604     20.4   +0.930    0.073    +3.4
+motion+rain             +0.217     14.1   -0.500    0.342    -0.5
+noise+impulse           +0.421     17.0   +0.383   31.610    -1.0
+noise+pixelate          +0.277     15.5   +0.749    3.600    -1.5
+defocus+pixelate        +0.286     16.0   +0.336    0.226    -2.4
+defocus+rain            +0.155     14.1   -0.601    0.214    -2.9
+motion+noise            +0.200     17.5   +0.626    1.161    -2.9
+motion+pixelate         +0.281     15.0   +0.461    0.361    -2.9
+motion+impulse          +0.299     13.6   -0.024    3.174    -3.4
+defocus+impulse         +0.321     15.5   -0.225    1.981    -4.4
+defocus+noise           +0.195     17.5   +0.466    0.724    -6.3
+rain+pixelate           +0.299     13.6   +0.222    1.061    -6.3
+pixelate+impulse        +0.366     14.6   +0.384    9.846    -6.3
+
+Spearman(alignment       , delta) = +0.045 (p=0.874)
+Spearman(hf_product      , delta) = -0.009 (p=0.975)
+Spearman(overlap         , delta) = +0.134 (p=0.635)
+Spearman(class_error_corr, delta) = +0.066 (p=0.815)
+Spearman(same_mechanism  , delta) = +0.631 (p=0.012)
+
+  lowpass+lowpass        n= 3  mean delta   -0.6 pp  range [-2.9, +3.4]
+  stochastic+stochastic  n= 3  mean delta   +2.3 pp  range [-1.0, +4.4]
+  mixed                  n= 9  mean delta   -3.8 pp  range [-6.3, -0.5]
+--- fold1 s17 target20 01:48:32
+defocus   level 0.527  acc  67.48
+motion    level 0.553  acc  68.45
+noise     level 0.449  acc  63.59
+rain      level 0.446  acc  67.96
+pixelate  level 0.370  acc  65.53
+impulse   level 0.271  acc  67.48
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              80.1    48.5     16.0   +31.6   +28.6  +0.210
+motion+rain               75.7    47.6     16.0   +28.2   +25.2  +0.296
+noise+impulse             68.4    46.1     22.8   +22.3   +12.6  +0.344
+rain+impulse              65.0    49.5     15.0   +15.5   +13.6  +0.132
+noise+rain                65.0    50.0     18.4   +15.0    +9.7  +0.031
+defocus+noise             68.4    53.4     15.5   +15.0   +12.6  -0.086
+motion+noise              65.0    53.4     14.6   +11.7   +10.2  +0.089
+noise+pixelate            63.6    52.9     18.0   +10.7    +5.8  +0.189
+defocus+impulse           59.2    49.5     15.5    +9.7    +7.3  +0.003
+motion+impulse            55.8    46.6     17.5    +9.2    +4.9  +0.139
+rain+pixelate             60.7    51.5     15.0    +9.2    +7.3  +0.326
+defocus+motion            45.1    43.7     20.4    +1.5    -5.8  +0.674
+pixelate+impulse          49.0    48.1     18.9    +1.0    -4.9  +0.258
+defocus+pixelate          44.7    51.5     15.5    -6.8    -9.2  +0.176
+motion+pixelate           43.2    50.0     16.0    -6.8    -9.7  +0.391
+
+Spearman(cos, E)        = -0.275 (p=0.321)
+Spearman(cos, delta)    = -0.243 (p=0.383)
+Spearman(overlap, E)    = -0.232 (p=0.404)
+Spearman(overlap, delta)= -0.026 (p=0.926)
+additive R^2 on E       = 0.688
+additive R^2 on delta   = 0.693
+mean delta = +11.1 pp, mean E = +7.2 pp
+main effects on delta: rain +13.2  noise +7.0  impulse +2.8  defocus +1.1  motion -0.8  pixelate -9.9
+defocus   level 0.527  hf_ratio 0.046
+motion    level 0.553  hf_ratio 0.219
+noise     level 0.449  hf_ratio 8.032
+rain      level 0.446  hf_ratio 1.121
+pixelate  level 0.370  hf_ratio 1.089
+impulse   level 0.271  hf_ratio 10.421
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.305     16.0   +0.100    0.052   +31.6
+motion+rain             +0.316     16.0   +0.054    0.245   +28.2
+noise+impulse           +0.550     22.8   +0.443   83.695   +22.3
+rain+impulse            +0.343     15.0   -0.036   11.682   +15.5
+noise+rain              +0.309     18.4   +0.335    9.004   +15.0
+defocus+noise           +0.303     15.5   -0.118    0.371   +15.0
+motion+noise            +0.308     14.6   +0.097    1.757   +11.7
+noise+pixelate          +0.416     18.0   +0.102    8.745   +10.7
+defocus+impulse         +0.321     15.5   +0.585    0.481    +9.7
+motion+impulse          +0.316     17.5   +0.811    2.279    +9.2
+rain+pixelate           +0.343     15.0   -0.319    1.221    +9.2
+defocus+motion          +0.569     20.4   +0.791    0.010    +1.5
+pixelate+impulse        +0.419     18.9   +0.842   11.347    +1.0
+defocus+pixelate        +0.403     15.5   +0.544    0.050    -6.8
+motion+pixelate         +0.394     16.0   +0.828    0.238    -6.8
+
+Spearman(alignment       , delta) = -0.486 (p=0.066)
+Spearman(hf_product      , delta) = +0.279 (p=0.314)
+Spearman(overlap         , delta) = -0.026 (p=0.926)
+Spearman(class_error_corr, delta) = -0.611 (p=0.015)
+Spearman(same_mechanism  , delta) = -0.158 (p=0.575)
+
+  lowpass+lowpass        n= 3  mean delta   -4.0 pp  range [-6.8, +1.5]
+  stochastic+stochastic  n= 3  mean delta  +17.6 pp  range [+15.0, +22.3]
+  mixed                  n= 9  mean delta  +14.0 pp  range [+1.0, +31.6]
+--- fold1 s17 target10 01:49:05
+defocus   level 0.315  acc  77.18
+motion    level 0.366  acc  77.18
+noise     level 0.305  acc  76.21
+rain      level 0.251  acc  76.70
+pixelate  level 0.104  acc  76.21
+impulse   level 0.146  acc  78.16
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             52.9    30.6     15.0   +22.3   +20.4  +0.190
+defocus+rain              54.4    32.5     13.6   +21.8   +21.4  +0.072
+motion+rain               52.9    32.5     13.6   +20.4   +19.9  +0.252
+rain+impulse              43.2    30.6     14.6   +12.6   +11.2  +0.268
+noise+rain                42.2    34.5     12.6    +7.8    +8.3  +0.013
+motion+impulse            39.3    31.6     13.1    +7.8    +7.8  +0.065
+rain+pixelate             39.3    33.0     14.1    +6.3    +5.3  +0.440
+defocus+noise             40.8    35.0     11.7    +5.8    +7.3  -0.182
+motion+noise              40.8    35.9     10.7    +4.9    +7.3  +0.038
+defocus+impulse           35.9    32.0     12.6    +3.9    +4.4  -0.141
+defocus+motion            31.6    28.6     17.0    +2.9    -1.0  +0.714
+pixelate+impulse          34.5    31.6     14.1    +2.9    +1.9  +0.314
+noise+pixelate            38.8    36.4     11.2    +2.4    +4.4  +0.096
+motion+pixelate           32.0    33.0     13.6    -1.0    -1.5  +0.322
+defocus+pixelate          31.6    35.0     11.7    -3.4    -1.9  +0.018
+
+Spearman(cos, E)        = -0.157 (p=0.576)
+Spearman(cos, delta)    = -0.050 (p=0.860)
+Spearman(overlap, E)    = +0.163 (p=0.562)
+Spearman(overlap, delta)= +0.358 (p=0.191)
+additive R^2 on E       = 0.581
+additive R^2 on delta   = 0.586
+mean delta = +7.8 pp, mean E = +7.7 pp
+main effects on delta: rain +9.0  impulse +4.2  noise +2.6  motion +0.5  defocus -0.5  pixelate -6.4
+defocus   level 0.315  hf_ratio 0.150
+motion    level 0.366  hf_ratio 0.297
+noise     level 0.305  hf_ratio 4.506
+rain      level 0.251  hf_ratio 0.947
+pixelate  level 0.104  hf_ratio 1.048
+impulse   level 0.146  hf_ratio 6.134
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.426     15.0   +0.590   27.643   +22.3
+defocus+rain            +0.186     13.6   +0.215    0.142   +21.8
+motion+rain             +0.247     13.6   +0.221    0.281   +20.4
+rain+impulse            +0.321     14.6   +0.259    5.811   +12.6
+noise+rain              +0.259     12.6   +0.640    4.269    +7.8
+motion+impulse          +0.243     13.1   +0.960    1.822    +7.8
+rain+pixelate           +0.293     14.1   +0.543    0.993    +6.3
+defocus+noise           +0.198     11.7   +0.361    0.675    +5.8
+motion+noise            +0.249     10.7   +0.422    1.339    +4.9
+defocus+impulse         +0.209     12.6   +0.670    0.918    +3.9
+defocus+motion          +0.577     17.0   +0.799    0.044    +2.9
+pixelate+impulse        +0.361     14.1   +0.689    6.431    +2.9
+noise+pixelate          +0.300     11.2   +0.715    4.725    +2.4
+motion+pixelate         +0.312     13.6   +0.564    0.311    -1.0
+defocus+pixelate        +0.245     11.7   +0.253    0.157    -3.4
+
+Spearman(alignment       , delta) = -0.136 (p=0.630)
+Spearman(hf_product      , delta) = +0.204 (p=0.467)
+Spearman(overlap         , delta) = +0.358 (p=0.191)
+Spearman(class_error_corr, delta) = -0.321 (p=0.243)
+Spearman(same_mechanism  , delta) = -0.063 (p=0.824)
+
+  lowpass+lowpass        n= 3  mean delta   -0.5 pp  range [-3.4, +2.9]
+  stochastic+stochastic  n= 3  mean delta  +14.2 pp  range [+7.8, +22.3]
+  mixed                  n= 9  mean delta   +8.5 pp  range [+2.4, +21.8]
+--- fold1 s29 target20 01:49:35
+defocus   level 0.451  acc  68.93
+motion    level 0.664  acc  66.50
+noise     level 0.485  acc  67.48
+rain      level 0.539  acc  66.50
+pixelate  level 0.280  acc  66.99
+impulse   level 0.343  acc  64.08
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                69.4    48.1     18.0   +21.4   +17.0  +0.105
+motion+rain               70.4    51.9     15.0   +18.4   +17.0  +0.136
+defocus+rain              67.0    50.0     14.6   +17.0   +16.0  -0.004
+noise+impulse             61.7    46.1     22.3   +15.5    +6.8  +0.594
+rain+impulse              66.0    51.5     18.0   +14.6   +10.2  +0.196
+motion+noise              59.2    49.0     17.0   +10.2    +6.8  +0.101
+defocus+noise             55.3    45.6     18.0    +9.7    +5.3  +0.040
+motion+impulse            54.9    49.5     19.9    +5.3    -1.0  +0.205
+defocus+motion            47.6    43.7     20.9    +3.9    -3.4  +0.730
+defocus+impulse           51.5    47.6     19.4    +3.9    -1.9  +0.160
+noise+pixelate            48.1    45.1     20.4    +2.9    -3.9  +0.259
+pixelate+impulse          50.0    48.5     20.4    +1.5    -5.3  +0.346
+rain+pixelate             51.0    50.0     16.5    +1.0    -1.9  +0.315
+defocus+pixelate          43.7    44.7     19.4    -1.0    -6.8  +0.065
+motion+pixelate           43.7    50.0     16.5    -6.3    -9.2  +0.262
+
+Spearman(cos, E)        = -0.423 (p=0.117)
+Spearman(cos, delta)    = -0.372 (p=0.172)
+Spearman(overlap, E)    = -0.386 (p=0.156)
+Spearman(overlap, delta)= -0.208 (p=0.458)
+additive R^2 on E       = 0.905
+additive R^2 on delta   = 0.898
+mean delta = +7.9 pp, mean E = +3.0 pp
+main effects on delta: rain +9.8  noise +6.7  impulse +1.9  defocus +0.1  motion -0.4  pixelate -8.7
+defocus   level 0.451  hf_ratio 0.068
+motion    level 0.664  hf_ratio 0.178
+noise     level 0.485  hf_ratio 9.044
+rain      level 0.539  hf_ratio 1.253
+pixelate  level 0.280  hf_ratio 1.079
+impulse   level 0.343  hf_ratio 12.842
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.350     18.0   +0.633   11.329   +21.4
+motion+rain             +0.326     15.0   +0.164    0.223   +18.4
+defocus+rain            +0.295     14.6   +0.036    0.085   +17.0
+noise+impulse           +0.634     22.3   +0.652  116.141   +15.5
+rain+impulse            +0.394     18.0   +0.329   16.086   +14.6
+motion+noise            +0.347     17.0   +0.343    1.612   +10.2
+defocus+noise           +0.373     18.0   +0.425    0.616    +9.7
+motion+impulse          +0.374     19.9   +0.892    2.289    +5.3
+defocus+motion          +0.596     20.9   +0.928    0.012    +3.9
+defocus+impulse         +0.402     19.4   +0.872    0.875    +3.9
+noise+pixelate          +0.446     20.4   +0.270    9.755    +2.9
+pixelate+impulse        +0.474     20.4   +0.286   13.851    +1.5
+rain+pixelate           +0.350     16.5   -0.154    1.351    +1.0
+defocus+pixelate        +0.407     19.4   +0.602    0.073    -1.0
+motion+pixelate         +0.399     16.5   +0.456    0.192    -6.3
+
+Spearman(alignment       , delta) = -0.490 (p=0.064)
+Spearman(hf_product      , delta) = +0.279 (p=0.314)
+Spearman(overlap         , delta) = -0.208 (p=0.458)
+Spearman(class_error_corr, delta) = -0.032 (p=0.909)
+Spearman(same_mechanism  , delta) = -0.016 (p=0.956)
+
+  lowpass+lowpass        n= 3  mean delta   -1.1 pp  range [-6.3, +3.9]
+  stochastic+stochastic  n= 3  mean delta  +17.2 pp  range [+14.6, +21.4]
+  mixed                  n= 9  mean delta   +7.8 pp  range [+1.0, +18.4]
+--- fold1 s29 target10 01:50:10
+defocus   level 0.324  acc  76.70
+motion    level 0.372  acc  76.21
+noise     level 0.305  acc  76.21
+rain      level 0.370  acc  77.18
+pixelate  level 1.000  acc  13.11
+impulse   level 0.219  acc  76.70
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              51.5    32.5     13.6   +18.9   +18.9  -0.060
+motion+rain               52.9    35.0     11.7   +18.0   +19.9  +0.082
+noise+rain                48.5    31.1     15.5   +17.5   +15.5  +0.039
+rain+impulse              48.5    32.0     14.1   +16.5   +16.0  +0.246
+noise+impulse             46.1    32.5     14.6   +13.6   +12.6  +0.400
+motion+impulse            46.6    34.5     12.6   +12.1   +13.1  +0.189
+defocus+impulse           43.7    32.0     14.6   +11.7   +10.7  +0.194
+defocus+noise             41.7    32.0     15.0    +9.7    +8.3  -0.034
+defocus+motion            34.5    28.6     18.4    +5.8    +1.0  +0.819
+motion+noise              40.3    35.0     12.6    +5.3    +6.3  +0.013
+noise+pixelate            86.4    89.3     21.4    -2.9   -10.7  +0.013
+rain+pixelate             85.9    89.3     20.4    -3.4   -10.2  +0.300
+motion+pixelate           85.4    90.8     19.9    -5.3   -11.7  +0.107
+defocus+pixelate          84.5    91.3     18.9    -6.8   -12.1  +0.078
+pixelate+impulse          67.5    89.3     20.9   -21.8   -29.1  +0.071
+
+Spearman(cos, E)        = -0.011 (p=0.970)
+Spearman(cos, delta)    = -0.043 (p=0.879)
+Spearman(overlap, E)    = -0.810 (p=0.000)
+Spearman(overlap, delta)= -0.737 (p=0.002)
+additive R^2 on E       = 0.884
+additive R^2 on delta   = 0.861
+mean delta = +5.9 pp, mean E = +3.2 pp
+main effects on delta: rain +10.7  noise +4.6  defocus +3.6  motion +2.8  impulse +1.8  pixelate -16.3
+defocus   level 0.324  hf_ratio 0.141
+motion    level 0.372  hf_ratio 0.296
+noise     level 0.305  hf_ratio 4.506
+rain      level 0.370  hf_ratio 1.036
+pixelate  level 1.000  hf_ratio 0.551
+impulse   level 0.219  hf_ratio 8.645
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.224     13.6   +0.079    0.147   +18.9
+motion+rain             +0.257     11.7   -0.057    0.306   +18.0
+noise+rain              +0.281     15.5   +0.734    4.670   +17.5
+rain+impulse            +0.353     14.1   +0.408    8.959   +16.5
+noise+impulse           +0.524     14.6   +0.248   38.959   +13.6
+motion+impulse          +0.325     12.6   +0.738    2.557   +12.1
+defocus+impulse         +0.365     14.6   +0.809    1.223   +11.7
+defocus+noise           +0.300     15.0   +0.239    0.638    +9.7
+defocus+motion          +0.618     18.4   +0.986    0.042    +5.8
+motion+noise            +0.283     12.6   +0.145    1.333    +5.3
+noise+pixelate          +0.361     21.4   +0.293    2.483    -2.9
+rain+pixelate           +0.394     20.4   +0.148    0.571    -3.4
+motion+pixelate         +0.325     19.9   -0.016    0.163    -5.3
+defocus+pixelate        +0.332     18.9   -0.026    0.078    -6.8
+pixelate+impulse        +0.363     20.9   +0.224    4.764   -21.8
+
+Spearman(alignment       , delta) = -0.436 (p=0.104)
+Spearman(hf_product      , delta) = +0.164 (p=0.558)
+Spearman(overlap         , delta) = -0.737 (p=0.002)
+Spearman(class_error_corr, delta) = +0.179 (p=0.524)
+Spearman(same_mechanism  , delta) = +0.000 (p=1.000)
+
+  lowpass+lowpass        n= 3  mean delta   -2.1 pp  range [-6.8, +5.8]
+  stochastic+stochastic  n= 3  mean delta  +15.9 pp  range [+13.6, +17.5]
+  mixed                  n= 9  mean delta   +5.3 pp  range [-21.8, +18.9]
+--- fold2 s17 target20 01:50:40
+defocus   level 0.335  acc  64.08
+motion    level 0.540  acc  63.59
+noise     level 0.423  acc  65.05
+rain      level 0.601  acc  64.08
+pixelate  level 0.332  acc  65.53
+impulse   level 0.274  acc  64.08
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               77.2    55.3     17.0   +21.8   +19.9  +0.220
+defocus+rain              76.2    57.3     14.6   +18.9   +19.4  +0.188
+rain+pixelate             67.5    55.3     15.0   +12.1   +12.1  +0.251
+noise+impulse             57.8    46.1     24.8   +11.7    +1.9  +0.438
+defocus+motion            57.8    48.5     23.8    +9.2    +0.5  +0.771
+motion+impulse            58.3    51.9     20.4    +6.3    +1.0  +0.129
+pixelate+impulse          50.5    45.1     25.2    +5.3    -4.9  +0.382
+noise+rain                60.7    56.8     14.1    +3.9    +4.9  -0.116
+rain+impulse              57.3    53.4     18.4    +3.9    +0.5  +0.140
+motion+noise              56.3    54.9     16.5    +1.5    +0.0  +0.021
+motion+pixelate           53.4    51.9     18.9    +1.5    -2.4  +0.216
+noise+pixelate            48.5    48.5     20.9    +0.0    -5.8  +0.225
+defocus+noise             52.9    56.8     14.1    -3.9    -2.9  -0.133
+defocus+impulse           50.0    54.9     17.0    -4.9    -6.8  -0.070
+defocus+pixelate          49.0    54.9     15.5    -5.8    -6.3  +0.037
+
+Spearman(cos, E)        = +0.243 (p=0.383)
+Spearman(cos, delta)    = +0.590 (p=0.021)
+Spearman(overlap, E)    = -0.220 (p=0.430)
+Spearman(overlap, delta)= +0.150 (p=0.595)
+additive R^2 on E       = 0.739
+additive R^2 on delta   = 0.507
+mean delta = +5.4 pp, mean E = +2.1 pp
+main effects on delta: rain +9.5  motion +4.4  impulse -0.1  defocus -2.3  noise -2.4  pixelate -2.4
+defocus   level 0.335  hf_ratio 0.109
+motion    level 0.540  hf_ratio 0.189
+noise     level 0.423  hf_ratio 8.817
+rain      level 0.601  hf_ratio 1.498
+pixelate  level 0.332  hf_ratio 1.128
+impulse   level 0.274  hf_ratio 12.669
+
+pair                     align  overlap  class_r  hf_prod   delta
+motion+rain             +0.317     17.0   -0.067    0.283   +21.8
+defocus+rain            +0.260     14.6   -0.197    0.163   +18.9
+rain+pixelate           +0.363     15.0   -0.022    1.689   +12.1
+noise+impulse           +0.558     24.8   +0.815  111.705   +11.7
+defocus+motion          +0.558     23.8   +0.824    0.021    +9.2
+motion+impulse          +0.326     20.4   +0.733    2.398    +6.3
+pixelate+impulse        +0.466     25.2   +0.669   14.288    +5.3
+noise+rain              +0.295     14.1   +0.360   13.207    +3.9
+rain+impulse            +0.358     18.4   +0.302   18.978    +3.9
+motion+noise            +0.301     16.5   +0.416    1.669    +1.5
+motion+pixelate         +0.370     18.9   +0.544    0.213    +1.5
+noise+pixelate          +0.424     20.9   +0.717    9.943    +0.0
+defocus+noise           +0.232     14.1   +0.113    0.961    -3.9
+defocus+impulse         +0.242     17.0   +0.413    1.382    -4.9
+defocus+pixelate        +0.318     15.5   +0.253    0.123    -5.8
+
+Spearman(alignment       , delta) = +0.284 (p=0.304)
+Spearman(hf_product      , delta) = +0.075 (p=0.790)
+Spearman(overlap         , delta) = +0.150 (p=0.595)
+Spearman(class_error_corr, delta) = -0.114 (p=0.685)
+Spearman(same_mechanism  , delta) = -0.110 (p=0.695)
+
+  lowpass+lowpass        n= 3  mean delta   +1.6 pp  range [-5.8, +9.2]
+  stochastic+stochastic  n= 3  mean delta   +6.5 pp  range [+3.9, +11.7]
+  mixed                  n= 9  mean delta   +6.4 pp  range [-4.9, +21.8]
+--- fold2 s17 target10 01:51:16
+defocus   level 0.240  acc  75.24
+motion    level 0.290  acc  74.76
+noise     level 0.237  acc  75.24
+rain      level 0.358  acc  75.73
+pixelate  level 0.106  acc  73.30
+impulse   level 0.184  acc  75.73
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              57.3    37.4     11.7   +19.9   +23.3  +0.080
+motion+rain               55.8    37.4     12.1   +18.4   +21.4  +0.143
+noise+impulse             46.1    33.5     15.5   +12.6   +12.1  +0.282
+rain+pixelate             46.1    39.3     11.7    +6.8   +10.2  +0.246
+rain+impulse              41.7    35.0     13.6    +6.8    +8.3  +0.276
+defocus+motion            36.9    30.1     19.9    +6.8    +1.9  +0.837
+noise+rain                40.3    37.4     11.7    +2.9    +6.3  -0.138
+motion+noise              42.2    39.8     10.2    +2.4    +7.3  -0.097
+pixelate+impulse          35.4    33.0     18.0    +2.4    -0.5  +0.426
+motion+impulse            36.4    35.4     14.1    +1.0    +1.9  +0.067
+noise+pixelate            35.0    34.0     17.5    +1.0    -1.5  +0.126
+defocus+impulse           37.4    36.4     12.6    +1.0    +3.4  -0.143
+defocus+noise             39.3    40.8      8.7    -1.5    +4.9  -0.270
+motion+pixelate           36.9    38.8     13.1    -1.9    +0.0  -0.010
+defocus+pixelate          35.4    41.3     10.2    -5.8    -1.0  -0.209
+
+Spearman(cos, E)        = +0.172 (p=0.541)
+Spearman(cos, delta)    = +0.624 (p=0.013)
+Spearman(overlap, E)    = -0.316 (p=0.251)
+Spearman(overlap, delta)= +0.151 (p=0.591)
+additive R^2 on E       = 0.632
+additive R^2 on delta   = 0.497
+mean delta = +4.9 pp, mean E = +6.5 pp
+main effects on delta: rain +8.6  motion +1.6  impulse +0.8  defocus -0.0  noise -0.7  pixelate -4.5
+defocus   level 0.240  hf_ratio 0.203
+motion    level 0.290  hf_ratio 0.314
+noise     level 0.237  hf_ratio 3.710
+rain      level 0.358  hf_ratio 1.075
+pixelate  level 0.106  hf_ratio 1.073
+impulse   level 0.184  hf_ratio 8.878
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.149     11.7   +0.136    0.218   +19.9
+motion+rain             +0.203     12.1   +0.425    0.337   +18.4
+noise+impulse           +0.446     15.5   +0.913   32.938   +12.6
+rain+pixelate           +0.291     11.7   +0.518    1.154    +6.8
+rain+impulse            +0.356     13.6   +0.546    9.548    +6.8
+defocus+motion          +0.577     19.9   +0.822    0.064    +6.8
+noise+rain              +0.237     11.7   +0.581    3.990    +2.9
+motion+noise            +0.186     10.2   +0.665    1.164    +2.4
+pixelate+impulse        +0.400     18.0   +0.963    9.525    +2.4
+motion+impulse          +0.233     14.1   +0.852    2.786    +1.0
+noise+pixelate          +0.306     17.5   +0.913    3.980    +1.0
+defocus+impulse         +0.160     12.6   +0.538    1.801    +1.0
+defocus+noise           +0.120      8.7   +0.250    0.753    -1.5
+motion+pixelate         +0.232     13.1   +0.758    0.337    -1.9
+defocus+pixelate        +0.144     10.2   +0.337    0.218    -5.8
+
+Spearman(alignment       , delta) = +0.377 (p=0.165)
+Spearman(hf_product      , delta) = +0.157 (p=0.575)
+Spearman(overlap         , delta) = +0.151 (p=0.591)
+Spearman(class_error_corr, delta) = -0.070 (p=0.805)
+Spearman(same_mechanism  , delta) = -0.047 (p=0.867)
+
+  lowpass+lowpass        n= 3  mean delta   -0.3 pp  range [-5.8, +6.8]
+  stochastic+stochastic  n= 3  mean delta   +7.4 pp  range [+2.9, +12.6]
+  mixed                  n= 9  mean delta   +5.7 pp  range [-1.5, +19.9]
+--- fold2 s29 target20 01:51:47
+defocus   level 0.295  acc  64.56
+motion    level 0.520  acc  65.53
+noise     level 0.438  acc  65.05
+rain      level 0.568  acc  63.11
+pixelate  level 0.302  acc  63.59
+impulse   level 0.311  acc  65.05
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               71.8    54.4     17.0   +17.5   +15.5  +0.006
+defocus+rain              69.9    56.3     16.0   +13.6   +12.6  -0.051
+noise+impulse             58.3    44.7     25.2   +13.6    +3.4  +0.562
+rain+impulse              59.2    54.4     17.5    +4.9    +2.4  +0.061
+defocus+motion            52.4    48.1     21.8    +4.4    -2.4  +0.778
+motion+impulse            54.4    50.0     19.4    +4.4    +0.0  +0.058
+noise+pixelate            49.5    45.6     25.7    +3.9    -6.8  +0.370
+noise+rain                60.2    57.3     14.6    +2.9    +3.4  -0.017
+motion+noise              57.3    55.3     14.1    +1.9    +2.9  +0.047
+pixelate+impulse          47.1    49.5     21.8    -2.4    -9.2  +0.377
+defocus+impulse           46.1    51.5     18.9    -5.3    -9.2  -0.076
+defocus+noise             50.0    56.8     13.6    -6.8    -5.3  -0.194
+motion+pixelate           47.6    54.4     16.5    -6.8    -8.3  +0.111
+rain+pixelate             50.0    57.8     15.5    -7.8    -8.3  +0.156
+defocus+pixelate          47.1    56.8     15.0    -9.7    -9.7  -0.070
+
+Spearman(cos, E)        = -0.009 (p=0.975)
+Spearman(cos, delta)    = +0.236 (p=0.397)
+Spearman(overlap, E)    = -0.091 (p=0.746)
+Spearman(overlap, delta)= +0.432 (p=0.107)
+additive R^2 on E       = 0.734
+additive R^2 on delta   = 0.478
+mean delta = +1.9 pp, mean E = -1.3 pp
+main effects on delta: rain +5.8  motion +3.4  noise +1.9  impulse +1.8  defocus -2.9  pixelate -7.7
+defocus   level 0.295  hf_ratio 0.140
+motion    level 0.520  hf_ratio 0.198
+noise     level 0.438  hf_ratio 9.313
+rain      level 0.568  hf_ratio 1.425
+pixelate  level 0.302  hf_ratio 1.124
+impulse   level 0.311  hf_ratio 14.200
+
+pair                     align  overlap  class_r  hf_prod   delta
+motion+rain             +0.284     17.0   -0.029    0.282   +17.5
+defocus+rain            +0.202     16.0   -0.172    0.199   +13.6
+noise+impulse           +0.614     25.2   +0.661  132.250   +13.6
+rain+impulse            +0.343     17.5   -0.247   20.240    +4.9
+defocus+motion          +0.557     21.8   +0.856    0.028    +4.4
+motion+impulse          +0.310     19.4   +0.842    2.809    +4.4
+noise+pixelate          +0.498     25.7   +0.797   10.470    +3.9
+noise+rain              +0.315     14.6   -0.027   13.276    +2.9
+motion+noise            +0.315     14.1   +0.393    1.842    +1.9
+pixelate+impulse        +0.479     21.8   +0.274   15.962    -2.4
+defocus+impulse         +0.242     18.9   +0.644    1.986    -5.3
+defocus+noise           +0.242     13.6   +0.114    1.302    -6.8
+motion+pixelate         +0.359     16.5   +0.096    0.222    -6.8
+rain+pixelate           +0.340     15.5   -0.223    1.602    -7.8
+defocus+pixelate        +0.291     15.0   -0.154    0.157    -9.7
+
+Spearman(alignment       , delta) = +0.079 (p=0.780)
+Spearman(hf_product      , delta) = +0.216 (p=0.438)
+Spearman(overlap         , delta) = +0.432 (p=0.107)
+Spearman(class_error_corr, delta) = +0.122 (p=0.666)
+Spearman(same_mechanism  , delta) = +0.000 (p=1.000)
+
+  lowpass+lowpass        n= 3  mean delta   -4.0 pp  range [-9.7, +4.4]
+  stochastic+stochastic  n= 3  mean delta   +7.1 pp  range [+2.9, +13.6]
+  mixed                  n= 9  mean delta   +2.1 pp  range [-7.8, +17.5]
+--- fold2 s29 target10 01:52:23
+defocus   level 0.238  acc  73.30
+motion    level 0.290  acc  76.21
+noise     level 0.304  acc  75.24
+rain      level 0.373  acc  76.21
+pixelate  level 1.000  acc  17.48
+impulse   level 0.216  acc  75.73
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               54.4    34.0     13.6   +20.4   +21.8  -0.046
+defocus+rain              52.4    37.4     13.1   +15.0   +17.0  -0.114
+noise+impulse             49.5    35.0     14.1   +14.6   +15.5  +0.467
+defocus+motion            44.7    32.0     18.4   +12.6    +9.2  +0.871
+rain+impulse              45.1    32.5     15.5   +12.6   +12.1  +0.118
+motion+impulse            39.3    34.5     13.6    +4.9    +6.3  +0.020
+motion+noise              42.2    38.3     10.2    +3.9    +8.7  -0.117
+noise+rain                41.7    37.9     10.7    +3.9    +8.3  -0.000
+defocus+noise             40.8    42.7      8.7    -1.9    +4.4  -0.303
+defocus+impulse           35.4    37.9     13.1    -2.4    -0.5  -0.058
+noise+pixelate            82.5    85.4     21.8    -2.9    -9.7  +0.169
+defocus+pixelate          81.6    88.8     20.4    -7.3   -12.6  +0.106
+motion+pixelate           80.1    88.3     18.0    -8.3   -11.2  +0.149
+rain+pixelate             74.8    88.8     17.5   -14.1   -16.5  +0.093
+pixelate+impulse          62.1    87.4     19.4   -25.2   -29.6  +0.137
+
+Spearman(cos, E)        = -0.171 (p=0.541)
+Spearman(cos, delta)    = -0.145 (p=0.606)
+Spearman(overlap, E)    = -0.460 (p=0.085)
+Spearman(overlap, delta)= -0.414 (p=0.125)
+additive R^2 on E       = 0.859
+additive R^2 on delta   = 0.699
+mean delta = +1.7 pp, mean E = +1.6 pp
+main effects on delta: rain +7.7  motion +6.6  noise +2.6  defocus +2.2  impulse -0.7  pixelate -16.2
+defocus   level 0.238  hf_ratio 0.206
+motion    level 0.290  hf_ratio 0.314
+noise     level 0.304  hf_ratio 5.303
+rain      level 0.373  hf_ratio 1.094
+pixelate  level 1.000  hf_ratio 0.583
+impulse   level 0.216  hf_ratio 10.235
+
+pair                     align  overlap  class_r  hf_prod   delta
+motion+rain             +0.181     13.6   +0.464    0.343   +20.4
+defocus+rain            +0.140     13.1   +0.191    0.225   +15.0
+noise+impulse           +0.545     14.1   +0.702   54.280   +14.6
+defocus+motion          +0.597     18.4   +0.854    0.065   +12.6
+rain+impulse            +0.317     15.5   +0.569   11.201   +12.6
+motion+impulse          +0.237     13.6   +0.778    3.211    +4.9
+motion+noise            +0.223     10.2   +0.512    1.664    +3.9
+noise+rain              +0.267     10.7   +0.511    5.804    +3.9
+defocus+noise           +0.173      8.7   +0.098    1.091    -1.9
+defocus+impulse         +0.199     13.1   +0.511    2.106    -2.4
+noise+pixelate          +0.421     21.8   +0.407    3.090    -2.9
+defocus+pixelate        +0.280     20.4   -0.292    0.120    -7.3
+motion+pixelate         +0.284     18.0   +0.091    0.183    -8.3
+rain+pixelate           +0.348     17.5   -0.086    0.638   -14.1
+pixelate+impulse        +0.358     19.4   +0.290    5.964   -25.2
+
+Spearman(alignment       , delta) = -0.263 (p=0.344)
+Spearman(hf_product      , delta) = +0.048 (p=0.864)
+Spearman(overlap         , delta) = -0.414 (p=0.125)
+Spearman(class_error_corr, delta) = +0.592 (p=0.020)
+Spearman(same_mechanism  , delta) = +0.110 (p=0.695)
+
+  lowpass+lowpass        n= 3  mean delta   -1.0 pp  range [-8.3, +12.6]
+  stochastic+stochastic  n= 3  mean delta  +10.4 pp  range [+3.9, +14.6]
+  mixed                  n= 9  mean delta   -0.3 pp  range [-25.2, +20.4]
+=== REBUILD DONE 01:52:57
+=== r50 training 01:52:57
+--- train fold0 s17 01:52:57
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 1, "train_loss": 1.874970374755489, "train_accuracy": 0.35194174757281554, "val_macro_f1": 0.05776515151515152, "val_accuracy": 0.2961165048543689, "lr": 0.01, "seconds": 1.5130270428489894}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 2, "train_loss": 1.572964567582584, "train_accuracy": 0.4368932038834951, "val_macro_f1": 0.23396798134365138, "val_accuracy": 0.38349514563106796, "lr": 0.00998458666866564, "seconds": 1.0508979791775346}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 3, "train_loss": 1.2553979841250817, "train_accuracy": 0.5558252427184466, "val_macro_f1": 0.3848020293972925, "val_accuracy": 0.4368932038834951, "lr": 0.009938441702975689, "seconds": 1.113924222998321}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 4, "train_loss": 0.9956004243452572, "train_accuracy": 0.6504854368932039, "val_macro_f1": 0.6412095058018942, "val_accuracy": 0.5970873786407767, "lr": 0.009861849601988383, "seconds": 1.0549589639995247}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 5, "train_loss": 0.7944854034960849, "train_accuracy": 0.6966019417475728, "val_macro_f1": 0.7109050589217125, "val_accuracy": 0.6699029126213593, "lr": 0.009755282581475769, "seconds": 1.020357770845294}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 6, "train_loss": 0.6718651912744763, "train_accuracy": 0.7524271844660194, "val_macro_f1": 0.6800884572711923, "val_accuracy": 0.6504854368932039, "lr": 0.009619397662556435, "seconds": 1.0669038549531251}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 7, "train_loss": 0.5277632706373641, "train_accuracy": 0.8131067961165048, "val_macro_f1": 0.7908917269745758, "val_accuracy": 0.7572815533980582, "lr": 0.00945503262094184, "seconds": 1.2355345708783716}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 8, "train_loss": 0.5793264959622355, "train_accuracy": 0.779126213592233, "val_macro_f1": 0.7022941474490805, "val_accuracy": 0.6650485436893204, "lr": 0.009263200821770462, "seconds": 1.0506141560617834}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 9, "train_loss": 0.4997631103089712, "train_accuracy": 0.8300970873786407, "val_macro_f1": 0.7264451746184201, "val_accuracy": 0.7038834951456311, "lr": 0.009045084971874739, "seconds": 2.2399210759904236}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 10, "train_loss": 0.4638534558629527, "train_accuracy": 0.8300970873786407, "val_macro_f1": 0.7355131535567354, "val_accuracy": 0.7038834951456311, "lr": 0.008802029828000156, "seconds": 1.0277124219574034}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 11, "train_loss": 0.4414000175531628, "train_accuracy": 0.8325242718446602, "val_macro_f1": 0.7803948794872976, "val_accuracy": 0.7475728155339806, "lr": 0.008535533905932738, "seconds": 1.0461100048851222}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 12, "train_loss": 0.3798736576895112, "train_accuracy": 0.8567961165048543, "val_macro_f1": 0.7086727209002626, "val_accuracy": 0.6747572815533981, "lr": 0.00824724024165092, "seconds": 1.0258043308276683}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 13, "train_loss": 0.39766075454869315, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.7548319087360345, "val_accuracy": 0.7330097087378641, "lr": 0.007938926261462366, "seconds": 1.0313690269831568}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 14, "train_loss": 0.3757143600039112, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.73860206467778, "val_accuracy": 0.7330097087378641, "lr": 0.0076124928235797445, "seconds": 1.0512321919668466}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 15, "train_loss": 0.374566772898424, "train_accuracy": 0.8713592233009708, "val_macro_f1": 0.7666064459801405, "val_accuracy": 0.7475728155339806, "lr": 0.007269952498697735, "seconds": 1.0630737559404224}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 16, "train_loss": 0.33480663756722384, "train_accuracy": 0.8786407766990292, "val_macro_f1": 0.8034818632875367, "val_accuracy": 0.7718446601941747, "lr": 0.0069134171618254504, "seconds": 1.1557194930501282}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 17, "train_loss": 0.3251293839760197, "train_accuracy": 0.883495145631068, "val_macro_f1": 0.7943625625020974, "val_accuracy": 0.7669902912621359, "lr": 0.006545084971874739, "seconds": 1.0505104749463499}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 18, "train_loss": 0.26269384314423627, "train_accuracy": 0.9053398058252428, "val_macro_f1": 0.8131939421469622, "val_accuracy": 0.7961165048543689, "lr": 0.006167226819279529, "seconds": 1.0481911681126803}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 19, "train_loss": 0.24205704727797833, "train_accuracy": 0.9174757281553398, "val_macro_f1": 0.8062828994344873, "val_accuracy": 0.7669902912621359, "lr": 0.005782172325201156, "seconds": 1.0260195068549365}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 20, "train_loss": 0.18885114058418181, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.8349486257696386, "val_accuracy": 0.8058252427184466, "lr": 0.005392295478639226, "seconds": 1.8958432900253683}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 21, "train_loss": 0.17726061095311804, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.8089399479543486, "val_accuracy": 0.7815533980582524, "lr": 0.005000000000000001, "seconds": 1.0689840700943023}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 22, "train_loss": 0.2288017434981263, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.772410194700904, "val_accuracy": 0.7572815533980582, "lr": 0.004607704521360776, "seconds": 1.0554122948087752}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 23, "train_loss": 0.24380008934192288, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.7722896341180222, "val_accuracy": 0.7524271844660194, "lr": 0.004217827674798847, "seconds": 1.0435692318715155}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 24, "train_loss": 0.21990370070471346, "train_accuracy": 0.9271844660194175, "val_macro_f1": 0.8090626932039098, "val_accuracy": 0.7815533980582524, "lr": 0.0038327731807204736, "seconds": 1.1110281869769096}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 25, "train_loss": 0.22707619178063662, "train_accuracy": 0.9174757281553398, "val_macro_f1": 0.7590411711402087, "val_accuracy": 0.7427184466019418, "lr": 0.003454915028125263, "seconds": 1.070308752823621}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 26, "train_loss": 0.17191737152419043, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.806651399372436, "val_accuracy": 0.7766990291262136, "lr": 0.0030865828381745515, "seconds": 1.0537908989936113}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 27, "train_loss": 0.17828932889167545, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8189008886932296, "val_accuracy": 0.7912621359223301, "lr": 0.0027300475013022664, "seconds": 1.044847222045064}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 28, "train_loss": 0.1295053907534451, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8021848689772839, "val_accuracy": 0.7718446601941747, "lr": 0.002387507176420256, "seconds": 1.0816476049367338}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 29, "train_loss": 0.16831930191482156, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8225789057897279, "val_accuracy": 0.7961165048543689, "lr": 0.002061073738537635, "seconds": 1.13193430704996}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 30, "train_loss": 0.15609589884582076, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8418143464904018, "val_accuracy": 0.8155339805825242, "lr": 0.0017527597583490825, "seconds": 1.0419236209709197}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 31, "train_loss": 0.15376738422703976, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8473572169701079, "val_accuracy": 0.8155339805825242, "lr": 0.0014644660940672629, "seconds": 1.0976961981505156}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 32, "train_loss": 0.146296232794095, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8334187577415131, "val_accuracy": 0.8058252427184466, "lr": 0.0011979701719998454, "seconds": 1.8303778730332851}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 33, "train_loss": 0.13938029218935272, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8336884685874894, "val_accuracy": 0.8058252427184466, "lr": 0.0009549150281252633, "seconds": 1.033905975986272}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 34, "train_loss": 0.14272292251291785, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8260366776147008, "val_accuracy": 0.8058252427184466, "lr": 0.0007367991782295391, "seconds": 1.0741314641200006}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 35, "train_loss": 0.16386129728798726, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8394944982891642, "val_accuracy": 0.8106796116504854, "lr": 0.0005449673790581611, "seconds": 1.067527534905821}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 36, "train_loss": 0.1310353446209315, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8389567213052413, "val_accuracy": 0.8106796116504854, "lr": 0.0003806023374435663, "seconds": 1.0696619930677116}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 37, "train_loss": 0.11019777427020583, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.8196864775937723, "val_accuracy": 0.7961165048543689, "lr": 0.00024471741852423234, "seconds": 1.0639155390672386}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 38, "train_loss": 0.14265513318834952, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8228141353986798, "val_accuracy": 0.7961165048543689, "lr": 0.00013815039801161723, "seconds": 1.0654697560239583}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 39, "train_loss": 0.13878789001587524, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.829061296117632, "val_accuracy": 0.8058252427184466, "lr": 6.155829702431172e-05, "seconds": 1.0328226902056485}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "epoch": 40, "train_loss": 0.11118925019230658, "train_accuracy": 0.9660194174757282, "val_macro_f1": 0.8245718412355938, "val_accuracy": 0.8009708737864077, "lr": 1.5413331334360186e-05, "seconds": 1.0586514989845455}
+{"done": "fgsc23_civ8_fold0/resnet50_none_e40_s17", "best_val_macro_f1": 0.8473572169701079}
+--- train fold0 s29 01:53:56
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 1, "train_loss": 1.9203103005307391, "train_accuracy": 0.3300970873786408, "val_macro_f1": 0.05711610486891385, "val_accuracy": 0.2961165048543689, "lr": 0.01, "seconds": 1.8096170909702778}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 2, "train_loss": 1.642598789872475, "train_accuracy": 0.4077669902912621, "val_macro_f1": 0.12510067944850553, "val_accuracy": 0.32524271844660196, "lr": 0.00998458666866564, "seconds": 1.172109907027334}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 3, "train_loss": 1.3782048607335506, "train_accuracy": 0.5145631067961165, "val_macro_f1": 0.4270137245045448, "val_accuracy": 0.470873786407767, "lr": 0.009938441702975689, "seconds": 1.0595287869218737}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 4, "train_loss": 0.9878292373083171, "train_accuracy": 0.6407766990291263, "val_macro_f1": 0.6255153823549358, "val_accuracy": 0.558252427184466, "lr": 0.009861849601988383, "seconds": 1.0925088780932128}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 5, "train_loss": 0.7794130224626041, "train_accuracy": 0.7354368932038835, "val_macro_f1": 0.7153614353837943, "val_accuracy": 0.6601941747572816, "lr": 0.009755282581475769, "seconds": 1.0752774961292744}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 6, "train_loss": 0.7565011301086945, "train_accuracy": 0.7233009708737864, "val_macro_f1": 0.6657079309697116, "val_accuracy": 0.6213592233009708, "lr": 0.009619397662556435, "seconds": 1.205834403866902}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 7, "train_loss": 0.5753121063547227, "train_accuracy": 0.7936893203883495, "val_macro_f1": 0.7425412208016979, "val_accuracy": 0.7038834951456311, "lr": 0.00945503262094184, "seconds": 1.3319747580680996}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 8, "train_loss": 0.5533046380987445, "train_accuracy": 0.808252427184466, "val_macro_f1": 0.6941362885441833, "val_accuracy": 0.6893203883495146, "lr": 0.009263200821770462, "seconds": 2.2271073209121823}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 9, "train_loss": 0.4399205524365879, "train_accuracy": 0.8325242718446602, "val_macro_f1": 0.756817081386047, "val_accuracy": 0.7184466019417476, "lr": 0.009045084971874739, "seconds": 1.2211044179275632}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 10, "train_loss": 0.43099236198999347, "train_accuracy": 0.8349514563106796, "val_macro_f1": 0.7652702038373702, "val_accuracy": 0.7330097087378641, "lr": 0.008802029828000156, "seconds": 1.3335077438969165}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 11, "train_loss": 0.3977988156878832, "train_accuracy": 0.8592233009708737, "val_macro_f1": 0.7905314870504744, "val_accuracy": 0.7524271844660194, "lr": 0.008535533905932738, "seconds": 1.081899814074859}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 12, "train_loss": 0.35335719325010057, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.7735526408305741, "val_accuracy": 0.7281553398058253, "lr": 0.00824724024165092, "seconds": 1.2612904380075634}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 13, "train_loss": 0.40127482720949115, "train_accuracy": 0.8446601941747572, "val_macro_f1": 0.7671321965194497, "val_accuracy": 0.7281553398058253, "lr": 0.007938926261462366, "seconds": 1.2168019730597734}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 14, "train_loss": 0.28387548347699987, "train_accuracy": 0.9101941747572816, "val_macro_f1": 0.7471615881930245, "val_accuracy": 0.6990291262135923, "lr": 0.0076124928235797445, "seconds": 1.1732413449790329}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 15, "train_loss": 0.32524364145056717, "train_accuracy": 0.8737864077669902, "val_macro_f1": 0.803673659447991, "val_accuracy": 0.7572815533980582, "lr": 0.007269952498697735, "seconds": 1.1859588290099055}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 16, "train_loss": 0.2737508594121748, "train_accuracy": 0.9029126213592233, "val_macro_f1": 0.8108960428549862, "val_accuracy": 0.7718446601941747, "lr": 0.0069134171618254504, "seconds": 1.142598849022761}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 17, "train_loss": 0.25645624014359075, "train_accuracy": 0.9053398058252428, "val_macro_f1": 0.8141758029708533, "val_accuracy": 0.7815533980582524, "lr": 0.006545084971874739, "seconds": 2.1204803599976003}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 18, "train_loss": 0.2570196607159179, "train_accuracy": 0.8859223300970874, "val_macro_f1": 0.7664175367012704, "val_accuracy": 0.7378640776699029, "lr": 0.006167226819279529, "seconds": 1.15599807491526}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 19, "train_loss": 0.1884031796339646, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.7727406817674296, "val_accuracy": 0.7281553398058253, "lr": 0.005782172325201156, "seconds": 1.1164432568475604}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 20, "train_loss": 0.22262879598487928, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8053065826307578, "val_accuracy": 0.7621359223300971, "lr": 0.005392295478639226, "seconds": 1.2059181679505855}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 21, "train_loss": 0.25300131463310094, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.7845976620600936, "val_accuracy": 0.7378640776699029, "lr": 0.005000000000000001, "seconds": 1.1967859510332346}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 22, "train_loss": 0.23182811175735252, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.8297899918540128, "val_accuracy": 0.7864077669902912, "lr": 0.004607704521360776, "seconds": 1.1969269861001521}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 23, "train_loss": 0.2575900893188217, "train_accuracy": 0.9101941747572816, "val_macro_f1": 0.8101693869314006, "val_accuracy": 0.7766990291262136, "lr": 0.004217827674798847, "seconds": 1.3013079389929771}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 24, "train_loss": 0.2276812091614436, "train_accuracy": 0.9029126213592233, "val_macro_f1": 0.8066760237743624, "val_accuracy": 0.7766990291262136, "lr": 0.0038327731807204736, "seconds": 1.0901281221304089}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 25, "train_loss": 0.18796813618210914, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.7970322843450786, "val_accuracy": 0.7621359223300971, "lr": 0.003454915028125263, "seconds": 1.1428130108397454}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 26, "train_loss": 0.1595113765701507, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8185536381415648, "val_accuracy": 0.7815533980582524, "lr": 0.0030865828381745515, "seconds": 1.1346478939522058}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 27, "train_loss": 0.14565091298043148, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8126866893171241, "val_accuracy": 0.7766990291262136, "lr": 0.0027300475013022664, "seconds": 2.503921688068658}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 28, "train_loss": 0.17632994026813692, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8180322381232925, "val_accuracy": 0.7864077669902912, "lr": 0.002387507176420256, "seconds": 1.0638535940088332}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 29, "train_loss": 0.16480543211247156, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.8093300262790071, "val_accuracy": 0.7766990291262136, "lr": 0.002061073738537635, "seconds": 1.0851479840930551}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 30, "train_loss": 0.1559499902921973, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8249041739980252, "val_accuracy": 0.7864077669902912, "lr": 0.0017527597583490825, "seconds": 1.220635563135147}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 31, "train_loss": 0.16427597345657718, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.832983375423563, "val_accuracy": 0.7961165048543689, "lr": 0.0014644660940672629, "seconds": 1.2897979889530689}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 32, "train_loss": 0.1646674231996814, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8219972320684774, "val_accuracy": 0.7864077669902912, "lr": 0.0011979701719998454, "seconds": 1.274576302850619}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 33, "train_loss": 0.13654086369912602, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8102433839316994, "val_accuracy": 0.7718446601941747, "lr": 0.0009549150281252633, "seconds": 1.1870326770003885}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 34, "train_loss": 0.13457442545196385, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8090694049027383, "val_accuracy": 0.7718446601941747, "lr": 0.0007367991782295391, "seconds": 1.1669713559094816}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 35, "train_loss": 0.13512208913136453, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8050501986810387, "val_accuracy": 0.7669902912621359, "lr": 0.0005449673790581611, "seconds": 1.16124921804294}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 36, "train_loss": 0.12911865375574352, "train_accuracy": 0.9538834951456311, "val_macro_f1": 0.8144892371073841, "val_accuracy": 0.7766990291262136, "lr": 0.0003806023374435663, "seconds": 1.2325611819978803}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 37, "train_loss": 0.16227192041075345, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8182572177075471, "val_accuracy": 0.7864077669902912, "lr": 0.00024471741852423234, "seconds": 1.1912818390410393}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 38, "train_loss": 0.1501013211978292, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8245835801194537, "val_accuracy": 0.7912621359223301, "lr": 0.00013815039801161723, "seconds": 2.502391686895862}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 39, "train_loss": 0.15269108675420284, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8112013906503714, "val_accuracy": 0.7766990291262136, "lr": 6.155829702431172e-05, "seconds": 1.2851450080052018}
+{"run": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "epoch": 40, "train_loss": 0.15340433059965522, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8076637171464758, "val_accuracy": 0.7718446601941747, "lr": 1.5413331334360186e-05, "seconds": 1.3219922371208668}
+{"done": "fgsc23_civ8_fold0/resnet50_none_e40_s29", "best_val_macro_f1": 0.832983375423563}
+--- train fold1 s17 01:55:05
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 1, "train_loss": 1.9100169961892286, "train_accuracy": 0.2961165048543689, "val_macro_f1": 0.09720252167060678, "val_accuracy": 0.4174757281553398, "lr": 0.01, "seconds": 1.852233269950375}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 2, "train_loss": 1.6603467591757912, "train_accuracy": 0.3762135922330097, "val_macro_f1": 0.3608892282354422, "val_accuracy": 0.5048543689320388, "lr": 0.00998458666866564, "seconds": 1.194535753922537}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 3, "train_loss": 1.3487611083151068, "train_accuracy": 0.47572815533980584, "val_macro_f1": 0.5859341139556598, "val_accuracy": 0.6019417475728155, "lr": 0.009938441702975689, "seconds": 1.2236813041381538}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 4, "train_loss": 1.0564441866087682, "train_accuracy": 0.6262135922330098, "val_macro_f1": 0.699655143609915, "val_accuracy": 0.6601941747572816, "lr": 0.009861849601988383, "seconds": 1.210533077828586}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 5, "train_loss": 0.8423453766165427, "train_accuracy": 0.7087378640776699, "val_macro_f1": 0.5899577167019028, "val_accuracy": 0.6504854368932039, "lr": 0.009755282581475769, "seconds": 1.2567007169127464}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 6, "train_loss": 0.7782536866595444, "train_accuracy": 0.7160194174757282, "val_macro_f1": 0.7976309756551692, "val_accuracy": 0.7669902912621359, "lr": 0.009619397662556435, "seconds": 1.0827945701312274}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 7, "train_loss": 0.582003486387938, "train_accuracy": 0.7597087378640777, "val_macro_f1": 0.7387962630992941, "val_accuracy": 0.7330097087378641, "lr": 0.00945503262094184, "seconds": 1.0776494960300624}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 8, "train_loss": 0.6084607602323143, "train_accuracy": 0.7766990291262136, "val_macro_f1": 0.7769719898306698, "val_accuracy": 0.7524271844660194, "lr": 0.009263200821770462, "seconds": 2.3564005631487817}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 9, "train_loss": 0.5396122518673684, "train_accuracy": 0.8009708737864077, "val_macro_f1": 0.8209094729845962, "val_accuracy": 0.7766990291262136, "lr": 0.009045084971874739, "seconds": 1.2173381589818746}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 10, "train_loss": 0.46368694479025685, "train_accuracy": 0.8300970873786407, "val_macro_f1": 0.8463771227638062, "val_accuracy": 0.8203883495145631, "lr": 0.008802029828000156, "seconds": 1.2257912082131952}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 11, "train_loss": 0.4821002966570623, "train_accuracy": 0.8033980582524272, "val_macro_f1": 0.8415089496550772, "val_accuracy": 0.8058252427184466, "lr": 0.008535533905932738, "seconds": 1.2089421711862087}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 12, "train_loss": 0.38005608812119196, "train_accuracy": 0.8470873786407767, "val_macro_f1": 0.7945137888241125, "val_accuracy": 0.7815533980582524, "lr": 0.00824724024165092, "seconds": 1.3059422068763524}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 13, "train_loss": 0.4019147533814884, "train_accuracy": 0.8446601941747572, "val_macro_f1": 0.784821525470923, "val_accuracy": 0.7864077669902912, "lr": 0.007938926261462366, "seconds": 1.3228520639240742}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 14, "train_loss": 0.4122939485948063, "train_accuracy": 0.8567961165048543, "val_macro_f1": 0.661604714750346, "val_accuracy": 0.7330097087378641, "lr": 0.0076124928235797445, "seconds": 1.3469366221688688}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 15, "train_loss": 0.39161759354535813, "train_accuracy": 0.8495145631067961, "val_macro_f1": 0.8212965886409386, "val_accuracy": 0.8009708737864077, "lr": 0.007269952498697735, "seconds": 1.1862197290174663}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 16, "train_loss": 0.29278525348427226, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8626636023937574, "val_accuracy": 0.8446601941747572, "lr": 0.0069134171618254504, "seconds": 1.1768506390508264}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 17, "train_loss": 0.2966500135880072, "train_accuracy": 0.8956310679611651, "val_macro_f1": 0.8830214905078788, "val_accuracy": 0.8737864077669902, "lr": 0.006545084971874739, "seconds": 1.1743765859864652}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 18, "train_loss": 0.2484935030196477, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.87669099905942, "val_accuracy": 0.8592233009708737, "lr": 0.006167226819279529, "seconds": 2.1468067669775337}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 19, "train_loss": 0.27782505591517515, "train_accuracy": 0.9004854368932039, "val_macro_f1": 0.8399501551462336, "val_accuracy": 0.8203883495145631, "lr": 0.005782172325201156, "seconds": 1.1839329020585865}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 20, "train_loss": 0.22806504137307695, "train_accuracy": 0.9174757281553398, "val_macro_f1": 0.8667989428105444, "val_accuracy": 0.8446601941747572, "lr": 0.005392295478639226, "seconds": 1.2348283829633147}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 21, "train_loss": 0.19910541451671748, "train_accuracy": 0.9271844660194175, "val_macro_f1": 0.8420251436105095, "val_accuracy": 0.8203883495145631, "lr": 0.005000000000000001, "seconds": 1.185617697890848}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 22, "train_loss": 0.24414128831868032, "train_accuracy": 0.9101941747572816, "val_macro_f1": 0.8536007463801332, "val_accuracy": 0.8349514563106796, "lr": 0.004607704521360776, "seconds": 1.3209942758549005}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 23, "train_loss": 0.1797352508433814, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8474070872855843, "val_accuracy": 0.8203883495145631, "lr": 0.004217827674798847, "seconds": 1.2061419249512255}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 24, "train_loss": 0.2149183043432467, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.8448791451335056, "val_accuracy": 0.8252427184466019, "lr": 0.0038327731807204736, "seconds": 1.3173305648379028}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 25, "train_loss": 0.20677664427502643, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8342726968479981, "val_accuracy": 0.8155339805825242, "lr": 0.003454915028125263, "seconds": 1.1813693488948047}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 26, "train_loss": 0.17623733403613268, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8446126167621775, "val_accuracy": 0.8252427184466019, "lr": 0.0030865828381745515, "seconds": 1.0952515779063106}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 27, "train_loss": 0.1865205217912359, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8501990204576411, "val_accuracy": 0.8349514563106796, "lr": 0.0027300475013022664, "seconds": 1.1098526851274073}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 28, "train_loss": 0.18708802492005153, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8503799605966789, "val_accuracy": 0.8349514563106796, "lr": 0.002387507176420256, "seconds": 1.2005497601348907}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 29, "train_loss": 0.1698966960883835, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8383575342404385, "val_accuracy": 0.8155339805825242, "lr": 0.002061073738537635, "seconds": 2.273570737801492}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 30, "train_loss": 0.18025160255362688, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8477522519705183, "val_accuracy": 0.8349514563106796, "lr": 0.0017527597583490825, "seconds": 1.2194054848514497}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 31, "train_loss": 0.1803714948371776, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8394581155632985, "val_accuracy": 0.8203883495145631, "lr": 0.0014644660940672629, "seconds": 1.2658904679119587}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 32, "train_loss": 0.15678270067115432, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8409350187023733, "val_accuracy": 0.8252427184466019, "lr": 0.0011979701719998454, "seconds": 1.229027593974024}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 33, "train_loss": 0.13805414200986474, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8534766524898103, "val_accuracy": 0.8398058252427184, "lr": 0.0009549150281252633, "seconds": 1.178472822997719}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 34, "train_loss": 0.12561711017946595, "train_accuracy": 0.9611650485436893, "val_macro_f1": 0.8522206083864018, "val_accuracy": 0.8349514563106796, "lr": 0.0007367991782295391, "seconds": 1.1753477049060166}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 35, "train_loss": 0.13240089882346032, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8532629441636794, "val_accuracy": 0.8398058252427184, "lr": 0.0005449673790581611, "seconds": 1.1942693809978664}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 36, "train_loss": 0.15999940934690457, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8532054030874785, "val_accuracy": 0.8398058252427184, "lr": 0.0003806023374435663, "seconds": 1.1948524629697204}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 37, "train_loss": 0.12726281076959037, "train_accuracy": 0.9635922330097088, "val_macro_f1": 0.8562201494376623, "val_accuracy": 0.8446601941747572, "lr": 0.00024471741852423234, "seconds": 1.2308748350478709}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 38, "train_loss": 0.19761541398983556, "train_accuracy": 0.9247572815533981, "val_macro_f1": 0.8562201494376623, "val_accuracy": 0.8446601941747572, "lr": 0.00013815039801161723, "seconds": 1.2942835870198905}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 39, "train_loss": 0.15985627428999225, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8476169364719194, "val_accuracy": 0.8349514563106796, "lr": 6.155829702431172e-05, "seconds": 1.229264749912545}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "epoch": 40, "train_loss": 0.15049727535942226, "train_accuracy": 0.9563106796116505, "val_macro_f1": 0.8562201494376623, "val_accuracy": 0.8446601941747572, "lr": 1.5413331334360186e-05, "seconds": 1.2359521458856761}
+{"done": "fgsc23_civ8_fold1/resnet50_none_e40_s17", "best_val_macro_f1": 0.8830214905078788}
+--- train fold1 s29 01:56:10
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 1, "train_loss": 1.9629246957093767, "train_accuracy": 0.30339805825242716, "val_macro_f1": 0.08149108955560569, "val_accuracy": 0.41262135922330095, "lr": 0.01, "seconds": 1.6700798019301146}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 2, "train_loss": 1.705878694080612, "train_accuracy": 0.3592233009708738, "val_macro_f1": 0.2591096536254447, "val_accuracy": 0.49029126213592233, "lr": 0.00998458666866564, "seconds": 1.1031019969377667}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 3, "train_loss": 1.5012008530422323, "train_accuracy": 0.45145631067961167, "val_macro_f1": 0.5898716153127918, "val_accuracy": 0.558252427184466, "lr": 0.009938441702975689, "seconds": 1.2969415071420372}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 4, "train_loss": 1.216517141721781, "train_accuracy": 0.5364077669902912, "val_macro_f1": 0.6958674619554759, "val_accuracy": 0.7233009708737864, "lr": 0.009861849601988383, "seconds": 1.1108062071725726}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 5, "train_loss": 0.8922823383970168, "train_accuracy": 0.6941747572815534, "val_macro_f1": 0.7621428169153895, "val_accuracy": 0.7330097087378641, "lr": 0.009755282581475769, "seconds": 1.179692555917427}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 6, "train_loss": 0.7164219797236248, "train_accuracy": 0.7257281553398058, "val_macro_f1": 0.6363127331141604, "val_accuracy": 0.6650485436893204, "lr": 0.009619397662556435, "seconds": 1.1137491741683334}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 7, "train_loss": 0.654123784268944, "train_accuracy": 0.7742718446601942, "val_macro_f1": 0.8172636539639391, "val_accuracy": 0.7669902912621359, "lr": 0.00945503262094184, "seconds": 1.0990229989401996}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 8, "train_loss": 0.5922191067806726, "train_accuracy": 0.7839805825242718, "val_macro_f1": 0.8214558294345529, "val_accuracy": 0.8058252427184466, "lr": 0.009263200821770462, "seconds": 2.236923197982833}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 9, "train_loss": 0.5203656884073053, "train_accuracy": 0.8058252427184466, "val_macro_f1": 0.8165289384581476, "val_accuracy": 0.7815533980582524, "lr": 0.009045084971874739, "seconds": 1.2870593399275094}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 10, "train_loss": 0.4030350374365316, "train_accuracy": 0.866504854368932, "val_macro_f1": 0.8449704909805864, "val_accuracy": 0.8106796116504854, "lr": 0.008802029828000156, "seconds": 1.4046013110782951}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 11, "train_loss": 0.46227156855527635, "train_accuracy": 0.8325242718446602, "val_macro_f1": 0.7401719949423846, "val_accuracy": 0.7427184466019418, "lr": 0.008535533905932738, "seconds": 1.1212272041011602}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 12, "train_loss": 0.43626432164201456, "train_accuracy": 0.8592233009708737, "val_macro_f1": 0.7913780938567678, "val_accuracy": 0.7815533980582524, "lr": 0.00824724024165092, "seconds": 1.14322649105452}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 13, "train_loss": 0.4578377511894819, "train_accuracy": 0.8252427184466019, "val_macro_f1": 0.8291496432559091, "val_accuracy": 0.7961165048543689, "lr": 0.007938926261462366, "seconds": 1.1526958418544382}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 14, "train_loss": 0.3855212692496846, "train_accuracy": 0.8616504854368932, "val_macro_f1": 0.8434439841767428, "val_accuracy": 0.8058252427184466, "lr": 0.0076124928235797445, "seconds": 1.2003990658558905}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 15, "train_loss": 0.35363434182787407, "train_accuracy": 0.8640776699029126, "val_macro_f1": 0.8393257976591311, "val_accuracy": 0.8106796116504854, "lr": 0.007269952498697735, "seconds": 1.182744073914364}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 16, "train_loss": 0.31513740397194057, "train_accuracy": 0.8980582524271845, "val_macro_f1": 0.8245066829787941, "val_accuracy": 0.8058252427184466, "lr": 0.0069134171618254504, "seconds": 1.3090623051393777}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 17, "train_loss": 0.23665776327975746, "train_accuracy": 0.9077669902912622, "val_macro_f1": 0.8434190222745819, "val_accuracy": 0.8203883495145631, "lr": 0.006545084971874739, "seconds": 1.233854688005522}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 18, "train_loss": 0.3014548817305889, "train_accuracy": 0.8859223300970874, "val_macro_f1": 0.8091244855763913, "val_accuracy": 0.7912621359223301, "lr": 0.006167226819279529, "seconds": 2.2152124331332743}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 19, "train_loss": 0.22789406921099692, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.8625004091648409, "val_accuracy": 0.8349514563106796, "lr": 0.005782172325201156, "seconds": 1.1494546639733016}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 20, "train_loss": 0.2799736680915055, "train_accuracy": 0.8980582524271845, "val_macro_f1": 0.8651218566741234, "val_accuracy": 0.8446601941747572, "lr": 0.005392295478639226, "seconds": 1.277145653963089}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 21, "train_loss": 0.2911842919669105, "train_accuracy": 0.8932038834951457, "val_macro_f1": 0.8480623808485144, "val_accuracy": 0.8349514563106796, "lr": 0.005000000000000001, "seconds": 1.402257971931249}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 22, "train_loss": 0.21214153472949, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8388453289246462, "val_accuracy": 0.8155339805825242, "lr": 0.004607704521360776, "seconds": 1.133686165092513}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 23, "train_loss": 0.2327602589955029, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.8385721682909777, "val_accuracy": 0.8203883495145631, "lr": 0.004217827674798847, "seconds": 1.3026365211699158}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 24, "train_loss": 0.2006297947712315, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8553069866125965, "val_accuracy": 0.8398058252427184, "lr": 0.0038327731807204736, "seconds": 1.31467049382627}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 25, "train_loss": 0.22491452271498522, "train_accuracy": 0.9271844660194175, "val_macro_f1": 0.8352133975432523, "val_accuracy": 0.8155339805825242, "lr": 0.003454915028125263, "seconds": 1.1050316160544753}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 26, "train_loss": 0.22050882629977847, "train_accuracy": 0.9247572815533981, "val_macro_f1": 0.8335210705413278, "val_accuracy": 0.8155339805825242, "lr": 0.0030865828381745515, "seconds": 1.1868975278921425}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 27, "train_loss": 0.16082491132530194, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8509267296737266, "val_accuracy": 0.8300970873786407, "lr": 0.0027300475013022664, "seconds": 1.2722466241102666}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 28, "train_loss": 0.1979614072343678, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.8670421647681632, "val_accuracy": 0.8446601941747572, "lr": 0.002387507176420256, "seconds": 2.169407428940758}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 29, "train_loss": 0.18515959613531538, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8655214688570352, "val_accuracy": 0.8446601941747572, "lr": 0.002061073738537635, "seconds": 1.1498559101019055}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 30, "train_loss": 0.12909335483914441, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8596524340178926, "val_accuracy": 0.8446601941747572, "lr": 0.0017527597583490825, "seconds": 1.218185091856867}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 31, "train_loss": 0.18903501809222026, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.856835362969528, "val_accuracy": 0.8398058252427184, "lr": 0.0014644660940672629, "seconds": 1.3241492439992726}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 32, "train_loss": 0.17194390810519747, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8620758508194324, "val_accuracy": 0.8446601941747572, "lr": 0.0011979701719998454, "seconds": 1.328655949095264}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 33, "train_loss": 0.17387469322646706, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8640056895325214, "val_accuracy": 0.8446601941747572, "lr": 0.0009549150281252633, "seconds": 1.211074311984703}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 34, "train_loss": 0.15554496616993135, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.862809618991561, "val_accuracy": 0.8446601941747572, "lr": 0.0007367991782295391, "seconds": 1.223988045938313}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 35, "train_loss": 0.150025063058705, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8593786969118534, "val_accuracy": 0.8446601941747572, "lr": 0.0005449673790581611, "seconds": 1.2906647559721023}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 36, "train_loss": 0.15994559033113775, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8713377651322647, "val_accuracy": 0.8543689320388349, "lr": 0.0003806023374435663, "seconds": 1.1840611100196838}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 37, "train_loss": 0.16083578649655128, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.862809618991561, "val_accuracy": 0.8446601941747572, "lr": 0.00024471741852423234, "seconds": 1.2401780760847032}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 38, "train_loss": 0.14066475543003637, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8687455422894867, "val_accuracy": 0.8495145631067961, "lr": 0.00013815039801161723, "seconds": 2.0630513271316886}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 39, "train_loss": 0.15206601289869512, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8668712436414209, "val_accuracy": 0.8495145631067961, "lr": 6.155829702431172e-05, "seconds": 1.3288473449647427}
+{"run": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "epoch": 40, "train_loss": 0.15011426705179862, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8588637710638304, "val_accuracy": 0.8446601941747572, "lr": 1.5413331334360186e-05, "seconds": 1.2013515420258045}
+{"done": "fgsc23_civ8_fold1/resnet50_none_e40_s29", "best_val_macro_f1": 0.8713377651322647}
+--- train fold2 s17 01:57:19
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 1, "train_loss": 1.8807053056735437, "train_accuracy": 0.3155339805825243, "val_macro_f1": 0.11115512026501512, "val_accuracy": 0.3932038834951456, "lr": 0.01, "seconds": 1.6340650790371}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 2, "train_loss": 1.5642338759690813, "train_accuracy": 0.4393203883495146, "val_macro_f1": 0.47978084049069136, "val_accuracy": 0.5339805825242718, "lr": 0.00998458666866564, "seconds": 1.1827054829336703}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 3, "train_loss": 1.2210680003305083, "train_accuracy": 0.5485436893203883, "val_macro_f1": 0.547278119610541, "val_accuracy": 0.5922330097087378, "lr": 0.009938441702975689, "seconds": 1.2740701721049845}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 4, "train_loss": 0.9322202350329427, "train_accuracy": 0.6359223300970874, "val_macro_f1": 0.6551861945551744, "val_accuracy": 0.6116504854368932, "lr": 0.009861849601988383, "seconds": 1.1694899259600788}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 5, "train_loss": 0.7866157374335724, "train_accuracy": 0.6941747572815534, "val_macro_f1": 0.7417146220842237, "val_accuracy": 0.7135922330097088, "lr": 0.009755282581475769, "seconds": 1.181603308999911}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 6, "train_loss": 0.6462061717672255, "train_accuracy": 0.7597087378640777, "val_macro_f1": 0.7856175677437817, "val_accuracy": 0.7572815533980582, "lr": 0.009619397662556435, "seconds": 1.157841223059222}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 7, "train_loss": 0.6744604136758637, "train_accuracy": 0.7524271844660194, "val_macro_f1": 0.7596363653227827, "val_accuracy": 0.7427184466019418, "lr": 0.00945503262094184, "seconds": 2.1462705170270056}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 8, "train_loss": 0.6253258313947511, "train_accuracy": 0.7597087378640777, "val_macro_f1": 0.8093747741821344, "val_accuracy": 0.7815533980582524, "lr": 0.009263200821770462, "seconds": 1.1638474178034812}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 9, "train_loss": 0.5149540574226564, "train_accuracy": 0.8131067961165048, "val_macro_f1": 0.8039824737352539, "val_accuracy": 0.7912621359223301, "lr": 0.009045084971874739, "seconds": 1.318776672007516}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 10, "train_loss": 0.42617060316419136, "train_accuracy": 0.8398058252427184, "val_macro_f1": 0.825994224804657, "val_accuracy": 0.8106796116504854, "lr": 0.008802029828000156, "seconds": 1.280529606854543}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 11, "train_loss": 0.43958160136509866, "train_accuracy": 0.8422330097087378, "val_macro_f1": 0.8070201837964852, "val_accuracy": 0.7864077669902912, "lr": 0.008535533905932738, "seconds": 1.2194847229402512}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 12, "train_loss": 0.39374444669890174, "train_accuracy": 0.8422330097087378, "val_macro_f1": 0.8053539081175477, "val_accuracy": 0.8009708737864077, "lr": 0.00824724024165092, "seconds": 1.2311469200067222}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 13, "train_loss": 0.42500432110527187, "train_accuracy": 0.8446601941747572, "val_macro_f1": 0.8153722177765761, "val_accuracy": 0.7815533980582524, "lr": 0.007938926261462366, "seconds": 1.3285771231167018}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 14, "train_loss": 0.3645323674076969, "train_accuracy": 0.8616504854368932, "val_macro_f1": 0.8264436971397, "val_accuracy": 0.8252427184466019, "lr": 0.0076124928235797445, "seconds": 1.1882395020220429}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 15, "train_loss": 0.3873298764228821, "train_accuracy": 0.8713592233009708, "val_macro_f1": 0.781011478582001, "val_accuracy": 0.7669902912621359, "lr": 0.007269952498697735, "seconds": 1.2855364938732237}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 16, "train_loss": 0.33708704357008334, "train_accuracy": 0.8883495145631068, "val_macro_f1": 0.8029373584831259, "val_accuracy": 0.7912621359223301, "lr": 0.0069134171618254504, "seconds": 2.3377174341585487}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 17, "train_loss": 0.33704273590763795, "train_accuracy": 0.883495145631068, "val_macro_f1": 0.8515778324609887, "val_accuracy": 0.8349514563106796, "lr": 0.006545084971874739, "seconds": 1.1200202931649983}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 18, "train_loss": 0.30796953211131606, "train_accuracy": 0.8980582524271845, "val_macro_f1": 0.8478002609674691, "val_accuracy": 0.8495145631067961, "lr": 0.006167226819279529, "seconds": 1.1918047999497503}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 19, "train_loss": 0.25540961006891383, "train_accuracy": 0.8980582524271845, "val_macro_f1": 0.8614505711377518, "val_accuracy": 0.8495145631067961, "lr": 0.005782172325201156, "seconds": 1.3290070118382573}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 20, "train_loss": 0.25516885142881895, "train_accuracy": 0.9004854368932039, "val_macro_f1": 0.8530272104655907, "val_accuracy": 0.8495145631067961, "lr": 0.005392295478639226, "seconds": 1.112910812953487}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 21, "train_loss": 0.22686603810023337, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.839319637644367, "val_accuracy": 0.8446601941747572, "lr": 0.005000000000000001, "seconds": 1.1057298709638417}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 22, "train_loss": 0.2524054843245201, "train_accuracy": 0.8956310679611651, "val_macro_f1": 0.8464850949501106, "val_accuracy": 0.8446601941747572, "lr": 0.004607704521360776, "seconds": 1.2380840920377523}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 23, "train_loss": 0.24040918124532237, "train_accuracy": 0.9029126213592233, "val_macro_f1": 0.8418172202293503, "val_accuracy": 0.8495145631067961, "lr": 0.004217827674798847, "seconds": 1.3038717231247574}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 24, "train_loss": 0.20770218707982777, "train_accuracy": 0.9320388349514563, "val_macro_f1": 0.8590884678610877, "val_accuracy": 0.8446601941747572, "lr": 0.0038327731807204736, "seconds": 1.1897985069081187}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 25, "train_loss": 0.22792640943261025, "train_accuracy": 0.9150485436893204, "val_macro_f1": 0.8693631686507033, "val_accuracy": 0.8543689320388349, "lr": 0.003454915028125263, "seconds": 1.2294443440623581}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 26, "train_loss": 0.1902797912220353, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.8867745991727329, "val_accuracy": 0.8786407766990292, "lr": 0.0030865828381745515, "seconds": 2.070259429048747}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 27, "train_loss": 0.2050206030456765, "train_accuracy": 0.9344660194174758, "val_macro_f1": 0.8728741973089615, "val_accuracy": 0.8737864077669902, "lr": 0.0027300475013022664, "seconds": 1.1706297099590302}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 28, "train_loss": 0.13496338583311987, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8616499297065232, "val_accuracy": 0.8543689320388349, "lr": 0.002387507176420256, "seconds": 1.2055884569417685}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 29, "train_loss": 0.19395140985262047, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.8656266583364185, "val_accuracy": 0.8640776699029126, "lr": 0.002061073738537635, "seconds": 1.2987587959505618}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 30, "train_loss": 0.21021737288502815, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.8626087825109203, "val_accuracy": 0.8640776699029126, "lr": 0.0017527597583490825, "seconds": 1.2315980109851807}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 31, "train_loss": 0.1604388934894673, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8714682539682539, "val_accuracy": 0.8737864077669902, "lr": 0.0014644660940672629, "seconds": 1.14066794491373}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 32, "train_loss": 0.19356503677599637, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.875397915576487, "val_accuracy": 0.8689320388349514, "lr": 0.0011979701719998454, "seconds": 1.1290061839390546}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 33, "train_loss": 0.16310367957480904, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.86898143863154, "val_accuracy": 0.8640776699029126, "lr": 0.0009549150281252633, "seconds": 1.0745141331572086}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 34, "train_loss": 0.13723388661458655, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8646532843181269, "val_accuracy": 0.8592233009708737, "lr": 0.0007367991782295391, "seconds": 1.2575676129199564}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 35, "train_loss": 0.14663733628768366, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8641707143339828, "val_accuracy": 0.8592233009708737, "lr": 0.0005449673790581611, "seconds": 1.2593548949807882}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 36, "train_loss": 0.15685453520888842, "train_accuracy": 0.9441747572815534, "val_macro_f1": 0.8627390164154869, "val_accuracy": 0.8592233009708737, "lr": 0.0003806023374435663, "seconds": 1.214806066825986}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 37, "train_loss": 0.11038962223576111, "train_accuracy": 0.9635922330097088, "val_macro_f1": 0.8726120983595731, "val_accuracy": 0.8689320388349514, "lr": 0.00024471741852423234, "seconds": 2.1584562289062887}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 38, "train_loss": 0.16335878694809755, "train_accuracy": 0.941747572815534, "val_macro_f1": 0.8702276222859422, "val_accuracy": 0.8689320388349514, "lr": 0.00013815039801161723, "seconds": 1.1836410290561616}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 39, "train_loss": 0.17189349650034627, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8618255657482328, "val_accuracy": 0.8592233009708737, "lr": 6.155829702431172e-05, "seconds": 1.1886369329877198}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "epoch": 40, "train_loss": 0.1342172326104155, "train_accuracy": 0.9514563106796117, "val_macro_f1": 0.8717338611451222, "val_accuracy": 0.8689320388349514, "lr": 1.5413331334360186e-05, "seconds": 1.1102076780516654}
+{"done": "fgsc23_civ8_fold2/resnet50_none_e40_s17", "best_val_macro_f1": 0.8867745991727329}
+--- train fold2 s29 01:58:30
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 1, "train_loss": 1.9465456495007265, "train_accuracy": 0.3131067961165049, "val_macro_f1": 0.07788855260815382, "val_accuracy": 0.3592233009708738, "lr": 0.01, "seconds": 1.7054075279738754}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 2, "train_loss": 1.6558014200729074, "train_accuracy": 0.3786407766990291, "val_macro_f1": 0.2033309990662932, "val_accuracy": 0.4320388349514563, "lr": 0.00998458666866564, "seconds": 1.1566137070767581}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 3, "train_loss": 1.3510271796902407, "train_accuracy": 0.5024271844660194, "val_macro_f1": 0.674092300152641, "val_accuracy": 0.6553398058252428, "lr": 0.009938441702975689, "seconds": 1.156428179005161}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 4, "train_loss": 1.0089149070017547, "train_accuracy": 0.6504854368932039, "val_macro_f1": 0.5734190224763118, "val_accuracy": 0.5776699029126213, "lr": 0.009861849601988383, "seconds": 1.2149237799458206}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 5, "train_loss": 0.8494224166407168, "train_accuracy": 0.691747572815534, "val_macro_f1": 0.6995867162622447, "val_accuracy": 0.6941747572815534, "lr": 0.009755282581475769, "seconds": 1.1626880920957774}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 6, "train_loss": 0.7297848121633808, "train_accuracy": 0.7233009708737864, "val_macro_f1": 0.6730078975838152, "val_accuracy": 0.6699029126213593, "lr": 0.009619397662556435, "seconds": 1.406498139956966}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 7, "train_loss": 0.6229530564210948, "train_accuracy": 0.7597087378640777, "val_macro_f1": 0.7255780661352245, "val_accuracy": 0.6941747572815534, "lr": 0.00945503262094184, "seconds": 1.1000763811171055}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 8, "train_loss": 0.5675551225838152, "train_accuracy": 0.7888349514563107, "val_macro_f1": 0.762014018099678, "val_accuracy": 0.7621359223300971, "lr": 0.009263200821770462, "seconds": 2.029945586109534}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 9, "train_loss": 0.509848221991826, "train_accuracy": 0.8131067961165048, "val_macro_f1": 0.7733486001185725, "val_accuracy": 0.7815533980582524, "lr": 0.009045084971874739, "seconds": 1.1475061899982393}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 10, "train_loss": 0.42816172901866506, "train_accuracy": 0.8276699029126213, "val_macro_f1": 0.7606173370324699, "val_accuracy": 0.7524271844660194, "lr": 0.008802029828000156, "seconds": 1.1877327740658075}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 11, "train_loss": 0.43730989069614595, "train_accuracy": 0.8519417475728155, "val_macro_f1": 0.7977820320628608, "val_accuracy": 0.7815533980582524, "lr": 0.008535533905932738, "seconds": 1.1461542430333793}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 12, "train_loss": 0.4002139542287993, "train_accuracy": 0.8470873786407767, "val_macro_f1": 0.8178191252892226, "val_accuracy": 0.7864077669902912, "lr": 0.00824724024165092, "seconds": 1.1312000409234315}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 13, "train_loss": 0.46755247035072844, "train_accuracy": 0.837378640776699, "val_macro_f1": 0.7887639146567718, "val_accuracy": 0.7766990291262136, "lr": 0.007938926261462366, "seconds": 1.2388614241499454}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 14, "train_loss": 0.364126049633165, "train_accuracy": 0.8567961165048543, "val_macro_f1": 0.7826680019460988, "val_accuracy": 0.7815533980582524, "lr": 0.0076124928235797445, "seconds": 1.1283566099591553}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 15, "train_loss": 0.4007833354102755, "train_accuracy": 0.8470873786407767, "val_macro_f1": 0.7725315118253759, "val_accuracy": 0.7572815533980582, "lr": 0.007269952498697735, "seconds": 1.0691058819647878}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 16, "train_loss": 0.32283118251457954, "train_accuracy": 0.8883495145631068, "val_macro_f1": 0.8160626511025144, "val_accuracy": 0.8058252427184466, "lr": 0.0069134171618254504, "seconds": 1.110425665974617}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 17, "train_loss": 0.3074400607243325, "train_accuracy": 0.8907766990291263, "val_macro_f1": 0.8279649761432664, "val_accuracy": 0.8203883495145631, "lr": 0.006545084971874739, "seconds": 2.2542424029670656}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 18, "train_loss": 0.3337197300878543, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.8069547686657563, "val_accuracy": 0.8203883495145631, "lr": 0.006167226819279529, "seconds": 1.2228169760201126}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 19, "train_loss": 0.2673015174935165, "train_accuracy": 0.8907766990291263, "val_macro_f1": 0.7804787715502002, "val_accuracy": 0.7766990291262136, "lr": 0.005782172325201156, "seconds": 1.0693374800030142}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 20, "train_loss": 0.27875102434343507, "train_accuracy": 0.9053398058252428, "val_macro_f1": 0.8143563698780709, "val_accuracy": 0.8155339805825242, "lr": 0.005392295478639226, "seconds": 1.1852357981260866}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 21, "train_loss": 0.27030349472194043, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8329226084033047, "val_accuracy": 0.8300970873786407, "lr": 0.005000000000000001, "seconds": 1.3293611619155854}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 22, "train_loss": 0.30502120369267693, "train_accuracy": 0.8810679611650486, "val_macro_f1": 0.8209409237251131, "val_accuracy": 0.8300970873786407, "lr": 0.004607704521360776, "seconds": 1.1906953258439898}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 23, "train_loss": 0.28390158929871123, "train_accuracy": 0.8859223300970874, "val_macro_f1": 0.8336619538840859, "val_accuracy": 0.8398058252427184, "lr": 0.004217827674798847, "seconds": 1.1023184948135167}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 24, "train_loss": 0.21245182370676577, "train_accuracy": 0.9247572815533981, "val_macro_f1": 0.8338410373421301, "val_accuracy": 0.8446601941747572, "lr": 0.0038327731807204736, "seconds": 1.2286571499425918}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 25, "train_loss": 0.20804128687358597, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8377549021178267, "val_accuracy": 0.8446601941747572, "lr": 0.003454915028125263, "seconds": 1.1037115480285138}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 26, "train_loss": 0.2529115919927949, "train_accuracy": 0.912621359223301, "val_macro_f1": 0.8359951374369068, "val_accuracy": 0.8349514563106796, "lr": 0.0030865828381745515, "seconds": 2.1141898040659726}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 27, "train_loss": 0.1701193216066916, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8381727397733112, "val_accuracy": 0.8398058252427184, "lr": 0.0027300475013022664, "seconds": 1.2159975469112396}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 28, "train_loss": 0.18161787193955728, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8231978630280203, "val_accuracy": 0.8300970873786407, "lr": 0.002387507176420256, "seconds": 1.1994431798812002}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 29, "train_loss": 0.20474445327971746, "train_accuracy": 0.9223300970873787, "val_macro_f1": 0.8275731637665033, "val_accuracy": 0.8300970873786407, "lr": 0.002061073738537635, "seconds": 1.2793777058832347}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 30, "train_loss": 0.17279355719830225, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8325457875457876, "val_accuracy": 0.8300970873786407, "lr": 0.0017527597583490825, "seconds": 1.1073070808779448}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 31, "train_loss": 0.18121630011252987, "train_accuracy": 0.9296116504854369, "val_macro_f1": 0.8332497915670591, "val_accuracy": 0.8300970873786407, "lr": 0.0014644660940672629, "seconds": 1.1916967129800469}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 32, "train_loss": 0.20723011142131195, "train_accuracy": 0.9199029126213593, "val_macro_f1": 0.8355151427519849, "val_accuracy": 0.8349514563106796, "lr": 0.0011979701719998454, "seconds": 1.2012741349171847}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 33, "train_loss": 0.1440100335669749, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8361433540653141, "val_accuracy": 0.8349514563106796, "lr": 0.0009549150281252633, "seconds": 1.3062181808054447}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 34, "train_loss": 0.16802177672247284, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8323141028000499, "val_accuracy": 0.8300970873786407, "lr": 0.0007367991782295391, "seconds": 1.3964468818157911}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 35, "train_loss": 0.15704577047269322, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8369037396702719, "val_accuracy": 0.8349514563106796, "lr": 0.0005449673790581611, "seconds": 1.1661837589927018}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 36, "train_loss": 0.18847047588200244, "train_accuracy": 0.9393203883495146, "val_macro_f1": 0.8268795369338848, "val_accuracy": 0.8252427184466019, "lr": 0.0003806023374435663, "seconds": 2.465265905018896}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 37, "train_loss": 0.16248055395570773, "train_accuracy": 0.9490291262135923, "val_macro_f1": 0.8313855863963623, "val_accuracy": 0.8300970873786407, "lr": 0.00024471741852423234, "seconds": 1.083288240013644}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 38, "train_loss": 0.1730083146864928, "train_accuracy": 0.9368932038834952, "val_macro_f1": 0.8316708463151654, "val_accuracy": 0.8300970873786407, "lr": 0.00013815039801161723, "seconds": 1.1002309790346771}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 39, "train_loss": 0.13904231830129346, "train_accuracy": 0.9587378640776699, "val_macro_f1": 0.8316708463151654, "val_accuracy": 0.8300970873786407, "lr": 6.155829702431172e-05, "seconds": 1.2923437699209899}
+{"run": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "epoch": 40, "train_loss": 0.1491268304294174, "train_accuracy": 0.9466019417475728, "val_macro_f1": 0.8280848190330949, "val_accuracy": 0.8252427184466019, "lr": 1.5413331334360186e-05, "seconds": 1.1154389288276434}
+{"done": "fgsc23_civ8_fold2/resnet50_none_e40_s29", "best_val_macro_f1": 0.8381727397733112}
+=== r50 composition 01:59:41
+--- compose fold0 s17 01:59:41
+clean     level 0.0  acc  81.55
+defocus   level 0.1  acc  82.52
+defocus   level 0.2  acc  76.70
+defocus   level 0.3  acc  68.93
+defocus   level 0.4  acc  57.28
+defocus   level 0.5  acc  51.46
+defocus   level 0.6  acc  44.17
+defocus   level 0.7  acc  39.32
+defocus   level 0.8  acc  35.92
+defocus   level 0.9  acc  32.04
+defocus   level 1.0  acc  31.55
+motion    level 0.1  acc  80.10
+motion    level 0.2  acc  75.73
+motion    level 0.3  acc  65.53
+motion    level 0.4  acc  62.14
+motion    level 0.5  acc  55.83
+motion    level 0.6  acc  53.88
+motion    level 0.7  acc  51.46
+motion    level 0.8  acc  47.57
+motion    level 0.9  acc  45.63
+motion    level 1.0  acc  43.69
+noise     level 0.1  acc  78.64
+noise     level 0.2  acc  75.24
+noise     level 0.3  acc  67.48
+noise     level 0.4  acc  57.28
+noise     level 0.5  acc  50.97
+noise     level 0.6  acc  44.66
+noise     level 0.7  acc  41.26
+noise     level 0.8  acc  39.32
+noise     level 0.9  acc  36.41
+noise     level 1.0  acc  34.47
+rain      level 0.1  acc  77.67
+rain      level 0.2  acc  71.36
+rain      level 0.3  acc  62.62
+rain      level 0.4  acc  55.34
+rain      level 0.5  acc  50.00
+rain      level 0.6  acc  40.78
+rain      level 0.7  acc  35.44
+rain      level 0.8  acc  28.16
+rain      level 0.9  acc  24.27
+rain      level 1.0  acc  22.82
+pixelate  level 0.1  acc  75.73
+pixelate  level 0.2  acc  74.76
+pixelate  level 0.3  acc  66.02
+pixelate  level 0.4  acc  63.11
+pixelate  level 0.5  acc  62.62
+pixelate  level 0.6  acc  51.46
+pixelate  level 0.7  acc  39.32
+pixelate  level 0.8  acc  35.44
+pixelate  level 0.9  acc  27.18
+pixelate  level 1.0  acc  19.90
+impulse   level 0.1  acc  53.40
+impulse   level 0.2  acc  44.66
+impulse   level 0.3  acc  39.32
+impulse   level 0.4  acc  36.89
+impulse   level 0.5  acc  32.52
+impulse   level 0.6  acc  31.07
+impulse   level 0.7  acc  31.07
+impulse   level 0.8  acc  27.67
+impulse   level 0.9  acc  25.24
+impulse   level 1.0  acc  22.82
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus      -1.0    4.9   12.6   24.3   30.1   37.4   42.2   45.6   49.5   50.0
+motion        1.5    5.8   16.0   19.4   25.7   27.7   30.1   34.0   35.9   37.9
+noise         2.9    6.3   14.1   24.3   30.6   36.9   40.3   42.2   45.1   47.1
+rain          3.9   10.2   18.9   26.2   31.6   40.8   46.1   53.4   57.3   58.7
+pixelate      5.8    6.8   15.5   18.4   18.9   30.1   42.2   46.1   54.4   61.7
+impulse      28.2   36.9   42.2   44.7   49.0   50.5   50.5   53.9   56.3   58.7
+calibrated levels: {"defocus@10": 0.266, "motion@10": 0.241, "noise@10": 0.248, "rain@10": 0.197, "pixelate@10": 0.237, "impulse@10": 1.0, "defocus@20": 0.363, "motion@20": 0.409, "noise@20": 0.358, "rain@20": 0.315, "pixelate@20": 0.51, "impulse@20": 1.0, "defocus@30": 0.498, "motion@30": 0.696, "noise@30": 0.491, "rain@30": 0.471, "pixelate@30": 0.599, "impulse@30": 0.121}
+clean                              acc  81.55
+single_defocus_10                  acc  72.82
+single_motion_10                   acc  73.30
+single_noise_10                    acc  71.84
+single_rain_10                     acc  71.84
+single_pixelate_10                 acc  73.30
+single_impulse_10                  acc  22.82
+single_defocus_20                  acc  62.14
+single_motion_20                   acc  61.65
+single_noise_20                    acc  59.71
+single_rain_20                     acc  62.62
+single_pixelate_20                 acc  63.11
+single_impulse_20                  acc  22.82
+single_defocus_30                  acc  50.97
+single_motion_30                   acc  51.94
+single_noise_30                    acc  51.46
+single_rain_30                     acc  51.46
+single_pixelate_30                 acc  50.97
+single_impulse_30                  acc  52.43
+pair_defocus+motion_10             acc  63.11
+pair_defocus+noise_10              acc  57.28
+pair_defocus+rain_10               acc  51.46
+pair_defocus+pixelate_10           acc  63.59
+pair_defocus+impulse_10            acc  23.30
+pair_motion+noise_10               acc  62.14
+pair_motion+rain_10                acc  56.31
+pair_motion+pixelate_10            acc  62.62
+pair_motion+impulse_10             acc  22.33
+pair_noise+rain_10                 acc  50.00
+pair_noise+pixelate_10             acc  45.15
+pair_noise+impulse_10              acc  19.90
+pair_rain+pixelate_10              acc  51.94
+pair_rain+impulse_10               acc  21.36
+pair_pixelate+impulse_10           acc  22.82
+pair_defocus+motion_20             acc  50.00
+pair_defocus+noise_20              acc  43.69
+pair_defocus+rain_20               acc  34.47
+pair_defocus+pixelate_20           acc  46.60
+pair_defocus+impulse_20            acc  23.79
+pair_motion+noise_20               acc  42.23
+pair_motion+rain_20                acc  38.83
+pair_motion+pixelate_20            acc  48.06
+pair_motion+impulse_20             acc  22.33
+pair_noise+rain_20                 acc  33.98
+pair_noise+pixelate_20             acc  40.78
+pair_noise+impulse_20              acc  19.42
+pair_rain+pixelate_20              acc  42.23
+pair_rain+impulse_20               acc  20.39
+pair_pixelate+impulse_20           acc  22.33
+pair_defocus+motion_30             acc  37.38
+pair_defocus+noise_30              acc  32.52
+pair_defocus+rain_30               acc  21.36
+pair_defocus+pixelate_30           acc  38.35
+pair_defocus+impulse_30            acc  23.30
+pair_motion+noise_30               acc  28.64
+pair_motion+rain_30                acc  19.90
+pair_motion+pixelate_30            acc  36.41
+pair_motion+impulse_30             acc  25.73
+pair_noise+rain_30                 acc  22.82
+pair_noise+pixelate_30             acc  28.64
+pair_noise+impulse_30              acc  38.35
+pair_rain+pixelate_30              acc  27.67
+pair_rain+impulse_30               acc  29.61
+pair_pixelate+impulse_30           acc  33.98
+
+pair                             target  drop_a  drop_b  drop_ab       E
+noise+pixelate                       10     9.7     8.3     36.4   +18.4
+noise+rain                           10     9.7     9.7     31.6   +12.1
+defocus+rain                         10     8.7     9.7     30.1   +11.7
+rain+pixelate                        10     9.7     8.3     29.6   +11.7
+defocus+rain                         20    19.4    18.9     47.1    +8.7
+motion+rain                          10     8.3     9.7     25.2    +7.3
+noise+rain                           20    21.8    18.9     47.6    +6.8
+defocus+noise                        10     8.7     9.7     24.3    +5.8
+motion+rain                          20    19.9    18.9     42.7    +3.9
+motion+pixelate                      10     8.3     8.3     18.9    +2.4
+rain+pixelate                        20    18.9    18.4     39.3    +1.9
+motion+rain                          30    29.6    30.1     61.7    +1.9
+motion+noise                         10     8.3     9.7     19.4    +1.5
+defocus+motion                       10     8.7     8.3     18.4    +1.5
+defocus+pixelate                     10     8.7     8.3     18.0    +1.0
+noise+pixelate                       20    21.8    18.4     40.8    +0.5
+defocus+rain                         30    30.6    30.1     60.2    -0.5
+defocus+impulse                      30    30.6    29.1     58.3    -1.5
+noise+rain                           30    30.1    30.1     58.7    -1.5
+motion+noise                         20    19.9    21.8     39.3    -2.4
+motion+impulse                       30    29.6    29.1     55.8    -2.9
+defocus+pixelate                     20    19.4    18.4     35.0    -2.9
+defocus+noise                        20    19.4    21.8     37.9    -3.4
+motion+pixelate                      20    19.9    18.4     33.5    -4.9
+noise+impulse                        10     9.7    58.7     61.7    -6.8
+motion+noise                         30    29.6    30.1     52.9    -6.8
+rain+pixelate                        30    30.1    30.6     53.9    -6.8
+rain+impulse                         30    30.1    29.1     51.9    -7.3
+motion+impulse                       10     8.3    58.7     59.2    -7.8
+noise+pixelate                       30    30.1    30.6     52.9    -7.8
+defocus+motion                       20    19.4    19.9     31.6    -7.8
+rain+impulse                         10     9.7    58.7     60.2    -8.3
+pixelate+impulse                     10     8.3    58.7     58.7    -8.3
+defocus+impulse                      10     8.7    58.7     58.3    -9.2
+defocus+noise                        30    30.6    30.1     49.0   -11.7
+pixelate+impulse                     30    30.6    29.1     47.6   -12.1
+motion+pixelate                      30    29.6    30.6     45.1   -15.0
+defocus+motion                       30    30.6    29.6     44.2   -16.0
+noise+impulse                        30    30.1    29.1     43.2   -16.0
+rain+impulse                         20    18.9    58.7     61.2   -16.5
+pixelate+impulse                     20    18.4    58.7     59.2   -18.0
+defocus+pixelate                     30    30.6    30.6     43.2   -18.0
+noise+impulse                        20    21.8    58.7     62.1   -18.4
+motion+impulse                       20    19.9    58.7     59.2   -19.4
+defocus+impulse                      20    19.4    58.7     57.8   -20.4
+defocus   level 0.363  acc  62.14
+motion    level 0.409  acc  61.65
+noise     level 0.358  acc  59.71
+rain      level 0.315  acc  62.62
+pixelate  level 0.510  acc  63.11
+impulse   level 1.000  acc  22.82
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                66.0    53.9     23.8   +12.1    +6.8  +0.388
+defocus+rain              65.5    58.3     17.0    +7.3    +8.7  +0.107
+noise+pixelate            59.2    55.3     21.8    +3.9    +0.5  +0.497
+motion+rain               61.2    57.8     18.0    +3.4    +3.9  +0.115
+defocus+motion            50.0    47.6     28.6    +2.4    -7.8  +0.929
+rain+pixelate             57.8    55.8     18.4    +1.9    +1.9  +0.458
+noise+impulse             80.6    81.1     36.4    -0.5   -18.4  +0.414
+rain+impulse              79.6    82.0     32.5    -2.4   -16.5  +0.157
+motion+noise              57.8    61.2     17.5    -3.4    -2.4  +0.169
+defocus+noise             56.3    61.2     17.0    -4.9    -3.4  +0.179
+defocus+pixelate          53.4    58.3     16.5    -4.9    -2.9  +0.271
+pixelate+impulse          77.7    84.0     30.1    -6.3   -18.0  +0.422
+motion+impulse            77.7    84.5     31.1    -6.8   -19.4  +0.285
+motion+pixelate           51.9    59.7     15.5    -7.8    -4.9  +0.330
+defocus+impulse           76.2    87.9     27.2   -11.7   -20.4  +0.238
+
+Spearman(cos, E)        = -0.196 (p=0.483)
+Spearman(cos, delta)    = +0.064 (p=0.820)
+Spearman(overlap, E)    = -0.584 (p=0.022)
+Spearman(overlap, delta)= +0.008 (p=0.977)
+additive R^2 on E       = 0.952
+additive R^2 on delta   = 0.696
+mean delta = -1.2 pp, mean E = -6.1 pp
+main effects on delta: rain +6.8  noise +3.0  defocus -1.7  motion -1.8  pixelate -2.1  impulse -5.7
+defocus   level 0.363  hf_ratio 0.120
+motion    level 0.409  hf_ratio 0.303
+noise     level 0.358  hf_ratio 6.559
+rain      level 0.315  hf_ratio 1.012
+pixelate  level 0.510  hf_ratio 1.157
+impulse   level 1.000  hf_ratio 40.392
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.458     23.8   +0.279    6.640   +12.1
+defocus+rain            +0.344     17.0   -0.660    0.121    +7.3
+noise+pixelate          +0.489     21.8   +0.725    7.588    +3.9
+motion+rain             +0.313     18.0   -0.626    0.307    +3.4
+defocus+motion          +0.668     28.6   +0.801    0.036    +2.4
+rain+pixelate           +0.417     18.4   +0.545    1.171    +1.9
+noise+impulse           +0.540     36.4   +0.349  264.912    -0.5
+rain+impulse            +0.414     32.5   +0.356   40.896    -2.4
+motion+noise            +0.345     17.5   -0.124    1.989    -3.4
+defocus+noise           +0.400     17.0   -0.164    0.786    -4.9
+defocus+pixelate        +0.413     16.5   -0.235    0.139    -4.9
+pixelate+impulse        +0.487     30.1   +0.311   46.734    -6.3
+motion+impulse          +0.391     31.1   +0.293   12.248    -6.8
+motion+pixelate         +0.388     15.5   -0.243    0.351    -7.8
+defocus+impulse         +0.428     27.2   -0.108    4.842   -11.7
+
+Spearman(alignment       , delta) = +0.116 (p=0.680)
+Spearman(hf_product      , delta) = -0.195 (p=0.487)
+Spearman(overlap         , delta) = +0.008 (p=0.977)
+Spearman(class_error_corr, delta) = +0.148 (p=0.598)
+Spearman(same_mechanism  , delta) = +0.079 (p=0.780)
+
+  lowpass+lowpass        n= 3  mean delta   -3.4 pp  range [-7.8, +2.4]
+  stochastic+stochastic  n= 3  mean delta   +3.1 pp  range [-2.4, +12.1]
+  mixed                  n= 9  mean delta   -1.8 pp  range [-11.7, +7.3]
+--- compose fold0 s29 02:01:56
+clean     level 0.0  acc  79.61
+defocus   level 0.1  acc  80.10
+defocus   level 0.2  acc  76.70
+defocus   level 0.3  acc  67.48
+defocus   level 0.4  acc  58.74
+defocus   level 0.5  acc  50.00
+defocus   level 0.6  acc  42.72
+defocus   level 0.7  acc  36.89
+defocus   level 0.8  acc  33.50
+defocus   level 0.9  acc  28.64
+defocus   level 1.0  acc  27.18
+motion    level 0.1  acc  80.58
+motion    level 0.2  acc  76.70
+motion    level 0.3  acc  70.87
+motion    level 0.4  acc  63.59
+motion    level 0.5  acc  59.22
+motion    level 0.6  acc  54.37
+motion    level 0.7  acc  49.03
+motion    level 0.8  acc  46.60
+motion    level 0.9  acc  43.20
+motion    level 1.0  acc  40.29
+noise     level 0.1  acc  75.73
+noise     level 0.2  acc  67.96
+noise     level 0.3  acc  62.14
+noise     level 0.4  acc  54.37
+noise     level 0.5  acc  40.29
+noise     level 0.6  acc  36.41
+noise     level 0.7  acc  30.58
+noise     level 0.8  acc  28.64
+noise     level 0.9  acc  23.79
+noise     level 1.0  acc  19.42
+rain      level 0.1  acc  74.76
+rain      level 0.2  acc  67.48
+rain      level 0.3  acc  59.71
+rain      level 0.4  acc  51.46
+rain      level 0.5  acc  40.78
+rain      level 0.6  acc  34.47
+rain      level 0.7  acc  28.64
+rain      level 0.8  acc  24.27
+rain      level 0.9  acc  20.39
+rain      level 1.0  acc  15.53
+pixelate  level 0.1  acc  70.87
+pixelate  level 0.2  acc  66.99
+pixelate  level 0.3  acc  61.65
+pixelate  level 0.4  acc  56.80
+pixelate  level 0.5  acc  54.85
+pixelate  level 0.6  acc  47.57
+pixelate  level 0.7  acc  40.29
+pixelate  level 0.8  acc  27.18
+pixelate  level 0.9  acc  17.96
+pixelate  level 1.0  acc  31.55
+impulse   level 0.1  acc  49.51
+impulse   level 0.2  acc  41.26
+impulse   level 0.3  acc  38.35
+impulse   level 0.4  acc  36.41
+impulse   level 0.5  acc  33.50
+impulse   level 0.6  acc  27.67
+impulse   level 0.7  acc  27.67
+impulse   level 0.8  acc  24.27
+impulse   level 0.9  acc  23.30
+impulse   level 1.0  acc  22.82
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus      -0.5    2.9   12.1   20.9   29.6   36.9   42.7   46.1   51.0   52.4
+motion       -1.0    2.9    8.7   16.0   20.4   25.2   30.6   33.0   36.4   39.3
+noise         3.9   11.7   17.5   25.2   39.3   43.2   49.0   51.0   55.8   60.2
+rain          4.9   12.1   19.9   28.2   38.8   45.1   51.0   55.3   59.2   64.1
+pixelate      8.7   12.6   18.0   22.8   24.8   32.0   39.3   52.4   61.7   48.1
+impulse      30.1   38.3   41.3   43.2   46.1   51.9   51.9   55.3   56.3   56.8
+calibrated levels: {"defocus@10": 0.277, "motion@10": 0.317, "noise@10": 0.179, "rain@10": 0.171, "pixelate@10": 0.133, "impulse@10": 1.0, "defocus@20": 0.39, "motion@20": 0.491, "noise@20": 0.332, "rain@20": 0.301, "pixelate@20": 0.342, "impulse@20": 1.0, "defocus@30": 0.505, "motion@30": 0.689, "noise@30": 0.434, "rain@30": 0.417, "pixelate@30": 0.572, "impulse@30": 1.0}
+clean                              acc  79.61
+single_defocus_10                  acc  67.96
+single_motion_10                   acc  70.39
+single_noise_10                    acc  69.90
+single_rain_10                     acc  68.45
+single_pixelate_10                 acc  68.93
+single_impulse_10                  acc  22.82
+single_defocus_20                  acc  59.22
+single_motion_20                   acc  59.71
+single_noise_20                    acc  61.65
+single_rain_20                     acc  59.71
+single_pixelate_20                 acc  60.19
+single_impulse_20                  acc  22.82
+single_defocus_30                  acc  49.51
+single_motion_30                   acc  50.00
+single_noise_30                    acc  50.97
+single_rain_30                     acc  49.51
+single_pixelate_30                 acc  51.94
+single_impulse_30                  acc  22.82
+pair_defocus+motion_10             acc  61.17
+pair_defocus+noise_10              acc  54.85
+pair_defocus+rain_10               acc  47.09
+pair_defocus+pixelate_10           acc  63.59
+pair_defocus+impulse_10            acc  24.76
+pair_motion+noise_10               acc  57.77
+pair_motion+rain_10                acc  46.60
+pair_motion+pixelate_10            acc  61.65
+pair_motion+impulse_10             acc  24.76
+pair_noise+rain_10                 acc  54.37
+pair_noise+pixelate_10             acc  53.88
+pair_noise+impulse_10              acc  24.27
+pair_rain+pixelate_10              acc  57.28
+pair_rain+impulse_10               acc  20.39
+pair_pixelate+impulse_10           acc  24.27
+pair_defocus+motion_20             acc  47.57
+pair_defocus+noise_20              acc  38.83
+pair_defocus+rain_20               acc  26.21
+pair_defocus+pixelate_20           acc  50.97
+pair_defocus+impulse_20            acc  24.76
+pair_motion+noise_20               acc  36.41
+pair_motion+rain_20                acc  26.70
+pair_motion+pixelate_20            acc  50.00
+pair_motion+impulse_20             acc  24.27
+pair_noise+rain_20                 acc  35.44
+pair_noise+pixelate_20             acc  33.01
+pair_noise+impulse_20              acc  21.84
+pair_rain+pixelate_20              acc  43.69
+pair_rain+impulse_20               acc  19.90
+pair_pixelate+impulse_20           acc  24.76
+pair_defocus+motion_30             acc  37.38
+pair_defocus+noise_30              acc  29.13
+pair_defocus+rain_30               acc  17.48
+pair_defocus+pixelate_30           acc  38.35
+pair_defocus+impulse_30            acc  24.76
+pair_motion+noise_30               acc  31.55
+pair_motion+rain_30                acc  18.93
+pair_motion+pixelate_30            acc  42.23
+pair_motion+impulse_30             acc  25.24
+pair_noise+rain_30                 acc  21.36
+pair_noise+pixelate_30             acc  19.42
+pair_noise+impulse_30              acc  21.36
+pair_rain+pixelate_30              acc  32.52
+pair_rain+impulse_30               acc  19.42
+pair_pixelate+impulse_30           acc  24.27
+
+pair                             target  drop_a  drop_b  drop_ab       E
+motion+rain                          20    19.9    19.9     52.9   +13.1
+defocus+rain                         20    20.4    19.9     53.4   +13.1
+motion+rain                          10     9.2    11.2     33.0   +12.6
+defocus+rain                         10    11.7    11.2     32.5    +9.7
+noise+pixelate                       20    18.0    19.4     46.6    +9.2
+noise+rain                           20    18.0    19.9     44.2    +6.3
+noise+pixelate                       10     9.7    10.7     25.7    +5.3
+motion+noise                         20    19.9    18.0     43.2    +5.3
+noise+rain                           10     9.7    11.2     25.2    +4.4
+noise+pixelate                       30    28.6    27.7     60.2    +3.9
+defocus+noise                        10    11.7     9.7     24.8    +3.4
+motion+noise                         10     9.2     9.7     21.8    +2.9
+defocus+noise                        20    20.4    18.0     40.8    +2.4
+defocus+rain                         30    30.1    30.1     62.1    +1.9
+motion+rain                          30    29.6    30.1     60.7    +1.0
+rain+pixelate                        10    11.2    10.7     22.3    +0.5
+noise+rain                           30    28.6    30.1     58.3    -0.5
+motion+pixelate                      10     9.2    10.7     18.0    -1.9
+defocus+motion                       10    11.7     9.2     18.4    -2.4
+rain+pixelate                        20    19.9    19.4     35.9    -3.4
+defocus+pixelate                     10    11.7    10.7     16.0    -6.3
+defocus+noise                        30    30.1    28.6     50.5    -8.3
+defocus+motion                       20    20.4    19.9     32.0    -8.3
+rain+impulse                         10    11.2    56.8     59.2    -8.7
+motion+pixelate                      20    19.9    19.4     29.6    -9.7
+motion+noise                         30    29.6    28.6     48.1   -10.2
+rain+pixelate                        30    30.1    27.7     47.1   -10.7
+motion+impulse                       10     9.2    56.8     54.9   -11.2
+noise+impulse                        10     9.7    56.8     55.3   -11.2
+defocus+pixelate                     20    20.4    19.4     28.6   -11.2
+pixelate+impulse                     10    10.7    56.8     55.3   -12.1
+defocus+impulse                      10    11.7    56.8     54.9   -13.6
+defocus+pixelate                     30    30.1    27.7     41.3   -16.5
+noise+impulse                        20    18.0    56.8     57.8   -17.0
+rain+impulse                         20    19.9    56.8     59.7   -17.0
+defocus+motion                       30    30.1    29.6     42.2   -17.5
+motion+pixelate                      30    29.6    27.7     37.4   -19.9
+motion+impulse                       20    19.9    56.8     55.3   -21.4
+pixelate+impulse                     20    19.4    56.8     54.9   -21.4
+defocus+impulse                      20    20.4    56.8     54.9   -22.3
+rain+impulse                         30    30.1    56.8     60.2   -26.7
+noise+impulse                        30    28.6    56.8     58.3   -27.2
+pixelate+impulse                     30    27.7    56.8     55.3   -29.1
+defocus+impulse                      30    30.1    56.8     54.9   -32.0
+motion+impulse                       30    29.6    56.8     54.4   -32.0
+defocus   level 0.390  acc  59.22
+motion    level 0.491  acc  59.71
+noise     level 0.332  acc  61.65
+rain      level 0.301  acc  59.71
+pixelate  level 0.342  acc  60.19
+impulse   level 1.000  acc  22.82
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              73.8    59.2     21.8   +14.6   +13.1  +0.019
+noise+pixelate            67.0    52.9     25.2   +14.1    +9.2  +0.446
+motion+rain               73.3    62.1     18.4   +11.2   +13.1  +0.098
+noise+rain                64.6    54.4     24.3   +10.2    +6.3  +0.399
+motion+noise              63.6    61.7     17.0    +1.9    +5.3  +0.202
+defocus+noise             61.2    60.7     18.4    +0.5    +2.4  +0.110
+rain+pixelate             56.3    57.3     22.8    -1.0    -3.4  +0.462
+defocus+motion            52.4    54.9     26.2    -2.4    -8.3  +0.912
+noise+impulse             78.2    81.1     34.5    -2.9   -17.0  +0.372
+rain+impulse              80.1    84.0     33.5    -3.9   -17.0  +0.238
+motion+impulse            75.7    82.0     35.4    -6.3   -21.4  +0.212
+pixelate+impulse          75.2    83.5     33.5    -8.3   -21.4  +0.449
+defocus+pixelate          49.0    60.7     19.9   -11.7   -11.2  +0.287
+motion+pixelate           50.0    61.7     18.4   -11.7    -9.7  +0.465
+defocus+impulse           75.2    86.9     31.1   -11.7   -22.3  +0.127
+
+Spearman(cos, E)        = -0.229 (p=0.412)
+Spearman(cos, delta)    = -0.290 (p=0.295)
+Spearman(overlap, E)    = -0.661 (p=0.007)
+Spearman(overlap, delta)= -0.345 (p=0.208)
+additive R^2 on E       = 0.850
+additive R^2 on delta   = 0.653
+mean delta = -0.5 pp, mean E = -5.5 pp
+main effects on delta: rain +8.3  noise +6.5  motion -1.3  defocus -2.2  pixelate -4.1  impulse -7.7
+defocus   level 0.390  hf_ratio 0.103
+motion    level 0.491  hf_ratio 0.259
+noise     level 0.332  hf_ratio 5.848
+rain      level 0.301  hf_ratio 0.999
+pixelate  level 0.342  hf_ratio 1.112
+impulse   level 1.000  hf_ratio 40.392
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.306     21.8   -0.518    0.103   +14.6
+noise+pixelate          +0.484     25.2   +0.924    6.504   +14.1
+motion+rain             +0.305     18.4   -0.605    0.259   +11.2
+noise+rain              +0.461     24.3   +0.475    5.845   +10.2
+motion+noise            +0.351     17.0   +0.124    1.517    +1.9
+defocus+noise           +0.368     18.4   -0.124    0.602    +0.5
+rain+pixelate           +0.408     22.8   +0.342    1.111    -1.0
+defocus+motion          +0.647     26.2   +0.826    0.027    -2.4
+noise+impulse           +0.525     34.5   +0.563  236.222    -2.9
+rain+impulse            +0.433     33.5   +0.307   40.368    -3.9
+motion+impulse          +0.375     35.4   +0.367   10.476    -6.3
+pixelate+impulse        +0.501     33.5   +0.464   44.918    -8.3
+defocus+pixelate        +0.430     19.9   +0.098    0.115   -11.7
+motion+pixelate         +0.436     18.4   +0.230    0.288   -11.7
+defocus+impulse         +0.377     31.1   -0.008    4.160   -11.7
+
+Spearman(alignment       , delta) = -0.290 (p=0.295)
+Spearman(hf_product      , delta) = -0.204 (p=0.466)
+Spearman(overlap         , delta) = -0.345 (p=0.208)
+Spearman(class_error_corr, delta) = -0.025 (p=0.929)
+Spearman(same_mechanism  , delta) = -0.315 (p=0.252)
+
+  lowpass+lowpass        n= 3  mean delta   -8.6 pp  range [-11.7, -2.4]
+  stochastic+stochastic  n= 3  mean delta   +1.1 pp  range [-3.9, +10.2]
+  mixed                  n= 9  mean delta   +1.7 pp  range [-11.7, +14.6]
+--- compose fold1 s17 02:04:07
+clean     level 0.0  acc  87.38
+defocus   level 0.1  acc  84.95
+defocus   level 0.2  acc  80.10
+defocus   level 0.3  acc  74.76
+defocus   level 0.4  acc  66.50
+defocus   level 0.5  acc  57.77
+defocus   level 0.6  acc  50.00
+defocus   level 0.7  acc  40.29
+defocus   level 0.8  acc  36.89
+defocus   level 0.9  acc  33.50
+defocus   level 1.0  acc  32.52
+motion    level 0.1  acc  85.44
+motion    level 0.2  acc  79.13
+motion    level 0.3  acc  75.73
+motion    level 0.4  acc  66.50
+motion    level 0.5  acc  62.62
+motion    level 0.6  acc  60.19
+motion    level 0.7  acc  55.34
+motion    level 0.8  acc  54.37
+motion    level 0.9  acc  53.40
+motion    level 1.0  acc  50.97
+noise     level 0.1  acc  81.07
+noise     level 0.2  acc  72.33
+noise     level 0.3  acc  60.19
+noise     level 0.4  acc  42.72
+noise     level 0.5  acc  35.92
+noise     level 0.6  acc  27.18
+noise     level 0.7  acc  21.84
+noise     level 0.8  acc  19.90
+noise     level 0.9  acc  17.96
+noise     level 1.0  acc  17.48
+rain      level 0.1  acc  79.61
+rain      level 0.2  acc  75.73
+rain      level 0.3  acc  73.79
+rain      level 0.4  acc  68.45
+rain      level 0.5  acc  63.11
+rain      level 0.6  acc  60.19
+rain      level 0.7  acc  52.91
+rain      level 0.8  acc  43.20
+rain      level 0.9  acc  31.55
+rain      level 1.0  acc  27.18
+pixelate  level 0.1  acc  80.10
+pixelate  level 0.2  acc  77.18
+pixelate  level 0.3  acc  73.30
+pixelate  level 0.4  acc  67.96
+pixelate  level 0.5  acc  65.53
+pixelate  level 0.6  acc  63.59
+pixelate  level 0.7  acc  45.63
+pixelate  level 0.8  acc  36.41
+pixelate  level 0.9  acc  21.36
+pixelate  level 1.0  acc  20.39
+impulse   level 0.1  acc  44.66
+impulse   level 0.2  acc  36.41
+impulse   level 0.3  acc  29.13
+impulse   level 0.4  acc  18.93
+impulse   level 0.5  acc  17.48
+impulse   level 0.6  acc  17.96
+impulse   level 0.7  acc  14.56
+impulse   level 0.8  acc  13.59
+impulse   level 0.9  acc  14.08
+impulse   level 1.0  acc  15.53
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       2.4    7.3   12.6   20.9   29.6   37.4   47.1   50.5   53.9   54.9
+motion        1.9    8.3   11.7   20.9   24.8   27.2   32.0   33.0   34.0   36.4
+noise         6.3   15.0   27.2   44.7   51.5   60.2   65.5   67.5   69.4   69.9
+rain          7.8   11.7   13.6   18.9   24.3   27.2   34.5   44.2   55.8   60.2
+pixelate      7.3   10.2   14.1   19.4   21.8   23.8   41.7   51.0   66.0   67.0
+impulse      42.7   51.0   58.3   68.4   69.9   69.4   72.8   73.8   73.3   71.8
+calibrated levels: {"defocus@10": 0.251, "motion@10": 0.251, "noise@10": 0.142, "rain@10": 0.158, "pixelate@10": 0.193, "impulse@10": 1.0, "defocus@20": 0.389, "motion@20": 0.391, "noise@20": 0.241, "rain@20": 0.42, "pixelate@20": 0.424, "impulse@20": 1.0, "defocus@30": 0.505, "motion@30": 0.658, "noise@30": 0.316, "rain@30": 0.639, "pixelate@30": 0.635, "impulse@30": 1.0}
+clean                              acc  87.38
+single_defocus_10                  acc  77.18
+single_motion_10                   acc  76.70
+single_noise_10                    acc  78.16
+single_rain_10                     acc  76.21
+single_pixelate_10                 acc  78.16
+single_impulse_10                  acc  15.53
+single_defocus_20                  acc  66.50
+single_motion_20                   acc  67.48
+single_noise_20                    acc  70.39
+single_rain_20                     acc  69.42
+single_pixelate_20                 acc  68.93
+single_impulse_20                  acc  15.53
+single_defocus_30                  acc  56.31
+single_motion_30                   acc  55.83
+single_noise_30                    acc  58.74
+single_rain_30                     acc  57.28
+single_pixelate_30                 acc  57.77
+single_impulse_30                  acc  15.53
+pair_defocus+motion_10             acc  66.99
+pair_defocus+noise_10              acc  60.19
+pair_defocus+rain_10               acc  63.59
+pair_defocus+pixelate_10           acc  72.82
+pair_defocus+impulse_10            acc  16.99
+pair_motion+noise_10               acc  60.19
+pair_motion+rain_10                acc  61.17
+pair_motion+pixelate_10            acc  70.87
+pair_motion+impulse_10             acc  16.50
+pair_noise+rain_10                 acc  61.17
+pair_noise+pixelate_10             acc  59.71
+pair_noise+impulse_10              acc  16.50
+pair_rain+pixelate_10              acc  67.96
+pair_rain+impulse_10               acc  16.99
+pair_pixelate+impulse_10           acc  15.05
+pair_defocus+motion_20             acc  54.37
+pair_defocus+noise_20              acc  36.41
+pair_defocus+rain_20               acc  35.92
+pair_defocus+pixelate_20           acc  58.25
+pair_defocus+impulse_20            acc  15.53
+pair_motion+noise_20               acc  38.83
+pair_motion+rain_20                acc  43.20
+pair_motion+pixelate_20            acc  56.80
+pair_motion+impulse_20             acc  16.02
+pair_noise+rain_20                 acc  33.50
+pair_noise+pixelate_20             acc  33.98
+pair_noise+impulse_20              acc  20.39
+pair_rain+pixelate_20              acc  53.40
+pair_rain+impulse_20               acc  20.39
+pair_pixelate+impulse_20           acc  14.56
+pair_defocus+motion_30             acc  43.20
+pair_defocus+noise_30              acc  22.82
+pair_defocus+rain_30               acc  24.27
+pair_defocus+pixelate_30           acc  42.23
+pair_defocus+impulse_30            acc  15.53
+pair_motion+noise_30               acc  26.70
+pair_motion+rain_30                acc  26.70
+pair_motion+pixelate_30            acc  47.09
+pair_motion+impulse_30             acc  15.53
+pair_noise+rain_30                 acc  22.33
+pair_noise+pixelate_30             acc  22.82
+pair_noise+impulse_30              acc  22.82
+pair_rain+pixelate_30              acc  36.89
+pair_rain+impulse_30               acc  20.87
+pair_pixelate+impulse_30           acc  15.05
+
+pair                             target  drop_a  drop_b  drop_ab       E
+noise+rain                           20    17.0    18.0     53.9   +18.9
+noise+pixelate                       20    17.0    18.4     53.4   +18.0
+defocus+noise                        20    20.9    17.0     51.0   +13.1
+defocus+rain                         20    20.9    18.0     51.5   +12.6
+motion+noise                         20    19.9    17.0     48.5   +11.7
+noise+pixelate                       10     9.2     9.2     27.7    +9.2
+defocus+noise                        10    10.2     9.2     27.2    +7.8
+motion+noise                         10    10.7     9.2     27.2    +7.3
+motion+rain                          20    19.9    18.0     44.2    +6.3
+noise+rain                           30    28.6    30.1     65.0    +6.3
+noise+pixelate                       30    28.6    29.6     64.6    +6.3
+noise+rain                           10     9.2    11.2     26.2    +5.8
+defocus+noise                        30    31.1    28.6     64.6    +4.9
+motion+rain                          10    10.7    11.2     26.2    +4.4
+defocus+rain                         10    10.2    11.2     23.8    +2.4
+defocus+rain                         30    31.1    30.1     63.1    +1.9
+motion+noise                         30    31.6    28.6     60.7    +0.5
+defocus+motion                       10    10.2    10.7     20.4    -0.5
+motion+rain                          30    31.6    30.1     60.7    -1.0
+rain+pixelate                        10    11.2     9.2     19.4    -1.0
+rain+pixelate                        20    18.0    18.4     34.0    -2.4
+motion+pixelate                      10    10.7     9.2     16.5    -3.4
+defocus+pixelate                     10    10.2     9.2     14.6    -4.9
+defocus+motion                       20    20.9    19.9     33.0    -7.8
+motion+pixelate                      20    19.9    18.4     30.6    -7.8
+pixelate+impulse                     10     9.2    71.8     72.3    -8.7
+rain+pixelate                        30    30.1    29.6     50.5    -9.2
+defocus+pixelate                     20    20.9    18.4     29.1   -10.2
+noise+impulse                        10     9.2    71.8     70.9   -10.2
+defocus+impulse                      10    10.2    71.8     70.4   -11.7
+motion+impulse                       10    10.7    71.8     70.9   -11.7
+rain+impulse                         10    11.2    71.8     70.4   -12.6
+defocus+pixelate                     30    31.1    29.6     45.1   -15.5
+pixelate+impulse                     20    18.4    71.8     72.8   -17.5
+defocus+motion                       30    31.1    31.6     44.2   -18.4
+motion+impulse                       20    19.9    71.8     71.4   -20.4
+defocus+impulse                      20    20.9    71.8     71.8   -20.9
+motion+pixelate                      30    31.6    29.6     40.3   -20.9
+noise+impulse                        20    17.0    71.8     67.0   -21.8
+rain+impulse                         20    18.0    71.8     67.0   -22.8
+pixelate+impulse                     30    29.6    71.8     72.3   -29.1
+defocus+impulse                      30    31.1    71.8     71.8   -31.1
+motion+impulse                       30    31.6    71.8     71.8   -31.6
+rain+impulse                         30    30.1    71.8     66.5   -35.4
+noise+impulse                        30    28.6    71.8     64.6   -35.9
+defocus   level 0.389  acc  66.50
+motion    level 0.391  acc  67.48
+noise     level 0.241  acc  70.39
+rain      level 0.420  acc  69.42
+pixelate  level 0.424  acc  68.93
+impulse   level 1.000  acc  15.53
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                66.5    44.7     15.5   +21.8   +18.9  +0.257
+noise+pixelate            66.0    46.6     14.1   +19.4   +18.0  +0.320
+defocus+rain              64.1    48.1     16.0   +16.0   +12.6  +0.287
+motion+noise              61.2    46.1     16.0   +15.0   +11.7  +0.294
+defocus+noise             63.6    49.0     14.1   +14.6   +13.1  +0.273
+motion+rain               56.8    46.1     17.0   +10.7    +6.3  +0.371
+defocus+motion            45.6    41.3     24.8    +4.4    -7.8  +0.915
+rain+pixelate             46.6    46.1     15.5    +0.5    -2.4  +0.667
+motion+pixelate           43.2    45.6     18.0    -2.4    -7.8  +0.539
+pixelate+impulse          85.4    88.3     27.2    -2.9   -17.5  +0.489
+defocus+pixelate          41.7    47.1     17.5    -5.3   -10.2  +0.458
+motion+impulse            84.0    89.3     27.7    -5.3   -20.4  +0.431
+defocus+impulse           84.5    90.3     27.7    -5.8   -20.9  +0.414
+noise+impulse             79.6    86.4     27.7    -6.8   -21.8  +0.408
+rain+impulse              79.6    89.8     25.2   -10.2   -22.8  +0.389
+
+Spearman(cos, E)        = -0.557 (p=0.031)
+Spearman(cos, delta)    = -0.539 (p=0.038)
+Spearman(overlap, E)    = -0.902 (p=0.000)
+Spearman(overlap, delta)= -0.836 (p=0.000)
+additive R^2 on E       = 0.853
+additive R^2 on delta   = 0.754
+mean delta = +4.2 pp, mean E = -3.4 pp
+main effects on delta: noise +11.6  rain +5.3  defocus +1.5  motion +1.1  pixelate -2.1  impulse -12.2
+defocus   level 0.389  hf_ratio 0.096
+motion    level 0.391  hf_ratio 0.284
+noise     level 0.241  hf_ratio 3.264
+rain      level 0.420  hf_ratio 1.090
+pixelate  level 0.424  hf_ratio 1.082
+impulse   level 1.000  hf_ratio 33.687
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.417     15.5   +0.476    3.556   +21.8
+noise+pixelate          +0.402     14.1   +0.519    3.530   +19.4
+defocus+rain            +0.423     16.0   +0.093    0.105   +16.0
+motion+noise            +0.363     16.0   +0.355    0.929   +15.0
+defocus+noise           +0.422     14.1   +0.085    0.313   +14.6
+motion+rain             +0.389     17.0   +0.104    0.310   +10.7
+defocus+motion          +0.680     24.8   +0.937    0.027    +4.4
+rain+pixelate           +0.515     15.5   +0.764    1.179    +0.5
+motion+pixelate         +0.433     18.0   +0.417    0.308    -2.4
+pixelate+impulse        +0.524     27.2   +0.321   36.436    -2.9
+defocus+pixelate        +0.464     17.5   +0.323    0.104    -5.3
+motion+impulse          +0.436     27.7   +0.218    9.584    -5.3
+defocus+impulse         +0.508     27.7   +0.024    3.234    -5.8
+noise+impulse           +0.502     27.7   +0.516  109.945    -6.8
+rain+impulse            +0.529     25.2   +0.081   36.706   -10.2
+
+Spearman(alignment       , delta) = -0.682 (p=0.005)
+Spearman(hf_product      , delta) = -0.386 (p=0.156)
+Spearman(overlap         , delta) = -0.836 (p=0.000)
+Spearman(class_error_corr, delta) = +0.293 (p=0.289)
+Spearman(same_mechanism  , delta) = -0.283 (p=0.306)
+
+  lowpass+lowpass        n= 3  mean delta   -1.1 pp  range [-5.3, +4.4]
+  stochastic+stochastic  n= 3  mean delta   +1.6 pp  range [-10.2, +21.8]
+  mixed                  n= 9  mean delta   +6.9 pp  range [-5.8, +19.4]
+--- compose fold1 s29 02:06:15
+clean     level 0.0  acc  85.92
+defocus   level 0.1  acc  83.01
+defocus   level 0.2  acc  78.16
+defocus   level 0.3  acc  70.39
+defocus   level 0.4  acc  62.14
+defocus   level 0.5  acc  50.00
+defocus   level 0.6  acc  39.81
+defocus   level 0.7  acc  35.92
+defocus   level 0.8  acc  33.98
+defocus   level 0.9  acc  30.10
+defocus   level 1.0  acc  27.18
+motion    level 0.1  acc  83.01
+motion    level 0.2  acc  80.10
+motion    level 0.3  acc  74.27
+motion    level 0.4  acc  64.56
+motion    level 0.5  acc  58.25
+motion    level 0.6  acc  55.83
+motion    level 0.7  acc  50.97
+motion    level 0.8  acc  49.51
+motion    level 0.9  acc  48.54
+motion    level 1.0  acc  47.09
+noise     level 0.1  acc  83.01
+noise     level 0.2  acc  75.24
+noise     level 0.3  acc  66.99
+noise     level 0.4  acc  51.94
+noise     level 0.5  acc  43.20
+noise     level 0.6  acc  34.95
+noise     level 0.7  acc  31.07
+noise     level 0.8  acc  28.16
+noise     level 0.9  acc  24.76
+noise     level 1.0  acc  22.33
+rain      level 0.1  acc  81.07
+rain      level 0.2  acc  73.30
+rain      level 0.3  acc  66.50
+rain      level 0.4  acc  58.74
+rain      level 0.5  acc  49.03
+rain      level 0.6  acc  44.17
+rain      level 0.7  acc  37.38
+rain      level 0.8  acc  31.07
+rain      level 0.9  acc  27.18
+rain      level 1.0  acc  22.33
+pixelate  level 0.1  acc  78.16
+pixelate  level 0.2  acc  73.79
+pixelate  level 0.3  acc  68.45
+pixelate  level 0.4  acc  61.65
+pixelate  level 0.5  acc  64.08
+pixelate  level 0.6  acc  50.97
+pixelate  level 0.7  acc  35.92
+pixelate  level 0.8  acc  26.70
+pixelate  level 0.9  acc  15.05
+pixelate  level 1.0  acc  18.45
+impulse   level 0.1  acc  55.83
+impulse   level 0.2  acc  42.72
+impulse   level 0.3  acc  28.64
+impulse   level 0.4  acc  21.84
+impulse   level 0.5  acc  17.48
+impulse   level 0.6  acc  15.53
+impulse   level 0.7  acc  13.59
+impulse   level 0.8  acc  14.08
+impulse   level 0.9  acc  14.08
+impulse   level 1.0  acc  13.11
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       2.9    7.8   15.5   23.8   35.9   46.1   50.0   51.9   55.8   58.7
+motion        2.9    5.8   11.7   21.4   27.7   30.1   35.0   36.4   37.4   38.8
+noise         2.9   10.7   18.9   34.0   42.7   51.0   54.9   57.8   61.2   63.6
+rain          4.9   12.6   19.4   27.2   36.9   41.7   48.5   54.9   58.7   63.6
+pixelate      7.8   12.1   17.5   24.3   21.8   35.0   50.0   59.2   70.9   67.5
+impulse      30.1   43.2   57.3   64.1   68.4   70.4   72.3   71.8   71.8   72.8
+calibrated levels: {"defocus@10": 0.229, "motion@10": 0.272, "noise@10": 0.191, "rain@10": 0.166, "pixelate@10": 0.151, "impulse@10": 1.0, "defocus@20": 0.354, "motion@20": 0.386, "noise@20": 0.307, "rain@20": 0.308, "pixelate@20": 0.337, "impulse@20": 1.0, "defocus@30": 0.451, "motion@30": 0.596, "noise@30": 0.374, "rain@30": 0.429, "pixelate@30": 0.562, "impulse@30": 1.0}
+clean                              acc  85.92
+single_defocus_10                  acc  76.70
+single_motion_10                   acc  74.76
+single_noise_10                    acc  75.24
+single_rain_10                     acc  75.73
+single_pixelate_10                 acc  75.73
+single_impulse_10                  acc  13.11
+single_defocus_20                  acc  66.99
+single_motion_20                   acc  66.50
+single_noise_20                    acc  65.53
+single_rain_20                     acc  65.53
+single_pixelate_20                 acc  65.53
+single_impulse_20                  acc  13.11
+single_defocus_30                  acc  54.37
+single_motion_30                   acc  56.31
+single_noise_30                    acc  55.34
+single_rain_30                     acc  55.34
+single_pixelate_30                 acc  60.19
+single_impulse_30                  acc  13.11
+pair_defocus+motion_10             acc  67.96
+pair_defocus+noise_10              acc  66.02
+pair_defocus+rain_10               acc  60.68
+pair_defocus+pixelate_10           acc  73.79
+pair_defocus+impulse_10            acc  14.56
+pair_motion+noise_10               acc  62.14
+pair_motion+rain_10                acc  56.80
+pair_motion+pixelate_10            acc  71.36
+pair_motion+impulse_10             acc  15.53
+pair_noise+rain_10                 acc  58.25
+pair_noise+pixelate_10             acc  51.94
+pair_noise+impulse_10              acc  12.62
+pair_rain+pixelate_10              acc  63.59
+pair_rain+impulse_10               acc  13.11
+pair_pixelate+impulse_10           acc  14.08
+pair_defocus+motion_20             acc  53.88
+pair_defocus+noise_20              acc  40.29
+pair_defocus+rain_20               acc  31.55
+pair_defocus+pixelate_20           acc  55.34
+pair_defocus+impulse_20            acc  13.11
+pair_motion+noise_20               acc  43.20
+pair_motion+rain_20                acc  40.29
+pair_motion+pixelate_20            acc  50.49
+pair_motion+impulse_20             acc  15.05
+pair_noise+rain_20                 acc  37.38
+pair_noise+pixelate_20             acc  30.58
+pair_noise+impulse_20              acc  11.17
+pair_rain+pixelate_20              acc  41.26
+pair_rain+impulse_20               acc  13.11
+pair_pixelate+impulse_20           acc  14.56
+pair_defocus+motion_30             acc  42.72
+pair_defocus+noise_30              acc  26.21
+pair_defocus+rain_30               acc  22.82
+pair_defocus+pixelate_30           acc  36.41
+pair_defocus+impulse_30            acc  13.59
+pair_motion+noise_30               acc  31.55
+pair_motion+rain_30                acc  24.76
+pair_motion+pixelate_30            acc  44.66
+pair_motion+impulse_30             acc  15.05
+pair_noise+rain_30                 acc  28.16
+pair_noise+pixelate_30             acc  20.39
+pair_noise+impulse_30              acc  11.65
+pair_rain+pixelate_30              acc  34.95
+pair_rain+impulse_30               acc  12.62
+pair_pixelate+impulse_30           acc  13.59
+
+pair                             target  drop_a  drop_b  drop_ab       E
+defocus+rain                         20    18.9    20.4     54.4   +15.0
+noise+pixelate                       20    20.4    20.4     55.3   +14.6
+noise+pixelate                       10    10.7    10.2     34.0   +13.1
+noise+pixelate                       30    30.6    25.7     65.5    +9.2
+noise+rain                           20    20.4    20.4     48.5    +7.8
+motion+rain                          10    11.2    10.2     29.1    +7.8
+noise+rain                           10    10.7    10.2     27.7    +6.8
+defocus+noise                        20    18.9    20.4     45.6    +6.3
+motion+rain                          20    19.4    20.4     45.6    +5.8
+defocus+rain                         10     9.2    10.2     25.2    +5.8
+rain+pixelate                        20    20.4    20.4     44.7    +3.9
+motion+noise                         20    19.4    20.4     42.7    +2.9
+motion+noise                         10    11.2    10.7     23.8    +1.9
+rain+pixelate                        10    10.2    10.2     22.3    +1.9
+motion+rain                          30    29.6    30.6     61.2    +1.0
+defocus+rain                         30    31.6    30.6     63.1    +1.0
+defocus+noise                        10     9.2    10.7     19.9    +0.0
+defocus+motion                       10     9.2    11.2     18.0    -2.4
+defocus+noise                        30    31.6    30.6     59.7    -2.4
+noise+rain                           30    30.6    30.6     57.8    -3.4
+motion+pixelate                      20    19.4    20.4     35.4    -4.4
+rain+pixelate                        30    30.6    25.7     51.0    -5.3
+motion+noise                         30    29.6    30.6     54.4    -5.8
+defocus+motion                       20    18.9    19.4     32.0    -6.3
+motion+pixelate                      10    11.2    10.2     14.6    -6.8
+defocus+pixelate                     10     9.2    10.2     12.1    -7.3
+defocus+pixelate                     30    31.6    25.7     49.5    -7.8
+defocus+pixelate                     20    18.9    20.4     30.6    -8.7
+noise+impulse                        10    10.7    72.8     73.3   -10.2
+rain+impulse                         10    10.2    72.8     72.8   -10.2
+defocus+impulse                      10     9.2    72.8     71.4   -10.7
+pixelate+impulse                     10    10.2    72.8     71.8   -11.2
+motion+impulse                       10    11.2    72.8     70.4   -13.6
+motion+pixelate                      30    29.6    25.7     41.3   -14.1
+defocus+motion                       30    31.6    29.6     43.2   -18.0
+noise+impulse                        20    20.4    72.8     74.8   -18.4
+defocus+impulse                      20    18.9    72.8     72.8   -18.9
+rain+impulse                         20    20.4    72.8     72.8   -20.4
+motion+impulse                       20    19.4    72.8     70.9   -21.4
+pixelate+impulse                     20    20.4    72.8     71.4   -21.8
+pixelate+impulse                     30    25.7    72.8     72.3   -26.2
+noise+impulse                        30    30.6    72.8     74.3   -29.1
+rain+impulse                         30    30.6    72.8     73.3   -30.1
+motion+impulse                       30    29.6    72.8     70.9   -31.6
+defocus+impulse                      30    31.6    72.8     72.3   -32.0
+defocus   level 0.354  acc  66.99
+motion    level 0.386  acc  66.50
+noise     level 0.307  acc  65.53
+rain      level 0.308  acc  65.53
+pixelate  level 0.337  acc  65.53
+impulse   level 1.000  acc  13.11
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+pixelate            69.4    49.0     19.9   +20.4   +14.6  +0.435
+defocus+rain              68.4    48.5     18.9   +19.9   +15.0  +0.079
+noise+rain                62.6    48.1     20.9   +14.6    +7.8  +0.358
+motion+rain               59.7    50.0     18.0    +9.7    +5.8  +0.137
+rain+pixelate             58.7    49.5     19.4    +9.2    +3.9  +0.476
+defocus+noise             59.7    51.9     15.5    +7.8    +6.3  +0.215
+motion+noise              56.8    51.9     16.0    +4.9    +2.9  +0.229
+defocus+motion            46.1    43.7     22.8    +2.4    -6.3  +0.912
+noise+impulse             88.8    87.4     34.0    +1.5   -18.4  +0.370
+motion+pixelate           49.5    49.5     18.4    +0.0    -4.4  +0.320
+rain+impulse              86.9    90.3     31.1    -3.4   -20.4  +0.269
+pixelate+impulse          85.4    90.3     31.1    -4.9   -21.8  +0.370
+defocus+pixelate          44.7    50.0     17.5    -5.3    -8.7  +0.243
+defocus+impulse           86.9    92.2     27.7    -5.3   -18.9  +0.182
+motion+impulse            85.0    91.3     29.1    -6.3   -21.4  +0.191
+
+Spearman(cos, E)        = -0.082 (p=0.771)
+Spearman(cos, delta)    = +0.121 (p=0.666)
+Spearman(overlap, E)    = -0.615 (p=0.015)
+Spearman(overlap, delta)= -0.381 (p=0.162)
+additive R^2 on E       = 0.873
+additive R^2 on delta   = 0.719
+mean delta = +4.3 pp, mean E = -4.3 pp
+main effects on delta: rain +7.9  noise +7.7  defocus +0.3  pixelate +0.3  motion -1.9  impulse -9.2
+defocus   level 0.354  hf_ratio 0.118
+motion    level 0.386  hf_ratio 0.289
+noise     level 0.307  hf_ratio 4.549
+rain      level 0.308  hf_ratio 0.983
+pixelate  level 0.337  hf_ratio 1.084
+impulse   level 1.000  hf_ratio 33.687
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+pixelate          +0.474     19.9   +0.821    4.929   +20.4
+defocus+rain            +0.352     18.9   +0.074    0.116   +19.9
+noise+rain              +0.437     20.9   +0.672    4.473   +14.6
+motion+rain             +0.339     18.0   -0.023    0.284    +9.7
+rain+pixelate           +0.436     19.4   +0.642    1.066    +9.2
+defocus+noise           +0.421     15.5   +0.289    0.536    +7.8
+motion+noise            +0.374     16.0   +0.262    1.316    +4.9
+defocus+motion          +0.688     22.8   +0.948    0.034    +2.4
+noise+impulse           +0.510     34.0   +0.605  153.236    +1.5
+motion+pixelate         +0.405     18.4   +0.312    0.313    +0.0
+rain+impulse            +0.453     31.1   +0.158   33.125    -3.4
+pixelate+impulse        +0.494     31.1   +0.196   36.503    -4.9
+defocus+pixelate        +0.420     17.5   +0.339    0.128    -5.3
+defocus+impulse         +0.430     27.7   -0.106    3.969    -5.3
+motion+impulse          +0.391     29.1   +0.026    9.743    -6.3
+
+Spearman(alignment       , delta) = -0.075 (p=0.791)
+Spearman(hf_product      , delta) = -0.275 (p=0.321)
+Spearman(overlap         , delta) = -0.381 (p=0.162)
+Spearman(class_error_corr, delta) = +0.389 (p=0.152)
+Spearman(same_mechanism  , delta) = -0.189 (p=0.500)
+
+  lowpass+lowpass        n= 3  mean delta   -1.0 pp  range [-5.3, +2.4]
+  stochastic+stochastic  n= 3  mean delta   +4.2 pp  range [-3.4, +14.6]
+  mixed                  n= 9  mean delta   +6.1 pp  range [-6.3, +20.4]
+--- compose fold2 s17 02:08:23
+clean     level 0.0  acc  87.86
+defocus   level 0.1  acc  85.92
+defocus   level 0.2  acc  79.13
+defocus   level 0.3  acc  67.48
+defocus   level 0.4  acc  56.31
+defocus   level 0.5  acc  44.17
+defocus   level 0.6  acc  34.47
+defocus   level 0.7  acc  33.50
+defocus   level 0.8  acc  31.55
+defocus   level 0.9  acc  30.10
+defocus   level 1.0  acc  28.64
+motion    level 0.1  acc  87.38
+motion    level 0.2  acc  81.07
+motion    level 0.3  acc  68.45
+motion    level 0.4  acc  61.17
+motion    level 0.5  acc  56.31
+motion    level 0.6  acc  52.91
+motion    level 0.7  acc  49.51
+motion    level 0.8  acc  48.06
+motion    level 0.9  acc  47.09
+motion    level 1.0  acc  46.60
+noise     level 0.1  acc  80.10
+noise     level 0.2  acc  74.27
+noise     level 0.3  acc  61.65
+noise     level 0.4  acc  50.97
+noise     level 0.5  acc  42.23
+noise     level 0.6  acc  33.98
+noise     level 0.7  acc  29.61
+noise     level 0.8  acc  25.73
+noise     level 0.9  acc  23.30
+noise     level 1.0  acc  19.42
+rain      level 0.1  acc  80.58
+rain      level 0.2  acc  77.67
+rain      level 0.3  acc  73.79
+rain      level 0.4  acc  65.05
+rain      level 0.5  acc  61.17
+rain      level 0.6  acc  55.34
+rain      level 0.7  acc  45.15
+rain      level 0.8  acc  39.32
+rain      level 0.9  acc  31.55
+rain      level 1.0  acc  24.27
+pixelate  level 0.1  acc  73.79
+pixelate  level 0.2  acc  71.84
+pixelate  level 0.3  acc  60.68
+pixelate  level 0.4  acc  58.74
+pixelate  level 0.5  acc  53.88
+pixelate  level 0.6  acc  46.12
+pixelate  level 0.7  acc  32.04
+pixelate  level 0.8  acc  25.24
+pixelate  level 0.9  acc  17.96
+pixelate  level 1.0  acc  15.05
+impulse   level 0.1  acc  38.83
+impulse   level 0.2  acc  28.64
+impulse   level 0.3  acc  25.24
+impulse   level 0.4  acc  21.84
+impulse   level 0.5  acc  20.39
+impulse   level 0.6  acc  19.42
+impulse   level 0.7  acc  18.45
+impulse   level 0.8  acc  18.45
+impulse   level 0.9  acc  17.96
+impulse   level 1.0  acc  17.48
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       1.9    8.7   20.4   31.6   43.7   53.4   54.4   56.3   57.8   59.2
+motion        0.5    6.8   19.4   26.7   31.6   35.0   38.3   39.8   40.8   41.3
+noise         7.8   13.6   26.2   36.9   45.6   53.9   58.3   62.1   64.6   68.4
+rain          7.3   10.2   14.1   22.8   26.7   32.5   42.7   48.5   56.3   63.6
+pixelate     14.1   16.0   27.2   29.1   34.0   41.7   55.8   62.6   69.9   72.8
+impulse      49.0   59.2   62.6   66.0   67.5   68.4   69.4   69.4   69.9   70.4
+calibrated levels: {"defocus@10": 0.211, "motion@10": 0.225, "noise@10": 0.138, "rain@10": 0.193, "pixelate@10": 1.0, "impulse@10": 1.0, "defocus@20": 0.297, "motion@20": 0.308, "noise@20": 0.251, "rain@20": 0.368, "pixelate@20": 0.236, "impulse@20": 1.0, "defocus@30": 0.386, "motion@30": 0.468, "noise@30": 0.335, "rain@30": 0.557, "pixelate@30": 0.418, "impulse@30": 1.0}
+clean                              acc  87.86
+single_defocus_10                  acc  77.18
+single_motion_10                   acc  79.61
+single_noise_10                    acc  78.16
+single_rain_10                     acc  78.16
+single_pixelate_10                 acc  15.05
+single_impulse_10                  acc  17.48
+single_defocus_20                  acc  67.96
+single_motion_20                   acc  68.93
+single_noise_20                    acc  70.39
+single_rain_20                     acc  68.93
+single_pixelate_20                 acc  66.50
+single_impulse_20                  acc  17.48
+single_defocus_30                  acc  55.83
+single_motion_30                   acc  59.22
+single_noise_30                    acc  59.71
+single_rain_30                     acc  59.22
+single_pixelate_30                 acc  55.34
+single_impulse_30                  acc  17.48
+pair_defocus+motion_10             acc  66.50
+pair_defocus+noise_10              acc  67.96
+pair_defocus+rain_10               acc  61.17
+pair_defocus+pixelate_10           acc  14.08
+pair_defocus+impulse_10            acc  17.96
+pair_motion+noise_10               acc  66.50
+pair_motion+rain_10                acc  60.68
+pair_motion+pixelate_10            acc  15.05
+pair_motion+impulse_10             acc  17.96
+pair_noise+rain_10                 acc  67.48
+pair_noise+pixelate_10             acc  16.50
+pair_noise+impulse_10              acc  16.99
+pair_rain+pixelate_10              acc  11.65
+pair_rain+impulse_10               acc  17.48
+pair_pixelate+impulse_10           acc  15.53
+pair_defocus+motion_20             acc  56.31
+pair_defocus+noise_20              acc  44.66
+pair_defocus+rain_20               acc  41.26
+pair_defocus+pixelate_20           acc  61.65
+pair_defocus+impulse_20            acc  17.96
+pair_motion+noise_20               acc  46.60
+pair_motion+rain_20                acc  46.60
+pair_motion+pixelate_20            acc  59.22
+pair_motion+impulse_20             acc  17.48
+pair_noise+rain_20                 acc  42.72
+pair_noise+pixelate_20             acc  42.23
+pair_noise+impulse_20              acc  17.48
+pair_rain+pixelate_20              acc  41.75
+pair_rain+impulse_20               acc  17.48
+pair_pixelate+impulse_20           acc  17.48
+pair_defocus+motion_30             acc  41.75
+pair_defocus+noise_30              acc  28.64
+pair_defocus+rain_30               acc  30.10
+pair_defocus+pixelate_30           acc  42.23
+pair_defocus+impulse_30            acc  17.48
+pair_motion+noise_30               acc  33.01
+pair_motion+rain_30                acc  35.44
+pair_motion+pixelate_30            acc  43.20
+pair_motion+impulse_30             acc  17.48
+pair_noise+rain_30                 acc  28.16
+pair_noise+pixelate_30             acc  34.95
+pair_noise+impulse_30              acc  17.48
+pair_rain+pixelate_30              acc  31.55
+pair_rain+impulse_30               acc  17.48
+pair_pixelate+impulse_30           acc  17.48
+
+pair                             target  drop_a  drop_b  drop_ab       E
+motion+rain                          10     8.3     9.7     27.2    +9.2
+noise+rain                           20    17.5    18.9     45.1    +8.7
+defocus+rain                         20    19.9    18.9     46.6    +7.8
+noise+pixelate                       20    17.5    21.4     45.6    +6.8
+defocus+rain                         10    10.7     9.7     26.7    +6.3
+defocus+noise                        20    19.9    17.5     43.2    +5.8
+rain+pixelate                        20    18.9    21.4     46.1    +5.8
+motion+noise                         20    18.9    17.5     41.3    +4.9
+motion+rain                          20    18.9    18.9     41.3    +3.4
+motion+noise                         10     8.3     9.7     21.4    +3.4
+noise+rain                           30    28.2    28.6     59.7    +2.9
+defocus+motion                       10    10.7     8.3     21.4    +2.4
+noise+rain                           10     9.7     9.7     20.4    +1.0
+defocus+noise                        10    10.7     9.7     19.9    -0.5
+defocus+noise                        30    32.0    28.2     59.2    -1.0
+motion+noise                         30    28.6    28.2     54.9    -1.9
+defocus+rain                         30    32.0    28.6     57.8    -2.9
+motion+rain                          30    28.6    28.6     52.4    -4.9
+rain+pixelate                        30    28.6    32.5     56.3    -4.9
+rain+pixelate                        10     9.7    72.8     76.2    -6.3
+defocus+motion                       20    19.9    18.9     31.6    -7.3
+noise+pixelate                       30    28.2    32.5     52.9    -7.8
+motion+pixelate                      10     8.3    72.8     72.8    -8.3
+motion+impulse                       10     8.3    70.4     69.9    -8.7
+noise+impulse                        10     9.7    70.4     70.9    -9.2
+defocus+pixelate                     10    10.7    72.8     73.8    -9.7
+rain+impulse                         10     9.7    70.4     70.4    -9.7
+defocus+impulse                      10    10.7    70.4     69.9   -11.2
+noise+pixelate                       10     9.7    72.8     71.4   -11.2
+motion+pixelate                      20    18.9    21.4     28.6   -11.7
+defocus+motion                       30    32.0    28.6     46.1   -14.6
+defocus+pixelate                     20    19.9    21.4     26.2   -15.0
+motion+pixelate                      30    28.6    32.5     44.7   -16.5
+noise+impulse                        20    17.5    70.4     70.4   -17.5
+motion+impulse                       20    18.9    70.4     70.4   -18.9
+rain+impulse                         20    18.9    70.4     70.4   -18.9
+defocus+pixelate                     30    32.0    32.5     45.6   -18.9
+defocus+impulse                      20    19.9    70.4     69.9   -20.4
+pixelate+impulse                     20    21.4    70.4     70.4   -21.4
+noise+impulse                        30    28.2    70.4     70.4   -28.2
+motion+impulse                       30    28.6    70.4     70.4   -28.6
+rain+impulse                         30    28.6    70.4     70.4   -28.6
+defocus+impulse                      30    32.0    70.4     70.4   -32.0
+pixelate+impulse                     30    32.5    70.4     70.4   -32.5
+pixelate+impulse                     10    72.8    70.4     72.3   -70.9
+defocus   level 0.297  acc  67.96
+motion    level 0.308  acc  68.93
+noise     level 0.251  acc  70.39
+rain      level 0.368  acc  68.93
+pixelate  level 0.236  acc  66.50
+impulse   level 1.000  acc  17.48
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                57.3    42.2     18.4   +15.0    +8.7  +0.072
+noise+pixelate            57.8    43.2     19.9   +14.6    +6.8  +0.087
+rain+pixelate             58.3    46.6     18.0   +11.7    +5.8  +0.330
+defocus+rain              58.7    48.5     14.6   +10.2    +7.8  -0.061
+defocus+noise             55.3    49.5     12.1    +5.8    +5.8  +0.064
+motion+noise              53.4    48.1     12.6    +5.3    +4.9  +0.017
+motion+rain               53.4    48.5     13.6    +4.9    +3.4  -0.038
+defocus+motion            43.7    39.8     23.3    +3.9    -7.3  +0.933
+noise+impulse             82.5    84.0     28.2    -1.5   -17.5  +0.136
+pixelate+impulse          82.5    85.0     31.1    -2.4   -21.4  +0.291
+motion+impulse            82.5    86.4     27.2    -3.9   -18.9  +0.015
+rain+impulse              82.5    87.4     26.2    -4.9   -18.9  +0.053
+defocus+impulse           82.0    88.3     26.2    -6.3   -20.4  +0.009
+motion+pixelate           40.8    50.0     14.6    -9.2   -11.7  +0.044
+defocus+pixelate          38.3    51.5     14.1   -13.1   -15.0  -0.043
+
+Spearman(cos, E)        = +0.021 (p=0.939)
+Spearman(cos, delta)    = +0.325 (p=0.237)
+Spearman(overlap, E)    = -0.612 (p=0.015)
+Spearman(overlap, delta)= -0.252 (p=0.364)
+additive R^2 on E       = 0.887
+additive R^2 on delta   = 0.627
+mean delta = +2.0 pp, mean E = -5.9 pp
+main effects on delta: noise +7.7  rain +7.1  pixelate -1.7  motion -1.9  defocus -2.0  impulse -6.8
+defocus   level 0.297  hf_ratio 0.138
+motion    level 0.308  hf_ratio 0.298
+noise     level 0.251  hf_ratio 4.017
+rain      level 0.368  hf_ratio 1.088
+pixelate  level 0.236  hf_ratio 1.105
+impulse   level 1.000  hf_ratio 41.201
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.369     18.4   +0.804    4.370   +15.0
+noise+pixelate          +0.344     19.9   +0.692    4.440   +14.6
+rain+pixelate           +0.391     18.0   +0.807    1.202   +11.7
+defocus+rain            +0.281     14.6   +0.326    0.150   +10.2
+defocus+noise           +0.316     12.1   +0.044    0.555    +5.8
+motion+noise            +0.269     12.6   +0.076    1.196    +5.3
+motion+rain             +0.267     13.6   +0.414    0.324    +4.9
+defocus+motion          +0.660     23.3   +0.931    0.041    +3.9
+noise+impulse           +0.383     28.2   +0.546  165.513    -1.5
+pixelate+impulse        +0.379     31.1   +0.501   45.541    -2.4
+motion+impulse          +0.273     27.2   +0.312   12.271    -3.9
+rain+impulse            +0.360     26.2   +0.324   44.820    -4.9
+defocus+impulse         +0.297     26.2   +0.159    5.688    -6.3
+motion+pixelate         +0.284     14.6   +0.192    0.329    -9.2
+defocus+pixelate        +0.287     14.1   -0.058    0.153   -13.1
+
+Spearman(alignment       , delta) = +0.189 (p=0.499)
+Spearman(hf_product      , delta) = -0.107 (p=0.704)
+Spearman(overlap         , delta) = -0.252 (p=0.364)
+Spearman(class_error_corr, delta) = +0.543 (p=0.037)
+Spearman(same_mechanism  , delta) = -0.346 (p=0.206)
+
+  lowpass+lowpass        n= 3  mean delta   -6.1 pp  range [-13.1, +3.9]
+  stochastic+stochastic  n= 3  mean delta   +2.9 pp  range [-4.9, +15.0]
+  mixed                  n= 9  mean delta   +4.4 pp  range [-6.3, +14.6]
+--- compose fold2 s29 02:10:35
+clean     level 0.0  acc  83.98
+defocus   level 0.1  acc  82.52
+defocus   level 0.2  acc  77.18
+defocus   level 0.3  acc  64.08
+defocus   level 0.4  acc  52.91
+defocus   level 0.5  acc  46.60
+defocus   level 0.6  acc  41.26
+defocus   level 0.7  acc  33.98
+defocus   level 0.8  acc  31.07
+defocus   level 0.9  acc  30.10
+defocus   level 1.0  acc  28.64
+motion    level 0.1  acc  83.01
+motion    level 0.2  acc  74.76
+motion    level 0.3  acc  61.17
+motion    level 0.4  acc  59.22
+motion    level 0.5  acc  56.80
+motion    level 0.6  acc  52.43
+motion    level 0.7  acc  48.06
+motion    level 0.8  acc  45.63
+motion    level 0.9  acc  44.66
+motion    level 1.0  acc  45.63
+noise     level 0.1  acc  80.10
+noise     level 0.2  acc  65.53
+noise     level 0.3  acc  53.88
+noise     level 0.4  acc  41.75
+noise     level 0.5  acc  35.92
+noise     level 0.6  acc  32.04
+noise     level 0.7  acc  31.07
+noise     level 0.8  acc  27.18
+noise     level 0.9  acc  28.64
+noise     level 1.0  acc  30.10
+rain      level 0.1  acc  77.67
+rain      level 0.2  acc  69.42
+rain      level 0.3  acc  63.11
+rain      level 0.4  acc  51.94
+rain      level 0.5  acc  47.09
+rain      level 0.6  acc  35.92
+rain      level 0.7  acc  24.76
+rain      level 0.8  acc  20.87
+rain      level 0.9  acc  17.96
+rain      level 1.0  acc  16.02
+pixelate  level 0.1  acc  75.73
+pixelate  level 0.2  acc  75.24
+pixelate  level 0.3  acc  66.99
+pixelate  level 0.4  acc  64.56
+pixelate  level 0.5  acc  57.77
+pixelate  level 0.6  acc  47.09
+pixelate  level 0.7  acc  35.92
+pixelate  level 0.8  acc  27.67
+pixelate  level 0.9  acc  16.99
+pixelate  level 1.0  acc  16.02
+impulse   level 0.1  acc  42.72
+impulse   level 0.2  acc  36.41
+impulse   level 0.3  acc  29.61
+impulse   level 0.4  acc  26.21
+impulse   level 0.5  acc  23.79
+impulse   level 0.6  acc  20.39
+impulse   level 0.7  acc  20.87
+impulse   level 0.8  acc  20.87
+impulse   level 0.9  acc  22.82
+impulse   level 1.0  acc  20.39
+
+family        0.1    0.2    0.3    0.4    0.5    0.6    0.7    0.8    0.9    1.0
+defocus       1.5    6.8   19.9   31.1   37.4   42.7   50.0   52.9   53.9   55.3
+motion        1.0    9.2   22.8   24.8   27.2   31.6   35.9   38.3   39.3   38.3
+noise         3.9   18.4   30.1   42.2   48.1   51.9   52.9   56.8   55.3   53.9
+rain          6.3   14.6   20.9   32.0   36.9   48.1   59.2   63.1   66.0   68.0
+pixelate      8.3    8.7   17.0   19.4   26.2   36.9   48.1   56.3   67.0   68.0
+impulse      41.3   47.6   54.4   57.8   60.2   63.6   63.1   63.1   61.2   63.6
+calibrated levels: {"defocus@10": 0.224, "motion@10": 0.206, "noise@10": 0.142, "rain@10": 0.145, "pixelate@10": 0.215, "impulse@10": 1.0, "defocus@20": 0.301, "motion@20": 0.279, "noise@20": 0.213, "rain@20": 0.286, "pixelate@20": 0.409, "impulse@20": 1.0, "defocus@30": 0.39, "motion@30": 0.564, "noise@30": 0.299, "rain@30": 0.382, "pixelate@30": 0.535, "impulse@30": 1.0}
+clean                              acc  83.98
+single_defocus_10                  acc  76.70
+single_motion_10                   acc  73.79
+single_noise_10                    acc  74.76
+single_rain_10                     acc  73.79
+single_pixelate_10                 acc  74.27
+single_impulse_10                  acc  20.39
+single_defocus_20                  acc  64.56
+single_motion_20                   acc  62.62
+single_noise_20                    acc  65.53
+single_rain_20                     acc  64.08
+single_pixelate_20                 acc  63.11
+single_impulse_20                  acc  20.39
+single_defocus_30                  acc  53.88
+single_motion_30                   acc  53.40
+single_noise_30                    acc  54.37
+single_rain_30                     acc  52.91
+single_pixelate_30                 acc  59.22
+single_impulse_30                  acc  20.39
+pair_defocus+motion_10             acc  63.59
+pair_defocus+noise_10              acc  53.40
+pair_defocus+rain_10               acc  49.03
+pair_defocus+pixelate_10           acc  64.56
+pair_defocus+impulse_10            acc  20.39
+pair_motion+noise_10               acc  58.74
+pair_motion+rain_10                acc  56.80
+pair_motion+pixelate_10            acc  68.93
+pair_motion+impulse_10             acc  20.87
+pair_noise+rain_10                 acc  67.96
+pair_noise+pixelate_10             acc  51.94
+pair_noise+impulse_10              acc  21.36
+pair_rain+pixelate_10              acc  60.19
+pair_rain+impulse_10               acc  23.30
+pair_pixelate+impulse_10           acc  19.90
+pair_defocus+motion_20             acc  54.37
+pair_defocus+noise_20              acc  33.98
+pair_defocus+rain_20               acc  31.07
+pair_defocus+pixelate_20           acc  56.31
+pair_defocus+impulse_20            acc  20.87
+pair_motion+noise_20               acc  44.17
+pair_motion+rain_20                acc  36.89
+pair_motion+pixelate_20            acc  58.74
+pair_motion+impulse_20             acc  20.39
+pair_noise+rain_20                 acc  53.88
+pair_noise+pixelate_20             acc  35.44
+pair_noise+impulse_20              acc  23.30
+pair_rain+pixelate_20              acc  43.69
+pair_rain+impulse_20               acc  22.82
+pair_pixelate+impulse_20           acc  21.36
+pair_defocus+motion_30             acc  41.26
+pair_defocus+noise_30              acc  27.18
+pair_defocus+rain_30               acc  20.39
+pair_defocus+pixelate_30           acc  45.15
+pair_defocus+impulse_30            acc  21.36
+pair_motion+noise_30               acc  34.47
+pair_motion+rain_30                acc  22.82
+pair_motion+pixelate_30            acc  44.66
+pair_motion+impulse_30             acc  22.33
+pair_noise+rain_30                 acc  44.17
+pair_noise+pixelate_30             acc  29.61
+pair_noise+impulse_30              acc  22.82
+pair_rain+pixelate_30              acc  37.86
+pair_rain+impulse_30               acc  23.79
+pair_pixelate+impulse_30           acc  20.39
+
+pair                             target  drop_a  drop_b  drop_ab       E
+defocus+rain                         10     7.3    10.2     35.0   +17.5
+defocus+noise                        10     7.3     9.2     30.6   +14.1
+defocus+rain                         20    19.4    19.9     52.9   +13.6
+noise+pixelate                       10     9.2     9.7     32.0   +13.1
+defocus+noise                        20    19.4    18.4     50.0   +12.1
+noise+pixelate                       20    18.4    20.9     48.5    +9.2
+motion+rain                          10    10.2    10.2     27.2    +6.8
+motion+rain                          20    21.4    19.9     47.1    +5.8
+motion+noise                         10    10.2     9.2     25.2    +5.8
+rain+pixelate                        10    10.2     9.7     23.8    +3.9
+defocus+motion                       10     7.3    10.2     20.4    +2.9
+defocus+rain                         30    30.1    31.1     63.6    +2.4
+defocus+pixelate                     10     7.3     9.7     19.4    +2.4
+motion+noise                         20    21.4    18.4     39.8    +0.0
+noise+pixelate                       30    29.6    24.8     54.4    +0.0
+rain+pixelate                        20    19.9    20.9     40.3    -0.5
+motion+rain                          30    30.6    31.1     61.2    -0.5
+defocus+noise                        30    30.1    29.6     56.8    -2.9
+noise+rain                           10     9.2    10.2     16.0    -3.4
+motion+pixelate                      10    10.2     9.7     15.0    -4.9
+defocus+impulse                      10     7.3    63.6     63.6    -7.3
+noise+rain                           20    18.4    19.9     30.1    -8.3
+pixelate+impulse                     10     9.7    63.6     64.1    -9.2
+rain+pixelate                        30    31.1    24.8     46.1    -9.7
+noise+impulse                        10     9.2    63.6     62.6   -10.2
+motion+impulse                       10    10.2    63.6     63.1   -10.7
+motion+noise                         30    30.6    29.6     49.5   -10.7
+defocus+motion                       20    19.4    21.4     29.6   -11.2
+defocus+pixelate                     20    19.4    20.9     27.7   -12.6
+rain+impulse                         10    10.2    63.6     60.7   -13.1
+defocus+pixelate                     30    30.1    24.8     38.8   -16.0
+motion+pixelate                      30    30.6    24.8     39.3   -16.0
+motion+pixelate                      20    21.4    20.9     25.2   -17.0
+defocus+motion                       30    30.1    30.6     42.7   -18.0
+defocus+impulse                      20    19.4    63.6     63.1   -19.9
+noise+rain                           30    29.6    31.1     39.8   -20.9
+noise+impulse                        20    18.4    63.6     60.7   -21.4
+motion+impulse                       20    21.4    63.6     63.6   -21.4
+pixelate+impulse                     20    20.9    63.6     62.6   -21.8
+rain+impulse                         20    19.9    63.6     61.2   -22.3
+pixelate+impulse                     30    24.8    63.6     63.6   -24.8
+defocus+impulse                      30    30.1    63.6     62.6   -31.1
+noise+impulse                        30    29.6    63.6     61.2   -32.0
+motion+impulse                       30    30.6    63.6     61.7   -32.5
+rain+impulse                         30    31.1    63.6     60.2   -34.5
+defocus   level 0.301  acc  64.56
+motion    level 0.279  acc  62.62
+noise     level 0.213  acc  65.53
+rain      level 0.286  acc  64.08
+pixelate  level 0.409  acc  63.11
+impulse   level 1.000  acc  20.39
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              68.9    53.9     17.5   +15.0   +13.6  -0.047
+noise+pixelate            64.6    52.4     18.9   +12.1    +9.2  +0.584
+defocus+noise             66.0    54.4     15.5   +11.7   +12.1  +0.053
+motion+rain               63.1    55.8     17.5    +7.3    +5.8  -0.045
+defocus+motion            45.6    43.7     29.1    +1.9   -11.2  +0.940
+rain+pixelate             56.3    54.9     18.0    +1.5    -0.5  +0.510
+motion+noise              55.8    55.3     16.5    +0.5    +0.0  -0.040
+noise+rain                46.1    48.5     21.8    -2.4    -8.3  +0.187
+motion+impulse            79.6    85.0     32.0    -5.3   -21.4  +0.055
+noise+impulse             76.7    82.5     31.6    -5.8   -21.4  +0.533
+pixelate+impulse          78.6    85.0     31.6    -6.3   -21.8  +0.420
+defocus+impulse           79.1    86.4     28.6    -7.3   -19.9  +0.112
+rain+impulse              77.2    86.9     28.6    -9.7   -22.3  +0.094
+defocus+pixelate          43.7    56.8     15.5   -13.1   -12.6  +0.071
+motion+pixelate           41.3    55.8     18.4   -14.6   -17.0  +0.025
+
+Spearman(cos, E)        = -0.314 (p=0.254)
+Spearman(cos, delta)    = -0.054 (p=0.850)
+Spearman(overlap, E)    = -0.724 (p=0.002)
+Spearman(overlap, delta)= -0.283 (p=0.306)
+additive R^2 on E       = 0.680
+additive R^2 on delta   = 0.424
+mean delta = -1.0 pp, mean E = -7.7 pp
+main effects on delta: noise +5.0  rain +3.9  defocus +3.1  motion -1.5  pixelate -4.1  impulse -7.6
+defocus   level 0.301  hf_ratio 0.135
+motion    level 0.279  hf_ratio 0.326
+noise     level 0.213  hf_ratio 3.216
+rain      level 0.286  hf_ratio 1.001
+pixelate  level 0.409  hf_ratio 1.142
+impulse   level 1.000  hf_ratio 41.201
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.308     17.5   -0.260    0.135   +15.0
+noise+pixelate          +0.524     18.9   +0.684    3.672   +12.1
+defocus+noise           +0.366     15.5   +0.200    0.433   +11.7
+motion+rain             +0.260     17.5   -0.336    0.326    +7.3
+defocus+motion          +0.676     29.1   +0.887    0.044    +1.9
+rain+pixelate           +0.441     18.0   +0.381    1.142    +1.5
+motion+noise            +0.281     16.5   +0.184    1.048    +0.5
+noise+rain              +0.393     21.8   +0.401    3.218    -2.4
+motion+impulse          +0.296     32.0   +0.390   13.423    -5.3
+noise+impulse           +0.543     31.6   +0.657  132.522    -5.8
+pixelate+impulse        +0.551     31.6   +0.224   47.037    -6.3
+defocus+impulse         +0.375     28.6   +0.269    5.545    -7.3
+rain+impulse            +0.399     28.6   +0.060   41.226    -9.7
+defocus+pixelate        +0.386     15.5   +0.088    0.154   -13.1
+motion+pixelate         +0.322     18.4   +0.251    0.372   -14.6
+
+Spearman(alignment       , delta) = -0.104 (p=0.713)
+Spearman(hf_product      , delta) = -0.357 (p=0.191)
+Spearman(overlap         , delta) = -0.283 (p=0.306)
+Spearman(class_error_corr, delta) = +0.046 (p=0.869)
+Spearman(same_mechanism  , delta) = -0.535 (p=0.040)
+
+  lowpass+lowpass        n= 3  mean delta   -8.6 pp  range [-14.6, +1.9]
+  stochastic+stochastic  n= 3  mean delta   -6.0 pp  range [-9.7, -2.4]
+  mixed                  n= 9  mean delta   +3.2 pp  range [-7.3, +15.0]
+=== R50 DONE 02:12:48

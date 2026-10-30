@@ -89,10 +89,25 @@ class MethodModel(nn.Module):
         if method not in METHODS:
             raise ValueError(method)
         base = build_model(model_name, num_classes, pretrained=True)
-        self.features = base.features
-        self.avgpool = base.avgpool
-        self.norm = base.classifier[0]
+        if hasattr(base, "features") and hasattr(base, "classifier"):
+            # ConvNeXt: ``features`` is (B,C,H,W) and ``classifier[0]`` is the
+            # final LayerNorm, so the split at features / norm is native.
+            self.features = base.features
+            self.avgpool = base.avgpool
+            self.norm = base.classifier[0]
+        elif hasattr(base, "layer4"):
+            # ResNet: the penultimate feature map is everything up to layer4,
+            # and the classifier applies avgpool -> flatten -> fc with no norm.
+            self.features = nn.Sequential(base.conv1, base.bn1, base.relu, base.maxpool,
+                                          base.layer1, base.layer2, base.layer3,
+                                          base.layer4)
+            self.avgpool = base.avgpool
+            self.norm = nn.Identity()
+        else:
+            raise ValueError(f"unsupported backbone {model_name}")
         dim = DIMS[model_name]
+        if method in ("r1", "m1") and model_name != "convnext_tiny":
+            raise ValueError(f"method {method} is written against ConvNeXt internals")
         self.method = method
         self.num_classes = num_classes
         if method == "r1":

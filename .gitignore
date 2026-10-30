@@ -28,3 +28,5 @@ __pycache__/
 
 # External experiment outputs
 /runs_external/
+reports/composition/*/
+reports/composition_r50/*/

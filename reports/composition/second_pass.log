@@ -1,0 +1,440 @@
+=== second pass 01:18:04
+--- fold0 s17 01:18:04
+defocus   level 0.282  acc  73.30
+motion    level 0.340  acc  74.76
+noise     level 0.208  acc  74.76
+rain      level 0.176  acc  74.76
+pixelate  level 1.000  acc  29.13
+impulse   level 0.212  acc  74.27
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             48.5    35.0     16.0   +13.6   +13.1  +0.434
+motion+rain               45.6    35.4     15.0   +10.2   +10.7  +0.060
+motion+impulse            43.2    35.9     15.0    +7.3    +7.8  +0.006
+defocus+rain              43.7    39.3     12.6    +4.4    +7.3  -0.131
+rain+impulse              38.3    35.0     16.0    +3.4    +2.9  +0.290
+pixelate+impulse          82.0    79.1     17.5    +2.9    +1.0  +0.109
+defocus+motion            36.4    34.0     18.0    +2.4    +0.0  +0.769
+noise+rain                35.4    35.9     14.6    -0.5    +0.5  +0.019
+motion+noise              34.5    37.9     12.6    -3.4    -0.5  -0.093
+noise+pixelate            71.8    76.2     19.9    -4.4    -8.7  +0.063
+defocus+impulse           34.5    39.8     12.6    -5.3    -2.4  -0.166
+defocus+noise             33.0    38.8     13.1    -5.8    -3.4  -0.235
+defocus+pixelate          72.8    79.1     18.4    -6.3    -9.2  +0.039
+motion+pixelate           70.4    78.2     18.0    -7.8   -10.2  +0.082
+rain+pixelate             68.4    82.0     14.1   -13.6   -12.1  +0.142
+
+Spearman(cos, E)        = +0.086 (p=0.761)
+Spearman(cos, delta)    = +0.171 (p=0.541)
+Spearman(overlap, E)    = -0.160 (p=0.569)
+Spearman(overlap, delta)= -0.050 (p=0.859)
+additive R^2 on E       = 0.669
+additive R^2 on delta   = 0.499
+mean delta = -0.2 pp, mean E = -0.2 pp
+main effects on delta: impulse +5.7  motion +2.4  rain +1.2  noise +0.1  defocus -2.5  pixelate -7.1
+defocus   level 0.410  hf_ratio 0.092
+motion    level 0.528  hf_ratio 0.234
+noise     level 0.435  hf_ratio 8.872
+rain      level 0.392  hf_ratio 1.099
+pixelate  level 0.353  hf_ratio 1.113
+impulse   level 0.475  hf_ratio 20.558
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.627     21.4   +0.484  182.384   +13.6
+motion+rain             +0.274     16.5   -0.605    0.257   +10.2
+motion+impulse          +0.328     18.4   +0.630    4.807    +7.3
+defocus+rain            +0.218     16.0   -0.518    0.101    +4.4
+rain+impulse            +0.378     17.5   -0.130   22.600    +3.4
+pixelate+impulse        +0.459     19.9   +0.190   22.886    +2.9
+defocus+motion          +0.560     22.3   +0.822    0.022    +2.4
+noise+rain              +0.307     16.5   -0.072    9.753    -0.5
+motion+noise            +0.298     17.0   +0.317    2.075    -3.4
+noise+pixelate          +0.431     20.4   +0.689    9.876    -4.4
+defocus+impulse         +0.310     18.4   +0.307    1.897    -5.3
+defocus+noise           +0.288     18.0   +0.316    0.819    -5.8
+defocus+pixelate        +0.378     19.9   +0.506    0.103    -6.3
+motion+pixelate         +0.406     18.0   +0.447    0.260    -7.8
+rain+pixelate           +0.355     18.4   -0.252    1.224   -13.6
+
+Spearman(alignment       , delta) = +0.004 (p=0.990)
+Spearman(hf_product      , delta) = +0.286 (p=0.302)
+Spearman(overlap         , delta) = -0.099 (p=0.726)
+Spearman(class_error_corr, delta) = -0.129 (p=0.648)
+Spearman(same_mechanism  , delta) = +0.000 (p=1.000)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+--- fold0 s29 01:18:49
+defocus   level 0.268  acc  71.36
+motion    level 0.324  acc  72.33
+noise     level 0.227  acc  71.84
+rain      level 0.304  acc  71.84
+pixelate  level 0.115  acc  76.70
+impulse   level 0.197  acc  72.33
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+rain                48.1    43.7     12.6    +4.4    +9.7  -0.137
+rain+impulse              42.7    39.3     16.5    +3.4    +4.9  +0.212
+defocus+motion            39.3    35.9     20.4    +3.4    +1.0  +0.865
+motion+rain               41.3    41.7     14.1    -0.5    +3.4  +0.091
+noise+impulse             37.9    38.8     17.0    -1.0    +0.0  +0.144
+noise+pixelate            34.5    35.9     15.5    -1.5    +1.0  -0.048
+defocus+pixelate          33.5    35.9     16.0    -2.4    -0.5  +0.136
+defocus+rain              39.8    42.7     14.1    -2.9    +1.0  -0.057
+motion+noise              35.4    38.3     17.5    -2.9    -2.4  -0.134
+motion+pixelate           33.0    35.9     15.0    -2.9    +0.0  +0.220
+motion+impulse            38.3    41.7     13.6    -3.4    +1.0  +0.277
+defocus+impulse           36.4    40.8     15.5    -4.4    -1.9  +0.282
+defocus+noise             33.0    39.3     17.5    -6.3    -5.8  -0.215
+rain+pixelate             31.6    37.9     13.6    -6.3    -1.9  +0.484
+pixelate+impulse          30.1    36.4     14.6    -6.3    -2.9  +0.275
+
+Spearman(cos, E)        = -0.039 (p=0.889)
+Spearman(cos, delta)    = -0.252 (p=0.365)
+Spearman(overlap, E)    = -0.326 (p=0.236)
+Spearman(overlap, delta)= +0.134 (p=0.635)
+additive R^2 on E       = 0.451
+additive R^2 on delta   = 0.273
+mean delta = -2.0 pp, mean E = +0.4 pp
+main effects on delta: rain +1.6  motion +0.5  noise +0.3  impulse -0.8  defocus -1.1  pixelate -2.8
+defocus   level 0.435  hf_ratio 0.081
+motion    level 0.620  hf_ratio 0.204
+noise     level 0.642  hf_ratio 16.299
+rain      level 0.452  hf_ratio 1.185
+pixelate  level 0.428  hf_ratio 1.120
+impulse   level 0.464  hf_ratio 20.118
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+rain              +0.346     19.4   -0.054   19.321    +4.4
+rain+impulse            +0.384     21.4   -0.288   23.847    +3.4
+defocus+motion          +0.600     26.7   +0.831    0.016    +3.4
+motion+rain             +0.301     17.5   -0.598    0.242    -0.5
+noise+impulse           +0.657     26.7   +0.714  327.893    -1.0
+noise+pixelate          +0.499     20.9   +0.487   18.250    -1.5
+defocus+pixelate        +0.460     21.4   +0.405    0.090    -2.4
+defocus+rain            +0.236     19.9   -0.571    0.096    -2.9
+motion+noise            +0.357     20.4   +0.382    3.330    -2.9
+motion+pixelate         +0.441     19.9   +0.281    0.229    -2.9
+motion+impulse          +0.391     23.8   +0.738    4.110    -3.4
+defocus+impulse         +0.416     23.3   +0.378    1.624    -4.4
+defocus+noise           +0.363     20.9   +0.088    1.316    -6.3
+rain+pixelate           +0.362     21.8   -0.318    1.327    -6.3
+pixelate+impulse        +0.501     22.3   +0.018   22.526    -6.3
+
+Spearman(alignment       , delta) = -0.036 (p=0.899)
+Spearman(hf_product      , delta) = +0.082 (p=0.771)
+Spearman(overlap         , delta) = -0.221 (p=0.429)
+Spearman(class_error_corr, delta) = +0.052 (p=0.854)
+Spearman(same_mechanism  , delta) = +0.631 (p=0.012)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+--- fold1 s17 01:20:22
+defocus   level 0.315  acc  77.18
+motion    level 0.366  acc  77.18
+noise     level 0.305  acc  76.21
+rain      level 0.251  acc  76.70
+pixelate  level 0.104  acc  76.21
+impulse   level 0.146  acc  78.16
+
+pair                    err_ab   indep  overlap   delta       E     cos
+noise+impulse             52.9    30.6     15.0   +22.3   +20.4  +0.190
+defocus+rain              54.4    32.5     13.6   +21.8   +21.4  +0.072
+motion+rain               52.9    32.5     13.6   +20.4   +19.9  +0.252
+rain+impulse              43.2    30.6     14.6   +12.6   +11.2  +0.268
+noise+rain                42.2    34.5     12.6    +7.8    +8.3  +0.013
+motion+impulse            39.3    31.6     13.1    +7.8    +7.8  +0.065
+rain+pixelate             39.3    33.0     14.1    +6.3    +5.3  +0.440
+defocus+noise             40.8    35.0     11.7    +5.8    +7.3  -0.182
+motion+noise              40.8    35.9     10.7    +4.9    +7.3  +0.038
+defocus+impulse           35.9    32.0     12.6    +3.9    +4.4  -0.141
+defocus+motion            31.6    28.6     17.0    +2.9    -1.0  +0.714
+pixelate+impulse          34.5    31.6     14.1    +2.9    +1.9  +0.314
+noise+pixelate            38.8    36.4     11.2    +2.4    +4.4  +0.096
+motion+pixelate           32.0    33.0     13.6    -1.0    -1.5  +0.322
+defocus+pixelate          31.6    35.0     11.7    -3.4    -1.9  +0.018
+
+Spearman(cos, E)        = -0.157 (p=0.576)
+Spearman(cos, delta)    = -0.050 (p=0.860)
+Spearman(overlap, E)    = +0.163 (p=0.562)
+Spearman(overlap, delta)= +0.358 (p=0.191)
+additive R^2 on E       = 0.581
+additive R^2 on delta   = 0.586
+mean delta = +7.8 pp, mean E = +7.7 pp
+main effects on delta: rain +9.0  impulse +4.2  noise +2.6  motion +0.5  defocus -0.5  pixelate -6.4
+defocus   level 0.527  hf_ratio 0.046
+motion    level 0.553  hf_ratio 0.219
+noise     level 0.449  hf_ratio 8.032
+rain      level 0.446  hf_ratio 1.121
+pixelate  level 0.370  hf_ratio 1.089
+impulse   level 0.271  hf_ratio 10.421
+
+pair                     align  overlap  class_r  hf_prod   delta
+noise+impulse           +0.550     22.8   +0.443   83.695   +22.3
+defocus+rain            +0.305     16.0   +0.100    0.052   +21.8
+motion+rain             +0.316     16.0   +0.054    0.245   +20.4
+rain+impulse            +0.343     15.0   -0.036   11.682   +12.6
+noise+rain              +0.309     18.4   +0.335    9.004    +7.8
+motion+impulse          +0.316     17.5   +0.811    2.279    +7.8
+rain+pixelate           +0.343     15.0   -0.319    1.221    +6.3
+defocus+noise           +0.303     15.5   -0.118    0.371    +5.8
+motion+noise            +0.308     14.6   +0.097    1.757    +4.9
+defocus+impulse         +0.321     15.5   +0.585    0.481    +3.9
+defocus+motion          +0.569     20.4   +0.791    0.010    +2.9
+pixelate+impulse        +0.419     18.9   +0.842   11.347    +2.9
+noise+pixelate          +0.416     18.0   +0.102    8.745    +2.4
+motion+pixelate         +0.394     16.0   +0.828    0.238    -1.0
+defocus+pixelate        +0.403     15.5   +0.544    0.050    -3.4
+
+Spearman(alignment       , delta) = -0.386 (p=0.156)
+Spearman(hf_product      , delta) = +0.346 (p=0.206)
+Spearman(overlap         , delta) = +0.067 (p=0.814)
+Spearman(class_error_corr, delta) = -0.464 (p=0.081)
+Spearman(same_mechanism  , delta) = -0.063 (p=0.824)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+--- fold1 s29 01:26:49
+defocus   level 0.324  acc  76.70
+motion    level 0.372  acc  76.21
+noise     level 0.305  acc  76.21
+rain      level 0.370  acc  77.18
+pixelate  level 1.000  acc  13.11
+impulse   level 0.219  acc  76.70
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              51.5    32.5     13.6   +18.9   +18.9  -0.060
+motion+rain               52.9    35.0     11.7   +18.0   +19.9  +0.082
+noise+rain                48.5    31.1     15.5   +17.5   +15.5  +0.039
+rain+impulse              48.5    32.0     14.1   +16.5   +16.0  +0.246
+noise+impulse             46.1    32.5     14.6   +13.6   +12.6  +0.400
+motion+impulse            46.6    34.5     12.6   +12.1   +13.1  +0.189
+defocus+impulse           43.7    32.0     14.6   +11.7   +10.7  +0.194
+defocus+noise             41.7    32.0     15.0    +9.7    +8.3  -0.034
+defocus+motion            34.5    28.6     18.4    +5.8    +1.0  +0.819
+motion+noise              40.3    35.0     12.6    +5.3    +6.3  +0.013
+noise+pixelate            86.4    89.3     21.4    -2.9   -10.7  +0.013
+rain+pixelate             85.9    89.3     20.4    -3.4   -10.2  +0.300
+motion+pixelate           85.4    90.8     19.9    -5.3   -11.7  +0.107
+defocus+pixelate          84.5    91.3     18.9    -6.8   -12.1  +0.078
+pixelate+impulse          67.5    89.3     20.9   -21.8   -29.1  +0.071
+
+Spearman(cos, E)        = -0.011 (p=0.970)
+Spearman(cos, delta)    = -0.043 (p=0.879)
+Spearman(overlap, E)    = -0.810 (p=0.000)
+Spearman(overlap, delta)= -0.737 (p=0.002)
+additive R^2 on E       = 0.884
+additive R^2 on delta   = 0.861
+mean delta = +5.9 pp, mean E = +3.2 pp
+main effects on delta: rain +10.7  noise +4.6  defocus +3.6  motion +2.8  impulse +1.8  pixelate -16.3
+defocus   level 0.451  hf_ratio 0.068
+motion    level 0.664  hf_ratio 0.178
+noise     level 0.485  hf_ratio 9.044
+rain      level 0.539  hf_ratio 1.253
+pixelate  level 0.280  hf_ratio 1.079
+impulse   level 0.343  hf_ratio 12.842
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.295     14.6   +0.036    0.085   +18.9
+motion+rain             +0.326     15.0   +0.164    0.223   +18.0
+noise+rain              +0.350     18.0   +0.633   11.329   +17.5
+rain+impulse            +0.394     18.0   +0.329   16.086   +16.5
+noise+impulse           +0.634     22.3   +0.652  116.141   +13.6
+motion+impulse          +0.374     19.9   +0.892    2.289   +12.1
+defocus+impulse         +0.402     19.4   +0.872    0.875   +11.7
+defocus+noise           +0.373     18.0   +0.425    0.616    +9.7
+defocus+motion          +0.596     20.9   +0.928    0.012    +5.8
+motion+noise            +0.347     17.0   +0.343    1.612    +5.3
+noise+pixelate          +0.446     20.4   +0.270    9.755    -2.9
+rain+pixelate           +0.350     16.5   -0.154    1.351    -3.4
+motion+pixelate         +0.399     16.5   +0.456    0.192    -5.3
+defocus+pixelate        +0.407     19.4   +0.602    0.073    -6.8
+pixelate+impulse        +0.474     20.4   +0.286   13.851   -21.8
+
+Spearman(alignment       , delta) = -0.493 (p=0.062)
+Spearman(hf_product      , delta) = +0.114 (p=0.685)
+Spearman(overlap         , delta) = -0.284 (p=0.305)
+Spearman(class_error_corr, delta) = +0.011 (p=0.970)
+Spearman(same_mechanism  , delta) = +0.000 (p=1.000)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+--- fold2 s17 01:27:21
+defocus   level 0.240  acc  75.24
+motion    level 0.290  acc  74.76
+noise     level 0.237  acc  75.24
+rain      level 0.358  acc  75.73
+pixelate  level 0.106  acc  73.30
+impulse   level 0.184  acc  75.73
+
+pair                    err_ab   indep  overlap   delta       E     cos
+defocus+rain              57.3    37.4     11.7   +19.9   +23.3  +0.080
+motion+rain               55.8    37.4     12.1   +18.4   +21.4  +0.143
+noise+impulse             46.1    33.5     15.5   +12.6   +12.1  +0.282
+rain+pixelate             46.1    39.3     11.7    +6.8   +10.2  +0.246
+rain+impulse              41.7    35.0     13.6    +6.8    +8.3  +0.276
+defocus+motion            36.9    30.1     19.9    +6.8    +1.9  +0.837
+noise+rain                40.3    37.4     11.7    +2.9    +6.3  -0.138
+motion+noise              42.2    39.8     10.2    +2.4    +7.3  -0.097
+pixelate+impulse          35.4    33.0     18.0    +2.4    -0.5  +0.426
+motion+impulse            36.4    35.4     14.1    +1.0    +1.9  +0.067
+noise+pixelate            35.0    34.0     17.5    +1.0    -1.5  +0.126
+defocus+impulse           37.4    36.4     12.6    +1.0    +3.4  -0.143
+defocus+noise             39.3    40.8      8.7    -1.5    +4.9  -0.270
+motion+pixelate           36.9    38.8     13.1    -1.9    +0.0  -0.010
+defocus+pixelate          35.4    41.3     10.2    -5.8    -1.0  -0.209
+
+Spearman(cos, E)        = +0.172 (p=0.541)
+Spearman(cos, delta)    = +0.624 (p=0.013)
+Spearman(overlap, E)    = -0.316 (p=0.251)
+Spearman(overlap, delta)= +0.151 (p=0.591)
+additive R^2 on E       = 0.632
+additive R^2 on delta   = 0.497
+mean delta = +4.9 pp, mean E = +6.5 pp
+main effects on delta: rain +8.6  motion +1.6  impulse +0.8  defocus -0.0  noise -0.7  pixelate -4.5
+defocus   level 0.335  hf_ratio 0.109
+motion    level 0.540  hf_ratio 0.189
+noise     level 0.423  hf_ratio 8.817
+rain      level 0.601  hf_ratio 1.498
+pixelate  level 0.332  hf_ratio 1.128
+impulse   level 0.274  hf_ratio 12.669
+
+pair                     align  overlap  class_r  hf_prod   delta
+defocus+rain            +0.260     14.6   -0.197    0.163   +19.9
+motion+rain             +0.317     17.0   -0.067    0.283   +18.4
+noise+impulse           +0.558     24.8   +0.815  111.705   +12.6
+rain+pixelate           +0.363     15.0   -0.022    1.689    +6.8
+rain+impulse            +0.358     18.4   +0.302   18.978    +6.8
+defocus+motion          +0.558     23.8   +0.824    0.021    +6.8
+noise+rain              +0.295     14.1   +0.360   13.207    +2.9
+motion+noise            +0.301     16.5   +0.416    1.669    +2.4
+pixelate+impulse        +0.466     25.2   +0.669   14.288    +2.4
+motion+impulse          +0.326     20.4   +0.733    2.398    +1.0
+noise+pixelate          +0.424     20.9   +0.717    9.943    +1.0
+defocus+impulse         +0.242     17.0   +0.413    1.382    +1.0
+defocus+noise           +0.232     14.1   +0.113    0.961    -1.5
+motion+pixelate         +0.370     18.9   +0.544    0.213    -1.9
+defocus+pixelate        +0.318     15.5   +0.253    0.123    -5.8
+
+Spearman(alignment       , delta) = +0.131 (p=0.643)
+Spearman(hf_product      , delta) = +0.211 (p=0.450)
+Spearman(overlap         , delta) = +0.014 (p=0.960)
+Spearman(class_error_corr, delta) = -0.225 (p=0.419)
+Spearman(same_mechanism  , delta) = -0.047 (p=0.867)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+--- fold2 s29 01:27:51
+defocus   level 0.238  acc  73.30
+motion    level 0.290  acc  76.21
+noise     level 0.304  acc  75.24
+rain      level 0.373  acc  76.21
+pixelate  level 1.000  acc  17.48
+impulse   level 0.216  acc  75.73
+
+pair                    err_ab   indep  overlap   delta       E     cos
+motion+rain               54.4    34.0     13.6   +20.4   +21.8  -0.046
+defocus+rain              52.4    37.4     13.1   +15.0   +17.0  -0.114
+noise+impulse             49.5    35.0     14.1   +14.6   +15.5  +0.467
+defocus+motion            44.7    32.0     18.4   +12.6    +9.2  +0.871
+rain+impulse              45.1    32.5     15.5   +12.6   +12.1  +0.118
+motion+impulse            39.3    34.5     13.6    +4.9    +6.3  +0.020
+motion+noise              42.2    38.3     10.2    +3.9    +8.7  -0.117
+noise+rain                41.7    37.9     10.7    +3.9    +8.3  -0.000
+defocus+noise             40.8    42.7      8.7    -1.9    +4.4  -0.303
+defocus+impulse           35.4    37.9     13.1    -2.4    -0.5  -0.058
+noise+pixelate            82.5    85.4     21.8    -2.9    -9.7  +0.169
+defocus+pixelate          81.6    88.8     20.4    -7.3   -12.6  +0.106
+motion+pixelate           80.1    88.3     18.0    -8.3   -11.2  +0.149
+rain+pixelate             74.8    88.8     17.5   -14.1   -16.5  +0.093
+pixelate+impulse          62.1    87.4     19.4   -25.2   -29.6  +0.137
+
+Spearman(cos, E)        = -0.171 (p=0.541)
+Spearman(cos, delta)    = -0.145 (p=0.606)
+Spearman(overlap, E)    = -0.460 (p=0.085)
+Spearman(overlap, delta)= -0.414 (p=0.125)
+additive R^2 on E       = 0.859
+additive R^2 on delta   = 0.699
+mean delta = +1.7 pp, mean E = +1.6 pp
+main effects on delta: rain +7.7  motion +6.6  noise +2.6  defocus +2.2  impulse -0.7  pixelate -16.2
+defocus   level 0.295  hf_ratio 0.140
+motion    level 0.520  hf_ratio 0.198
+noise     level 0.438  hf_ratio 9.313
+rain      level 0.568  hf_ratio 1.425
+pixelate  level 0.302  hf_ratio 1.124
+impulse   level 0.311  hf_ratio 14.200
+
+pair                     align  overlap  class_r  hf_prod   delta
+motion+rain             +0.284     17.0   -0.029    0.282   +20.4
+defocus+rain            +0.202     16.0   -0.172    0.199   +15.0
+noise+impulse           +0.614     25.2   +0.661  132.250   +14.6
+defocus+motion          +0.557     21.8   +0.856    0.028   +12.6
+rain+impulse            +0.343     17.5   -0.247   20.240   +12.6
+motion+impulse          +0.310     19.4   +0.842    2.809    +4.9
+motion+noise            +0.315     14.1   +0.393    1.842    +3.9
+noise+rain              +0.315     14.6   -0.027   13.276    +3.9
+defocus+noise           +0.242     13.6   +0.114    1.302    -1.9
+defocus+impulse         +0.242     18.9   +0.644    1.986    -2.4
+noise+pixelate          +0.498     25.7   +0.797   10.470    -2.9
+defocus+pixelate        +0.291     15.0   -0.154    0.157    -7.3
+motion+pixelate         +0.359     16.5   +0.096    0.222    -8.3
+rain+pixelate           +0.340     15.5   -0.223    1.602   -14.1
+pixelate+impulse        +0.479     21.8   +0.274   15.962   -25.2
+
+Spearman(alignment       , delta) = -0.166 (p=0.553)
+Spearman(hf_product      , delta) = -0.027 (p=0.924)
+Spearman(overlap         , delta) = +0.098 (p=0.729)
+Spearman(class_error_corr, delta) = +0.036 (p=0.899)
+Spearman(same_mechanism  , delta) = +0.110 (p=0.695)
+
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 185, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in main
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 171, in <listcomp>
+    mask = np.array([_group(r) == mechanism for r in records])
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_predictors.py", line 82, in _group
+    ma, mb = MECHANISM[record["a"]], MECHANISM[record["b"]]
+KeyError: 'a'
+=== SECOND PASS DONE 01:28:22

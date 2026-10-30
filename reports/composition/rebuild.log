@@ -1,0 +1,278 @@
+=== rebuild 01:36:18
+--- fold0 s17 target20 01:36:18
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold0 s17 target10 01:36:22
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold0 s29 target20 01:36:26
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold0 s29 target10 01:36:30
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold1 s17 target20 01:36:35
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold1 s17 target10 01:36:39
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold1 s29 target20 01:36:43
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold1 s29 target10 01:36:48
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold2 s17 target20 01:36:52
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold2 s17 target10 01:36:56
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold2 s29 target20 01:37:01
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+--- fold2 s29 target10 01:37:05
+Traceback (most recent call last):
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 199, in <module>
+    main()
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/composition_interaction.py", line 85, in main
+    model, settings = ee.load_any(run)
+  File "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust/scripts/explore_eval.py", line 47, in load_any
+    return model.cuda(), settings
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 900, in _apply
+    module._apply(fn)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 927, in _apply
+    param_applied = fn(param)
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1050, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/uestc/anaconda3/envs/copt_cuda/lib/python3.10/site-packages/torch/cuda/__init__.py", line 319, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: CUDA driver initialization failed, you might not have a CUDA gpu.
+=== REBUILD DONE 01:37:09
