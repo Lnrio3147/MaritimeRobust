@@ -16,9 +16,20 @@ import torch.nn.functional as F
 from maritime_robust.engine import build_model
 
 DIMS = {"convnext_tiny": 768, "swin_t": 768, "resnet50": 2048}
-METHODS = ("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3")
+METHODS = ("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1")
+CLIP = 0.99
 CG_MEAN = torch.tensor([.485, .456, .406]).view(1, 3, 1, 1)
 CG_STD = torch.tensor([.229, .224, .225]).view(1, 3, 1, 1)
+
+
+def clip_mask(x):
+    """M1: per-pixel mask of censored (sensor-clipped) evidence.
+
+    ``x`` is a ``[0, 1]`` image tensor; a pixel counts as censored as soon as any
+    channel reaches the clip ceiling, because the underlying scene value is then
+    unobservable rather than merely bright.
+    """
+    return (x.amax(x.dim() - 3, keepdim=True) >= CLIP).to(x.dtype)
 
 
 def retinex(x, kernel=31):
@@ -100,8 +111,31 @@ class MethodModel(nn.Module):
             self.head = nn.Linear(dim, num_classes)
         else:
             self.head = nn.Linear(dim, num_classes)
+        if method == "m1":
+            # Widen the patchify stem to take the mask as a fourth channel. The
+            # new weights start at zero, so the arm begins numerically identical
+            # to the "none" arm and the mask has to earn its gradient.
+            stem = self.features[0][0]
+            conv = nn.Conv2d(stem.in_channels + 1, stem.out_channels, stem.kernel_size,
+                             stem.stride, stem.padding, bias=stem.bias is not None)
+            with torch.no_grad():
+                conv.weight.zero_()
+                conv.weight[:, :stem.in_channels].copy_(stem.weight)
+                if stem.bias is not None:
+                    conv.bias.copy_(stem.bias)
+            self.features[0][0] = conv
 
     def features_of(self, x):
+        if self.method == "m1":
+            feat = self.features(x)
+            # Classify from uncensored evidence only: average the feature map
+            # over the pixels that were not clipped, with a small floor so a
+            # fully censored image still yields a (weak) descriptor.
+            weight = 1.0 - F.adaptive_avg_pool2d(x[:, 3:4].clamp(0, 1), feat.shape[-2:])
+            weight = weight + 0.05
+            pooled = ((feat * weight).sum((2, 3), keepdim=True)
+                      / weight.sum((2, 3), keepdim=True))
+            return torch.flatten(self.norm(pooled), 1)
         return torch.flatten(self.norm(self.avgpool(self.features(x))), 1)
 
     def forward(self, x):

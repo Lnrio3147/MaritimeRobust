@@ -39,7 +39,7 @@ from maritime_robust.degradations import corrupt, corruption_seed  # noqa: E402
 from maritime_robust.engine import (ShipDataset, combined_recipe, loader,  # noqa: E402
                                     predict)
 from maritime_robust.methods import build as build_method, load_imagenet22k  # noqa: E402
-from maritime_robust.methods.augment import KINDS, AugDataset  # noqa: E402
+from maritime_robust.methods.augment import KINDS, AugDataset, MaskedClean  # noqa: E402
 
 MEAN, STD, FILL = [.485, .456, .406], [.229, .224, .225], (124, 116, 104)
 PAIRS = [("haze", "glare"), ("haze", "cloud")]
@@ -95,7 +95,7 @@ def main():
     ap.add_argument("--fold", type=int, required=True)
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--method", default="none",
-                    choices=("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3"))
+                    choices=("none", "r3", "i1", "t1", "i2", "r1", "t2", "t3", "m1"))
     ap.add_argument("--model", default="convnext_tiny")
     ap.add_argument("--epochs", type=int, default=24)
     ap.add_argument("--lambda-consistency", type=float, default=0.5)
@@ -171,11 +171,12 @@ def main():
         scaler = torch.amp.GradScaler("cuda")
         if args.method == "t1":
             ds = PairDataset(train_rows, seed=args.seed)
-        elif args.method in ("t2", "t3"):
+        elif args.method in ("t2", "t3", "m1"):
             ds = AugDataset(train_rows, seed=args.seed, curriculum=args.method == "t3",
-                            total_epochs=args.epochs)
+                            total_epochs=args.epochs, with_mask=args.method == "m1")
         else:
             ds = ShipDataset(train_rows, train=True, augmentation="combined", seed=args.seed)
+        val_ds = MaskedClean(val_rows) if args.method == "m1" else ShipDataset(val_rows)
         # T2: group DRO weights over the six degradation groups
         q = torch.full((len(KINDS),), 1.0 / len(KINDS), device="cuda")
         eta, scale = 0.05, 1.0
@@ -190,7 +191,7 @@ def main():
                 if args.method == "t1":
                     x, single, y = batch
                     single = single.cuda(non_blocking=True)
-                elif args.method in ("t2", "t3"):
+                elif args.method in ("t2", "t3", "m1"):
                     x, y, kind = batch
                     kind = kind.cuda(non_blocking=True)
                 else:
@@ -228,7 +229,7 @@ def main():
                 loss_sum += loss.item() * len(y)
                 correct += (logits.argmax(1) == y).sum().item()
                 budget.check()
-            result, _ = predict(model, ShipDataset(val_rows), n, batch_size, workers, budget)
+            result, _ = predict(model, val_ds, n, batch_size, workers, budget)
             record = {"epoch": epoch + 1, "train_loss": loss_sum / len(ds),
                       "train_accuracy": correct / len(ds), "val_macro_f1": result["macro_f1"],
                       "val_accuracy": result["accuracy"], "lr": optimizer.param_groups[0]["lr"],

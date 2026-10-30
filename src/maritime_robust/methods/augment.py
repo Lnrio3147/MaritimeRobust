@@ -13,6 +13,7 @@ from __future__ import annotations
 import json
 
 import numpy as np
+import torch
 from PIL import Image, ImageOps
 from torch.utils.data import Dataset
 from torchvision.transforms import functional as TF
@@ -20,18 +21,43 @@ from torchvision.transforms import functional as TF
 from maritime_robust.common import ROOT, stable_seed
 from maritime_robust.degradations import corrupt, corruption_seed
 from maritime_robust.engine import combined_recipe
+from maritime_robust.methods import clip_mask
 
 MEAN, STD, FILL = [.485, .456, .406], [.229, .224, .225], (124, 116, 104)
 KINDS = ("clean", "haze", "cloud", "glare", "haze+glare", "haze+cloud")
 KIND_INDEX = {k: i for i, k in enumerate(KINDS)}
 
 
+class MaskedClean(Dataset):
+    """Validation view for M1: same geometry as ``ShipDataset(val_rows)`` (contain
+    then pad, no augmentation, no corruption) with the mask channel appended."""
+
+    META = json.dumps({"kind": "clean", "severity": 0, "domain": "matched",
+                       "placement": "random"}, separators=(",", ":"))
+
+    def __init__(self, rows):
+        self.rows = rows
+
+    def __len__(self):
+        return len(self.rows)
+
+    def __getitem__(self, index):
+        row = self.rows[index]
+        with Image.open(ROOT / row["path"]) as handle:
+            image = handle.convert("RGB")
+        image = ImageOps.contain(image, (224, 224), Image.Resampling.BICUBIC)
+        raw = TF.to_tensor(ImageOps.pad(image, (224, 224), Image.Resampling.BICUBIC, color=FILL))
+        tensor = torch.cat([TF.normalize(raw, MEAN, STD), clip_mask(raw)], 0)
+        return tensor, row["label"], index, self.META
+
+
 class AugDataset(Dataset):
-    def __init__(self, rows, seed=17, curriculum=False, total_epochs=40):
+    def __init__(self, rows, seed=17, curriculum=False, total_epochs=40, with_mask=False):
         self.rows = rows
         self.seed = seed
         self.epoch = 0
         self.curriculum = curriculum
+        self.with_mask = with_mask
         self.total_epochs = total_epochs
         self.recipe = combined_recipe()
         self.clean_probability = self.recipe["clean_probability"]
@@ -85,5 +111,8 @@ class AugDataset(Dataset):
         image, _ = corrupt(image, seed=seed, kind=condition["kind"],
                            severity=condition["severity"], domain="matched", placement="random")
         image = ImageOps.pad(image, (224, 224), method=Image.Resampling.BICUBIC, color=FILL)
-        tensor = TF.normalize(TF.to_tensor(image), MEAN, STD)
+        raw = TF.to_tensor(image)
+        tensor = TF.normalize(raw, MEAN, STD)
+        if self.with_mask:
+            tensor = torch.cat([tensor, clip_mask(raw)], 0)
         return tensor, row["label"], KIND_INDEX[condition["kind"]]
