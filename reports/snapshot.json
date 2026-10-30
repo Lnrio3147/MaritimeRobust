@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-10-30T12:45:59+00:00",
+ "generated_at": "2026-10-30T15:05:33+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "71d6b696034156e86350cfcb8dd0a37e6dff2e02",
+  "commit": "5fae20aeca16ea301ed6177555687c44c5f18fdf",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 710
+  "tracked_files": 723
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -297,6 +297,14 @@
    "sha256": "179b126e66caf1efefb10d9574030ed8f94509415c386b06fcf0f449d84ec1dc",
    "bytes": 2699
   },
+  "scripts/selective_gate.py": {
+   "sha256": "71772049f2e52bcbc084d714751ceff5b8a992abc4156876d591882c37677b11",
+   "bytes": 2430
+  },
+  "scripts/selective_probe.py": {
+   "sha256": "f3812503472f1bc92b4d91eba903b49d13b84b989ed8efd957950805f347fe2d",
+   "bytes": 7077
+  },
   "scripts/severity_curve.py": {
    "sha256": "7317af183dec6c598ed87891955ff4a2e6a3c11371b301c14753755e3fd1734e",
    "bytes": 8223
@@ -497,6 +505,10 @@
    "sha256": "5d998938cc689ca9fcbd126e3ba6a343617c98ed25e82d1b2954a6f66237739f",
    "bytes": 2545
   },
+  "reports/PREREG_SELECTIVE_PROBE.md": {
+   "sha256": "3a9bd19e97979b34e09e8b2811ee56f7c5e5d7edae1f991ca458e6b2e592b95d",
+   "bytes": 3882
+  },
   "reports/PREREG_SEVERITY_2_4.md": {
    "sha256": "d268022ae044ef17924a90fe7595d68c0a2a169358edc79761a114df400f0839",
    "bytes": 3558
@@ -560,6 +572,10 @@
   "reports/SATURATION_PROBE.md": {
    "sha256": "6a3e1b2623a5d0998b62d7f865a6ff1155584851d64a520077742ece08b70da2",
    "bytes": 2673
+  },
+  "reports/SELECTIVE_PROBE.md": {
+   "sha256": "9daf54b2d65a525a7551478dabf9ef63757d69c1c664376ee0f67e268e250dde",
+   "bytes": 4104
   },
   "reports/SEVERITY_CURVE.md": {
    "sha256": "661ddf90e76235b6cb7b63c2c2f62f3e74e21b6218576a8d7f67be2b99065aa8",
@@ -830,8 +846,8 @@
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "7c06831fc1fd2ea63bd07ddd4a1515885e8d547c277063c4e8c847e79668ca8a",
-   "bytes": 348558
+   "sha256": "c94938aa2cf79d31250a7584b3c7fcdc8ac31552f8d23ae63f69930fb866843b",
+   "bytes": 365038
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",

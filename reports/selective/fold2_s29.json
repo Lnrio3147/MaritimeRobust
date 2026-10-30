@@ -1,0 +1,816 @@
+{
+  "run": "runs/fgsc23_civ8_fold2/convnext_tiny_none_e40_s29",
+  "fold": 2,
+  "seed": 29,
+  "manifest": "data/manifests/folds/fgsc23_civ8_fold2.jsonl",
+  "n_val": 206,
+  "n_train": 412,
+  "cells": {
+    "clean": {
+      "kind": "clean",
+      "severity": 0,
+      "domain": "matched",
+      "layer": "clean",
+      "accuracy": 0.8495145631067961,
+      "error_rate": 0.15048543689320387,
+      "auroc": {
+        "ent": 0.8597235023041475,
+        "unc": 0.8501382488479262,
+        "margin": 0.8444239631336405,
+        "drift_nearest": 0.8589861751152074,
+        "drift_pred": 0.8593548387096774
+      }
+    },
+    "matched_haze_1": {
+      "kind": "haze",
+      "severity": 1,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8674568965517241,
+        "unc": 0.8624281609195402,
+        "margin": 0.8584770114942529,
+        "drift_nearest": 0.8626077586206896,
+        "drift_pred": 0.8615301724137931
+      }
+    },
+    "matched_haze_2": {
+      "kind": "haze",
+      "severity": 2,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8710488505747126,
+        "unc": 0.8615301724137931,
+        "margin": 0.8538074712643678,
+        "drift_nearest": 0.8644037356321839,
+        "drift_pred": 0.8638649425287356
+      }
+    },
+    "matched_haze_3": {
+      "kind": "haze",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8300970873786407,
+      "error_rate": 0.16990291262135923,
+      "auroc": {
+        "ent": 0.895405179615706,
+        "unc": 0.8895572263993317,
+        "margin": 0.8820384294068505,
+        "drift_nearest": 0.8743525480367585,
+        "drift_pred": 0.8741854636591478
+      }
+    },
+    "matched_haze_4": {
+      "kind": "haze",
+      "severity": 4,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8252427184466019,
+      "error_rate": 0.17475728155339806,
+      "auroc": {
+        "ent": 0.890032679738562,
+        "unc": 0.8826797385620915,
+        "margin": 0.87859477124183,
+        "drift_nearest": 0.8848039215686274,
+        "drift_pred": 0.8851307189542483
+      }
+    },
+    "matched_haze_5": {
+      "kind": "haze",
+      "severity": 5,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8106796116504854,
+      "error_rate": 0.18932038834951456,
+      "auroc": {
+        "ent": 0.8909872562567174,
+        "unc": 0.8851527713803163,
+        "margin": 0.8823890680178106,
+        "drift_nearest": 0.8582834331337326,
+        "drift_pred": 0.8596652848149854
+      }
+    },
+    "matched_cloud_1": {
+      "kind": "cloud",
+      "severity": 1,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8398058252427184,
+      "error_rate": 0.16019417475728157,
+      "auroc": {
+        "ent": 0.8551410054300228,
+        "unc": 0.8516377649325626,
+        "margin": 0.8518129269574356,
+        "drift_nearest": 0.8477842003853564,
+        "drift_pred": 0.8488351725345945
+      }
+    },
+    "matched_cloud_2": {
+      "kind": "cloud",
+      "severity": 2,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8155339805825242,
+      "error_rate": 0.18446601941747573,
+      "auroc": {
+        "ent": 0.8917606516290727,
+        "unc": 0.8897243107769424,
+        "margin": 0.8878446115288221,
+        "drift_nearest": 0.8822055137844611,
+        "drift_pred": 0.8834586466165414
+      }
+    },
+    "matched_cloud_3": {
+      "kind": "cloud",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8500359195402298,
+        "unc": 0.8512931034482759,
+        "margin": 0.8500359195402298,
+        "drift_nearest": 0.8315373563218391,
+        "drift_pred": 0.8318965517241379
+      }
+    },
+    "matched_cloud_4": {
+      "kind": "cloud",
+      "severity": 4,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8627873563218391,
+        "unc": 0.8507543103448276,
+        "margin": 0.8473419540229885,
+        "drift_nearest": 0.8507543103448276,
+        "drift_pred": 0.8507543103448276
+      }
+    },
+    "matched_cloud_5": {
+      "kind": "cloud",
+      "severity": 5,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.7912621359223301,
+      "error_rate": 0.2087378640776699,
+      "auroc": {
+        "ent": 0.8800114138964189,
+        "unc": 0.8757312027393351,
+        "margin": 0.8714509915822514,
+        "drift_nearest": 0.8705949493508346,
+        "drift_pred": 0.8705949493508346
+      }
+    },
+    "matched_glare_1": {
+      "kind": "glare",
+      "severity": 1,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8631465517241379,
+        "unc": 0.8530890804597702,
+        "margin": 0.8485991379310345,
+        "drift_nearest": 0.8572198275862069,
+        "drift_pred": 0.8570402298850575
+      }
+    },
+    "matched_glare_2": {
+      "kind": "glare",
+      "severity": 2,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8252427184466019,
+      "error_rate": 0.17475728155339806,
+      "auroc": {
+        "ent": 0.8782679738562091,
+        "unc": 0.8756535947712418,
+        "margin": 0.8725490196078431,
+        "drift_nearest": 0.8709150326797386,
+        "drift_pred": 0.8709150326797386
+      }
+    },
+    "matched_glare_3": {
+      "kind": "glare",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8155339805825242,
+      "error_rate": 0.18446601941747573,
+      "auroc": {
+        "ent": 0.8663847117794486,
+        "unc": 0.8616854636591479,
+        "margin": 0.8583959899749374,
+        "drift_nearest": 0.856516290726817,
+        "drift_pred": 0.856203007518797
+      }
+    },
+    "matched_glare_4": {
+      "kind": "glare",
+      "severity": 4,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.7766990291262136,
+      "error_rate": 0.22330097087378642,
+      "auroc": {
+        "ent": 0.9059782608695652,
+        "unc": 0.8978260869565218,
+        "margin": 0.8932065217391304,
+        "drift_nearest": 0.8842391304347826,
+        "drift_pred": 0.8847826086956522
+      }
+    },
+    "matched_glare_5": {
+      "kind": "glare",
+      "severity": 5,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.7524271844660194,
+      "error_rate": 0.24757281553398058,
+      "auroc": {
+        "ent": 0.8492093611638204,
+        "unc": 0.8411132194813409,
+        "margin": 0.8347881087919039,
+        "drift_nearest": 0.8223908918406072,
+        "drift_pred": 0.8213788741302973
+      }
+    },
+    "matched_haze+glare_3": {
+      "kind": "haze+glare",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.8058252427184466,
+      "error_rate": 0.1941747572815534,
+      "auroc": {
+        "ent": 0.8753012048192771,
+        "unc": 0.8745481927710843,
+        "margin": 0.8707831325301205,
+        "drift_nearest": 0.85,
+        "drift_pred": 0.8504518072289157
+      }
+    },
+    "matched_haze+glare_5": {
+      "kind": "haze+glare",
+      "severity": 5,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.6359223300970874,
+      "error_rate": 0.3640776699029126,
+      "auroc": {
+        "ent": 0.7346564885496183,
+        "unc": 0.7334351145038168,
+        "margin": 0.7320101781170484,
+        "drift_nearest": 0.7268193384223919,
+        "drift_pred": 0.7274300254452927
+      }
+    },
+    "matched_haze+cloud_3": {
+      "kind": "haze+cloud",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.7912621359223301,
+      "error_rate": 0.2087378640776699,
+      "auroc": {
+        "ent": 0.8967042374090455,
+        "unc": 0.8867170780425168,
+        "margin": 0.883578256527322,
+        "drift_nearest": 0.8834355828220859,
+        "drift_pred": 0.8820088457697246
+      }
+    },
+    "matched_haze+cloud_5": {
+      "kind": "haze+cloud",
+      "severity": 5,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.7815533980582524,
+      "error_rate": 0.21844660194174756,
+      "auroc": {
+        "ent": 0.8338164251207729,
+        "unc": 0.8339544513457557,
+        "margin": 0.8368530020703934,
+        "drift_nearest": 0.8226363008971704,
+        "drift_pred": 0.8234644582470669
+      }
+    },
+    "shifted_haze_1": {
+      "kind": "haze",
+      "severity": 1,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8398058252427184,
+      "error_rate": 0.16019417475728157,
+      "auroc": {
+        "ent": 0.860746190225959,
+        "unc": 0.8544403573305307,
+        "margin": 0.8537397092310387,
+        "drift_nearest": 0.8525135750569277,
+        "drift_pred": 0.8521632510071816
+      }
+    },
+    "shifted_haze_2": {
+      "kind": "haze",
+      "severity": 2,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8398058252427184,
+      "error_rate": 0.16019417475728157,
+      "auroc": {
+        "ent": 0.8621474864249431,
+        "unc": 0.8567174636538798,
+        "margin": 0.8547906813802768,
+        "drift_nearest": 0.8586442459274829,
+        "drift_pred": 0.86022070415134
+      }
+    },
+    "shifted_haze_3": {
+      "kind": "haze",
+      "severity": 3,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8300970873786407,
+      "error_rate": 0.16990291262135923,
+      "auroc": {
+        "ent": 0.8810359231411863,
+        "unc": 0.8805346700083542,
+        "margin": 0.8813700918964077,
+        "drift_nearest": 0.868671679197995,
+        "drift_pred": 0.8678362573099415
+      }
+    },
+    "shifted_haze_4": {
+      "kind": "haze",
+      "severity": 4,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8106796116504854,
+      "error_rate": 0.18932038834951456,
+      "auroc": {
+        "ent": 0.8962075848303394,
+        "unc": 0.8991248272685398,
+        "margin": 0.8989712881928451,
+        "drift_nearest": 0.8779364348226624,
+        "drift_pred": 0.8782435129740519
+      }
+    },
+    "shifted_haze_5": {
+      "kind": "haze",
+      "severity": 5,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.7864077669902912,
+      "error_rate": 0.21359223300970873,
+      "auroc": {
+        "ent": 0.8911335578002245,
+        "unc": 0.8919753086419753,
+        "margin": 0.8911335578002245,
+        "drift_nearest": 0.8745791245791246,
+        "drift_pred": 0.877104377104377
+      }
+    },
+    "shifted_cloud_1": {
+      "kind": "cloud",
+      "severity": 1,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8543689320388349,
+      "error_rate": 0.14563106796116504,
+      "auroc": {
+        "ent": 0.8227272727272728,
+        "unc": 0.8172348484848485,
+        "margin": 0.8113636363636364,
+        "drift_nearest": 0.8179924242424242,
+        "drift_pred": 0.81875
+      }
+    },
+    "shifted_cloud_2": {
+      "kind": "cloud",
+      "severity": 2,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8252427184466019,
+      "error_rate": 0.17475728155339806,
+      "auroc": {
+        "ent": 0.8552287581699346,
+        "unc": 0.8625816993464053,
+        "margin": 0.8627450980392157,
+        "drift_nearest": 0.8383986928104575,
+        "drift_pred": 0.8411764705882353
+      }
+    },
+    "shifted_cloud_3": {
+      "kind": "cloud",
+      "severity": 3,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.7864077669902912,
+      "error_rate": 0.21359223300970873,
+      "auroc": {
+        "ent": 0.8477833894500562,
+        "unc": 0.8480639730639731,
+        "margin": 0.8468013468013468,
+        "drift_nearest": 0.8308080808080808,
+        "drift_pred": 0.8316498316498316
+      }
+    },
+    "shifted_cloud_4": {
+      "kind": "cloud",
+      "severity": 4,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.7864077669902912,
+      "error_rate": 0.21359223300970873,
+      "auroc": {
+        "ent": 0.8187429854096521,
+        "unc": 0.8195847362514029,
+        "margin": 0.8191638608305275,
+        "drift_nearest": 0.8058361391694725,
+        "drift_pred": 0.8040123456790124
+      }
+    },
+    "shifted_cloud_5": {
+      "kind": "cloud",
+      "severity": 5,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.7766990291262136,
+      "error_rate": 0.22330097087378642,
+      "auroc": {
+        "ent": 0.8332880434782609,
+        "unc": 0.825679347826087,
+        "margin": 0.8237771739130435,
+        "drift_nearest": 0.8298913043478261,
+        "drift_pred": 0.8302989130434782
+      }
+    },
+    "shifted_glare_1": {
+      "kind": "glare",
+      "severity": 1,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8349514563106796,
+      "error_rate": 0.1650485436893204,
+      "auroc": {
+        "ent": 0.8746580027359782,
+        "unc": 0.8661080711354309,
+        "margin": 0.8642270861833106,
+        "drift_nearest": 0.8732900136798906,
+        "drift_pred": 0.8714090287277702
+      }
+    },
+    "shifted_glare_2": {
+      "kind": "glare",
+      "severity": 2,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8726652298850575,
+        "unc": 0.8649425287356322,
+        "margin": 0.860632183908046,
+        "drift_nearest": 0.8685344827586207,
+        "drift_pred": 0.8676364942528736
+      }
+    },
+    "shifted_glare_3": {
+      "kind": "glare",
+      "severity": 3,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8398058252427184,
+      "error_rate": 0.16019417475728157,
+      "auroc": {
+        "ent": 0.8675775091960063,
+        "unc": 0.8572429497284989,
+        "margin": 0.8483096864599755,
+        "drift_nearest": 0.8653004028726572,
+        "drift_pred": 0.8645997547731652
+      }
+    },
+    "shifted_glare_4": {
+      "kind": "glare",
+      "severity": 4,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.8155339805825242,
+      "error_rate": 0.18446601941747573,
+      "auroc": {
+        "ent": 0.8986528822055138,
+        "unc": 0.8950501253132832,
+        "margin": 0.8928571428571429,
+        "drift_nearest": 0.8818922305764411,
+        "drift_pred": 0.8804824561403509
+      }
+    },
+    "shifted_glare_5": {
+      "kind": "glare",
+      "severity": 5,
+      "domain": "shifted",
+      "layer": "single",
+      "accuracy": 0.7864077669902912,
+      "error_rate": 0.21359223300970873,
+      "auroc": {
+        "ent": 0.8907126823793491,
+        "unc": 0.8852413019079686,
+        "margin": 0.8817340067340067,
+        "drift_nearest": 0.8691077441077442,
+        "drift_pred": 0.867003367003367
+      }
+    },
+    "shifted_haze+glare_3": {
+      "kind": "haze+glare",
+      "severity": 3,
+      "domain": "shifted",
+      "layer": "combo",
+      "accuracy": 0.8300970873786407,
+      "error_rate": 0.16990291262135923,
+      "auroc": {
+        "ent": 0.8551378446115289,
+        "unc": 0.8536340852130326,
+        "margin": 0.8516290726817043,
+        "drift_nearest": 0.8197159565580618,
+        "drift_pred": 0.8212197159565581
+      }
+    },
+    "shifted_haze+glare_5": {
+      "kind": "haze+glare",
+      "severity": 5,
+      "domain": "shifted",
+      "layer": "combo",
+      "accuracy": 0.7281553398058253,
+      "error_rate": 0.27184466019417475,
+      "auroc": {
+        "ent": 0.8069047619047619,
+        "unc": 0.825,
+        "margin": 0.8252380952380952,
+        "drift_nearest": 0.7903571428571429,
+        "drift_pred": 0.791547619047619
+      }
+    },
+    "shifted_haze+cloud_3": {
+      "kind": "haze+cloud",
+      "severity": 3,
+      "domain": "shifted",
+      "layer": "combo",
+      "accuracy": 0.7912621359223301,
+      "error_rate": 0.2087378640776699,
+      "auroc": {
+        "ent": 0.8501926095020688,
+        "unc": 0.8513339991439578,
+        "margin": 0.8551861891853332,
+        "drift_nearest": 0.8277928377799971,
+        "drift_pred": 0.8293622485375945
+      }
+    },
+    "shifted_haze+cloud_5": {
+      "kind": "haze+cloud",
+      "severity": 5,
+      "domain": "shifted",
+      "layer": "combo",
+      "accuracy": 0.7378640776699029,
+      "error_rate": 0.2621359223300971,
+      "auroc": {
+        "ent": 0.7967836257309941,
+        "unc": 0.79203216374269,
+        "margin": 0.7875243664717348,
+        "drift_nearest": 0.8044590643274854,
+        "drift_pred": 0.8042153996101364
+      }
+    },
+    "matched_cloud_3_center": {
+      "kind": "cloud",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8252427184466019,
+      "error_rate": 0.17475728155339806,
+      "auroc": {
+        "ent": 0.8565359477124183,
+        "unc": 0.8522875816993464,
+        "margin": 0.8521241830065359,
+        "drift_nearest": 0.8344771241830066,
+        "drift_pred": 0.8343137254901961
+      }
+    },
+    "matched_glare_3_center": {
+      "kind": "glare",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8009708737864077,
+      "error_rate": 0.19902912621359223,
+      "auroc": {
+        "ent": 0.8835181079083518,
+        "unc": 0.8821877309682188,
+        "margin": 0.8770140428677013,
+        "drift_nearest": 0.8495195861049519,
+        "drift_pred": 0.8536585365853658
+      }
+    },
+    "matched_cloud_3_border": {
+      "kind": "cloud",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8543689320388349,
+      "error_rate": 0.14563106796116504,
+      "auroc": {
+        "ent": 0.8458333333333333,
+        "unc": 0.8410984848484848,
+        "margin": 0.8329545454545455,
+        "drift_nearest": 0.825,
+        "drift_pred": 0.8221590909090909
+      }
+    },
+    "matched_glare_3_border": {
+      "kind": "glare",
+      "severity": 3,
+      "domain": "matched",
+      "layer": "single",
+      "accuracy": 0.8446601941747572,
+      "error_rate": 0.1553398058252427,
+      "auroc": {
+        "ent": 0.8760775862068966,
+        "unc": 0.8613505747126436,
+        "margin": 0.8547054597701149,
+        "drift_nearest": 0.8676364942528736,
+        "drift_pred": 0.8683548850574713
+      }
+    },
+    "matched_haze+glare_2": {
+      "kind": "haze+glare",
+      "severity": 2,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.8252427184466019,
+      "error_rate": 0.17475728155339806,
+      "auroc": {
+        "ent": 0.8861111111111111,
+        "unc": 0.8874183006535947,
+        "margin": 0.888235294117647,
+        "drift_nearest": 0.8581699346405228,
+        "drift_pred": 0.8583333333333333
+      }
+    },
+    "matched_haze+glare_4": {
+      "kind": "haze+glare",
+      "severity": 4,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.7864077669902912,
+      "error_rate": 0.21359223300970873,
+      "auroc": {
+        "ent": 0.8560606060606061,
+        "unc": 0.8463804713804713,
+        "margin": 0.8437149270482603,
+        "drift_nearest": 0.82996632996633,
+        "drift_pred": 0.8312289562289562
+      }
+    },
+    "matched_haze+cloud_2": {
+      "kind": "haze+cloud",
+      "severity": 2,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.8155339805825242,
+      "error_rate": 0.18446601941747573,
+      "auroc": {
+        "ent": 0.8784461152882206,
+        "unc": 0.8751566416040101,
+        "margin": 0.8734335839598998,
+        "drift_nearest": 0.869204260651629,
+        "drift_pred": 0.8693609022556391
+      }
+    },
+    "matched_haze+cloud_4": {
+      "kind": "haze+cloud",
+      "severity": 4,
+      "domain": "matched",
+      "layer": "combo",
+      "accuracy": 0.8009708737864077,
+      "error_rate": 0.19902912621359223,
+      "auroc": {
+        "ent": 0.8619364375461936,
+        "unc": 0.8613451589061345,
+        "margin": 0.8614929785661493,
+        "drift_nearest": 0.844789356984479,
+        "drift_pred": 0.8462675535846268
+      }
+    }
+  },
+  "summary": {
+    "combo_s5": {
+      "n": 4,
+      "conditions": [
+        "matched_haze+cloud_5",
+        "matched_haze+glare_5",
+        "shifted_haze+cloud_5",
+        "shifted_haze+glare_5"
+      ],
+      "auc": {
+        "ent": 0.7930403253265368,
+        "unc": 0.7961054323980655,
+        "margin": 0.7954064104743179,
+        "drift_nearest": 0.7860679616260475,
+        "drift_pred": 0.7866643755875287
+      },
+      "mean_error_rate": 0.279126213592233
+    },
+    "combo_low": {
+      "n": 8,
+      "conditions": [
+        "matched_haze+cloud_2",
+        "matched_haze+cloud_3",
+        "matched_haze+cloud_4",
+        "matched_haze+glare_2",
+        "matched_haze+glare_3",
+        "matched_haze+glare_4",
+        "shifted_haze+cloud_3",
+        "shifted_haze+glare_3"
+      ],
+      "auc": {
+        "ent": 0.8699862707935064,
+        "unc": 0.8670667409643502,
+        "margin": 0.8660066793270546,
+        "drift_nearest": 0.8478842824253883,
+        "drift_pred": 0.8485291703619184
+      },
+      "mean_error_rate": 0.1941747572815534
+    },
+    "single": {
+      "n": 34,
+      "conditions": [
+        "matched_cloud_1",
+        "matched_cloud_2",
+        "matched_cloud_3",
+        "matched_cloud_3_border",
+        "matched_cloud_3_center",
+        "matched_cloud_4",
+        "matched_cloud_5",
+        "matched_glare_1",
+        "matched_glare_2",
+        "matched_glare_3",
+        "matched_glare_3_border",
+        "matched_glare_3_center",
+        "matched_glare_4",
+        "matched_glare_5",
+        "matched_haze_1",
+        "matched_haze_2",
+        "matched_haze_3",
+        "matched_haze_4",
+        "matched_haze_5",
+        "shifted_cloud_1",
+        "shifted_cloud_2",
+        "shifted_cloud_3",
+        "shifted_cloud_4",
+        "shifted_cloud_5",
+        "shifted_glare_1",
+        "shifted_glare_2",
+        "shifted_glare_3",
+        "shifted_glare_4",
+        "shifted_glare_5",
+        "shifted_haze_1",
+        "shifted_haze_2",
+        "shifted_haze_3",
+        "shifted_haze_4",
+        "shifted_haze_5"
+      ],
+      "auc": {
+        "ent": 0.8692037218284977,
+        "unc": 0.864450082005016,
+        "margin": 0.8611690210232833,
+        "drift_nearest": 0.8561364317631207,
+        "drift_pred": 0.8562149696558379
+      },
+      "mean_error_rate": 0.17975442604226158
+    },
+    "clean": {
+      "n": 1,
+      "conditions": [
+        "clean"
+      ],
+      "auc": {
+        "ent": 0.8597235023041475,
+        "unc": 0.8501382488479262,
+        "margin": 0.8444239631336405,
+        "drift_nearest": 0.8589861751152074,
+        "drift_pred": 0.8593548387096774
+      },
+      "mean_error_rate": 0.15048543689320387
+    }
+  }
+}
