@@ -1,0 +1,43 @@
+note: "version 2" Tectonic command-line interface activated
+note: Running TeX ...
+warning: lineno.sty:296: Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
+note: downloading SHA256SUM
+note: downloading hyperref.sty
+note: downloading ltxcmds.sty
+note: downloading iftex.sty
+note: downloading pdftexcmds.sty
+note: downloading infwarerr.sty
+note: downloading kvsetkeys.sty
+note: downloading kvdefinekeys.sty
+note: downloading pdfescape.sty
+note: downloading hycolor.sty
+note: downloading letltxmacro.sty
+note: downloading auxhook.sty
+note: downloading kvoptions.sty
+note: downloading pd1enc.def
+note: downloading intcalc.sty
+note: downloading etexcmds.sty
+note: downloading puenc.def
+note: downloading backref.sty
+note: downloading rerunfilecheck.sty
+note: downloading uniquecounter.sty
+note: downloading bigintcalc.sty
+note: downloading pzdr.tfm
+note: downloading bitset.sty
+note: downloading hxetex.def
+note: downloading stringenc.sty
+note: downloading nameref.sty
+note: downloading refcount.sty
+note: downloading gettitlestring.sty
+note: downloading lmroman9-regular.otf
+note: downloading msam5.tfm
+note: downloading msbm5.tfm
+warning: body:53: Missing character: There is no ��� (U+2248) in font [lmroman10-regular]:mapping=tex-text;!
+warning: could not represent character "≈" (0x2248) in font "[lmroman10-regular]:mapping=tex-text;"
+warning:   you may need to load the `fontspec` package and use (e.g.) \setmainfont to
+warning:   choose a different font that covers the unrepresentable character(s)
+error: body:62: LaTeX Error: File `figures/fig2_compound_vs_single' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help
+error: halted on potentially-recoverable error as specified

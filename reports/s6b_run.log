@@ -1,0 +1,21 @@
+=== s6b train 13:13:57
+--- s6b fold0 s17 13:13:57
+    (already trained, skipping)
+--- s6b fold0 s29 13:13:57
+    (already trained, skipping)
+--- s6b fold1 s17 13:13:57
+    (already trained, skipping)
+--- s6b fold1 s29 13:13:57
+    (already trained, skipping)
+--- s6b fold2 s17 13:13:57
+    (already trained, skipping)
+--- s6b fold2 s29 13:13:57
+    (already trained, skipping)
+=== s6b eval 13:13:57
+    (already evaluated)
+    (already evaluated)
+    (already evaluated)
+    (already evaluated)
+    (already evaluated)
+    (already evaluated)
+=== S6B DONE 13:13:57

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,11 @@ import torchvision
 from torchvision.transforms import functional as TF
 
 PROJECT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(PROJECT / "src"))
+sys.path.insert(0, str(PROJECT / "scripts"))
+
+from maritime_robust.external import cifar_c  # noqa: E402
+
 MEAN, STD = (0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616)
 
 
@@ -38,7 +44,8 @@ def main():
     summary = json.loads((run / "summary.json").read_text())
     checkpoint = torch.load(PROJECT / "runs_cifar" / run.name / "best.pt",
                             map_location="cuda", weights_only=False)
-    model = getattr(torchvision.models, checkpoint["settings"]["arch"])(num_classes=10).cuda()
+    model = cifar_c.build_resnet(checkpoint["settings"]["arch"],
+                             checkpoint["settings"].get("stem", "cifar"), 10).cuda()
     model.load_state_dict(checkpoint["model"])
     model.eval()
 

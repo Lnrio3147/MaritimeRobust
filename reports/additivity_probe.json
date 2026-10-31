@@ -1,0 +1,30 @@
+{
+  "run": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s17",
+  "fold": 0,
+  "seed": 17,
+  "model": "convnext_tiny",
+  "severity": 5,
+  "accuracy": 0.5533980582524272,
+  "pairs": {
+    "haze+glare": {
+      "rel_residual_mean": 0.8706977367401123,
+      "rel_residual_median": 0.7915964126586914,
+      "rel_residual_p90": 1.152209758758545,
+      "rel_residual_wrong": 0.9048334360122681,
+      "rel_residual_right": 0.8431497812271118,
+      "spearman_residual_vs_error": 0.058949025355719706,
+      "p_value": 0.3999774286005141,
+      "n_wrong": 92
+    },
+    "haze+cloud": {
+      "rel_residual_mean": 0.7837324142456055,
+      "rel_residual_median": 0.7587298154830933,
+      "rel_residual_p90": 0.9390565752983093,
+      "rel_residual_wrong": 0.8186573386192322,
+      "rel_residual_right": 0.7555474638938904,
+      "spearman_residual_vs_error": 0.20049236757474587,
+      "p_value": 0.00385862372153399,
+      "n_wrong": 92
+    }
+  }
+}

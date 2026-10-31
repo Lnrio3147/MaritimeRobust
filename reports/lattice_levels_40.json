@@ -1,0 +1,53 @@
+{
+  "target_pp": 40.0,
+  "fold": 0,
+  "seed": 17,
+  "checkpoint": "runs/fgsc23_civ8_fold0/convnext_tiny_none_e40_s17",
+  "clean_accuracy": 0.8446601941747572,
+  "levels": {
+    "defocus": 0.65,
+    "motion": 0.85,
+    "noise": 0.75,
+    "rain": 0.75,
+    "pixelate": 0.75,
+    "impulse": 0.75
+  },
+  "detail": {
+    "defocus": {
+      "level": 0.65,
+      "drop_pp": 41.262135922330096,
+      "max_drop_pp": 47.57281553398058,
+      "matched": true
+    },
+    "motion": {
+      "level": 0.85,
+      "drop_pp": 39.80582524271844,
+      "max_drop_pp": 40.291262135922324,
+      "matched": true
+    },
+    "noise": {
+      "level": 0.75,
+      "drop_pp": 42.23300970873786,
+      "max_drop_pp": 54.36893203883495,
+      "matched": true
+    },
+    "rain": {
+      "level": 0.75,
+      "drop_pp": 41.262135922330096,
+      "max_drop_pp": 60.19417475728155,
+      "matched": true
+    },
+    "pixelate": {
+      "level": 0.75,
+      "drop_pp": 37.864077669902905,
+      "max_drop_pp": 51.45631067961165,
+      "matched": true
+    },
+    "impulse": {
+      "level": 0.75,
+      "drop_pp": 41.262135922330096,
+      "max_drop_pp": 51.45631067961165,
+      "matched": true
+    }
+  }
+}

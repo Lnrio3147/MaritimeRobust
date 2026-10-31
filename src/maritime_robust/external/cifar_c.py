@@ -93,3 +93,25 @@ def pool(k, held=HELD_OUT):
     if k > len(order):
         raise ValueError(f"pool of {k} exceeds the {len(order)} non-held-out pairs")
     return order[:k]
+
+
+def build_resnet(arch="resnet18", stem="cifar", num_classes=10):
+    """A torchvision ResNet, optionally with the CIFAR stem.
+
+    torchvision's default stem is a 7x7 stride-2 convolution followed by a
+    max-pool, which discards three quarters of a 32x32 image before the first
+    residual block and costs several points of clean accuracy on CIFAR-10. The
+    CIFAR variant (3x3 stride 1, no pool) is the standard recipe; every number
+    in the replication uses it, and the flag exists so the choice is recorded
+    rather than implied.
+    """
+    import torch.nn as nn
+    import torchvision
+
+    model = getattr(torchvision.models, arch)(num_classes=num_classes)
+    if stem == "cifar":
+        model.conv1 = nn.Conv2d(3, 64, 3, stride=1, padding=1, bias=False)
+        model.maxpool = nn.Identity()
+    elif stem != "torchvision":
+        raise ValueError(f"unknown stem {stem!r}")
+    return model

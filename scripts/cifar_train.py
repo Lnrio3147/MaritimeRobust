@@ -73,6 +73,8 @@ class CifarTrain(torch.utils.data.Dataset):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--arch", default="resnet18")
+    ap.add_argument("--stem", default="cifar", choices=("cifar", "torchvision"),
+                    help="CIFAR-style 3x3 conv1 without max-pool, or torchvision's stem")
     ap.add_argument("--seed", type=int, default=17)
     ap.add_argument("--epochs", type=int, default=100)
     ap.add_argument("--batch-size", type=int, default=128)
@@ -99,15 +101,17 @@ def main():
                  or (cifar_c.pool(args.pool_k) if args.pool_k else cifar_c.all_pairs()))
         if args.aug == "singles":
             pairs = [(n, n) for n in cifar_c.NAMES]
-    suffix = args.suffix or (f"_{args.aug}" + (f"_{args.arch}" if args.aug == "clean" else "")
+    suffix = args.suffix or (f"_{args.aug}"
                              + (f"_k{args.pool_k}" if args.pool_k else ""))
-    tag = f"cifar10_{args.arch}{suffix}_s{args.seed}"
+    stem = "" if args.stem == "torchvision" else f"_{args.stem}"
+    tag = f"cifar10_{args.arch}{stem}{suffix}_s{args.seed}"
     out = ROOT / "runs_cifar" / tag
     if (out / "complete.json").exists():
         raise SystemExit(f"{out} already completed")
     out.mkdir(parents=True, exist_ok=True)
 
-    settings = {"dataset": "cifar10", "arch": args.arch, "aug": args.aug,
+    settings = {"dataset": "cifar10", "arch": args.arch, "stem": args.stem,
+                "aug": args.aug,
                 "pairs": ["+".join(p) for p in pairs], "severity": args.severity,
                 "held_out": ["+".join(p) for p in cifar_c.HELD_OUT],
                 "corrupt_probability": args.corrupt_probability, "seed": args.seed,
@@ -143,7 +147,7 @@ def main():
         test_x = TF.normalize(test_x, MEAN, STD).cuda()
         test_y = torch.tensor(np.asarray(test_ds.targets)).cuda()
 
-        model = getattr(torchvision.models, args.arch)(num_classes=10).cuda()
+        model = cifar_c.build_resnet(args.arch, args.stem, 10).cuda()
         optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9,
                                     weight_decay=5e-4, nesterov=True)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs)

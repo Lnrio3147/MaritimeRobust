@@ -99,7 +99,7 @@ def main():
     run = ROOT / args.run_dir
     checkpoint = torch.load(run / "best.pt", map_location="cuda", weights_only=False)
     arch = checkpoint["settings"]["arch"]
-    model = getattr(torchvision.models, arch)(num_classes=10).cuda()
+    model = cifar_c.build_resnet(arch, checkpoint["settings"].get("stem", "cifar"), 10).cuda()
     model.load_state_dict(checkpoint["model"])
     model.eval()
 

@@ -6,6 +6,7 @@ __pycache__/
 data/raw/
 artifacts/weights/
 runs/
+/runs
 runs_modules/
 *.part
 runs_joint/

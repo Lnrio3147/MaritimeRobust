@@ -1,0 +1,9 @@
+=== rerun start 05:32:04
+S6B FAIL
+=== calibrate double damage 05:59:53
+CALIBRATE FAIL
+S6H FAIL
+=== tiny probe 05:59:58
+=== PROBE DONE 06:02:15
+CIFAR FAIL
+=== RERUN DONE 06:02:20

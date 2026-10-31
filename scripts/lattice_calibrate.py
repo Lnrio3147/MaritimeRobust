@@ -29,7 +29,8 @@ PROJECT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT / "src"))
 sys.path.insert(0, str(PROJECT / "scripts"))
 
-from maritime_robust.common import ROOT, Budget, read_jsonl, seed_all, write_json  # noqa: E402
+from maritime_robust.common import (ROOT, Budget, read_jsonl, seed_all,  # noqa: E402
+                                    stable_seed, write_json)
 from maritime_robust.corruptions_extra import FAMILIES, apply  # noqa: E402
 from maritime_robust.engine import ShipDataset, loader, predict  # noqa: E402
 from maritime_robust.methods import build as build_method  # noqa: E402
@@ -45,8 +46,9 @@ class LevelDataset(ShipDataset):
     def image(self, index):
         image, meta = super().image(index)
         row = self.rows[index]
-        corrupted = apply(image, self.family, self.level,
-                          seed=(self.base_seed * 1_000_003 + int(row["sample_id"])) % (2**31))
+        seed = stable_seed(self.base_seed, row["sample_id"], self.family,
+                           f"{self.level:.3f}") % (2**31)
+        corrupted = apply(image, self.family, self.level, seed=seed)
         return corrupted, {"kind": self.family, "level": self.level}
 
 

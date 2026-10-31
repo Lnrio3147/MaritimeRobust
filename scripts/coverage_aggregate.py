@@ -27,7 +27,8 @@ ARMS = [("baseline (k=0)", "reports/lattice_baseline", "reports/overlap"),
         ("c12", "reports/lattice_c12", "reports/overlap_c12"),
         ("c12b (lattice+recipe)", "reports/lattice_c12b", "reports/overlap_c12b"),
         ("s6 (singles control)", "reports/lattice_s6", "reports/overlap_s6"),
-        ("s6b (singles+recipe)", "reports/lattice_s6b", "reports/overlap_s6b")]
+        ("s6b (singles+recipe)", "reports/lattice_s6b", "reports/overlap_s6b"),
+        ("s6h (damage-matched singles)", "reports/lattice_s6h", "reports/overlap_s6h")]
 
 
 def load(directory):
@@ -78,7 +79,8 @@ def main():
 
     # --- the load-bearing comparison: pairing removed, everything else equal
     for singles_arm, pair_arm in (("s6 (singles control)", "c12"),
-                                  ("s6b (singles+recipe)", "c12b (lattice+recipe)")):
+                                  ("s6b (singles+recipe)", "c12b (lattice+recipe)"),
+                                  ("s6h (damage-matched singles)", "c3")):
         if singles_arm not in lat or pair_arm not in lat:
             continue
         if singles_arm not in held or pair_arm not in held:

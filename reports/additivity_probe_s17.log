@@ -1,0 +1,3 @@
+haze+glare  rel|r| mean 0.871  median 0.792  wrong 0.905 vs right 0.843  rho(|r|, err) +0.059 (p=0.4)
+haze+cloud  rel|r| mean 0.784  median 0.759  wrong 0.819 vs right 0.756  rho(|r|, err) +0.200 (p=0.00386)
+wrote reports/additivity_probe.json
