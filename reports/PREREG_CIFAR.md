@@ -67,3 +67,23 @@ ResNet-18,标准训练配方。测的是**度量结构**,不是任何一个方�
 | 保真度校验不过 | 退化移植有误,整套数字作废,先修移植 |
 | B1 不过 | 覆盖假设不迁移;论文只保留"两区制"观测结论 |
 | B2 不过 | 主张从"对覆盖"降为"族覆盖" |
+
+## 运行偏差记录(2026-10-31,在阶段 A 网格完成之前写)
+
+判据与冻结预测一字不改;以下仅为执行过程中的返工,连同返工原因一并留档。
+
+1. **主干替换。** 首次用 torchvision 原生 stem(7×7 s2 + maxpool,32×32 输入)训练,
+   clean test 79.4%(训练集 99.8%)。这是"小图配大感受野"的已知问题,不是本实验的结论。
+   改为 CIFAR 式 stem(3×3 s1、无 maxpool)后重训。
+2. **轮数。** 100 epoch + cosine 在修好 stem 后停在 clean test 89.6%,低于本预注册
+   要求的 94–96% 区间。加长到 200 epoch。
+3. **数据增强被冻结(严重,已修复)。** `cifar_train.py` 的 DataLoader 原本
+   `persistent_workers=True`。持久化 worker 持有的是 fork 时的 dataset 副本,
+   主进程每轮写的 `train_ds.epoch = epoch` 传不进去,于是**每个 epoch 看到的
+   裁切/翻转完全相同**——等价于增强只在第一轮生效。症状即上面两条:
+   训练精度 ~100%、测试卡在 ~90%。改为 `persistent_workers=False` 后重训。
+   前两次的 clean 参考模型(及其尚未完成的网格)作废,不入任何统计。
+   影响范围仅 CIFAR:**海上数据的训练脚本没有开 persistent worker**,
+   每轮重建 worker 会重新拿到带 epoch 的 dataset,其历史结果不受此缺陷影响。
+4. 阶段 A/B 的所有臂(clean、k15、k40、singles)已统一为 200 epoch、同一个 stem、同一个修复后
+   的 loader,相互之间只有增强支撑集不同。

@@ -19,7 +19,7 @@ run_arm () {          # $1 = tag suffix, rest = extra training flags
   local tag="cifar10_resnet18_cifar_$1_s17"; shift
   echo "=== $tag train $(date +%H:%M:%S)"
   if [ ! -f "runs_cifar/$tag/complete.json" ]; then
-    $PY scripts/cifar_train.py --arch resnet18 --seed 17 --epochs 100 --workers 8 "$@" \
+    $PY scripts/cifar_train.py --arch resnet18 --seed 17 --epochs 200 --workers 8 "$@" \
         > "reports/${tag}_train.log" 2>&1 || { echo "TRAIN FAIL $tag"; return 1; }
   fi
   echo "=== $tag eval $(date +%H:%M:%S)"

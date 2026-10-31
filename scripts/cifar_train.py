@@ -151,9 +151,13 @@ def main():
         optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9,
                                     weight_decay=5e-4, nesterov=True)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs)
+        # persistent_workers stays off: worker processes keep the dataset object
+        # they are forked with, so ``train_ds.epoch = epoch`` below would never
+        # reach them and every epoch would see the same frozen crop/flip. That
+        # bug caps test accuracy near 90% while training accuracy reaches 100%.
         loader = torch.utils.data.DataLoader(
             train_ds, batch_size=args.batch_size, shuffle=True, num_workers=args.workers,
-            pin_memory=True, drop_last=True, persistent_workers=args.workers > 0)
+            pin_memory=True, drop_last=True, persistent_workers=False)
 
         best, history = -1.0, []
         for epoch in range(args.epochs):

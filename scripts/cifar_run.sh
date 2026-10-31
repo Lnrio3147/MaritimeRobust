@@ -14,7 +14,7 @@ PY=.venv/bin/python
 PYTHONUNBUFFERED=1
 
 echo "=== cifar train clean $(date +%H:%M:%S)"
-$PY scripts/cifar_train.py --arch resnet18 --seed 17 --epochs 100 --workers 8 \
+$PY scripts/cifar_train.py --arch resnet18 --seed 17 --epochs 200 --workers 8 \
     > reports/cifar_train_s17.log 2>&1 || { echo "CIFAR TRAIN FAIL"; exit 1; }
 
 echo "=== cifar eval clean $(date +%H:%M:%S)"
