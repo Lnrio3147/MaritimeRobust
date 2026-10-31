@@ -178,8 +178,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", default="paper/DRAFT.md")
     ap.add_argument("--body", default="paper/latex/body.tex")
+    ap.add_argument("--supplement", default="paper/latex/supplement_body.tex")
     args = ap.parse_args()
     text = Path(args.input).read_text()
+    # Appendices go to the supplementary document: CVPR counts pages up to the
+    # references, and the appendices are reproduction detail rather than claims.
+    split = text.find("\n## Appendix")
+    if split != -1:
+        Path(args.supplement).write_text(convert(text[split:]) + "\n")
+        text = text[:split]
     body = convert(text)
     # The abstract heading is consumed above, so close it before the first section.
     body = body.replace(r"\end{abstract}" + "\n" + r"\section{", r"\end{abstract}" + "\n\n" + r"\section{")

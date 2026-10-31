@@ -8,5 +8,6 @@ set -eu
 cd "$(dirname "$0")/.." || exit 1
 .venv/bin/python scripts/md_to_latex.py
 cd paper/latex
-tectonic -X compile main.tex 2>&1 | grep -vE "^note: downloading" | tail -12
-echo "wrote paper/latex/main.pdf"
+tectonic -X compile main.tex 2>&1 | grep -vE "^note: downloading" | tail -6
+tectonic -X compile supplement.tex 2>&1 | grep -vE "^note: downloading" | tail -6
+echo "wrote paper/latex/main.pdf and supplement.pdf"
