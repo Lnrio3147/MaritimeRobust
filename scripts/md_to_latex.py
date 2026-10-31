@@ -100,7 +100,7 @@ def convert(markdown):
             caption = re.sub(r"^\*(.+)\*$", r"\1", caption)
             caption = re.sub(r"^Figure\s+\d+\.\s*", "", caption)   # LaTeX numbers figures
             out += [r"\begin{figure}[t]", r"\centering",
-                    r"\includegraphics[width=0.92\linewidth]{" + str(Path(match.group(2)).with_suffix("")) + "}",
+                    r"\includegraphics[width=0.86\linewidth]{" + str(Path(match.group(2)).with_suffix("")) + "}",
                     r"\caption{" + inline(caption) + "}", r"\end{figure}"]
             i += 1
             while i < len(lines) and (not lines[i].strip() or
