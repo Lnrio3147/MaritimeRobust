@@ -40,4 +40,6 @@ $PY scripts/cifar_aggregate.py \
            "lattice_k40=reports/cifar_grid/cifar10_resnet18_cifar_lattice_k40_s17" \
            "singles=reports/cifar_grid/cifar10_resnet18_cifar_singles_s17" \
     > reports/cifar_aggregate_b.log 2>&1 || echo "AGGREGATE FAIL"
+echo "=== held-out pairs $(date +%H:%M:%S)"
+$PY scripts/cifar_heldout.py > reports/cifar_heldout.log 2>&1 || echo "HELDOUT FAIL"
 echo "=== CIFAR B DONE $(date +%H:%M:%S)"
