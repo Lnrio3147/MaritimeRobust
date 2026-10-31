@@ -18,7 +18,8 @@ SPECIAL = {"&": r"\&", "%": r"\%", "#": r"\#", "_": r"\_",
            "~": r"\textasciitilde{}", "^": r"\textasciicircum{}"}
 
 # XeTeX with the Times package has no glyphs for these; spell them in LaTeX.
-UNICODE = {"\u2014": "---", "\u2013": "--", "\u2212": "$-$", "\u2248": "$\\approx$",
+UNICODE = {
+    "∪": r"$\cup$", "∩": r"$\cap$","\u2014": "---", "\u2013": "--", "\u2212": "$-$", "\u2248": "$\\approx$",
            "\u2264": "$\\leq$", "\u2265": "$\\geq$", "\u00b1": "$\\pm$",
            "\u00b2": "$^2$", "\u00b3": "$^3$", "\u00d7": "$\\times$",
            "\u00b7": "$\\cdot$", "\u00b0": "$^\\circ$", "\u2192": "$\\to$",
