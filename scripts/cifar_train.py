@@ -38,12 +38,33 @@ STD = (0.2470, 0.2435, 0.2616)
 
 
 class CifarTrain(torch.utils.data.Dataset):
+    """CIFAR-10 with an epoch-dependent random crop, flip and optional corruption.
+
+    ``epoch`` is read through a shared ``Value`` so that it reaches persistent
+    DataLoader workers: those keep the dataset object they were forked with, and
+    a plain attribute would stay at whatever it held when the workers started.
+    Every epoch would then re-use the epoch-0 crop and flip, which trains the
+    model on a frozen augmented set (training accuracy 100%, test near 90%).
+    """
+
     def __init__(self, root, aug="clean", pairs=(), severity=3, corrupt_probability=0.5,
-                 seed=17):
+                 seed=17, epoch_ref=None):
         self.data = torchvision.datasets.CIFAR10(root, train=True, download=True)
         self.aug, self.pairs = aug, list(pairs)
         self.severity, self.corrupt_probability, self.seed = severity, corrupt_probability, seed
-        self.epoch = 0
+        self.epoch_ref = epoch_ref
+        self._epoch = 0
+
+    @property
+    def epoch(self):
+        return int(self.epoch_ref.value) if self.epoch_ref is not None else self._epoch
+
+    @epoch.setter
+    def epoch(self, value):
+        if self.epoch_ref is not None:
+            self.epoch_ref.value = int(value)
+        else:
+            self._epoch = int(value)
 
     def __len__(self):
         return len(self.data)
@@ -136,8 +157,9 @@ def main():
             return None
 
     with (NoBudget() if args.skip_budget else Budget("cifar")) as budget:
+        epoch_ref = torch.multiprocessing.get_context("fork").Value("i", 0)
         train_ds = CifarTrain(data_root, args.aug, pairs, args.severity,
-                              args.corrupt_probability, args.seed)
+                              args.corrupt_probability, args.seed, epoch_ref=epoch_ref)
         base = train_ds
         if args.limit:
             train_ds = torch.utils.data.Subset(train_ds, range(args.limit))
@@ -151,13 +173,11 @@ def main():
         optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9,
                                     weight_decay=5e-4, nesterov=True)
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, args.epochs)
-        # persistent_workers stays off: worker processes keep the dataset object
-        # they are forked with, so ``train_ds.epoch = epoch`` below would never
-        # reach them and every epoch would see the same frozen crop/flip. That
-        # bug caps test accuracy near 90% while training accuracy reaches 100%.
+        # persistent_workers is safe now: the epoch reaches the workers through
+        # the shared epoch_ref rather than through the pickled dataset copy.
         loader = torch.utils.data.DataLoader(
             train_ds, batch_size=args.batch_size, shuffle=True, num_workers=args.workers,
-            pin_memory=True, drop_last=True, persistent_workers=False)
+            pin_memory=True, drop_last=True, persistent_workers=args.workers > 0)
 
         best, history = -1.0, []
         for epoch in range(args.epochs):
