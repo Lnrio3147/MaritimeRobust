@@ -1,0 +1,43 @@
+# CIFAR-10-C: compound excess over the union baseline
+
+`delta = e(a+b) - |E_a u E_b|`, 105 unordered pairs x 5 severities, 10000 test images per condition. `super` is the accuracy-space superadditivity `e(a+b) - e(a) - e(b)` that the compound-corruption literature reports; the two disagree, and the disagreement is the point.
+
+| arm | cells | delta mean | median | p10 .. p90 | > 0 | > +2pp | super mean |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| resnet18_s17 | 525 | +3.63 | +2.19 | -9.5 .. +18.8 | 62% | 50% | -7.76 |
+
+## Damage law
+
+If delta were a function of how much damage the compound carries, a damage-only predictor would be enough. Spearman correlations over all cells, with the composite error as the damage measure.
+
+| arm | spearman(delta, compound error) | p | spearman(super, compound error) | p |
+|---|---:|---:|---:|---:|
+| resnet18_s17 | +0.26 | 1.0e-09 | -0.19 | 7.1e-06 |
+
+## By severity
+
+| arm | s1 | s2 | s3 | s4 | s5 |
+|---|---:|---:|---:|---:|---:|
+| resnet18_s17 | +0.66 | +2.93 | +4.90 | +6.58 | +3.06 |
+
+### By family — resnet18_s17
+
+Mean delta over the ten compounds each family appears in, per severity.
+
+| family | s1 | s2 | s3 | s4 | s5 | mean |
+|---|---:|---:|---:|---:|---:|---:|
+| brightness | -0.8 | -0.7 | +0.0 | +0.9 | +3.8 | +0.6 |
+| contrast | +1.1 | +9.3 | +18.2 | +23.2 | +2.7 | +10.9 |
+| defocus_blur | -0.8 | +0.6 | +4.1 | +11.6 | +3.7 | +3.9 |
+| elastic_transform | -0.3 | -0.2 | +2.0 | +5.3 | +3.2 | +2.0 |
+| fog | +0.1 | +4.3 | +11.0 | +17.9 | +19.1 | +10.5 |
+| frost | +1.1 | +4.3 | +8.4 | +9.6 | +9.7 | +6.6 |
+| gaussian_noise | +0.2 | -2.6 | -7.0 | -7.2 | -9.5 | -5.2 |
+| glass_blur | +3.2 | +5.4 | +5.9 | +3.2 | +2.7 | +4.1 |
+| impulse_noise | -1.6 | -2.4 | -2.6 | -4.0 | -9.5 | -4.0 |
+| jpeg_compression | +3.1 | +5.8 | +6.9 | +6.6 | +2.6 | +5.0 |
+| motion_blur | +2.1 | +7.9 | +12.6 | +13.9 | +10.5 | +9.4 |
+| pixelate | -0.2 | +1.8 | +2.4 | +3.1 | -1.2 | +1.2 |
+| shot_noise | -0.1 | +0.4 | -2.9 | -3.1 | -7.2 | -2.6 |
+| snow | +1.4 | +5.7 | +6.3 | +7.8 | +8.0 | +5.8 |
+| zoom_blur | +1.5 | +4.3 | +8.3 | +10.2 | +7.4 | +6.3 |

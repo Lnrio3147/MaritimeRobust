@@ -1,0 +1,30 @@
+{
+ "clean_s17": {
+  "heldout_delta_all": 5.728000000000001,
+  "heldout_delta_s3": 7.855999999999999,
+  "heldout_super_s3": 1.8179999999999992,
+  "pooled_delta_all": 4.899238095238096,
+  "conditions": 525
+ },
+ "lattice_k15": {
+  "heldout_delta_all": 1.2528,
+  "heldout_delta_s3": -0.1660000000000017,
+  "heldout_super_s3": -5.032000000000001,
+  "pooled_delta_all": -0.19428571428571523,
+  "conditions": 525
+ },
+ "lattice_k40": {
+  "heldout_delta_all": 0.6948000000000008,
+  "heldout_delta_s3": -0.4160000000000008,
+  "heldout_super_s3": -5.286,
+  "pooled_delta_all": -0.4168571428571433,
+  "conditions": 525
+ },
+ "singles": {
+  "heldout_delta_all": 2.8368,
+  "heldout_delta_s3": 0.3279999999999994,
+  "heldout_super_s3": -3.9740000000000024,
+  "pooled_delta_all": 0.7494285714285711,
+  "conditions": 525
+ }
+}

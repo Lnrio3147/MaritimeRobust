@@ -1,0 +1,10 @@
+=== cifar10_resnet18_cifar_lattice_k15_s17 train 15:06:20
+=== cifar10_resnet18_cifar_lattice_k15_s17 eval 16:13:09
+=== cifar10_resnet18_cifar_lattice_k40_s17 train 16:51:15
+=== cifar10_resnet18_cifar_lattice_k40_s17 eval 17:56:20
+=== cifar10_resnet18_cifar_singles_s17 train 18:33:53
+=== cifar10_resnet18_cifar_singles_s17 eval 19:12:16
+=== aggregate 19:50:21
+=== held-out pairs 19:50:22
+=== CIFAR B DONE 19:50:25
+=== STAGE B FINISHED 19:50:25

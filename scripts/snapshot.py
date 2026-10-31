@@ -86,7 +86,7 @@ def derive_tag(run_dir: Path) -> dict:
     return {"method": method, "init": init, "epochs_from_name": epochs, "seed_from_name": int(parts[-1][1:]) if parts[-1][1:].isdigit() else None}
 
 
-RUN_DIRS = ("runs", "runs_external")
+RUN_DIRS = ("runs", "runs_external", "runs_cifar")
 
 
 def run_inventory(verify_weights: bool) -> list[dict]:
