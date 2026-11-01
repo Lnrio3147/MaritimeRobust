@@ -10,6 +10,7 @@
 | singles_s17 | 525 | +2.41 | +0.34 | -0.9 .. +6.5 | 56% | 31% | -2.17 |
 | lattice_k15_s29 | 525 | +0.82 | -0.48 | -1.2 .. +3.3 | 37% | 16% | -4.32 |
 | singles_s29 | 525 | +2.50 | +0.32 | -0.8 .. +6.4 | 58% | 31% | -2.06 |
+| augmix_s17 | 525 | +4.41 | +1.69 | -1.3 .. +14.5 | 66% | 48% | -0.82 |
 
 ## Damage law
 
@@ -23,6 +24,7 @@ If delta were a function of how much damage the compound carries, a damage-only 
 | singles_s17 | +0.89 | 2.4e-185 | +0.85 | 1.7e-148 |
 | lattice_k15_s29 | +0.70 | 8.4e-80 | +0.56 | 2.6e-45 |
 | singles_s29 | +0.89 | 1.8e-184 | +0.84 | 5.8e-143 |
+| augmix_s17 | +0.75 | 2.0e-97 | +0.64 | 2.5e-62 |
 
 ## By severity
 
@@ -34,6 +36,7 @@ If delta were a function of how much damage the compound carries, a damage-only 
 | singles_s17 | -0.62 | -0.20 | +0.75 | +2.76 | +9.35 |
 | lattice_k15_s29 | -0.76 | -0.67 | -0.29 | +0.87 | +4.97 |
 | singles_s29 | -0.61 | -0.11 | +0.88 | +2.80 | +9.52 |
+| augmix_s17 | -0.15 | +1.16 | +2.95 | +5.93 | +12.16 |
 
 ### By family — clean_s17
 
@@ -166,3 +169,25 @@ Mean delta over the ten compounds each family appears in, per severity.
 | shot_noise | -0.8 | -0.4 | +0.5 | +1.9 | +5.0 | +1.2 |
 | snow | -0.6 | -0.1 | +0.6 | +2.8 | +5.9 | +1.7 |
 | zoom_blur | -0.4 | -0.1 | +0.8 | +2.5 | +8.2 | +2.2 |
+
+### By family — augmix_s17
+
+Mean delta over the ten compounds each family appears in, per severity.
+
+| family | s1 | s2 | s3 | s4 | s5 | mean |
+|---|---:|---:|---:|---:|---:|---:|
+| brightness | -0.8 | -0.6 | -0.1 | +0.9 | +5.6 | +1.0 |
+| contrast | -0.4 | +1.3 | +4.6 | +11.0 | +31.5 | +9.6 |
+| defocus_blur | -0.8 | -0.7 | -0.3 | +1.9 | +9.6 | +1.9 |
+| elastic_transform | -1.1 | -0.8 | -0.3 | +2.8 | +7.8 | +1.7 |
+| fog | -0.6 | +0.5 | +2.9 | +7.8 | +23.8 | +6.9 |
+| frost | -0.0 | +1.7 | +5.5 | +7.6 | +14.9 | +5.9 |
+| gaussian_noise | +0.4 | +1.8 | +3.0 | +5.5 | +7.1 | +3.6 |
+| glass_blur | +2.0 | +4.8 | +5.7 | +10.1 | +12.5 | +7.0 |
+| impulse_noise | +0.0 | +2.1 | +5.5 | +10.1 | +10.3 | +5.6 |
+| jpeg_compression | +1.0 | +2.9 | +4.8 | +6.8 | +9.9 | +5.1 |
+| motion_blur | -0.4 | +1.3 | +4.7 | +6.4 | +14.6 | +5.3 |
+| pixelate | -0.9 | -0.5 | -0.2 | +0.8 | +4.2 | +0.7 |
+| shot_noise | -0.3 | +0.8 | +3.0 | +5.5 | +8.4 | +3.5 |
+| snow | +0.1 | +2.7 | +3.8 | +6.9 | +10.4 | +4.8 |
+| zoom_blur | -0.4 | +0.2 | +1.7 | +4.7 | +12.0 | +3.6 |

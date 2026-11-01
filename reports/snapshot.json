@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-11-01T10:59:05+00:00",
+ "generated_at": "2026-11-01T13:59:49+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "3a97c83837f8bc4dea0b5ea787f0d3682f78f078",
+  "commit": "4ccd19a4eef9d533255a15e9f5477d7b00361c16",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 1085
+  "tracked_files": 1096
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -113,6 +113,10 @@
    "sha256": "9fdf679808fdec8595b22dfaef2e12a9185dd801dda89d2299e628871ef864cf",
    "bytes": 19851
   },
+  "scripts/cifar_accuracy.py": {
+   "sha256": "8694514565f52ca573af58bf106bca1adcbbe362a7777301119dbd14c22de3a5",
+   "bytes": 3704
+  },
   "scripts/cifar_aggregate.py": {
    "sha256": "381a6d1b365e81333148f669f19054041716073d1eaa178a93a6fedde779a38a",
    "bytes": 7659
@@ -126,8 +130,8 @@
    "bytes": 3935
   },
   "scripts/cifar_train.py": {
-   "sha256": "d6f218de7174789e3f2cc9ba20653390cb341eef2912801eb50d3e155249459c",
-   "bytes": 10670
+   "sha256": "0ca24c5865b7d9a56e91f8f8311871606da9c1b616e6d1114bd9d103ec6de523",
+   "bytes": 12473
   },
   "scripts/cifar_validate.py": {
    "sha256": "dedf2ff96cb82133de7a2b46a1824be384822d62288aa2d9cd4f7e778a230676",
@@ -553,13 +557,17 @@
    "sha256": "f48b0b963f6f70838b0997dc41ed10ae92293dd04d0955cd1665de0fa10f16d4",
    "bytes": 9892
   },
+  "reports/CIFAR_ACCURACY.md": {
+   "sha256": "6b007fa5eb60d64c5bca0f3dae5c488904dd84d4098be65a67b1cd66c76c5389",
+   "bytes": 1066
+  },
   "reports/CIFAR_GRID.md": {
-   "sha256": "56fc9dac4d2a213336e6f97465149679ccb91a022fe1acf421d4fa27c8d7040b",
-   "bytes": 8237
+   "sha256": "34ab2164061b1fe6f395170dbe9b25369a360cac450e9ffdee1e16ca316944b1",
+   "bytes": 9466
   },
   "reports/CIFAR_HELDOUT.md": {
-   "sha256": "c3cca2b686657ee23bc085d037281af0b8728f45fa3739ce0bdf12bf43456259",
-   "bytes": 1305
+   "sha256": "c2a4248f02e8943349d9c763c304a77ab76f0deaf1efde91b53a70087961340b",
+   "bytes": 1452
   },
   "reports/CIFAR_VALIDATION.md": {
    "sha256": "26a7e52ed8e7d7a1ce8041b44d7f7ad17d3092a87d31c577ef452212f68f632b",
@@ -658,8 +666,8 @@
    "bytes": 5640
   },
   "reports/PREREG_CIFAR.md": {
-   "sha256": "5237089b670cf8424ba92add04001733d8a8bd4b66443f6a3e22895ee19387ca",
-   "bytes": 12205
+   "sha256": "b385a37284e696ebdde35aca2dc16bcf011e0dbec5f512342c9549b06229cadf",
+   "bytes": 15532
   },
   "reports/PREREG_COMPOSITION_REPLICATION.md": {
    "sha256": "00da373033c85712ce2f81949cdd9084aa4f80e9adb796555c069f17e50a5f28",
@@ -813,13 +821,17 @@
    "sha256": "f8309eef7deda72ab21acfbc6805317217f387d60502938b3f256684d1b815e5",
    "bytes": 3120
   },
+  "reports/cifar_accuracy.json": {
+   "sha256": "a321dda3fa126ee878c54b565586f74bd015af7a8c9250563ca1f610f144ffd6",
+   "bytes": 896
+  },
   "reports/cifar_grid.json": {
-   "sha256": "1846d1202101a0e97b30564207b7f2557f887eb4d9116f554b5cd842d0beb194",
-   "bytes": 1282958
+   "sha256": "8656c7159b8023a34c26b6e72c9cb0d5ec55bffc8ab309839e03b012eefeacce",
+   "bytes": 1494985
   },
   "reports/cifar_heldout.json": {
-   "sha256": "2ff080ab4953937296d67f9fea1d37e602edd27b0fc84a7a1577d6bcb6636e9a",
-   "bytes": 1331
+   "sha256": "89455635a8ff37d886bd7e2a3197532fdb80df2da318a3b9f599e99a736ba18e",
+   "bytes": 1529
   },
   "reports/cli_degradation_sample.png.json": {
    "sha256": "d7098444c68c0e7dbe374b3c2c3cfed3df896d4d2f580ed4be11098bac9dc0d0",
@@ -1078,8 +1090,8 @@
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "a1fe740aae6c27ce6f9fb5d10ee34d2389f8453b12a5db590b12b6dd305fa54b",
-   "bytes": 575667
+   "sha256": "e03da1d05ef3f1191a5ca987ca60a64a30c70b8bed00e833c4907d78c3392edf",
+   "bytes": 577647
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",
@@ -1489,7 +1501,7 @@
   }
  },
  "weights_verified": false,
- "run_count": 229,
+ "run_count": 230,
  "runs": [
   {
    "run": "runs/fgsc23_civ8_fold0/convnext_base_none_e40_s17",
@@ -12606,6 +12618,47 @@
     },
     "history.json": {
      "bytes": 18899
+    },
+    "best.pt": {
+     "bytes": 44775740,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs_cifar/cifar10_resnet18_cifar_augmix_s17",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 17,
+   "model": null,
+   "declared_method": null,
+   "seed": 17,
+   "epochs": 200,
+   "train_n": null,
+   "val_n": null,
+   "best_val_macro_f1": null,
+   "manifest_sha256": null,
+   "config_sha256": null,
+   "recipe_sha256": null,
+   "combined_recipe_sha256": null,
+   "source_sha256": null,
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": null,
+   "training_wall_seconds": 4555.482525988948,
+   "peak_cuda_allocated_bytes": null,
+   "smoke_only": null,
+   "recorded_checkpoint_sha256": "5791cf05791e79ff954ea1102ec60e6c099fb4aa0f099ca6ad9e745503b47197",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 873
+    },
+    "config.json": {
+     "bytes": 704
+    },
+    "history.json": {
+     "bytes": 37907
     },
     "best.pt": {
      "bytes": 44775740,

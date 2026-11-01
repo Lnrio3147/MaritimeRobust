@@ -41,6 +41,13 @@
   "pooled_delta_all": 0.8830476190476187,
   "conditions": 525
  },
+ "augmix_s17": {
+  "heldout_delta_all": 4.4708,
+  "heldout_delta_s3": 1.968000000000001,
+  "heldout_super_s3": -2.2379999999999955,
+  "pooled_delta_all": 2.9535238095238103,
+  "conditions": 525
+ },
  "_b2_per_seed": {
   "17": -0.4940000000000011,
   "29": -0.8939999999999992

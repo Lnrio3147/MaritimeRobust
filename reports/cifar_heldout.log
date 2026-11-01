@@ -30,6 +30,11 @@
 - held-out pairs, all severities: delta +2.93 pp
 - held-out pairs, s3: delta +0.41 pp (super -3.83)
 - all pairs, s3: delta +0.88 pp
+## augmix_s17
+
+- held-out pairs, all severities: delta +4.47 pp
+- held-out pairs, s3: delta +1.97 pp (super -2.24)
+- all pairs, s3: delta +2.95 pp
 
 ## Frozen contrasts
 

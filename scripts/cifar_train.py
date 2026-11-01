@@ -54,6 +54,10 @@ class CifarTrain(torch.utils.data.Dataset):
         self.severity, self.corrupt_probability, self.seed = severity, corrupt_probability, seed
         self.epoch_ref = epoch_ref
         self._epoch = 0
+        # Canonical AugMix (Hendrycks et al. 2020) with torchvision's own operator set
+        # and mixing; it returns an unnormalised tensor, normalised below to match the
+        # clean view's scale.
+        self.augmix = torchvision.transforms.AugMix(severity=3)
 
     @property
     def epoch(self):
@@ -77,7 +81,7 @@ class CifarTrain(torch.utils.data.Dataset):
         image = TF.crop(image, i, j, 32, 32)
         if rng.random() < 0.5:
             image = TF.hflip(image)
-        if self.aug != "clean":
+        if self.aug in ("lattice", "singles"):
             np.random.seed(stable_seed(self.seed, self.epoch, index, "cifar_corrupt") % (2**32))
             aug = np.random.default_rng(stable_seed(self.seed, self.epoch, index, "cifar_pick"))
             if aug.random() >= self.corrupt_probability:
@@ -87,6 +91,13 @@ class CifarTrain(torch.utils.data.Dataset):
                 else:
                     pair = self.pairs[int(aug.integers(len(self.pairs)))]
                     image = Image.fromarray(cifar_c.apply_pair(image, pair, self.severity))
+        if self.aug == "augmix":
+            clean = TF.normalize(TF.to_tensor(image), MEAN, STD)
+            # AugMix takes uint8 images: its operators use the uint8 bounds.
+            raw_u8 = TF.pil_to_tensor(image)
+            to_float = lambda aug: TF.normalize(TF.convert_image_dtype(aug, torch.float32), MEAN, STD)
+            return (clean, to_float(self.augmix(raw_u8.clone())),
+                    to_float(self.augmix(raw_u8.clone())), label)
         tensor = TF.to_tensor(image)
         return TF.normalize(tensor, MEAN, STD), label
 
@@ -100,7 +111,7 @@ def main():
     ap.add_argument("--epochs", type=int, default=100)
     ap.add_argument("--batch-size", type=int, default=128)
     ap.add_argument("--workers", type=int, default=8)
-    ap.add_argument("--aug", default="clean", choices=["clean", "lattice", "singles"])
+    ap.add_argument("--aug", default="clean", choices=["clean", "lattice", "singles", "augmix"])
     ap.add_argument("--pairs", default="", help="comma-separated a:b pairs; empty means all")
     ap.add_argument("--pool-k", type=int, default=None,
                     help="use the first k pairs of the balanced non-held-out pool")
@@ -117,7 +128,7 @@ def main():
     seed_all(args.seed)
 
     pairs = []
-    if args.aug != "clean":
+    if args.aug in ("lattice", "singles"):
         pairs = ([tuple(p.split(":")) for p in args.pairs.split(",") if p]
                  or (cifar_c.pool(args.pool_k) if args.pool_k else cifar_c.all_pairs()))
         if args.aug == "singles":
@@ -186,11 +197,27 @@ def main():
             base.epoch = epoch
             model.train()
             loss_sum = correct = 0
-            for x, y in loader:
-                x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+            for batch in loader:
                 optimizer.zero_grad(set_to_none=True)
-                logits = model(x)
-                loss = F.cross_entropy(logits, y, label_smoothing=0.0)
+                if args.aug == "augmix":
+                    # AugMix with the Jensen-Shannon term of the original recipe:
+                    # two mixed views and the clean view, averaged cross-entropy plus
+                    # lambda * JSD, so the baseline is the published method and not a
+                    # stripped version of it.
+                    xc, xm1, xm2, y = batch
+                    xc, xm1, xm2, y = (v.cuda(non_blocking=True) for v in (xc, xm1, xm2, y))
+                    oc, o1, o2 = model(xc), model(xm1), model(xm2)
+                    loss = (F.cross_entropy(o1, y) + F.cross_entropy(o2, y)) / 2
+                    pc, p1, p2 = F.softmax(oc, 1), F.softmax(o1, 1), F.softmax(o2, 1)
+                    pm = (pc + p1 + p2) / 3
+                    kl = lambda p, q: (p * (torch.log(p + 1e-8) - torch.log(q + 1e-8))).sum(1).mean()
+                    loss = loss + 12 * (kl(pc, pm) + kl(p1, pm) + kl(p2, pm)) / 3
+                    logits = oc
+                else:
+                    x, y = batch
+                    x, y = x.cuda(non_blocking=True), y.cuda(non_blocking=True)
+                    logits = model(x)
+                    loss = F.cross_entropy(logits, y, label_smoothing=0.0)
                 if not torch.isfinite(loss):
                     raise SystemExit(f"non-finite loss at {tag} epoch {epoch}")
                 loss.backward()
