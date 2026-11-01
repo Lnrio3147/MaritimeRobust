@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -58,16 +59,32 @@ def main():
                   f"(super {summary[arm]['heldout_super_s3']:+.2f})",
                   f"- all pairs, s3: delta {summary[arm]['pooled_delta_all']:+.2f} pp"]
     lines += ["", "## Frozen contrasts", ""]
-    for arm in ("lattice_k15", "lattice_k40", "singles"):
-        for ref in ("clean_s17", "clean"):
-            if arm in summary and ref in summary:
-                d = summary[arm]["heldout_delta_s3"] - summary[ref]["heldout_delta_s3"]
-                lines.append(f"- {arm} minus {ref} (held-out, s3): {d:+.2f} pp")
-                break
-    if "lattice_k15" in summary and "singles" in summary:
-        d = summary["lattice_k15"]["heldout_delta_s3"] - summary["singles"]["heldout_delta_s3"]
-        lines.append(f"- B2 paired-minus-singles (held-out, s3): {d:+.2f} pp "
+
+    def seed_of(name):
+        m = re.search(r"_s(\d+)$", name)
+        return m.group(1) if m else ""
+
+    clean = {seed_of(a): a for a in summary if a.startswith("clean")}
+    for width in ("lattice_k15", "lattice_k40"):
+        for seed, arm in sorted((seed_of(a), a) for a in summary if a.startswith(width)):
+            if seed in clean:
+                d = summary[arm]["heldout_delta_s3"] - summary[clean[seed]]["heldout_delta_s3"]
+                lines.append(f"- {arm} minus {clean[seed]} (held-out, s3): {d:+.2f} pp")
+
+    # B2: the paired-minus-singles contrast, computed per seed where both arms exist.
+    paired = {seed_of(a): a for a in summary if a.startswith("lattice_k15")}
+    single = {seed_of(a): a for a in summary if a.startswith("singles")}
+    b2 = {}
+    for seed in sorted(set(paired) & set(single)):
+        d = summary[paired[seed]]["heldout_delta_s3"] - summary[single[seed]]["heldout_delta_s3"]
+        b2[seed] = d
+        lines.append(f"- B2 paired-minus-singles, seed {seed} (held-out, s3): {d:+.2f} pp "
                      f"(threshold: < -1 pp)")
+    if len(b2) > 1:
+        values = np.array(list(b2.values()))
+        lines.append(f"- B2 across {len(b2)} seeds: mean {values.mean():+.2f} pp, "
+                     f"range {values.min():+.2f} … {values.max():+.2f} pp")
+    summary["_b2_per_seed"] = b2
     (PROJECT / "reports/CIFAR_HELDOUT.md").write_text("\n".join(lines) + "\n")
     (PROJECT / "reports/cifar_heldout.json").write_text(json.dumps(summary, indent=1) + "\n")
     print("\n".join(lines))

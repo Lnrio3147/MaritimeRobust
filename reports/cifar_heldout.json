@@ -6,25 +6,43 @@
   "pooled_delta_all": 4.899238095238096,
   "conditions": 525
  },
- "lattice_k15": {
+ "lattice_k15_s17": {
   "heldout_delta_all": 1.2528,
   "heldout_delta_s3": -0.1660000000000017,
   "heldout_super_s3": -5.032000000000001,
   "pooled_delta_all": -0.19428571428571523,
   "conditions": 525
  },
- "lattice_k40": {
+ "lattice_k40_s17": {
   "heldout_delta_all": 0.6948000000000008,
   "heldout_delta_s3": -0.4160000000000008,
   "heldout_super_s3": -5.286,
   "pooled_delta_all": -0.4168571428571433,
   "conditions": 525
  },
- "singles": {
+ "singles_s17": {
   "heldout_delta_all": 2.8368,
   "heldout_delta_s3": 0.3279999999999994,
   "heldout_super_s3": -3.9740000000000024,
   "pooled_delta_all": 0.7494285714285711,
   "conditions": 525
+ },
+ "lattice_k15_s29": {
+  "heldout_delta_all": 1.1316000000000006,
+  "heldout_delta_s3": -0.4820000000000002,
+  "heldout_super_s3": -5.3400000000000025,
+  "pooled_delta_all": -0.29438095238095285,
+  "conditions": 525
+ },
+ "singles_s29": {
+  "heldout_delta_all": 2.9303999999999997,
+  "heldout_delta_s3": 0.41199999999999903,
+  "heldout_super_s3": -3.830000000000004,
+  "pooled_delta_all": 0.8830476190476187,
+  "conditions": 525
+ },
+ "_b2_per_seed": {
+  "17": -0.4940000000000011,
+  "29": -0.8939999999999992
  }
 }

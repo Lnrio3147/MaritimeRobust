@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated_at": "2026-10-31T11:53:20+00:00",
+ "generated_at": "2026-11-01T10:59:05+00:00",
  "root": "/home/uestc/mount_2T/uestc/lnrio/MaritimeRobust",
  "git": {
-  "commit": "bc793bac075ac0d2c23b134f4ed9ac40ded3a3c1",
+  "commit": "3a97c83837f8bc4dea0b5ea787f0d3682f78f078",
   "branch": "master",
   "dirty": true,
-  "tracked_files": 1059
+  "tracked_files": 1085
  },
  "code": {
   "src/maritime_robust/__init__.py": {
@@ -122,8 +122,8 @@
    "bytes": 6224
   },
   "scripts/cifar_heldout.py": {
-   "sha256": "014a09303e65602258e0135679a980928fdac5256c7ccaaf5a00baac405f1679",
-   "bytes": 3200
+   "sha256": "fa0c56ea068dd06e840c87cef02c21350ec5d905fea336085bbad6f1778d120b",
+   "bytes": 3935
   },
   "scripts/cifar_train.py": {
    "sha256": "d6f218de7174789e3f2cc9ba20653390cb341eef2912801eb50d3e155249459c",
@@ -554,12 +554,12 @@
    "bytes": 9892
   },
   "reports/CIFAR_GRID.md": {
-   "sha256": "87279b54bf0717e38aeb523b7ffb085d9810f92bf538dd059df16fa3b817214b",
-   "bytes": 5727
+   "sha256": "56fc9dac4d2a213336e6f97465149679ccb91a022fe1acf421d4fa27c8d7040b",
+   "bytes": 8237
   },
   "reports/CIFAR_HELDOUT.md": {
-   "sha256": "3b6890ff22d76e97f4b0e68a5ce2da73bf9dcd533edd9743e54a278c9aff0208",
-   "bytes": 885
+   "sha256": "c3cca2b686657ee23bc085d037281af0b8728f45fa3739ce0bdf12bf43456259",
+   "bytes": 1305
   },
   "reports/CIFAR_VALIDATION.md": {
    "sha256": "26a7e52ed8e7d7a1ce8041b44d7f7ad17d3092a87d31c577ef452212f68f632b",
@@ -658,8 +658,8 @@
    "bytes": 5640
   },
   "reports/PREREG_CIFAR.md": {
-   "sha256": "cbf5a4d249aa406db17e5033c9b1cd6043b401b2326baa97bd5852613237272f",
-   "bytes": 9731
+   "sha256": "5237089b670cf8424ba92add04001733d8a8bd4b66443f6a3e22895ee19387ca",
+   "bytes": 12205
   },
   "reports/PREREG_COMPOSITION_REPLICATION.md": {
    "sha256": "00da373033c85712ce2f81949cdd9084aa4f80e9adb796555c069f17e50a5f28",
@@ -814,12 +814,12 @@
    "bytes": 3120
   },
   "reports/cifar_grid.json": {
-   "sha256": "4b241069dccf6d0a8eba41b0f27a940296cc062cc361f273c68374ab43967a79",
-   "bytes": 853221
+   "sha256": "1846d1202101a0e97b30564207b7f2557f887eb4d9116f554b5cd842d0beb194",
+   "bytes": 1282958
   },
   "reports/cifar_heldout.json": {
-   "sha256": "24394bfbd354d0f84c9e5549f1135f4a9ec1d745e6398c6671d9ca837c44f95c",
-   "bytes": 808
+   "sha256": "2ff080ab4953937296d67f9fea1d37e602edd27b0fc84a7a1577d6bcb6636e9a",
+   "bytes": 1331
   },
   "reports/cli_degradation_sample.png.json": {
    "sha256": "d7098444c68c0e7dbe374b3c2c3cfed3df896d4d2f580ed4be11098bac9dc0d0",
@@ -1078,8 +1078,8 @@
    "bytes": 12774
   },
   "reports/snapshot.json": {
-   "sha256": "a890a8c16d7a79b2f5623b5cb2a9b22e96f12d96c58fad07ffdf31e1efdec29a",
-   "bytes": 372044
+   "sha256": "a1fe740aae6c27ce6f9fb5d10ee34d2389f8453b12a5db590b12b6dd305fa54b",
+   "bytes": 575667
   },
   "reports/validation_calibration.json": {
    "sha256": "2a577663ed4fb1d4bfb83c367cad258af9c0a3aee352e223ae3840d4e4077801",
@@ -1489,7 +1489,7 @@
   }
  },
  "weights_verified": false,
- "run_count": 227,
+ "run_count": 229,
  "runs": [
   {
    "run": "runs/fgsc23_civ8_fold0/convnext_base_none_e40_s17",
@@ -12696,6 +12696,47 @@
    }
   },
   {
+   "run": "runs_cifar/cifar10_resnet18_cifar_lattice_k15_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": null,
+   "declared_method": null,
+   "seed": 29,
+   "epochs": 200,
+   "train_n": null,
+   "val_n": null,
+   "best_val_macro_f1": null,
+   "manifest_sha256": null,
+   "config_sha256": null,
+   "recipe_sha256": null,
+   "combined_recipe_sha256": null,
+   "source_sha256": null,
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": null,
+   "training_wall_seconds": 4063.4477671310306,
+   "peak_cuda_allocated_bytes": null,
+   "smoke_only": null,
+   "recorded_checkpoint_sha256": "840397159afe06bc6373b6eab2ad5ac40f609c3b54eaf02aceae95cba2a89a43",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 1312
+    },
+    "config.json": {
+     "bytes": 1142
+    },
+    "history.json": {
+     "bytes": 37894
+    },
+    "best.pt": {
+     "bytes": 44776252,
+     "exists": true
+    }
+   }
+  },
+  {
    "run": "runs_cifar/cifar10_resnet18_cifar_lattice_k40_s17",
    "method": "none",
    "init": "imagenet1k",
@@ -12770,6 +12811,47 @@
     },
     "history.json": {
      "bytes": 37970
+    },
+    "best.pt": {
+     "bytes": 44776252,
+     "exists": true
+    }
+   }
+  },
+  {
+   "run": "runs_cifar/cifar10_resnet18_cifar_singles_s29",
+   "method": "none",
+   "init": "imagenet1k",
+   "epochs_from_name": null,
+   "seed_from_name": 29,
+   "model": null,
+   "declared_method": null,
+   "seed": 29,
+   "epochs": 200,
+   "train_n": null,
+   "val_n": null,
+   "best_val_macro_f1": null,
+   "manifest_sha256": null,
+   "config_sha256": null,
+   "recipe_sha256": null,
+   "combined_recipe_sha256": null,
+   "source_sha256": null,
+   "pretrained_url": null,
+   "pretrained_sha256": null,
+   "parameter_count": null,
+   "training_wall_seconds": 2314.5418480059598,
+   "peak_cuda_allocated_bytes": null,
+   "smoke_only": null,
+   "recorded_checkpoint_sha256": "e5a43d326885d46f1526592275b959418b9cb5a5de6c539d1e88fe61a09b1773",
+   "artifacts": {
+    "complete.json": {
+     "bytes": 1312
+    },
+    "config.json": {
+     "bytes": 1142
+    },
+    "history.json": {
+     "bytes": 37973
     },
     "best.pt": {
      "bytes": 44776252,

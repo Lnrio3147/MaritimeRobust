@@ -1,0 +1,9 @@
+=== cifar10_resnet18_cifar_lattice_k15_s29 train 21:25:35
+=== cifar10_resnet18_cifar_lattice_k15_s29 eval 22:33:22
+=== cifar10_resnet18_cifar_lattice_k15_s29 done 23:12:18
+=== cifar10_resnet18_cifar_singles_s29 train 23:12:18
+=== cifar10_resnet18_cifar_singles_s29 eval 23:50:57
+=== cifar10_resnet18_cifar_singles_s29 done 00:28:20
+=== aggregate 00:28:20
+=== held-out pairs 00:28:22
+=== CIFAR SEED29 DONE 00:28:24
