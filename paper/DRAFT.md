@@ -34,7 +34,7 @@ Answering it required three design decisions that turned out to matter more than
 - Evidence that the effect of compound degradation is **not** separable into its constituents, and that under the shipped renderer this non-separability appears as a **threshold confined to the highest severity** rather than a smooth gradient (§4.3) — including one pre-registered prediction that failed. A second, physically-motivated renderer, applied both to a frozen model and to models retrained under it, reproduces the severity-5 excess (10.2 / 16.0 pp against 9.7 / 12.6 pp) but produces it from severity 4 upwards: the excess is not an artefact of one rendering, while the *onset severity* is (§8.4).
 - Evidence that compound failures are qualitatively new: 41.5% of severe-compound errors occur on images that every single degradation leaves correct (§4.4). Against the stronger independent-failure baseline (the union of single-corruption error sets), the severity-5 haze+glare excess survives in 6/6 cells (+7.3 to +13.1 pp, mean +9.9), while the haze+cloud excess vanishes (mean −0.7 pp); at severities 2–4 both pairs are mildly sub-additive (§4.6).
 - A composition study over fifteen calibrated pairs: at matched marginal damage the interaction decomposes additively into per-family main effects (R² 0.42–0.90 across two backbones and twelve cells), no single-corruption geometric predictor recovers the ordering, and the per-family values themselves are backbone-dependent (§4.6).
-- Evidence that the excess is what an uncovered operating point looks like, and that it is removable: a pool of calibrated compound samples cuts the held-out excess from +8.2 to −1.8 pp (6/6 cells); the same six families applied one at a time do not (−5.8 pp paired, 6/6); ~40% of the gain survives an arm matched on per-image damage (−3.7 pp, 6/6); and the effect transfers to unseen pairs but not to unseen families (§5). The same measurement on CIFAR-10-C reproduces the excess against the union baseline (+3.6 pp) while the additive baseline reports the opposite sign (−7.8 pp), and covering it there removes 8.3 pp at no clean cost, though by family exposure rather than pairing (§4.7).
+- Evidence that the excess is what an uncovered operating point looks like, and that it is removable: a pool of calibrated compound samples cuts the held-out excess from +8.2 to −1.8 pp (6/6 cells); the same six families applied one at a time do not (−5.8 pp paired, 6/6); ~40% of the gain survives an arm matched on per-image damage (−3.7 pp, 6/6); and the effect transfers to unseen pairs but not to unseen families (§5). The same measurement on CIFAR-10-C reproduces the excess against the union baseline (+3.6 pp) while the additive baseline reports the opposite sign (−7.8 pp), and covering it there removes 8.3 pp at no clean cost, though by family exposure rather than pairing (§4.7). On the same benchmark coverage lifts compound accuracy from **57.3% to 87.9%** for **1.2 pp** of clean accuracy — **9.2 pp** above an AugMix baseline that never sees those families, and higher on 104 of 105 pairs.
 - A pre-registered negative result on eight interventions, and a documented case in which a limited training budget manufactures a gain (§6).
 
 ---
@@ -172,11 +172,13 @@ The archive's generator is unseeded, so infidelity is checked by comparing accur
 | singles | 94.99 | 92.30 | 86.77 | 90.04 | +0.33 |
 | AugMix | 95.36 | 88.95 | 78.72 | 84.84 | +1.97 |
 
-*Table 1. Percent correct over the 601-condition grid, and the excess on the five held-out pairs at severity 3.*
+*Table 1. Percent correct over the 601-condition grid, and the excess on the five held-out pairs at severity 3. All arms at seed 17; second seeds and pair-level bootstrap intervals are in Appendix C.*
 
-Coverage is worth **30.6 pp** on compound conditions and 28.7 pp on held-out pairs, for 1.2–1.3 pp of clean accuracy (B3 holds). It is monotone in pool width but saturates — k=15 to k=40 buys 0.25 pp (B1 holds) — so the pool need not be wide, only complete. The pairing contrast fails and stays failed at a second seed: singles sit at +0.33 pp of excess against the paired arm's −0.17, differences of −0.49 and −0.89 pp, both inside the pre-registered [−1, +1] band (B2 fails). Family exposure recovers 7.5–8.3 pp of the 8.0 available; co-occurrence adds under 1 pp. By B2's pre-registered consequence, §5's claim is family coverage, not pair coverage.
+Coverage is worth **30.6 pp** on compound conditions (pair-level bootstrap 95% CI [+28.5, +32.7]) and 28.7 pp on held-out pairs, for 1.2–1.3 pp of clean accuracy (B3 holds), and a second seed reproduces it to within 0.1 pp. It is monotone in pool width but saturates — k=15 to k=40 buys 0.25 pp (B1 holds) — so the pool need not be wide, only complete. The pairing contrast fails and stays failed at a second seed: singles sit at +0.33 pp of excess against the paired arm's −0.17, differences of −0.49 and −0.89 pp, both inside the pre-registered [−1, +1] band (B2 fails). Family exposure recovers 7.5–8.3 pp of the 8.0 available; co-occurrence adds under 1 pp. By B2's pre-registered consequence, §5's claim is family coverage, not pair coverage.
 
-**What this comparison licenses, and what it does not.** AugMix never sees the test corruption families: it reaches 78.72% on compounds, 9 pp below the coverage arms, with its excess untouched (+4.41 pp). The gain is not free augmentation — it comes from training on the families being evaluated. The claim holds where those families are known; for unknown families we claim nothing, and AugMix is the honest baseline there.
+**What this comparison licenses, and what it does not.** AugMix never sees the test corruption families: it reaches 78.72% on compounds, 9.2 pp below the coverage arms on 104 of 105 pairs (95% CI [+8.0, +10.4]), with its excess untouched (+4.41 pp), and it leads AugMix on singles too (91.8 vs 89.0). The gain is not free augmentation — it comes from training on the families being evaluated. The claim holds where those families are known; for unknown families we claim nothing, and AugMix is the honest baseline there.
+
+A control arm separates "trained on augmentations" from "trained on *these* corruptions". `otheraug` uses the same recipe and the same 200 epochs with a set of augmentation families disjoint from the fifteen evaluated ones. It reaches 69.85% on compounds — 12.2 pp above the clean reference and 8.9 pp below AugMix — and its held-out excess stays at +5.78 pp, against +7.86 for the clean reference and +1.97 for AugMix. Three predictions were frozen before the arm ran and all three hold: compound accuracy at least 5 pp below the k=15 lattice (gap 18.0 pp), held-out excess above +1 pp, clean accuracy at least 95.0% (95.86). Augmentation strength is therefore not the variable that moves compound accuracy: an arm training hard on degradation drawn from outside the evaluated families lands below AugMix, and only the families being evaluated reach 86.8–87.9.
 
 ---
 
@@ -255,7 +257,7 @@ On 157 FGSC-23 validation images annotated for real degradation (93 with at leas
 ### 8.2 What it does not support
 
 - **No performance ceiling.** Frequency-domain methods, deeper backbones, larger data and multi-factor interventions were not tested; the best arm here is not a state-of-the-art claim.
-- **No mechanism.** The novelty analysis is behavioural. The saturation/contrast fit of §4.5 is a condition-level association (R² = 0.80) with weak per-image correlation (r = 0.13, 0.26). Both mechanism tests are negative or partial: removing hard clipping removes a third of the excess; a clipped-pixel mask gives no gain. A per-image drift signal predicts failure (AUC 0.78–0.82), but as a training weight it fails in both directions (α = +1: −1.29 and +0.16 pp; α = −1: +0.65 and +2.99 pp), and without the clean reference a distance to the nearest clean centroid detects errors worse than prediction entropy in all six units (−0.020, −0.034 AUROC). The mechanism behind new errors is unknown.
+- **No mechanism.** The novelty analysis is behavioural. The saturation/contrast fit of §4.5 is a condition-level association (R² = 0.80) with weak per-image correlation (r = 0.13, 0.26). Both mechanism tests are negative or partial: removing hard clipping removes a third of the excess; a clipped-pixel mask gives no gain. A per-image drift signal predicts failure (AUC 0.78–0.82) but fails as a training weight in both directions, and without the clean reference no signal reconstructs it. The mechanism behind new errors is unknown.
 - **No established threshold, and no renderer-independent onset.** "Threshold" is an inference from four severity levels: the crossover is bounded only to (4, 5), and our pre-registered monotonicity prediction failed (P1, 2 of 6 runs). A physically-motivated re-rendering (§8.4) moves the onset to severity 4 while preserving the severity-5 excess, so the claim is descriptive — an excess that grows with severity — not a law of the axis.
 - **No generalization to real weather.** §7 is observational with insufficient heavy-degradation samples.
 - **No transfer across families.** Coverage of co-occurrence removes the excess on pairs drawn from families the training pools contain, and not on haze+glare, whose families are absent from every lattice pool (§5, P10): a deployment recipe must cover the degradations it expects to meet.
@@ -280,8 +282,65 @@ Compound weather degradations do to maritime ship classifiers what single degrad
 
 ## Appendix A. Reproduction
 
-Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (230 runs, code, configs, splits, reports). The probes of §4.5 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). The second renderer of §8.4 is `reports/PHYSICAL_RENDERER.md`, produced by `scripts/physical_eval.py` from `src/maritime_robust/physical.py` and gated by `scripts/physical_gate.py`; its pre-registration is `reports/PREREG_PHYSICAL_RENDERER.md`. A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`. The error-overlap decomposition of §4.6 is `reports/COMPOSITION.md` §2, from `scripts/overlap_main_grid.py`; the fifteen-pair composition study and its replication gate are the rest of `reports/COMPOSITION.md`, from `scripts/composition_{calibrate,pairs,interaction,predictors,aggregate,gate}.py`, with the gate pre-registered in `reports/PREREG_COMPOSITION_REPLICATION.md`. All composition measurements are frozen-model inference; the only training added is six ResNet-50 clean baselines. The coverage study of §5 is pre-registered in `reports/PREREG_COVERAGE.md` (P1–P13, with the outcome of every prediction recorded there), calibrated by `scripts/lattice_calibrate.py`, run by `scripts/coverage_{lattice,singles,singles_hard,singles_mixbase}_run.sh`, and aggregated into `reports/COVERAGE.md` by `scripts/coverage_aggregate.py`; the figure is `scripts/coverage_figure.py`. The CIFAR-10-C replication of §4.7 is pre-registered in `reports/PREREG_CIFAR.md` (C1–C5, B1–B3, A1–A3), trained by `scripts/cifar_train.py` (the AugMix baseline under A1–A3 is `scripts/cifar_augmix.sh`), evaluated over the 601-condition grid by `scripts/cifar_eval.py`, validated for port fidelity against the published archive by `scripts/cifar_validate.py`, and aggregated into `reports/CIFAR_GRID.md` by `scripts/cifar_aggregate.py`.
+Every number in this draft is produced by code in `scripts/` from artefacts hashed in `reports/snapshot.json` (230 runs, code, configs, splits, reports). The probes of §4.5 are `reports/SATURATION_PROBE.md` (pixel statistics), `reports/hdr_render_probe.json` (soft-shoulder re-render, script `scripts/hdr_render_probe.py`) and `reports/M1_KILL_TEST.md` (mask falsification, script `scripts/m1_eval.py`, per-image predictions in `reports/m1_preds_s{17,29}.npz`). The second renderer of §8.4 is `reports/PHYSICAL_RENDERER.md`, produced by `scripts/physical_eval.py` from `src/maritime_robust/physical.py` and gated by `scripts/physical_gate.py`; its pre-registration is `reports/PREREG_PHYSICAL_RENDERER.md`. A full re-evaluation of 12 runs reproduced the published R1 statistic bit-exactly (max absolute difference 0). The pre-registration for the severity 2/4 extension is in `reports/PREREG_SEVERITY_2_4.md`; the analysis and its comparison against the registered predictions is in `reports/SEVERITY_CURVE.md`. The error-overlap decomposition of §4.6 is `reports/COMPOSITION.md` §2, from `scripts/overlap_main_grid.py`; the fifteen-pair composition study and its replication gate are the rest of `reports/COMPOSITION.md`, from `scripts/composition_{calibrate,pairs,interaction,predictors,aggregate,gate}.py`, with the gate pre-registered in `reports/PREREG_COMPOSITION_REPLICATION.md`. All composition measurements are frozen-model inference; the only training added is six ResNet-50 clean baselines. The coverage study of §5 is pre-registered in `reports/PREREG_COVERAGE.md` (P1–P13, with the outcome of every prediction recorded there), calibrated by `scripts/lattice_calibrate.py`, run by `scripts/coverage_{lattice,singles,singles_hard,singles_mixbase}_run.sh`, and aggregated into `reports/COVERAGE.md` by `scripts/coverage_aggregate.py`; the figure is `scripts/coverage_figure.py`. The CIFAR-10-C replication of §4.7 is pre-registered in `reports/PREREG_CIFAR.md` (C1–C5, B1–B3, A1–A3), trained by `scripts/cifar_train.py` (the AugMix baseline under A1–A3 is `scripts/cifar_augmix.sh`), evaluated over the 601-condition grid by `scripts/cifar_eval.py`, validated for port fidelity against the published archive by `scripts/cifar_validate.py`, and aggregated into `reports/CIFAR_GRID.md` by `scripts/cifar_aggregate.py`. The disjoint-augmentation control of §4.7 is arm `otheraug_s17` on the same grid, adjudicated against its frozen predictions O1–O3 by `scripts/cifar_otheraug_report.py` into `reports/OTHERAUG.md`.
 
 ## Appendix B. Margin-space superadditivity
 
 The original analysis measured superadditivity in margin space (difference between compound accuracy and the additive expectation of margin losses): haze+glare extra margin loss −0.152 … −0.032, haze+cloud −0.144 … +0.009, across four backbone families. It agrees in sign with the accuracy-space result reported in §4.3 and is not used for inference here.
+
+## Appendix C. CIFAR-10-C arms: protocol, seeds and intervals
+
+All arms in §4.7 share one protocol: ResNet-18 with the CIFAR stem (3×3, no max-pool), 200 epochs of SGD at learning rate 0.1, momentum 0.9, weight decay 5e-4, nesterov, cosine schedule, batch 128, 4-pixel pad-and-crop and horizontal flip. An arm that trains on degradations replaces the clean view with a corrupted one at probability 0.5 and leaves the geometry pipeline untouched; the clean reference sees clean images only. Every arm is evaluated on the same 601 conditions — clean, 75 single, 525 pair — on the full 10,000-image test set.
+
+| arm | seeds | training pool |
+|---|---|---|
+| clean reference | 17 | none |
+| lattice k=15 | 17, 29 | 15 calibrated pairs; the five held-out pairs excluded from every pool |
+| lattice k=40 | 17 | 40 calibrated pairs |
+| singles | 17, 29 | each of the 15 corruption families alone, at the same 0.5 rate |
+| AugMix | 17 | torchvision AugMix (severity 3) plus the Jensen–Shannon term, λ = 12 |
+
+**Accuracy at both seeds** (percent correct, mean over the conditions of each family):
+
+| arm | clean | singles | pairs | held-out s3 |
+|---|---:|---:|---:|---:|
+| clean_s17 | 95.47 | 74.77 | 57.29 | 61.14 |
+| lattice_k15_s17 | 94.28 | 91.80 | 87.88 | 89.86 |
+| lattice_k40_s17 | 94.16 | 91.95 | 88.52 | 90.16 |
+| singles_s17 | 94.99 | 92.30 | 86.77 | 90.04 |
+| lattice_k15_s29 | 94.31 | 91.73 | 87.78 | 90.08 |
+| singles_s29 | 95.03 | 92.26 | 86.58 | 89.93 |
+| augmix_s17 | 95.36 | 88.95 | 78.72 | 84.84 |
+
+**Intervals.** Gain over the clean reference on the 525 pair conditions, with a percentile bootstrap over the 105 corruption pairs (20,000 resamples). The five severities of one pair are not independent draws, so resampling conditions would overstate precision; resampling pairs keeps them together. The arm contrast is computed per pair first, so its interval is paired.
+
+| arm | gain (pp) | 95% CI | worst pair | best pair |
+|---|---:|---|---:|---:|
+| lattice_k15_s17 | +30.60 | [+28.47, +32.69] | +4.4 | +58.3 |
+| lattice_k40_s17 | +31.23 | [+29.14, +33.32] | +4.7 | +58.8 |
+| singles_s17 | +29.48 | [+27.47, +31.50] | +4.8 | +57.9 |
+| lattice_k15_s29 | +30.50 | [+28.44, +32.60] | +4.4 | +58.4 |
+| singles_s29 | +29.29 | [+27.30, +31.33] | +4.8 | +57.8 |
+| augmix_s17 | +21.43 | [+20.19, +22.65] | +4.0 | +36.4 |
+| augmix_s29 | +21.44 | [+20.16, +22.73] | +3.9 | +38.5 |
+
+k=15 minus AugMix: +9.17 pp, 95% CI [+8.01, +10.39], higher on 104 of 105 pairs. Seed spreads are 0.10 pp for k=15 and 0.19 pp for singles.
+
+**Why raw accuracy and not mCE.** mCE normalizes each corruption's error by a fixed AlexNet baseline and aggregates only the fifteen single-corruption families, so it has no slot for pair conditions — the object of this study — and would place our numbers on a scale we did not measure. Arms are therefore compared only against the clean reference trained under the identical recipe, and no claim of parity with published CIFAR-10-C tables is made. The AugMix arm tests the mechanism claim (does generic augmentation substitute for family coverage), not a leaderboard position.
+
+**AugMix predictions.** Three predictions were frozen before that arm ran. A1: AugMix lands near the singles arm (86.77%) rather than the paired arms (87.88–88.52%). A2: its held-out excess stays positive, unlike the coverage arms (−0.17, −0.42). A3: its clean accuracy does not fall below the clean reference's 95.47%. A1 failed, and in the opposite direction from the prediction: AugMix reaches 78.72%, 8.05 pp *below* the singles arm. A2 held (+1.97 pp). A3 held to within 0.11 pp (95.36 vs 95.47). The failure is informative rather than awkward: the generic augmentation never targets the families under test, so it does not substitute for covering them, but it also does not approach the arm that shows those families one at a time.
+
+The arm was repeated at a second seed to check that A1's margin is not seed noise. It is not: seed 29 gives 78.73% on compounds against 78.72% at seed 17 (gain over clean +21.44 pp, CI [+20.16, +22.73]), clean 95.85%, singles 89.39%, and the held-out excess stays positive (+2.44 pp at severity 3, against +1.97 pp at seed 17). A generic augmentation that never samples the evaluated families sits ~9 pp below coverage at both seeds, so the +9.17 pp contrast is a property of the arms rather than of one training run — the same reading as the coverage arms' own seed spreads of 0.10 pp and 0.19 pp.
+
+**All six frozen predictions on this benchmark.**
+
+| id | prediction (registered before the run) | result | verdict |
+|---|---|---|---|
+| B1 | held-out excess falls with pool width k | −0.17 (k=15) → −0.42 (k=40) | holds |
+| B2 | paired arm beats singles by more than 1 pp | −0.49 (s17), −0.89 (s29) | fails |
+| B3 | no arm loses more than 1.5 pp clean accuracy | −0.48 … −1.31 | holds |
+| A1 | AugMix lands near the singles arm (86.77%) | 78.72%, 8.05 pp below it | fails |
+| A2 | AugMix's held-out excess stays positive | +1.97 pp | holds |
+| A3 | AugMix's clean accuracy not below 95.47% | 95.36% | holds (0.11 pp) |
+
+Two of six failed, and both failures narrow the paper's claim rather than widen it: B2's failure moved §5 from pair coverage to family coverage, and A1's failure showed that generic augmentation does not substitute for covering the families under test.

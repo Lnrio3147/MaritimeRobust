@@ -1,0 +1,5 @@
+=== cifar10_resnet18_cifar_augmix_s29 train 22:21:53
+=== cifar10_resnet18_cifar_augmix_s29 eval 23:38:01
+=== aggregate 00:20:30
+=== held-out pairs 00:20:36
+=== CIFAR AUGMIX S29 DONE 00:20:39

@@ -1,4 +1,4 @@
-\emph{Draft --- 2026-10-30. Every number in this draft is traceable to a file listed in \texttt{reports/snapshot.json}.}
+\emph{Draft --- 2026-10-30. Every number in this draft is traceable to a file listed in \path{reports/snapshot.json}.}
 
 \begin{abstract}
 Maritime images are rarely degraded by one factor at a time: haze, cloud and sun glare co-occur, yet maritime robustness studies vary one degradation at a time. We introduce a paired evaluation protocol for compound degradations, applied to fine-grained ship-type recognition on FGSC-23 (eight civilian classes): preprocessing is fixed, each image's corruption instance is a deterministic function of its identity, and every condition is evaluated per image, so any two models --- or conditions --- can be differenced without confounding. Four backbone families show compound conditions dropping accuracy by up to 43 points, non-linearly in the single-factor drops. In a pre-registered four-severity design, the compound drop is indistinguishable from its additive prediction at severities 2--4, but at severity 5 it exceeds that prediction by \textbf{+11.3 pp (95\% CI [+7.2, +15.3], BH q < 0.001)} and exceeds the largest single-degradation drop in \textbf{6 of 6} runs. Against the stronger baseline --- the union of the constituents' error sets --- \textbf{41.5\%} of severe-compound errors are made by no single degradation at any severity.
@@ -30,7 +30,7 @@ Answering it required three design decisions that turned out to matter more than
 \item Evidence that the effect of compound degradation is \textbf{not} separable into its constituents, and that under the shipped renderer this non-separability appears as a \textbf{threshold confined to the highest severity} rather than a smooth gradient (§4.3) --- including one pre-registered prediction that failed. A second, physically-motivated renderer, applied both to a frozen model and to models retrained under it, reproduces the severity-5 excess (10.2 / 16.0 pp against 9.7 / 12.6 pp) but produces it from severity 4 upwards: the excess is not an artefact of one rendering, while the \emph{onset severity} is (§8.4).
 \item Evidence that compound failures are qualitatively new: 41.5\% of severe-compound errors occur on images that every single degradation leaves correct (§4.4). Against the stronger independent-failure baseline (the union of single-corruption error sets), the severity-5 haze+glare excess survives in 6/6 cells (+7.3 to +13.1 pp, mean +9.9), while the haze+cloud excess vanishes (mean $-$0.7 pp); at severities 2--4 both pairs are mildly sub-additive (§4.6).
 \item A composition study over fifteen calibrated pairs: at matched marginal damage the interaction decomposes additively into per-family main effects (R$^2$ 0.42--0.90 across two backbones and twelve cells), no single-corruption geometric predictor recovers the ordering, and the per-family values themselves are backbone-dependent (§4.6).
-\item Evidence that the excess is what an uncovered operating point looks like, and that it is removable: a pool of calibrated compound samples cuts the held-out excess from +8.2 to $-$1.8 pp (6/6 cells); the same six families applied one at a time do not ($-$5.8 pp paired, 6/6); \textasciitilde{}40\% of the gain survives an arm matched on per-image damage ($-$3.7 pp, 6/6); and the effect transfers to unseen pairs but not to unseen families (§5). The same measurement on CIFAR-10-C reproduces the excess against the union baseline (+3.6 pp) while the additive baseline reports the opposite sign ($-$7.8 pp), and covering it there removes 8.3 pp at no clean cost, though by family exposure rather than pairing (§4.7).
+\item Evidence that the excess is what an uncovered operating point looks like, and that it is removable: a pool of calibrated compound samples cuts the held-out excess from +8.2 to $-$1.8 pp (6/6 cells); the same six families applied one at a time do not ($-$5.8 pp paired, 6/6); \textasciitilde{}40\% of the gain survives an arm matched on per-image damage ($-$3.7 pp, 6/6); and the effect transfers to unseen pairs but not to unseen families (§5). The same measurement on CIFAR-10-C reproduces the excess against the union baseline (+3.6 pp) while the additive baseline reports the opposite sign ($-$7.8 pp), and covering it there removes 8.3 pp at no clean cost, though by family exposure rather than pairing (§4.7). On the same benchmark coverage lifts compound accuracy from \textbf{57.3\% to 87.9\%} for \textbf{1.2 pp} of clean accuracy --- \textbf{9.2 pp} above an AugMix baseline that never sees those families, and higher on 104 of 105 pairs.
 \item A pre-registered negative result on eight interventions, and a documented case in which a limited training budget manufactures a gain (§6).
 \end{itemize}
 \section{Related work}
@@ -74,7 +74,7 @@ E(s) = [acc(clean) $-$ acc(a+b, s)] $-$ {[acc(clean) $-$ acc(a, s)] + [acc(clean
 
 so that E(s) is the share of the compound drop not explained by the two marginal drops. The additive baseline is the sum of those two marginals, each measured on the same images, same model, same seed, at the same severity, in the same domain as the compound; E(s) is what the sum leaves unexplained. Because a reviewer can reasonably object that any such measure is an artefact of the metric, we report it in accuracy space (the margin-space version appears in the appendix and agrees in sign).
 
-\resizebox{\columnwidth}{!}{%
+\noindent\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lllll}
 \toprule
 Severity & haze+glare E & 95\% CI & haze+cloud E & 95\% CI \\
@@ -87,7 +87,7 @@ Severity & haze+glare E & 95\% CI & haze+cloud E & 95\% CI \\
 \end{tabular}}
 Only haze+glare at severity 5 survives Benjamini--Hochberg correction over the eight estimates (q < 0.001); all others have q $\geq$ 0.48.
 
-We pre-registered four predictions before running severities 2 and 4. Three are confirmed and one \textbf{failed}; per-run values are in \texttt{reports/COMPOUND\_ANALYSIS.md}:
+We pre-registered four predictions before running severities 2 and 4. Three are confirmed and one \textbf{failed}; per-run values are in \path{reports/COMPOUND_ANALYSIS.md}:
 
 \begin{itemize}
 \item P2 (E at severity 2 covers zero): \textbf{confirmed}.
@@ -97,12 +97,12 @@ We pre-registered four predictions before running severities 2 and 4. Three are 
 \end{itemize}
 We report P1's failure rather than redefining the test, because it changes the claim: the data do not support "superadditivity grows with severity". They support a sharper statement: \textbf{at severities 2--4 the compound effect is additive, and at severity 5 it is not.} In all six runs, E(5) exceeds every E(s $\leq$ 4) of the same run. With no point at severity 4.5, the crossover lies between 4 and 5 and cannot be localised further.
 
-This statement is scoped to one rendering: under an independent, physically-motivated renderer with severity matched on transmission and saturated-pixel fraction, the severity-5 excess is preserved but its onset moves to severity 4. What survives is the excess and its growth with severity; the onset is a property of the renderer (§8.4, \texttt{reports/PHYSICAL\_RENDERER.md}).
+This statement is scoped to one rendering: under an independent, physically-motivated renderer with severity matched on transmission and saturated-pixel fraction, the severity-5 excess is preserved but its onset moves to severity 4. What survives is the excess and its growth with severity; the onset is a property of the renderer (§8.4, \path{reports/PHYSICAL_RENDERER.md}).
 
 \subsection{Compound failures are new failures}
 For each compound condition we ask, per image and per seed: is this image misclassified under the compound, and is it also misclassified under \emph{any} severity of either constituent?
 
-\resizebox{\columnwidth}{!}{%
+\noindent\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrr}
 \toprule
 Condition & compound errors & error under no single at any severity & share \\
@@ -117,7 +117,7 @@ haze+cloud, s=4 & 237 & 17 & 7.2\% \\
 haze+cloud, s=5 & 292 & 67 & 22.9\% \\
 \bottomrule
 \end{tabular}}
-Error counts are per (fold, seed) evaluation, summed over the six runs; they share images across seeds and are descriptive, not independent observations. For the severity-3 and severity-5 conditions we additionally compute the overlap with the strongest single condition: 73.4\% and 44.4\% respectively for haze+glare (\texttt{reports/COMPOUND\_ANALYSIS.md}).
+Error counts are per (fold, seed) evaluation, summed over the six runs; they share images across seeds and are descriptive, not independent observations. For the severity-3 and severity-5 conditions we additionally compute the overlap with the strongest single condition: 73.4\% and 44.4\% respectively for haze+glare (\path{reports/COMPOUND_ANALYSIS.md}).
 
 At severity 5, four in ten compound errors are errors that no single degradation produces on that image --- not even the strongest one, at any severity. \textbf{Scope:} it is bounded by the comparison set actually run --- three families $\times$ five severities $\times$ two domains, the same model and seed. It does not claim that no conceivable single degradation could produce them. The phenomenon is not explained by the compound being simply more severe: there is no single degradation of comparable severity to compare against, since the compound drop (25.7 pp) exceeds the largest single drop (11.3 pp) in all six runs.
 
@@ -154,7 +154,7 @@ The archive's generator is unseeded, so infidelity is checked by comparing accur
 
 \textbf{Does covering it transfer, and is it competitive?} Five further arms apply §5's intervention here: pools of 15 and 40 pairs with five pairs held out of both, a singles arm showing every corruption alone at the same rate, and AugMix \cite{hendrycks2020augmix} with its Jensen-Shannon term --- the standard augmentation answer to CIFAR-10-C, at the same 200 epochs and on the same grid. Table 1 gives absolute accuracy, the number a reader compares against published robustness results.
 
-\resizebox{\columnwidth}{!}{%
+\noindent\resizebox{\columnwidth}{!}{%
 \begin{tabular}{lrrrrr}
 \toprule
 arm & clean & singles & pairs & held-out s3 & held-out delta \\
@@ -166,11 +166,13 @@ singles & 94.99 & 92.30 & 86.77 & 90.04 & +0.33 \\
 AugMix & 95.36 & 88.95 & 78.72 & 84.84 & +1.97 \\
 \bottomrule
 \end{tabular}}
-\emph{Table 1. Percent correct over the 601-condition grid, and the excess on the five held-out pairs at severity 3.}
+\emph{Table 1. Percent correct over the 601-condition grid, and the excess on the five held-out pairs at severity 3. All arms at seed 17; second seeds and pair-level bootstrap intervals are in Appendix C.}
 
-Coverage is worth \textbf{30.6 pp} on compound conditions and 28.7 pp on held-out pairs, for 1.2--1.3 pp of clean accuracy (B3 holds). It is monotone in pool width but saturates --- k=15 to k=40 buys 0.25 pp (B1 holds) --- so the pool need not be wide, only complete. The pairing contrast fails and stays failed at a second seed: singles sit at +0.33 pp of excess against the paired arm's $-$0.17, differences of $-$0.49 and $-$0.89 pp, both inside the pre-registered [$-$1, +1] band (B2 fails). Family exposure recovers 7.5--8.3 pp of the 8.0 available; co-occurrence adds under 1 pp. By B2's pre-registered consequence, §5's claim is family coverage, not pair coverage.
+Coverage is worth \textbf{30.6 pp} on compound conditions (pair-level bootstrap 95\% CI [+28.5, +32.7]) and 28.7 pp on held-out pairs, for 1.2--1.3 pp of clean accuracy (B3 holds), and a second seed reproduces it to within 0.1 pp. It is monotone in pool width but saturates --- k=15 to k=40 buys 0.25 pp (B1 holds) --- so the pool need not be wide, only complete. The pairing contrast fails and stays failed at a second seed: singles sit at +0.33 pp of excess against the paired arm's $-$0.17, differences of $-$0.49 and $-$0.89 pp, both inside the pre-registered [$-$1, +1] band (B2 fails). Family exposure recovers 7.5--8.3 pp of the 8.0 available; co-occurrence adds under 1 pp. By B2's pre-registered consequence, §5's claim is family coverage, not pair coverage.
 
-\textbf{What this comparison licenses, and what it does not.} AugMix never sees the test corruption families: it reaches 78.72\% on compounds, 9 pp below the coverage arms, with its excess untouched (+4.41 pp). The gain is not free augmentation --- it comes from training on the families being evaluated. The claim holds where those families are known; for unknown families we claim nothing, and AugMix is the honest baseline there.
+\textbf{What this comparison licenses, and what it does not.} AugMix never sees the test corruption families: it reaches 78.72\% on compounds, 9.2 pp below the coverage arms on 104 of 105 pairs (95\% CI [+8.0, +10.4]), with its excess untouched (+4.41 pp), and it leads AugMix on singles too (91.8 vs 89.0). The gain is not free augmentation --- it comes from training on the families being evaluated. The claim holds where those families are known; for unknown families we claim nothing, and AugMix is the honest baseline there.
+
+A control arm separates "trained on augmentations" from "trained on \emph{these} corruptions". \texttt{otheraug} uses the same recipe and the same 200 epochs with a set of augmentation families disjoint from the fifteen evaluated ones. It reaches 69.85\% on compounds --- 12.2 pp above the clean reference and 8.9 pp below AugMix --- and its held-out excess stays at +5.78 pp, against +7.86 for the clean reference and +1.97 for AugMix. Three predictions were frozen before the arm ran and all three hold: compound accuracy at least 5 pp below the k=15 lattice (gap 18.0 pp), held-out excess above +1 pp, clean accuracy at least 95.0\% (95.86). Augmentation strength is therefore not the variable that moves compound accuracy: an arm training hard on degradation drawn from outside the evaluated families lands below AugMix, and only the families being evaluated reach 86.8--87.9.
 
 \section{Coverage: the excess is an operating point training never visits}
 The union decomposition of §4.6 says what the excess is not: compound images are not merely harder instances of existing errors. This section asks what removes it, under a deliberately unglamorous hypothesis --- a model can only learn a joint operating point if training shows it one. Under the project's combined recipe, compounds are a quarter of the batches and are drawn from three families (haze, cloud, glare); the fifteen-pair lattice of §4.6 uses six families that training never mixes. If the excess is an uncovered operating point rather than an intrinsic property of compound degradation, teaching the model co-occurrence should remove it --- and teaching it the same families one at a time should not.
@@ -184,7 +186,7 @@ The union decomposition of §4.6 says what the excess is not: compound images ar
 \includegraphics[width=0.86\linewidth]{figures/fig5_coverage}
 \caption{(a) Excess on the three held-out pairs for each arm, one dot per (fold, seed) cell; (b) the paired-minus-singles contrast, in which compound exposure is identical by construction, for the two recipe settings. Negative is better: it means the pair arm has less excess than the same families applied one at a time.}
 \end{figure}
-\resizebox{\columnwidth}{!}{%
+\noindent\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llrrr}
 \toprule
 arm & compound sampling & held-out delta (pp) & pool-pair delta (pp) & clean acc (\%) \\
@@ -210,7 +212,7 @@ Three folds $\times$ two seeds per arm; every arm applies a compound to half of 
 \section{Interventions: a pre-registered negative result}
 Seven interventions across three loci plus one initialization control, each trained at 40 epochs, three folds, two seeds, with identical data, preprocessing, corruption instances and evaluation. Screening criteria were fixed in advance: mean gain $\geq$ +1.5 pp on the combined conditions, two of three folds positive, no clean-accuracy loss beyond 1 pp, and a paired bootstrap interval excluding zero.
 
-\resizebox{\columnwidth}{!}{%
+\noindent\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llrll}
 \toprule
 Candidate & Locus & Mean $\Delta$ & 95\% CI & Verdict \\
@@ -246,7 +248,7 @@ On 157 FGSC-23 validation images annotated for real degradation (93 with at leas
 \subsection{What it does not support}
 \begin{itemize}
 \item \textbf{No performance ceiling.} Frequency-domain methods, deeper backbones, larger data and multi-factor interventions were not tested; the best arm here is not a state-of-the-art claim.
-\item \textbf{No mechanism.} The novelty analysis is behavioural. The saturation/contrast fit of §4.5 is a condition-level association (R$^2$ = 0.80) with weak per-image correlation (r = 0.13, 0.26). Both mechanism tests are negative or partial: removing hard clipping removes a third of the excess; a clipped-pixel mask gives no gain. A per-image drift signal predicts failure (AUC 0.78--0.82), but as a training weight it fails in both directions ($\alpha$ = +1: $-$1.29 and +0.16 pp; $\alpha$ = $-$1: +0.65 and +2.99 pp), and without the clean reference a distance to the nearest clean centroid detects errors worse than prediction entropy in all six units ($-$0.020, $-$0.034 AUROC). The mechanism behind new errors is unknown.
+\item \textbf{No mechanism.} The novelty analysis is behavioural. The saturation/contrast fit of §4.5 is a condition-level association (R$^2$ = 0.80) with weak per-image correlation (r = 0.13, 0.26). Both mechanism tests are negative or partial: removing hard clipping removes a third of the excess; a clipped-pixel mask gives no gain. A per-image drift signal predicts failure (AUC 0.78--0.82) but fails as a training weight in both directions, and without the clean reference no signal reconstructs it. The mechanism behind new errors is unknown.
 \item \textbf{No established threshold, and no renderer-independent onset.} "Threshold" is an inference from four severity levels: the crossover is bounded only to (4, 5), and our pre-registered monotonicity prediction failed (P1, 2 of 6 runs). A physically-motivated re-rendering (§8.4) moves the onset to severity 4 while preserving the severity-5 excess, so the claim is descriptive --- an excess that grows with severity --- not a law of the axis.
 \item \textbf{No generalization to real weather.} §7 is observational with insufficient heavy-degradation samples.
 \item \textbf{No transfer across families.} Coverage of co-occurrence removes the excess on pairs drawn from families the training pools contain, and not on haze+glare, whose families are absent from every lattice pool (§5, P10): a deployment recipe must cover the degradations it expects to meet.
