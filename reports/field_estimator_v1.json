@@ -1,0 +1,92 @@
+{
+ "gaussian_noise": {
+  "psnr_transfer": 9.564931869506836,
+  "psnr_identity": 22.19404411315918,
+  "mse_removed": -19.31795310974121
+ },
+ "shot_noise": {
+  "psnr_transfer": 9.648228645324707,
+  "psnr_identity": 23.930997848510742,
+  "mse_removed": -30.8560791015625
+ },
+ "impulse_noise": {
+  "psnr_transfer": 9.541522026062012,
+  "psnr_identity": 20.33299446105957,
+  "mse_removed": -11.869657516479492
+ },
+ "defocus_blur": {
+  "psnr_transfer": 10.23977279663086,
+  "psnr_identity": 31.106624603271484,
+  "mse_removed": -158.6434783935547
+ },
+ "glass_blur": {
+  "psnr_transfer": 10.06631851196289,
+  "psnr_identity": 22.704463958740234,
+  "mse_removed": -21.943622589111328
+ },
+ "motion_blur": {
+  "psnr_transfer": 10.442790031433105,
+  "psnr_identity": 22.58194923400879,
+  "mse_removed": -21.276933670043945
+ },
+ "zoom_blur": {
+  "psnr_transfer": 10.383190155029297,
+  "psnr_identity": 22.86905288696289,
+  "mse_removed": -23.033523559570312
+ },
+ "snow": {
+  "psnr_transfer": 9.50661849975586,
+  "psnr_identity": 18.765220642089844,
+  "mse_removed": -8.745187759399414
+ },
+ "frost": {
+  "psnr_transfer": 11.018011093139648,
+  "psnr_identity": 14.033435821533203,
+  "mse_removed": -1.6926400661468506
+ },
+ "fog": {
+  "psnr_transfer": 13.573753356933594,
+  "psnr_identity": 18.000442504882812,
+  "mse_removed": -2.4536681175231934
+ },
+ "brightness": {
+  "psnr_transfer": 9.701007843017578,
+  "psnr_identity": 18.101848602294922,
+  "mse_removed": -7.001459121704102
+ },
+ "contrast": {
+  "psnr_transfer": 14.37354850769043,
+  "psnr_identity": 18.828784942626953,
+  "mse_removed": -3.333395004272461
+ },
+ "elastic_transform": {
+  "psnr_transfer": 10.209218978881836,
+  "psnr_identity": 19.852365493774414,
+  "mse_removed": -11.23381233215332
+ },
+ "pixelate": {
+  "psnr_transfer": 9.977900505065918,
+  "psnr_identity": 29.323040008544922,
+  "mse_removed": -120.86980438232422
+ },
+ "jpeg_compression": {
+  "psnr_transfer": 9.905475616455078,
+  "psnr_identity": 28.834169387817383,
+  "mse_removed": -96.84237670898438
+ },
+ "frost+snow": {
+  "psnr_transfer": 11.539175033569336,
+  "psnr_identity": 10.027303695678711,
+  "mse_removed": 0.14170891046524048
+ },
+ "fog+contrast": {
+  "psnr_transfer": 17.884658813476562,
+  "psnr_identity": 15.608989715576172,
+  "mse_removed": 0.11766485124826431
+ },
+ "gaussian_noise+shot_noise": {
+  "psnr_transfer": 9.425824165344238,
+  "psnr_identity": 19.99374771118164,
+  "mse_removed": -11.583653450012207
+ }
+}

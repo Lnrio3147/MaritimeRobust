@@ -1,0 +1,80 @@
+step     0 rec 0.1461 field 0.2919 sig 0.0396 blur 2.216 K(clean) 0.882 N(clean) 0.0145 spread 0.0007/0.0059    1.2s
+step   200 rec 0.0644 field 0.1577 sig 0.0389 blur 2.187 K(clean) 0.943 N(clean) 0.0425 spread 0.0908/0.0905    8.9s
+step   400 rec 0.0619 field 0.1579 sig 0.0330 blur 1.176 K(clean) 0.968 N(clean) 0.0261 spread 0.1036/0.1071   16.4s
+step   600 rec 0.0594 field 0.1685 sig 0.0264 blur 1.209 K(clean) 0.976 N(clean) 0.0222 spread 0.1109/0.1132   23.9s
+step   800 rec 0.0491 field 0.1534 sig 0.0251 blur 0.960 K(clean) 0.962 N(clean) 0.0357 spread 0.1458/0.1415   31.4s
+step  1000 rec 0.0521 field 0.1396 sig 0.0274 blur 0.859 K(clean) 0.985 N(clean) 0.0163 spread 0.1072/0.1321   38.9s
+step  1200 rec 0.0526 field 0.1567 sig 0.0296 blur 0.765 K(clean) 0.962 N(clean) 0.0461 spread 0.1131/0.1307   46.4s
+step  1400 rec 0.0655 field 0.1665 sig 0.0371 blur 1.016 K(clean) 0.969 N(clean) 0.0294 spread 0.1365/0.1364   53.8s
+step  1600 rec 0.0525 field 0.1416 sig 0.0171 blur 0.961 K(clean) 0.962 N(clean) 0.0389 spread 0.1126/0.1181   61.3s
+step  1800 rec 0.0573 field 0.1650 sig 0.0233 blur 0.821 K(clean) 0.975 N(clean) 0.0307 spread 0.1206/0.1460   68.8s
+step  2000 rec 0.0516 field 0.1427 sig 0.0350 blur 0.903 K(clean) 0.970 N(clean) 0.0283 spread 0.1165/0.1217   76.4s
+step  2200 rec 0.0482 field 0.1266 sig 0.0204 blur 0.836 K(clean) 0.992 N(clean) 0.0110 spread 0.1023/0.1194   84.0s
+step  2400 rec 0.0492 field 0.1308 sig 0.0278 blur 0.557 K(clean) 0.976 N(clean) 0.0334 spread 0.1181/0.1251   91.4s
+step  2600 rec 0.0546 field 0.1472 sig 0.0276 blur 0.854 K(clean) 0.983 N(clean) 0.0152 spread 0.1206/0.1190   98.9s
+step  2800 rec 0.0578 field 0.1602 sig 0.0290 blur 0.730 K(clean) 0.985 N(clean) 0.0168 spread 0.1095/0.1266  106.3s
+step  3000 rec 0.0492 field 0.1327 sig 0.0251 blur 0.644 K(clean) 0.986 N(clean) 0.0138 spread 0.1136/0.1263  113.8s
+step  3200 rec 0.0509 field 0.1431 sig 0.0174 blur 0.845 K(clean) 0.978 N(clean) 0.0270 spread 0.1203/0.1463  121.2s
+step  3400 rec 0.0475 field 0.1218 sig 0.0268 blur 0.599 K(clean) 0.966 N(clean) 0.0353 spread 0.1156/0.1280  128.7s
+step  3600 rec 0.0462 field 0.1296 sig 0.0163 blur 0.530 K(clean) 0.985 N(clean) 0.0151 spread 0.1034/0.1307  136.2s
+step  3800 rec 0.0524 field 0.1420 sig 0.0171 blur 0.523 K(clean) 0.951 N(clean) 0.0532 spread 0.1302/0.1338  143.7s
+step  4000 rec 0.0517 field 0.1465 sig 0.0127 blur 0.538 K(clean) 0.972 N(clean) 0.0250 spread 0.1016/0.1117  151.1s
+step  4200 rec 0.0554 field 0.1547 sig 0.0114 blur 0.468 K(clean) 0.987 N(clean) 0.0211 spread 0.1155/0.1224  158.5s
+step  4400 rec 0.0497 field 0.1379 sig 0.0104 blur 0.541 K(clean) 0.976 N(clean) 0.0306 spread 0.1105/0.1362  165.9s
+step  4600 rec 0.0451 field 0.1316 sig 0.0086 blur 0.508 K(clean) 0.951 N(clean) 0.0424 spread 0.1279/0.1373  173.4s
+step  4800 rec 0.0498 field 0.1262 sig 0.0118 blur 0.493 K(clean) 0.975 N(clean) 0.0282 spread 0.1249/0.1370  180.9s
+step  5000 rec 0.0472 field 0.1054 sig 0.0102 blur 0.472 K(clean) 0.975 N(clean) 0.0257 spread 0.1172/0.1356  188.3s
+step  5200 rec 0.0493 field 0.1342 sig 0.0064 blur 0.534 K(clean) 0.979 N(clean) 0.0188 spread 0.1409/0.1254  195.8s
+step  5400 rec 0.0439 field 0.1177 sig 0.0069 blur 0.438 K(clean) 0.954 N(clean) 0.0406 spread 0.1354/0.1439  203.2s
+step  5600 rec 0.0482 field 0.1290 sig 0.0056 blur 0.415 K(clean) 0.994 N(clean) 0.0121 spread 0.1270/0.1278  210.6s
+step  5800 rec 0.0480 field 0.1441 sig 0.0069 blur 0.494 K(clean) 0.974 N(clean) 0.0263 spread 0.1155/0.1274  218.1s
+step  6000 rec 0.0503 field 0.1228 sig 0.0071 blur 0.536 K(clean) 0.977 N(clean) 0.0289 spread 0.1339/0.1443  225.5s
+step  6200 rec 0.0520 field 0.1293 sig 0.0050 blur 0.442 K(clean) 0.986 N(clean) 0.0146 spread 0.1151/0.1311  232.9s
+step  6400 rec 0.0406 field 0.1314 sig 0.0061 blur 0.310 K(clean) 0.961 N(clean) 0.0366 spread 0.1299/0.1463  240.4s
+step  6600 rec 0.0520 field 0.1329 sig 0.0065 blur 0.623 K(clean) 0.991 N(clean) 0.0137 spread 0.1168/0.1410  247.8s
+step  6800 rec 0.0487 field 0.1214 sig 0.0045 blur 0.555 K(clean) 0.973 N(clean) 0.0235 spread 0.1287/0.1306  255.3s
+step  7000 rec 0.0481 field 0.1252 sig 0.0052 blur 0.439 K(clean) 0.979 N(clean) 0.0259 spread 0.1113/0.1224  262.7s
+step  7200 rec 0.0442 field 0.1143 sig 0.0053 blur 0.238 K(clean) 0.975 N(clean) 0.0249 spread 0.1331/0.1463  270.1s
+step  7400 rec 0.0509 field 0.1494 sig 0.0060 blur 0.404 K(clean) 0.976 N(clean) 0.0211 spread 0.1199/0.1327  277.6s
+step  7600 rec 0.0483 field 0.1314 sig 0.0045 blur 0.476 K(clean) 0.982 N(clean) 0.0162 spread 0.1216/0.1413  285.0s
+step  7800 rec 0.0449 field 0.1182 sig 0.0040 blur 0.362 K(clean) 0.990 N(clean) 0.0136 spread 0.1233/0.1342  292.5s
+step  8000 rec 0.0424 field 0.0995 sig 0.0054 blur 0.320 K(clean) 0.977 N(clean) 0.0206 spread 0.1306/0.1358  299.9s
+step  8200 rec 0.0412 field 0.1238 sig 0.0041 blur 0.389 K(clean) 0.977 N(clean) 0.0245 spread 0.1113/0.1403  307.3s
+step  8400 rec 0.0448 field 0.1216 sig 0.0050 blur 0.282 K(clean) 0.987 N(clean) 0.0146 spread 0.1033/0.1162  314.7s
+step  8600 rec 0.0519 field 0.1335 sig 0.0052 blur 0.330 K(clean) 0.979 N(clean) 0.0277 spread 0.1181/0.1385  322.1s
+step  8800 rec 0.0458 field 0.1393 sig 0.0039 blur 0.458 K(clean) 0.972 N(clean) 0.0277 spread 0.1347/0.1576  329.5s
+step  9000 rec 0.0447 field 0.1287 sig 0.0047 blur 0.547 K(clean) 0.959 N(clean) 0.0347 spread 0.1439/0.1361  336.9s
+step  9200 rec 0.0489 field 0.1353 sig 0.0038 blur 0.307 K(clean) 0.981 N(clean) 0.0203 spread 0.1250/0.1437  344.4s
+step  9400 rec 0.0390 field 0.1066 sig 0.0042 blur 0.345 K(clean) 0.980 N(clean) 0.0226 spread 0.1277/0.1437  351.8s
+step  9600 rec 0.0387 field 0.1097 sig 0.0037 blur 0.368 K(clean) 0.975 N(clean) 0.0249 spread 0.1385/0.1376  359.2s
+step  9800 rec 0.0443 field 0.1095 sig 0.0033 blur 0.391 K(clean) 0.977 N(clean) 0.0196 spread 0.1106/0.1409  366.6s
+step 10000 rec 0.0510 field 0.1260 sig 0.0049 blur 0.373 K(clean) 0.966 N(clean) 0.0300 spread 0.1280/0.1307  374.1s
+step 10200 rec 0.0496 field 0.1112 sig 0.0045 blur 0.465 K(clean) 0.985 N(clean) 0.0176 spread 0.1208/0.1303  381.6s
+step 10400 rec 0.0502 field 0.1432 sig 0.0052 blur 0.355 K(clean) 0.971 N(clean) 0.0251 spread 0.1209/0.1502  389.1s
+step 10600 rec 0.0520 field 0.1176 sig 0.0049 blur 0.347 K(clean) 0.963 N(clean) 0.0324 spread 0.1105/0.1081  396.6s
+step 10800 rec 0.0466 field 0.1089 sig 0.0053 blur 0.358 K(clean) 0.973 N(clean) 0.0252 spread 0.1332/0.1476  404.1s
+step 11000 rec 0.0458 field 0.1346 sig 0.0036 blur 0.298 K(clean) 0.977 N(clean) 0.0227 spread 0.1183/0.1390  411.6s
+step 11200 rec 0.0497 field 0.1279 sig 0.0047 blur 0.410 K(clean) 0.979 N(clean) 0.0221 spread 0.1241/0.1507  419.0s
+step 11400 rec 0.0427 field 0.1143 sig 0.0045 blur 0.322 K(clean) 0.983 N(clean) 0.0215 spread 0.1333/0.1414  426.5s
+step 11600 rec 0.0489 field 0.1231 sig 0.0047 blur 0.543 K(clean) 0.983 N(clean) 0.0173 spread 0.1232/0.1445  433.9s
+step 11800 rec 0.0500 field 0.1453 sig 0.0041 blur 0.368 K(clean) 0.972 N(clean) 0.0249 spread 0.1285/0.1337  441.4s
+step 11999 rec 0.0461 field 0.1248 sig 0.0037 blur 0.494 K(clean) 0.984 N(clean) 0.0155 spread 0.1204/0.1459  448.8s
+gaussian_noise       identity 22.19 transfer 18.73 removed -1.326
+shot_noise           identity 23.62 transfer 20.29 removed -1.409
+impulse_noise        identity 20.32 transfer 17.49 removed -0.991
+defocus_blur         identity 30.91 transfer 32.25 removed -0.809
+glass_blur           identity 22.16 transfer 21.46 removed -0.270
+motion_blur          identity 22.14 transfer 23.07 removed +0.083
+zoom_blur            identity 22.40 transfer 23.61 removed +0.186
+snow                 identity 18.67 transfer 19.71 removed +0.180
+frost                identity 14.23 transfer 18.19 removed +0.539
+fog                  identity 17.68 transfer 18.63 removed +0.118
+brightness           identity 18.34 transfer 19.67 removed +0.189
+contrast             identity 18.38 transfer 19.16 removed -0.084
+elastic_transform    identity 19.41 transfer 19.45 removed -0.005
+pixelate             identity 28.99 transfer 27.45 removed -0.972
+jpeg_compression     identity 28.57 transfer 27.57 removed -0.570
+frost+snow                 identity 10.05 transfer 14.83 removed +0.640
+fog+contrast             identity 14.99 transfer 17.07 removed +0.345
+gaussian_noise+shot_noise           identity 19.88 transfer 16.83 removed -1.052
+wrote reports/FIELD_ESTIMATOR_BLUR2.md

@@ -1,0 +1,80 @@
+step     0 rec 0.1312 field 0.2660 sig 0.0278 K(clean) 0.883 N(clean) 0.0218 spread 0.0010/0.0089    1.3s
+step   200 rec 0.0611 field 0.1622 sig 0.0336 K(clean) 0.960 N(clean) 0.0401 spread 0.1303/0.1261   15.4s
+step   400 rec 0.0570 field 0.1583 sig 0.0310 K(clean) 0.950 N(clean) 0.0446 spread 0.1311/0.1327   27.8s
+step   600 rec 0.0490 field 0.1278 sig 0.0122 K(clean) 0.985 N(clean) 0.0190 spread 0.1286/0.1118   39.5s
+step   800 rec 0.0549 field 0.1560 sig 0.0072 K(clean) 0.964 N(clean) 0.0336 spread 0.1082/0.1336   52.4s
+step  1000 rec 0.0565 field 0.1471 sig 0.0074 K(clean) 0.975 N(clean) 0.0225 spread 0.1154/0.1164   65.6s
+step  1200 rec 0.0420 field 0.1280 sig 0.0045 K(clean) 0.985 N(clean) 0.0141 spread 0.1156/0.1236   79.1s
+step  1400 rec 0.0535 field 0.1408 sig 0.0095 K(clean) 0.971 N(clean) 0.0286 spread 0.1224/0.1314   92.5s
+step  1600 rec 0.0553 field 0.1466 sig 0.0038 K(clean) 0.978 N(clean) 0.0183 spread 0.1037/0.0921  105.3s
+step  1800 rec 0.0467 field 0.1220 sig 0.0039 K(clean) 0.983 N(clean) 0.0175 spread 0.1129/0.1267  120.1s
+step  2000 rec 0.0498 field 0.1361 sig 0.0050 K(clean) 0.968 N(clean) 0.0307 spread 0.1178/0.1262  132.5s
+step  2200 rec 0.0426 field 0.1109 sig 0.0031 K(clean) 0.976 N(clean) 0.0233 spread 0.1258/0.1230  143.6s
+step  2400 rec 0.0469 field 0.1429 sig 0.0035 K(clean) 0.973 N(clean) 0.0238 spread 0.1273/0.1431  154.6s
+step  2600 rec 0.0480 field 0.1340 sig 0.0038 K(clean) 0.950 N(clean) 0.0555 spread 0.1232/0.1395  168.8s
+step  2800 rec 0.0460 field 0.1247 sig 0.0027 K(clean) 0.983 N(clean) 0.0233 spread 0.1315/0.1385  181.4s
+step  3000 rec 0.0516 field 0.1405 sig 0.0025 K(clean) 0.967 N(clean) 0.0337 spread 0.1280/0.1465  193.6s
+step  3200 rec 0.0381 field 0.1209 sig 0.0025 K(clean) 0.969 N(clean) 0.0276 spread 0.1328/0.1463  204.9s
+step  3400 rec 0.0497 field 0.1436 sig 0.0022 K(clean) 0.943 N(clean) 0.0535 spread 0.1270/0.1593  215.5s
+step  3600 rec 0.0488 field 0.1218 sig 0.0027 K(clean) 0.974 N(clean) 0.0257 spread 0.1209/0.1251  227.5s
+step  3800 rec 0.0395 field 0.0971 sig 0.0035 K(clean) 0.963 N(clean) 0.0404 spread 0.1220/0.1319  241.3s
+step  4000 rec 0.0456 field 0.1243 sig 0.0026 K(clean) 0.971 N(clean) 0.0262 spread 0.1302/0.1418  251.9s
+step  4200 rec 0.0473 field 0.1265 sig 0.0018 K(clean) 0.978 N(clean) 0.0202 spread 0.1142/0.1395  262.3s
+step  4400 rec 0.0422 field 0.1219 sig 0.0021 K(clean) 0.976 N(clean) 0.0212 spread 0.1118/0.1433  275.0s
+step  4600 rec 0.0479 field 0.1361 sig 0.0018 K(clean) 0.982 N(clean) 0.0172 spread 0.1201/0.1474  287.2s
+step  4800 rec 0.0419 field 0.1083 sig 0.0016 K(clean) 0.971 N(clean) 0.0267 spread 0.1166/0.1619  299.7s
+step  5000 rec 0.0413 field 0.1040 sig 0.0020 K(clean) 0.976 N(clean) 0.0223 spread 0.1320/0.1365  311.1s
+step  5200 rec 0.0415 field 0.1227 sig 0.0026 K(clean) 0.972 N(clean) 0.0270 spread 0.1394/0.1609  323.4s
+step  5400 rec 0.0407 field 0.1116 sig 0.0016 K(clean) 0.978 N(clean) 0.0226 spread 0.1268/0.1455  336.8s
+step  5600 rec 0.0463 field 0.1213 sig 0.0017 K(clean) 0.982 N(clean) 0.0208 spread 0.1229/0.1329  348.6s
+step  5800 rec 0.0452 field 0.1255 sig 0.0020 K(clean) 0.964 N(clean) 0.0326 spread 0.1247/0.1269  358.9s
+step  6000 rec 0.0410 field 0.0906 sig 0.0021 K(clean) 0.978 N(clean) 0.0177 spread 0.1360/0.1289  370.3s
+step  6200 rec 0.0439 field 0.1177 sig 0.0024 K(clean) 0.988 N(clean) 0.0112 spread 0.1126/0.1296  384.4s
+step  6400 rec 0.0400 field 0.0985 sig 0.0016 K(clean) 0.993 N(clean) 0.0071 spread 0.1235/0.1440  397.6s
+step  6600 rec 0.0424 field 0.1178 sig 0.0039 K(clean) 0.967 N(clean) 0.0286 spread 0.1297/0.1450  411.6s
+step  6800 rec 0.0479 field 0.0989 sig 0.0021 K(clean) 0.989 N(clean) 0.0118 spread 0.1366/0.1536  424.0s
+step  7000 rec 0.0425 field 0.1124 sig 0.0022 K(clean) 0.971 N(clean) 0.0265 spread 0.1436/0.1354  440.0s
+step  7200 rec 0.0411 field 0.1143 sig 0.0019 K(clean) 0.973 N(clean) 0.0252 spread 0.1291/0.1479  454.9s
+step  7400 rec 0.0438 field 0.1385 sig 0.0019 K(clean) 0.967 N(clean) 0.0285 spread 0.1331/0.1382  466.5s
+step  7600 rec 0.0388 field 0.1078 sig 0.0016 K(clean) 0.980 N(clean) 0.0194 spread 0.1341/0.1480  478.8s
+step  7800 rec 0.0359 field 0.1011 sig 0.0020 K(clean) 0.990 N(clean) 0.0108 spread 0.1372/0.1484  491.9s
+step  8000 rec 0.0439 field 0.1307 sig 0.0019 K(clean) 0.971 N(clean) 0.0234 spread 0.1337/0.1334  503.7s
+step  8200 rec 0.0421 field 0.1036 sig 0.0018 K(clean) 0.977 N(clean) 0.0200 spread 0.1209/0.1454  514.9s
+step  8400 rec 0.0389 field 0.1017 sig 0.0012 K(clean) 0.984 N(clean) 0.0166 spread 0.1286/0.1448  527.1s
+step  8600 rec 0.0452 field 0.1002 sig 0.0025 K(clean) 0.982 N(clean) 0.0159 spread 0.1357/0.1460  539.5s
+step  8800 rec 0.0362 field 0.1074 sig 0.0013 K(clean) 0.979 N(clean) 0.0167 spread 0.1280/0.1403  551.4s
+step  9000 rec 0.0425 field 0.0947 sig 0.0017 K(clean) 0.985 N(clean) 0.0134 spread 0.1399/0.1429  563.3s
+step  9200 rec 0.0436 field 0.1347 sig 0.0015 K(clean) 0.979 N(clean) 0.0200 spread 0.1265/0.1461  573.0s
+step  9400 rec 0.0399 field 0.0952 sig 0.0015 K(clean) 0.984 N(clean) 0.0167 spread 0.1395/0.1468  585.3s
+step  9600 rec 0.0417 field 0.1077 sig 0.0012 K(clean) 0.992 N(clean) 0.0086 spread 0.1144/0.1333  596.6s
+step  9800 rec 0.0415 field 0.1172 sig 0.0017 K(clean) 0.983 N(clean) 0.0127 spread 0.1295/0.1270  609.5s
+step 10000 rec 0.0436 field 0.1274 sig 0.0017 K(clean) 0.964 N(clean) 0.0309 spread 0.1304/0.1417  621.5s
+step 10200 rec 0.0377 field 0.0962 sig 0.0016 K(clean) 0.983 N(clean) 0.0142 spread 0.1180/0.1256  633.6s
+step 10400 rec 0.0340 field 0.0994 sig 0.0010 K(clean) 0.975 N(clean) 0.0207 spread 0.1327/0.1421  646.3s
+step 10600 rec 0.0381 field 0.1116 sig 0.0014 K(clean) 0.968 N(clean) 0.0272 spread 0.1324/0.1525  659.9s
+step 10800 rec 0.0370 field 0.1101 sig 0.0011 K(clean) 0.977 N(clean) 0.0196 spread 0.1394/0.1454  670.8s
+step 11000 rec 0.0410 field 0.0866 sig 0.0014 K(clean) 0.989 N(clean) 0.0103 spread 0.1292/0.1437  681.0s
+step 11200 rec 0.0485 field 0.1226 sig 0.0013 K(clean) 0.977 N(clean) 0.0216 spread 0.1479/0.1561  692.1s
+step 11400 rec 0.0509 field 0.1060 sig 0.0022 K(clean) 0.984 N(clean) 0.0175 spread 0.1113/0.1263  704.0s
+step 11600 rec 0.0345 field 0.0882 sig 0.0015 K(clean) 0.987 N(clean) 0.0138 spread 0.1334/0.1412  715.1s
+step 11800 rec 0.0393 field 0.1011 sig 0.0013 K(clean) 0.985 N(clean) 0.0130 spread 0.1387/0.1573  725.7s
+step 11999 rec 0.0405 field 0.1048 sig 0.0015 K(clean) 0.983 N(clean) 0.0157 spread 0.1438/0.1521  737.3s
+gaussian_noise       identity 22.16 transfer 18.80 removed -1.199
+shot_noise           identity 23.79 transfer 20.45 removed -1.296
+impulse_noise        identity 20.25 transfer 17.40 removed -0.968
+defocus_blur         identity 31.29 transfer 29.38 removed -1.369
+glass_blur           identity 22.87 transfer 22.40 removed -0.143
+motion_blur          identity 22.93 transfer 22.18 removed -0.302
+zoom_blur            identity 23.14 transfer 22.51 removed -0.257
+snow                 identity 18.49 transfer 19.33 removed +0.144
+frost                identity 13.63 transfer 17.28 removed +0.521
+fog                  identity 18.08 transfer 18.89 removed +0.052
+brightness           identity 18.36 transfer 19.63 removed +0.208
+contrast             identity 19.30 transfer 19.69 removed -0.096
+elastic_transform    identity 19.67 transfer 19.59 removed -0.027
+pixelate             identity 29.55 transfer 28.59 removed -0.502
+jpeg_compression     identity 28.63 transfer 28.20 removed -0.225
+frost+snow                 identity 10.55 transfer 14.80 removed +0.601
+fog+contrast             identity 15.80 transfer 17.13 removed +0.221
+gaussian_noise+shot_noise           identity 19.93 transfer 16.71 removed -1.130
+wrote reports/FIELD_ESTIMATOR.md

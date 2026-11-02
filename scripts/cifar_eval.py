@@ -94,6 +94,10 @@ def main():
     ap.add_argument("--out", default=None)
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--skip-budget", action="store_true")
+    ap.add_argument("--bn-adapt", action="store_true",
+                    help="re-estimate BatchNorm statistics on each corrupted test set "
+                         "before predicting (label-free test-time adaptation). Off by "
+                         "default: every number in Table 1 is a frozen-model number.")
     args = ap.parse_args()
 
     run = ROOT / args.run_dir
@@ -130,6 +134,20 @@ def main():
             loader = torch.utils.data.DataLoader(ds, batch_size=args.batch_size,
                                                  num_workers=args.workers,
                                                  pin_memory=True)
+            if args.bn_adapt:
+                # Label-free adaptation: set every BatchNorm layer to the exact
+                # mean/variance of this corrupted test set, then predict with
+                # those statistics frozen. No gradients, no labels, no training.
+                model.train()
+                for module in model.modules():
+                    if isinstance(module, torch.nn.BatchNorm2d):
+                        module.reset_running_stats()
+                        module.momentum = None      # cumulative average == exact stats
+                with torch.no_grad():
+                    for x, _ in loader:
+                        model(x.cuda(non_blocking=True))
+                        budget.check()
+                model.eval()
             hits, total = [], 0
             with torch.no_grad():
                 for x, y in loader:
