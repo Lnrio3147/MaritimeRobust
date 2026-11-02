@@ -35,6 +35,36 @@
 - held-out pairs, all severities: delta +4.47 pp
 - held-out pairs, s3: delta +1.97 pp (super -2.24)
 - all pairs, s3: delta +2.95 pp
+## augmix_s29
+
+- held-out pairs, all severities: delta +5.03 pp
+- held-out pairs, s3: delta +2.44 pp (super -1.55)
+- all pairs, s3: delta +3.41 pp
+## otheraug_s17
+
+- held-out pairs, all severities: delta +6.60 pp
+- held-out pairs, s3: delta +5.78 pp (super +1.25)
+- all pairs, s3: delta +7.57 pp
+## ncf_c_a_s17
+
+- held-out pairs, all severities: delta +3.81 pp
+- held-out pairs, s3: delta +1.71 pp (super -3.03)
+- all pairs, s3: delta +3.22 pp
+## ncf_s_a_s17
+
+- held-out pairs, all severities: delta +4.62 pp
+- held-out pairs, s3: delta +3.64 pp (super -1.20)
+- all pairs, s3: delta +4.67 pp
+## ncf_c_a_r2_s17
+
+- held-out pairs, all severities: delta +3.65 pp
+- held-out pairs, s3: delta +1.55 pp (super -3.05)
+- all pairs, s3: delta +3.40 pp
+## ncf_c_b_r2_s17
+
+- held-out pairs, all severities: delta +3.91 pp
+- held-out pairs, s3: delta +1.48 pp (super -3.62)
+- all pairs, s3: delta +2.86 pp
 
 ## Frozen contrasts
 
