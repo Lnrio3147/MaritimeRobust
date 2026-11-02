@@ -76,3 +76,55 @@ A3 & AugMix's clean accuracy not below 95.47\% & 95.36\% & holds (0.11 pp) \\
 \end{tabular}}
 Two of six failed, and both failures narrow the paper's claim rather than widen it: B2's failure moved §5 from pair coverage to family coverage, and A1's failure showed that generic augmentation does not substitute for covering the families under test.
 
+\section{Appendix D. Intervention table}
+\noindent\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrll}
+\toprule
+Candidate & Locus & Mean $\Delta$ & 95\% CI & Verdict \\
+\midrule
+T1 consistency training & training & $-$0.18 & [$-$1.13, +0.76] & not sustained \\
+I1 conditional normalization & input & +0.94 & [$-$0.09, +1.98] & below criterion \\
+R3 feature denoising & representation & $-$0.69 & [$-$1.76, +0.35] & no positive evidence \\
+R1 multi-scale fusion & representation & $-$1.10 & [$-$2.23, +0.05] & interval covers zero \\
+I2 Retinex preprocessing & input & $-$2.56 & [$-$3.86, $-$1.22] & negative \\
+T2 group DRO & training & $-$5.04 & [$-$6.52, $-$3.54] & negative \\
+T3 curriculum & training & $-$8.76 & [$-$10.14, $-$7.40] & negative \\
+T4 ImageNet-22K init & initialization & $-$0.71 & [$-$2.07, +0.52] & no advantage demonstrated \\
+\bottomrule
+\end{tabular}}
+Three folds $\times$ two seeds per candidate, 40 epochs, identical data and corruption instances to §3. Mean $\Delta$ is over the 12 compound conditions.
+
+\section{Appendix E. Compound-error overlap counts}
+\noindent\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+Condition & compound errors & error under no single at any severity & share \\
+\midrule
+haze+glare, s=2 & 213 & 8 & 3.8\% \\
+haze+glare, s=3 & 241 & 16 & 6.6\% \\
+haze+glare, s=4 & 298 & 57 & 19.1\% \\
+haze+glare, s=5 & 504 & 209 & \textbf{41.5\%} \\
+haze+cloud, s=2 & 207 & 2 & 1.0\% \\
+haze+cloud, s=3 & 217 & 12 & 5.5\% \\
+haze+cloud, s=4 & 237 & 17 & 7.2\% \\
+haze+cloud, s=5 & 292 & 67 & 22.9\% \\
+\bottomrule
+\end{tabular}}
+\section{Appendix F. Coverage arms}
+\noindent\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llrrr}
+\toprule
+arm & compound sampling & held-out delta (pp) & pool-pair delta (pp) & clean acc (\%) \\
+\midrule
+baseline (k=0) & recipe's own compounds & +8.2 & +4.1 & 84.95 \\
+c3 & 3 pairs, all 6 families & $-$1.8 & $-$0.7 & 86.25 \\
+c6 & 6 pairs, all 6 families & +2.0 & +0.7 & 86.08 \\
+c12 & 12 pairs, all 6 families & +1.4 & $-$0.2 & 86.41 \\
+s6 & 6 singles, 20 pp each & +7.2 & +4.9 & 86.73 \\
+s6h & 6 singles, 40 pp each & +1.9 & +1.2 & 86.08 \\
+c12b & 12 pairs + base recipe & +4.5 & $-$0.1 & 85.84 \\
+s6b & 6 singles + base recipe & +9.7 & +5.9 & 86.33 \\
+\bottomrule
+\end{tabular}}
+Three folds $\times$ two seeds per arm; every arm applies a compound to half of every batch, so the compound rate is 0.5 everywhere. "Pool pairs" are the pairs a pool contains; the held-out pairs appear in no pool.
+

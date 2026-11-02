@@ -43,7 +43,15 @@ def inline(text):
 
     for char, latex in UNICODE.items():
         text = text.replace(char, hold(latex))
-    text = re.sub(r"`([^`]+)`", lambda m: hold(r"\texttt{" + escape(m.group(1)) + "}"), text)
+    def code(m):
+        """Inline code. Paths become \path so they break at / and _ instead of
+        running into the margin: the reproduction appendix is dense with them."""
+        inner = m.group(1)
+        if re.fullmatch(r"[A-Za-z0-9_./-]+", inner) and "/" in inner:
+            return hold(r"\path{" + inner + "}")
+        return hold(r"\texttt{" + escape(inner) + "}")
+
+    text = re.sub(r"`([^`]+)`", code, text)
     text = re.sub(r"\[@([\w:,\- ]+)\]",
                   lambda m: hold(r"\cite{" + ",".join(k.strip() for k in m.group(1).split(",")) + "}"),
                   text)
@@ -69,7 +77,9 @@ def table(lines):
     align_row = rows[1]
     spec = "".join("r" if set(c) <= set("-:") and c.endswith(":") else
                    ("l" if set(c) <= set("-:") else "c") for c in align_row)
-    body = [r"\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{" + spec + "}", r"\toprule",
+    # \noindent: a resized table already fills the measure, and the paragraph
+    # indent would push it 15pt past the margin.
+    body = [r"\noindent\resizebox{\columnwidth}{!}{%", r"\begin{tabular}{" + spec + "}", r"\toprule",
             " & ".join(inline(c) for c in rows[0]) + r" \\", r"\midrule"]
     for row in rows[2:]:
         body.append(" & ".join(inline(c) for c in row) + r" \\")
@@ -100,8 +110,10 @@ def convert(markdown):
             caption = next((l.strip() for l in lines[i + 1:] if l.strip()), "")
             caption = re.sub(r"^\*(.+)\*$", r"\1", caption)
             caption = re.sub(r"^Figure\s+\d+\.\s*", "", caption)   # LaTeX numbers figures
+            wm = re.search(r"width=([0-9.]+)", match.group(1))
+            width = wm.group(1) if wm else "0.78"
             out += [r"\begin{figure}[t]", r"\centering",
-                    r"\includegraphics[width=0.86\linewidth]{" + str(Path(match.group(2)).with_suffix("")) + "}",
+                    r"\includegraphics[width=" + width + r"\linewidth]{" + str(Path(match.group(2)).with_suffix("")) + "}",
                     r"\caption{" + inline(caption) + "}", r"\end{figure}"]
             i += 1
             while i < len(lines) and (not lines[i].strip() or
